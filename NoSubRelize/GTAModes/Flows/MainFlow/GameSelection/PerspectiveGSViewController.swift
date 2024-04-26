@@ -126,6 +126,9 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
         
         tableViewTwo.delegate = self
         tableViewTwo.dataSource = self
+       
+        tableViewOne.clipsToBounds = false
+        tableViewTwo.clipsToBounds = false
 
     }
     
@@ -177,8 +180,9 @@ extension PerspectiveGSViewController: UITableViewDataSource, UITableViewDelegat
                 }
          //
         let cell: PerspectiveMainViewCell = tableView.dequeueReusableCell(indexPath)
-        cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 24.0, isLock: false)
+        cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
+        cell.perspectiveDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
         return cell
     }
     

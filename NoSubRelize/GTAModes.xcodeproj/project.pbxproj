@@ -22,6 +22,8 @@
 		120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */; };
 		120EEE5F2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */; };
 		126FEE292BB18D650095A5DE /* markers.png in Resources */ = {isa = PBXBuildFile; fileRef = 126FEE282BB18D640095A5DE /* markers.png */; };
+		12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
+		12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
 		12EA114A2BB1F15F00ADE95E /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 12EA11492BB1F15F00ADE95E /* leaflet.css */; };
 		12EA114C2BB1F18D00ADE95E /* locations.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114B2BB1F18D00ADE95E /* locations.js */; };
 		12EA114E2BB1F54C00ADE95E /* jquery-2.1.4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */; };
@@ -2628,10 +2630,11 @@
 		120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesInfoViewController.swift; sourceTree = "<group>"; };
 		120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveHeaderViewNew.swift; sourceTree = "<group>"; };
 		126FEE282BB18D640095A5DE /* markers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markers.png; sourceTree = "<group>"; };
+		12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
 		12EA0ED52BAB3AF400263F40 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
-		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = leaflet.css; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/leaflet.css"; sourceTree = "<group>"; };
-		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = locations.js; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/locations.js"; sourceTree = "<group>"; };
-		12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-2.1.4.min.js"; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/jquery-2.1.4.min.js"; sourceTree = "<group>"; };
+		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = leaflet.css; sourceTree = "<group>"; };
+		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = locations.js; sourceTree = "<group>"; };
+		12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.min.js"; sourceTree = "<group>"; };
 		12EA20832BAB598A00263F40 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
 		12F217EF2B85D41100BCE63B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		12F217F22B85F03900BCE63B /* PerspectiveMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainViewCell.swift; sourceTree = "<group>"; };
@@ -4592,7 +4595,7 @@
 		12F3D1E12BACA74100078AD2 /* GTAVKMAP2p21p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP2p21p7vk.png; sourceTree = "<group>"; };
 		12F3D1E22BACA74300078AD2 /* GTAVKMAP10p25p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP10p25p7vk.png; sourceTree = "<group>"; };
 		12F3D1E32BACA74500078AD2 /* GTAVKMAP20p29p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP20p29p7vk.png; sourceTree = "<group>"; };
-		12F3D1E42BACA74600078AD2 /* GTAVKMAP11p6p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GTAVKMAP11p6p7vk.png; path = ../../../../../../../../Volumes/MacMiniTools/PM/MapNew/Map_2_Renamed_Corrected/Map/GTAVKMAP11p6p7vk.png; sourceTree = "<group>"; };
+		12F3D1E42BACA74600078AD2 /* GTAVKMAP11p6p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP11p6p7vk.png; sourceTree = "<group>"; };
 		12F3D1E52BACA74700078AD2 /* GTAVKMAP10p2p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP10p2p7vk.png; sourceTree = "<group>"; };
 		12F3D1E62BACA74800078AD2 /* GTAVKMAP35p41p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP35p41p7vk.png; sourceTree = "<group>"; };
 		12F3D1E72BACA74A00078AD2 /* GTAVKMAP18p2p6vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP18p2p6vk.png; sourceTree = "<group>"; };
@@ -8026,6 +8029,7 @@
 		2CBFE4482A77CE6A00A50257 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */,
 				120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */,
 				120EEE582B88B08B00BE6D3F /* Gilroy-Regular.ttf */,
 				120EEE502B877B1700BE6D3F /* Gilroy-Bold.ttf */,
@@ -8521,6 +8525,7 @@
 				12F3DBE92BACAC7500078AD2 /* GTAVKMAP19p38p7vk.png in Resources */,
 				12F3DB732BACAC7400078AD2 /* GTAVKMAP2p11p7vk.png in Resources */,
 				12F3DA9D2BACAC7400078AD2 /* GTAVKMAP34p35p7vk.png in Resources */,
+				12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */,
 				12F3D4DE2BACAC6F00078AD2 /* GTAVKMAP10p23p7vk.png in Resources */,
 				12F3DBA42BACAC7500078AD2 /* GTAVKMAP2p21p7vk.png in Resources */,
 				12F3D9582BACAC7300078AD2 /* GTAVKMAP41p26p7vk.png in Resources */,
@@ -10731,6 +10736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */,
 				120EEE4D2B87187900BE6D3F /* GilroyLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,7 +47,7 @@ open class PerspectiveNiblessViewController: UIViewController {
                 }
          //
         view.addSubview(waterBackground)
-        waterBackground.alpha = 0.0
+        waterBackground.alpha = 1.0
         
       //  gtavk_setupBackground()
         

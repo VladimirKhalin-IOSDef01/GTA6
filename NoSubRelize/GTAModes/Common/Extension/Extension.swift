@@ -39,9 +39,10 @@ extension AddShedow {
 
   // OUTPUT 2
   func perspectiveDropShadowStandart(color: UIColor, opacity: Float = 0.3, offSet: CGSize, radius: CGFloat = 5, scale: Bool = true) {
-    layer.masksToBounds = false
+    layer.masksToBounds = true
     layer.shadowColor = color.cgColor
-    layer.shadowOpacity = opacity
+    //layer.shadowOpacity = opacity
+      layer.shadowOpacity = opacity
     layer.shadowOffset = offSet
     layer.shadowRadius = radius
     layer.rasterizationScale = UIScreen.main.scale
@@ -49,6 +50,19 @@ extension AddShedow {
     layer.shouldRasterize = true
     layer.rasterizationScale = scale ? UIScreen.main.scale : 1
   }
+    
+    // OUTPUT 2
+    func perspectiveDropShadowWhite() {
+      layer.masksToBounds = false
+      layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 1.0
+   //   layer.shadowOffset = offSet
+      layer.shadowRadius = 10
+      layer.rasterizationScale = UIScreen.main.scale
+     // layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+      layer.shouldRasterize = true
+      layer.rasterizationScale = UIScreen.main.scale
+    }
 }
 
 typealias AddBlurEffect = UIView
