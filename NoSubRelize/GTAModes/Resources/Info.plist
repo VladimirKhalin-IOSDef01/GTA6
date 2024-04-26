@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION</key>
+	<string>YES</string>
+	<key>PW_APP_GROUPS_NAME</key>
+	<string>group.com.newbundle.webgeek</string>
+	<key>Pushwoosh_APPID</key>
+	<string>2964F-C16D0</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Bold.ttf</string>
+		<string>SFProText-Bold.ttf</string>
+		<string>Gilroy.ttf</string>
+		<string>GilroyLight.ttf</string>
+		<string>Gilroy-Regular.ttf</string>
+		<string>Gilroy-Bold.ttf</string>
+		<string>Gilroy-Semibold.ttf</string>
+		<string>Gilroy-Extrabold.ttf</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+</dict>
+</plist>

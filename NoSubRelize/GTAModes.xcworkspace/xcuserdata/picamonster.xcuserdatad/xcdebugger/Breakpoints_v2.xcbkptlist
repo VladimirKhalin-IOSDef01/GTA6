@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "66621BC9-1CF3-4084-9B07-CAD374F294AE"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCDDD001-6EC8-43E1-8985-E41336532D4C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "gta_reshreshToken(code:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9348C570-96A6-4705-8F7F-C37DF30D677B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "gta_getTokenBy(refresh_token:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1EADA9A-5CE3-4808-BDB5-C4F827BCB7A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "gta_setupDropBox()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D1EADA9A-5CE3-4808-BDB5-C4F827BCB7A4 - 78492337411e144b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in GTAModes.GTAModes_DBManager.gta_setupDropBox() -&gt; ()"
+                  moduleName = "GTAModes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/picamonster/Documents/FixFromDogs/GTA_Modes/GTAModes/GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "D1EADA9A-5CE3-4808-BDB5-C4F827BCB7A4 - 78492337411e144b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in GTAModes.GTAModes_DBManager.gta_setupDropBox() -&gt; ()"
+                  moduleName = "GTAModes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/picamonster/Documents/FixFromDogs/GTA_Modes/GTAModes/GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D7B0DAD-E0E7-4A37-A73B-DD3CF8397F1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "gta_reshreshToken(code:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C39E7BF9-0496-4D20-B570-C194F644DD53"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "gta_reshreshToken(code:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C39E7BF9-0496-4D20-B570-C194F644DD53 - 114bdeb063aaa9a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GTAModes.GTAModes_DBManager.gta_reshreshToken(code: Swift.String, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GTAModes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/picamonster/Documents/FixFromDogs/GTA_Modes/GTAModes/GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "C39E7BF9-0496-4D20-B570-C194F644DD53 - 114bdeb063aaa9a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GTAModes.GTAModes_DBManager.gta_reshreshToken(code: Swift.String, completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GTAModes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/picamonster/Documents/FixFromDogs/GTA_Modes/GTAModes/GTAModes/Services/DropBoxManager/GTAModes_DropBoxManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
