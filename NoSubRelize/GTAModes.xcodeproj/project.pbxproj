@@ -24,6 +24,12 @@
 		126FEE292BB18D650095A5DE /* markers.png in Resources */ = {isa = PBXBuildFile; fileRef = 126FEE282BB18D640095A5DE /* markers.png */; };
 		12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
 		12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
+		12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
+		12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
+		12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
+		12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
+		12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
+		12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
 		12EA114A2BB1F15F00ADE95E /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 12EA11492BB1F15F00ADE95E /* leaflet.css */; };
 		12EA114C2BB1F18D00ADE95E /* locations.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114B2BB1F18D00ADE95E /* locations.js */; };
 		12EA114E2BB1F54C00ADE95E /* jquery-2.1.4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */; };
@@ -2631,6 +2637,9 @@
 		120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveHeaderViewNew.swift; sourceTree = "<group>"; };
 		126FEE282BB18D640095A5DE /* markers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markers.png; sourceTree = "<group>"; };
 		12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistCell.swift; sourceTree = "<group>"; };
+		12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistChecker.swift; sourceTree = "<group>"; };
+		12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistButton.swift; sourceTree = "<group>"; };
 		12EA0ED52BAB3AF400263F40 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
 		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = leaflet.css; sourceTree = "<group>"; };
 		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = locations.js; sourceTree = "<group>"; };
@@ -5411,6 +5420,8 @@
 				2C45A53A2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift */,
 				2C45A53C2A76A7800023B3A8 /* PerspectiveChecklistModel.swift */,
 				12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */,
+				12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */,
+				12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -5436,6 +5447,7 @@
 			isa = PBXGroup;
 			children = (
 				2C45A5422A771A050023B3A8 /* PerspectiveChecklistCell.swift */,
+				12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -10805,6 +10817,8 @@
 				2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */,
 				12F217F52B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift in Sources */,
 				2CA95FF82A84D4210039343E /* PerspectiveCheatsObject.swift in Sources */,
+				12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
+				12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
 				2C45A53D2A76A7800023B3A8 /* PerspectiveChecklistModel.swift in Sources */,
 				2C7F39F42A7BF09800F575F7 /* PerspectiveHeaderView.swift in Sources */,
 				2C2A20762A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift in Sources */,
@@ -10823,6 +10837,7 @@
 				2C45A53B2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift in Sources */,
 				2CBFE45B2A79080D00A50257 /* PerspectiveGameMapViewController.swift in Sources */,
 				120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */,
+				12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CA95FFC2A8512470039343E /* PerspectiveMainItemObject.swift in Sources */,
 				2C2A20812A729337002A6D3C /* PerspectiveNiblessViewController.swift in Sources */,
 				2C2A20BB2A755AFA002A6D3C /* PerspectiveAutolayout.swift in Sources */,
@@ -10843,6 +10858,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
+				12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
+				12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CB88FD62A90CAC7006B9301 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -197,7 +197,7 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
                 }
          //
     
-        return UIDevice.current.userInterfaceIdiom == .pad ? 135 : 78
+        return UIDevice.current.userInterfaceIdiom == .pad ? 105 : 105
     }
     func oneCheck() -> Int{
     var checkOne = 93 + 3 * 2

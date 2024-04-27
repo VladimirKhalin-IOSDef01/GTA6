@@ -1,17 +1,23 @@
+//
+//  ActualChecklistChecker.swift
+//  GTAModes
+//
+//  Created by Vladimir Khalin on 26.04.2024.
+//
 
+import SwiftUI
 
-import UIKit
-
-class PerspectiveCheckListCustomSwitcher: UIControl {
+class ActualChecklistChecker: UIControl {
     var isOn: Bool = false {
         didSet {
            perspectiveToggleSwitch(animated: true)
         }
     }
-
+    
+   
     private let switchThumb = UIView()
     private let onBackgroundColor = UIColor(named: "toggleOn" )
-    private let offBackgroundColor = UIColor.gray
+    private let offBackgroundColor = UIColor.white.withAlphaComponent(0.05)
     private let thumbColor = UIColor.white
 
     override init(frame: CGRect) {
@@ -22,7 +28,7 @@ class PerspectiveCheckListCustomSwitcher: UIControl {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupViews() {
         self.backgroundColor = offBackgroundColor
         self.layer.cornerRadius = frame.height / 2
@@ -35,7 +41,6 @@ class PerspectiveCheckListCustomSwitcher: UIControl {
         updateSwitchThumbPosition(animated: false)
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleSwitchAction)))
     }
-    
     override func layoutSubviews() {
             super.layoutSubviews()
             self.layer.cornerRadius = self.bounds.height / 2
@@ -63,8 +68,16 @@ class PerspectiveCheckListCustomSwitcher: UIControl {
             backgroundColor = isOn ? onBackgroundColor : offBackgroundColor
         }
     }
-
+    
+    
+    
+    
+    
+    
+    
     private func perspectiveToggleSwitch(animated: Bool) {
         updateSwitchThumbPosition(animated: animated)
     }
+    
+    
 }
