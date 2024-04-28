@@ -4,39 +4,23 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    /*
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        
         gtavk_showMainFlow(window)
 
     }
     
     private func gtavk_showMainFlow(_ window: UIWindow) {
         let flowCoordinator = PerspectiveMainFlowCoordinator()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      
         let controller = flowCoordinator.perspectiveCreateFlow()
         controller.modalPresentationStyle = .fullScreen
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      
         let navigation = UINavigationController(rootViewController: controller)
         navigation.setNavigationBarHidden(true, animated: false)
         window.rootViewController = navigation
@@ -44,14 +28,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             PerspectiveThirdPartyServicesManager.shared.perspectiveMake_ATT()
         }
     }
+    */
     
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Убедитесь, что сцена имеет тип UIWindowScene
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        // Создаем новое окно для этой сцены
+        let window = UIWindow(windowScene: windowScene)
+        
+        // Создаем ViewController
+        let viewController = PerspectiveCustomAlertViewController()
+        
+        // Устанавливаем его как rootViewController окна
+        window.rootViewController = viewController
+        
+        // Делаем окно видимым
+        self.window = window
+        window.makeKeyAndVisible()
+    }
 }

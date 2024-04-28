@@ -26,7 +26,8 @@ class PerspectiveGameCheatsViewController: PerspectiveNiblessViewController {
     //
     private var footer = UIView()
     //
-    private var fotterContent = PerspectiveHeaderView()
+    private var fotterContent = PerspectiveHeaderViewNew()    // !!!
+    
     
 
     
@@ -40,9 +41,9 @@ class PerspectiveGameCheatsViewController: PerspectiveNiblessViewController {
             self?.model.perspectiveBackAction_Proceed()
         }
         customNavigation.rightButtonAction = { 
-           // [weak self] in
-           // self?.model.gtavk_filterAction_Proceed()
-            self.gta_changeDevice()
+            [weak self] in
+            self?.model.perspectiveFilterAction_Proceed()
+           // self.gta_changeDevice()
         }
     }
     
@@ -80,7 +81,7 @@ class PerspectiveGameCheatsViewController: PerspectiveNiblessViewController {
         tableView.tag = 1
         tableView.perspectiveLayout {
           //  $0.top.equal(to: searchContainer.bottomAnchor, offsetBy: 8.0)
-            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 16.0)
+            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 36.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 80 : 0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -80 : 0)
             $0.bottom.equal(to: view.bottomAnchor, offsetBy: 0)
@@ -90,21 +91,21 @@ class PerspectiveGameCheatsViewController: PerspectiveNiblessViewController {
         }
 
         view.addSubview(tableViewFooter)
-        tableViewFooter.isHidden = self.showTabBar ? false : true
-        tableViewFooter.backgroundColor = UIColor(named: "tapbarcolor")?.withAlphaComponent(0.95)
+       // tableViewFooter.isHidden = self.showTabBar ? false : true
+        tableViewFooter.backgroundColor = .clear
         tableViewFooter.alwaysBounceVertical = false
-        tableViewFooter.registerReusableHeaderFooterView(viewType: PerspectiveHeaderView.self)
+        tableViewFooter.registerReusableHeaderFooterView(viewType: PerspectiveHeaderViewNew.self)   // !!!
         tableViewFooter.estimatedRowHeight = 0.0
       //  tableViewFooter.dataSource = self
         tableViewFooter.delegate = self
-        tableViewFooter.tag = 2
+        tableViewFooter.tag = 1
 
         tableViewFooter.perspectiveLayout{
-           // $0.top.equal(to: tableView.bottomAnchor, offsetBy: 10)
+            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 20)
             $0.leading.equal(to: view.leadingAnchor)
             $0.trailing.equal(to: view.trailingAnchor)
-            $0.height.equal(to: 120)
-            $0.bottom.equal(to: view.bottomAnchor, offsetBy: 45)
+            $0.height.equal(to: 150)
+           // $0.bottom.equal(to: view.bottomAnchor, offsetBy: 45)
         }
         
         tableView.registerReusable_Cell(cellType: PerspectiveMainViewCell.self)
@@ -180,8 +181,8 @@ class PerspectiveGameCheatsViewController: PerspectiveNiblessViewController {
     
     
     @objc func gta_changeDevice() {
-        tableViewFooter.isHidden = showTabBar ? true : false
-        self.showTabBar.toggle()
+      //  tableViewFooter.isHidden = false
+      //  self.showTabBar.toggle()
     }
 }
 
@@ -223,7 +224,7 @@ extension PerspectiveGameCheatsViewController: UITableViewDataSource {
                     print("the world has turned upside down")
                 }
          //
-        return UIDevice.current.userInterfaceIdiom == .pad ? 160 : 100
+        return UIDevice.current.userInterfaceIdiom == .pad ? 176 : 176
     }
     
     
@@ -237,7 +238,7 @@ extension PerspectiveGameCheatsViewController: UITableViewDelegate {
                     print("the world has turned upside down")
                 }
          //
-        let headerView = tableView.dequeueReusableHeaderFooterView(viewType: PerspectiveHeaderView.self)
+        let headerView = tableView.dequeueReusableHeaderFooterView(viewType: PerspectiveHeaderViewNew.self) // !!!
         headerView?.backgroundColor = .orange
         headerView?.actionButton = { [weak self] index in
             self?.model.perspectiveShowCheats(Cheats_Device_Type.allCases[index])
@@ -246,16 +247,10 @@ extension PerspectiveGameCheatsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        if tableView.tag == 2 {
-            return 45
-        } else {
-            return 0
-        }
+       
+       
+            return 79
+        
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

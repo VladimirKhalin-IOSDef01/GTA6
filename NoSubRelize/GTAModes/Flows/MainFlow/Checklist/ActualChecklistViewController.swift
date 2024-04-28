@@ -1,4 +1,5 @@
-/*
+
+
 import UIKit
 import Combine
 
@@ -24,29 +25,18 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
         customNavigation.rightButtonAction = { [weak self] in
             self?.model.perspectiveFilterAction_Proceed()
         }
-        
-        
     }
     
     private func perspectiveSetupBindings() {
         model.reloadData
             .sink { [weak self] in
                 guard let self = self else { return }
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
                 self.tableView.reloadData()
             }.store(in: &subscriptions)
         
         model.hideSpiner = { [weak self] in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+
             self.tableView.reloadData()
             self.perspectiveHideSpiner()
         }
@@ -56,18 +46,9 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     private func perspectiveShowSpiner() {
 
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+     
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         loadingIndicator.style = .medium
         loadingIndicator.startAnimating()
         
@@ -78,17 +59,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     }
     
     private func perspectiveHideSpiner() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         alert?.dismiss(animated: false)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
     }
     
     override func viewDidLoad() {
@@ -183,4 +154,3 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
     return checkTwo
     }
 }
-*/

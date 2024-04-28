@@ -404,7 +404,7 @@ extension PerspectiveModesViewController: UITableViewDataSource, UITableViewDele
                     print("the world has turned upside down")
                 }
          //
-        return UIDevice.current.userInterfaceIdiom == .pad ? 230 : 140
+        return 238
     }
     
     
