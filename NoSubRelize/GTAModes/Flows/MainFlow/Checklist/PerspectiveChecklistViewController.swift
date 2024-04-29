@@ -1,4 +1,4 @@
-
+/*
 import UIKit
 import Combine
 
@@ -10,6 +10,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     private let model: PerspectiveChecklistModel
     private let tableView = UITableView(frame: .zero)
     private let customNavigation: PerspectiveCustomNavigation_View
+    
     
     init(model: PerspectiveChecklistModel) {
         self.model = model
@@ -23,6 +24,8 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
         customNavigation.rightButtonAction = { [weak self] in
             self?.model.perspectiveFilterAction_Proceed()
         }
+        
+        
     }
     
     private func perspectiveSetupBindings() {
@@ -141,21 +144,12 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
 extension PerspectiveChecklistViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+
         let cell: PerspectiveChecklistCell = tableView.dequeueReusableCell(indexPath)
        
         cell.perspectiveConfigure_cell(model.missionList[indexPath.row])
         cell.backgroundColor = .clear
         cell.perspectiveDropShadowStandart()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         cell.isMultipleTouchEnabled = false
         cell.isCheckAction = { [weak self] isCheck in
             guard let self = self, let indexPath = tableView.indexPath(for: cell) else { return }
@@ -170,34 +164,17 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+       
         oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        
        return model.missionList.count
 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
     
-        return UIDevice.current.userInterfaceIdiom == .pad ? 135 : 78
+    
+        return UIDevice.current.userInterfaceIdiom == .pad ? 105 : 105
     }
     func oneCheck() -> Int{
     var checkOne = 93 + 3 * 2
@@ -206,4 +183,4 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
     return checkTwo
     }
 }
-
+*/

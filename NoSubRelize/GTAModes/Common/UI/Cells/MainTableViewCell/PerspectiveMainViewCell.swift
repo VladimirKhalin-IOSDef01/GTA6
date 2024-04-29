@@ -19,6 +19,7 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
     private let rightImageView = UIImageView()
     private let lockImageView = UIImageView()
     
+    private var titleImage = UIImageView()
     private var lockConstraints: [NSLayoutConstraint] = []
     private var notLockConstraints: [NSLayoutConstraint] = []
     
@@ -37,10 +38,17 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
     
     public func perspectiveConfigure(_ value: PerspectiveMain_Item, fontSize: CGFloat, isLock: Bool) {
         //titleLabel.text = value.title.uppercased() + "→"
-        titleLabel.text = value.title + " →"
+        titleLabel.text = value.title + ""
         backgroundImageView.contentMode = .scaleAspectFill
-        titleLabel.font = UIFont(name: "Gilroy-Bold", size: fontSize)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: fontSize)
         titleLabel.textColor = .white
+       
+        titleImage.image = value.typeItem == .main ? UIImage(named: "\(value.title)") : nil
+        
+        
+        
+        
+        
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -77,13 +85,14 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
     private func perspectiveSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        containerView.layer.borderColor = UIColor(named: "MaskColor")!.cgColor
-        containerView.layer.borderWidth = 5
+        //containerView.layer.borderColor = UIColor(named: "ActualPink")!.cgColor
+        containerView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
+        containerView.layer.borderWidth = 2
        // containerView.withCornerRadius(20.0)
         containerView.clipsToBounds = true
-        containerView.perspectiveDropShadowStandart()
-       
-       
+      //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10))
+      //  containerView.perspectiveDropShadowWhite()
+      //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10), radius: 1)
         
         containerView.perspectiveLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
@@ -94,8 +103,9 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
         containerView.withCornerRadius(25)
         containerView.backgroundColor = .clear
         
+        
         containerView.addSubview(backgroundImageView)
-        backgroundImageView.layer.cornerRadius = 30
+        backgroundImageView.layer.cornerRadius = 25
         
         
         backgroundImageView.perspectiveLayout {
@@ -106,6 +116,7 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
         }
         
         backgroundImageView.addSubview(bottomBlackView)
+        
         bottomBlackView.perspectiveLayout {
             $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: backgroundImageView.bottomAnchor)
@@ -113,15 +124,9 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
             $0.trailing.equal(to: backgroundImageView.trailingAnchor)
             //$0.height.equal(to: 60.0)
         }
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = 0.5
-        blurEffectView.frame = bottomBlackView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        bottomBlackView.addSubview(blurEffectView)
-
-        bottomBlackView.backgroundColor = UIColor(named: "MaskColor")?.withAlphaComponent(0.5)
-        
+       
+        bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.70)
+       
         bottomBlackView.addSubview(lockImageView)
         lockImageView.perspectiveLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
@@ -153,6 +158,17 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
            // $0.leading.equal(to: lockImageView.trailingAnchor, offsetBy: 2.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
         }
+        
+        bottomBlackView.addSubview(titleImage)
+        titleImage.perspectiveLayout {
+            $0.centerX.equal(to: containerView.centerXAnchor)
+            $0.centerY.equal(to: titleLabel.centerYAnchor, offsetBy: -43)
+            $0.height.equal(to: 39.0)
+            $0.width.equal(to: 39.0)
+        }
+        
+        
+        
 //
 //        bottomBlackView.addSubview(rightImageView)
 //        rightImageView.gta_layout {

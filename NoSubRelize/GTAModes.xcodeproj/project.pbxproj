@@ -22,6 +22,20 @@
 		120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */; };
 		120EEE5F2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */; };
 		126FEE292BB18D650095A5DE /* markers.png in Resources */ = {isa = PBXBuildFile; fileRef = 126FEE282BB18D640095A5DE /* markers.png */; };
+		12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
+		12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
+		12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
+		12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
+		12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
+		12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
+		12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
+		12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
+		12D4322E2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */; };
+		12D4322F2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */; };
+		12D432322BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */; };
+		12D432332BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */; };
+		12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */; };
+		12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */; };
 		12EA114A2BB1F15F00ADE95E /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 12EA11492BB1F15F00ADE95E /* leaflet.css */; };
 		12EA114C2BB1F18D00ADE95E /* locations.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114B2BB1F18D00ADE95E /* locations.js */; };
 		12EA114E2BB1F54C00ADE95E /* jquery-2.1.4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */; };
@@ -2628,10 +2642,18 @@
 		120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesInfoViewController.swift; sourceTree = "<group>"; };
 		120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveHeaderViewNew.swift; sourceTree = "<group>"; };
 		126FEE282BB18D640095A5DE /* markers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markers.png; sourceTree = "<group>"; };
+		12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistCell.swift; sourceTree = "<group>"; };
+		12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistChecker.swift; sourceTree = "<group>"; };
+		12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistButton.swift; sourceTree = "<group>"; };
+		12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderView.swift; sourceTree = "<group>"; };
+		12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomAlertView.swift; sourceTree = "<group>"; };
+		12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistViewController.swift; sourceTree = "<group>"; };
+		12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualSwiftUILoaderView.swift; sourceTree = "<group>"; };
 		12EA0ED52BAB3AF400263F40 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
-		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = leaflet.css; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/leaflet.css"; sourceTree = "<group>"; };
-		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = locations.js; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/locations.js"; sourceTree = "<group>"; };
-		12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-2.1.4.min.js"; path = "../../../../../../../../Volumes/MacMiniTools/PM/Map 2/jquery-2.1.4.min.js"; sourceTree = "<group>"; };
+		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = leaflet.css; sourceTree = "<group>"; };
+		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = locations.js; sourceTree = "<group>"; };
+		12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.min.js"; sourceTree = "<group>"; };
 		12EA20832BAB598A00263F40 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
 		12F217EF2B85D41100BCE63B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		12F217F22B85F03900BCE63B /* PerspectiveMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainViewCell.swift; sourceTree = "<group>"; };
@@ -4592,7 +4614,7 @@
 		12F3D1E12BACA74100078AD2 /* GTAVKMAP2p21p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP2p21p7vk.png; sourceTree = "<group>"; };
 		12F3D1E22BACA74300078AD2 /* GTAVKMAP10p25p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP10p25p7vk.png; sourceTree = "<group>"; };
 		12F3D1E32BACA74500078AD2 /* GTAVKMAP20p29p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP20p29p7vk.png; sourceTree = "<group>"; };
-		12F3D1E42BACA74600078AD2 /* GTAVKMAP11p6p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GTAVKMAP11p6p7vk.png; path = ../../../../../../../../Volumes/MacMiniTools/PM/MapNew/Map_2_Renamed_Corrected/Map/GTAVKMAP11p6p7vk.png; sourceTree = "<group>"; };
+		12F3D1E42BACA74600078AD2 /* GTAVKMAP11p6p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP11p6p7vk.png; sourceTree = "<group>"; };
 		12F3D1E52BACA74700078AD2 /* GTAVKMAP10p2p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP10p2p7vk.png; sourceTree = "<group>"; };
 		12F3D1E62BACA74800078AD2 /* GTAVKMAP35p41p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP35p41p7vk.png; sourceTree = "<group>"; };
 		12F3D1E72BACA74A00078AD2 /* GTAVKMAP18p2p6vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP18p2p6vk.png; sourceTree = "<group>"; };
@@ -5226,6 +5248,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12D432302BDD1AF700BD1EC7 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */,
+				12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */,
+				12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		12F217F12B85D41800BCE63B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -5361,6 +5393,7 @@
 				2CDEBF052A82F55400F976A3 /* CustomNavigation */,
 				2C45A53E2A76A78D0023B3A8 /* Filters */,
 				2C2A20B42A755158002A6D3C /* Cells */,
+				12D432302BDD1AF700BD1EC7 /* Loader */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -5406,8 +5439,11 @@
 			children = (
 				2C45A5412A7719ED0023B3A8 /* Cell */,
 				2C45A53A2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift */,
+				12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */,
 				2C45A53C2A76A7800023B3A8 /* PerspectiveChecklistModel.swift */,
 				12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */,
+				12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */,
+				12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -5433,6 +5469,7 @@
 			isa = PBXGroup;
 			children = (
 				2C45A5422A771A050023B3A8 /* PerspectiveChecklistCell.swift */,
+				12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -8026,6 +8063,7 @@
 		2CBFE4482A77CE6A00A50257 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */,
 				120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */,
 				120EEE582B88B08B00BE6D3F /* Gilroy-Regular.ttf */,
 				120EEE502B877B1700BE6D3F /* Gilroy-Bold.ttf */,
@@ -8521,6 +8559,7 @@
 				12F3DBE92BACAC7500078AD2 /* GTAVKMAP19p38p7vk.png in Resources */,
 				12F3DB732BACAC7400078AD2 /* GTAVKMAP2p11p7vk.png in Resources */,
 				12F3DA9D2BACAC7400078AD2 /* GTAVKMAP34p35p7vk.png in Resources */,
+				12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */,
 				12F3D4DE2BACAC6F00078AD2 /* GTAVKMAP10p23p7vk.png in Resources */,
 				12F3DBA42BACAC7500078AD2 /* GTAVKMAP2p21p7vk.png in Resources */,
 				12F3D9582BACAC7300078AD2 /* GTAVKMAP41p26p7vk.png in Resources */,
@@ -10731,6 +10770,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */,
 				120EEE4D2B87187900BE6D3F /* GilroyLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -10793,12 +10833,16 @@
 				2C2A20B72A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift in Sources */,
 				2C45A5432A771A050023B3A8 /* PerspectiveChecklistCell.swift in Sources */,
 				2C45A5372A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift in Sources */,
+				12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */,
 				2CDEBF072A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift in Sources */,
 				2C4F877A2A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift in Sources */,
 				120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */,
+				12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */,
 				2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */,
 				12F217F52B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift in Sources */,
 				2CA95FF82A84D4210039343E /* PerspectiveCheatsObject.swift in Sources */,
+				12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
+				12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
 				2C45A53D2A76A7800023B3A8 /* PerspectiveChecklistModel.swift in Sources */,
 				2C7F39F42A7BF09800F575F7 /* PerspectiveHeaderView.swift in Sources */,
 				2C2A20762A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift in Sources */,
@@ -10817,11 +10861,14 @@
 				2C45A53B2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift in Sources */,
 				2CBFE45B2A79080D00A50257 /* PerspectiveGameMapViewController.swift in Sources */,
 				120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */,
+				12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CA95FFC2A8512470039343E /* PerspectiveMainItemObject.swift in Sources */,
 				2C2A20812A729337002A6D3C /* PerspectiveNiblessViewController.swift in Sources */,
+				12D432322BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */,
 				2C2A20BB2A755AFA002A6D3C /* PerspectiveAutolayout.swift in Sources */,
 				2CBFE4592A77ECA200A50257 /* PerspectivePanPresentManager.swift in Sources */,
 				2CDEBF032A82586500F976A3 /* PerspectiveDropBoxManager.swift in Sources */,
+				12D4322E2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */,
 				1201B5722BA2B82C00B86035 /* PerspectiveTestNetwork.swift in Sources */,
 				12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */,
 				2C1CA42D2A8E70B200C89F79 /* PerspectiveServicesManager.swift in Sources */,
@@ -10837,6 +10884,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
+				12D4322F2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */,
+				12D432332BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */,
+				12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
+				12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CB88FD62A90CAC7006B9301 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

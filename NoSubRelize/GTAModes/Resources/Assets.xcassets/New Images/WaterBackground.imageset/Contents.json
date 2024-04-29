@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "WaterBackground.svg",
+      "filename" : "ActualBg.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "ActualBg@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ActualBg@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -65,11 +65,6 @@ class PerspectiveCheckListCustomSwitcher: UIControl {
     }
 
     private func perspectiveToggleSwitch(animated: Bool) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         updateSwitchThumbPosition(animated: animated)
     }
 }

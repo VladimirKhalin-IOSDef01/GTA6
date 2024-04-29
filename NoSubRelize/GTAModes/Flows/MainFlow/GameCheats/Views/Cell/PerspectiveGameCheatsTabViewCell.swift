@@ -10,6 +10,7 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
     private let favoriteImage = UIImageView()
     private let firstStackView = UIStackView()
     private let secondStackView = UIStackView()
+    private let threeStackView = UIStackView()
     private let contentModeView = UIView()
     private let modeTitleLabel = UILabel()
     private let spacerOne = UIView()
@@ -40,19 +41,22 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
         titleLabel.text = ""
         firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
     
     public func perspectiveConfigure_cell(_ value: PerspectiveCheat_Item) {
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 16)
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
         titleLabel.textColor = .white
+        titleLabel.numberOfLines = 3
         //titleLabel.dropShadow(color: .black, offSet: CGSize(width: 1, height: 1))
         
         titleLabel.text = value.name
-        favoriteImage.image =  UIImage(named: value.isFavorite ? "favoritesYes" : "favoritesNo")
+        favoriteImage.image =  UIImage(named: value.isFavorite ? "ActualHeartPink" : "ActualHeart")
         if value.code.count > 1 {
             contentModeView.isHidden = true
             firstStackView.isHidden = false
-            secondStackView.isHidden = true // поменять
+            secondStackView.isHidden = false // поменять
+            threeStackView.isHidden = false
             print("============= ->  " + value.platform + "  <- =============" )
             let imagesListName = perspectiveConfigureCodes(value)
             print("============= ->  " + "\(imagesListName)" + "  <- =============" )
@@ -61,8 +65,13 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
             contentModeView.isHidden = false
             firstStackView.isHidden = true
             secondStackView.isHidden = true // поменять
-            modeTitleLabel.text = value.code.first ?? ""
-            modeTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 16)
+            threeStackView.isHidden = true
+            modeTitleLabel.text = value.code.first?.uppercased() ?? ""
+            modeTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 14)
+            modeTitleLabel.lineBreakMode = .byCharWrapping
+            modeTitleLabel.numberOfLines = 2
+            
+            
             modeTitleLabel.textColor = .white
         }
     }
@@ -74,74 +83,71 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
             $0.top.equal(to: contentView.topAnchor, offsetBy: 6.0)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -6.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
+           // $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
+            $0.width.equal(to: 163)
         }
-        containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 44 : 20.0)
-        containerView.backgroundColor = UIColor(named: "CheckCell")?.withAlphaComponent(1.0)
+        containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 18 : 18.0)
+        containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.6)
         containerView.perspectiveDropShadowStandart()
         
         containerView.addSubview(favoriteImage)
         favoriteImage.perspectiveLayout {
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -33 : -15.0)
-            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 32 : 10.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 32 : 21.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -14.0)
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 16.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 29 : 28.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 28.0)
         }
-        favoriteImage.image = UIImage(named: "favoritesNo")
+        favoriteImage.image = UIImage(named: "ActualHeart")
         
         containerView.addSubview(firstStackView)
         containerView.addSubview(secondStackView)
+        containerView.addSubview(threeStackView)
+       
         containerView.addSubview(titleLabel)
         titleLabel.perspectiveDropShadowStandart(color: .black, offSet: CGSize(width: 1, height: 1))
         titleLabel.perspectiveLayout {
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 18.0)
-            $0.trailing.equal(to: favoriteImage.leadingAnchor, offsetBy: -8.0)
-            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 17.0)
-        //    $0.bottom.equal(to: firstStackView.topAnchor, offsetBy: -12.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 14.0)
+            $0.trailing.equal(to: favoriteImage.leadingAnchor, offsetBy: -5.0)
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 8.0)
+            $0.height.equal(to: 50)
         }
  
-        firstStackView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
-        firstStackView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10)
-        firstStackView.perspectiveDropShadowStandart()
+        firstStackView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
         firstStackView.perspectiveLayout {
-           // $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 17.0)
-            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70 : 40.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 15.0)
-            $0.trailing.lessThanOrEqual(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -28 : -15.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 45 : 30)
-        }
-       /*
-        firstStackView.gta_layout {
-            $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 15.0)
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 60.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
-            $0.trailing.lessThanOrEqual(to: containerView.trailingAnchor, offsetBy: -15.0)
-            $0.height.equal(to: 28)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy:  -15.0)
+          //  $0.height.equal(to: 28)
         }
-        */
         
-        
-        
-        secondStackView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
-        secondStackView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10)
-        secondStackView.perspectiveDropShadowStandart()
+        secondStackView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
         secondStackView.perspectiveLayout {
-            $0.top.equal(to: firstStackView.bottomAnchor, offsetBy: 8.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 15.0)
-            $0.trailing.lessThanOrEqual(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -28 : -15.0)
-           // $0.height.equal(to: 28)
-            $0.height.equal(to: 0)
-            $0.bottom.equal(to: containerView.bottomAnchor, offsetBy: -8.0)
+            $0.top.equal(to: firstStackView.bottomAnchor, offsetBy: 2.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
+         //   $0.height.equal(to: 28)
         }
+        
+        threeStackView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
+        threeStackView.perspectiveLayout {
+            $0.top.equal(to: secondStackView.bottomAnchor, offsetBy: 2.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
+          //  $0.height.equal(to: 28)
+        }
+        
+        
         perspectiveConfigureStackView(firstStackView)
         perspectiveConfigureStackView(secondStackView)
+        perspectiveConfigureStackView(threeStackView)
         
         containerView.addSubview(contentModeView)
         contentModeView.perspectiveLayout {
             $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 8.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 15.0)
-            $0.trailing.lessThanOrEqual(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -33 : -15)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 28)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
+            //$0.trailing.lessThanOrEqual(to: containerView.trailingAnchor, offsetBy: -15)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15)
+          //  $0.height.equal(to: 28)
             //$0.bottom.equal(to: containerView.bottomAnchor, offsetBy: -8.0)
         }
         
@@ -153,21 +159,17 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
             $0.trailing.equal(to: contentModeView.trailingAnchor, offsetBy: -8.0)
             $0.centerY.equal(to: contentModeView.centerYAnchor)
         }
-        contentModeView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10.0)
-       // contentModeView.withBorder(width: 1.0, color: UIColor(named: "blueLight")!)
-        contentModeView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
+        contentModeView.withCornerRadius(8.0)
+        contentModeView.withBorder(width: 1.0, color: UIColor(named: "ActualPink")!)
+        contentModeView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
         contentModeView.perspectiveDropShadowStandart()
         containerView.layoutIfNeeded()
         
     }
     
     private func perspectiveAddImages(_ imagesName: [String]) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        firstStackView.addArrangedSubview(spacerOne)
+      
+       // firstStackView.addArrangedSubview(spacerOne)
         var spacerBool = false
         var imageIndex: Int = 0
         for image in imagesName {
@@ -176,45 +178,41 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
           //  imageView.contentMode = .scaleToFill
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.perspectiveLayout {
-                $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 19.0)
-                $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 19.0)
-               
+                $0.height.equal(to: 22.0)
+                $0.width.equal(to: 22.0)
             }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
-            let halfIndex = UIDevice.current.userInterfaceIdiom == .pad ? 28 : 28
-            if imageIndex <= Int(screenWidth) / halfIndex {
+   
+            if imageIndex <= 4 {
                 firstStackView.addArrangedSubview(imageView)
                 imageView.perspectiveLayout{
-                    $0.top.equal(to: firstStackView.topAnchor, offsetBy: 5)
-                    $0.bottom.equal(to: firstStackView.bottomAnchor, offsetBy: -5)
+                    $0.top.equal(to: firstStackView.topAnchor, offsetBy: 1)
+                    $0.bottom.equal(to: firstStackView.bottomAnchor, offsetBy: -1)
                 }
-            } else {
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
-                if !spacerBool {
-                    secondStackView.addArrangedSubview(spacerThree)
-                    spacerBool.toggle()
-                }
+            } else if imageIndex > 4 && imageIndex < 10 {
                 secondStackView.addArrangedSubview(imageView)
                 if image == imagesName.last {
-                    secondStackView.addArrangedSubview(spacerFore)
                     imageView.perspectiveLayout{
-                    $0.top.equal(to: secondStackView.topAnchor, offsetBy: 5)
-                    $0.bottom.equal(to: secondStackView.bottomAnchor, offsetBy: -5)
+                        $0.top.equal(to: secondStackView.topAnchor, offsetBy: 1)
+                        $0.bottom.equal(to: secondStackView.bottomAnchor, offsetBy: -1)
+                    }
                 }
+            } else if imageIndex > 9 && imageIndex < 15 {
+                threeStackView.addArrangedSubview(imageView)
+                if image == imagesName.last {
+                    imageView.perspectiveLayout{
+                        $0.top.equal(to: threeStackView.topAnchor, offsetBy: 1)
+                        $0.bottom.equal(to: threeStackView.bottomAnchor, offsetBy: -1)
+                    }
                 }
             }
+            
+            
             imageIndex += 1
     
         }
-        firstStackView.addArrangedSubview(spacerTwo)
+        firstStackView.addArrangedSubview(spacerOne)
+        secondStackView.addArrangedSubview(spacerTwo)
+        threeStackView.addArrangedSubview(spacerThree)
     }
     
     func perspectiveConfigureCodes(_ value: PerspectiveCheat_Item) -> [String] {
@@ -388,8 +386,7 @@ final class PerspectiveGameCheatsTabViewCell: UITableViewCell, PerspectiveReusab
                     print("the world has turned upside down")
                 }
          //
-        stackView.spacing = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 3
-        stackView.distribution = .fill
+        stackView.spacing = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 5
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")

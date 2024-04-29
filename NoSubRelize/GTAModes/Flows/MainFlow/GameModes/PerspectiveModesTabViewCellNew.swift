@@ -16,9 +16,10 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
     
     private var kingfisherManager: KingfisherManager
     private var downloadTask: DownloadTask?
-    
+    private var bottomBlackView = UIView()
     private let containerView = UIView()
     private let titleLabel = UILabel()
+    private let logoImage = UIImageView()
    // private let downloadTitleLabel = UILabel()
   //  private let shareTitleLabel = UILabel()
     
@@ -72,13 +73,13 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
     }
     
     public func perspectiveConfigure_cell(_ value: PerspectiveModItem, isLoaded: Bool) {
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 16)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: 16)
         titleLabel.textColor = .white
-        titleLabel.text = value.title
+        titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
         descriprionLabel.textColor = .white
         descriprionLabel.text = value.description
-        
+        logoImage.image = UIImage(named: "ActualModsLogo")
 //        downloadButtonView.backgroundColor = isLoaded ? UIColor(named: "greenColor")?.withAlphaComponent(0.4) : UIColor(named: "blueColor")?.withAlphaComponent(0.4)
 //        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 18)
 //        downloadTitleLabel.textColor = .white
@@ -141,30 +142,51 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 44 : 20.0)
         containerView.perspectiveDropShadowStandart()
-        containerView.backgroundColor = UIColor(named: "CheckCell")?.withAlphaComponent(0.9)
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//            containerView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-//        }
+        containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
+
+        containerView.addSubview(modeImage)
+        modeImage.withCornerRadius(20.0)
+        modeImage.perspectiveLayout {
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 0.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 0.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: 0.0)
+            $0.bottom.equal(to: containerView.bottomAnchor, offsetBy: 0.0)
+        }
+        
+        containerView.addSubview(bottomBlackView)
+        bottomBlackView.layer.cornerRadius = 20 // Задаём радиус скругления
+        bottomBlackView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Скругляем только нижние левый и правый углы
+        bottomBlackView.clipsToBounds = true
+        bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
+        bottomBlackView.perspectiveLayout {
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 160)
+            $0.leading.equal(to: containerView.leadingAnchor)
+            $0.trailing.equal(to: containerView.trailingAnchor)
+            $0.bottom.equal(to: containerView.bottomAnchor)
+           // $0.height.equal(to: 61)
+        }
+        
+        containerView.addSubview(logoImage)
+        logoImage.clipsToBounds = true
+        logoImage.contentMode = .scaleAspectFill
+        logoImage.perspectiveLayout {
+            $0.leading.equal(to: bottomBlackView.leadingAnchor, offsetBy: 16)
+            $0.centerY.equal(to: bottomBlackView.centerYAnchor)
+            $0.width.equal(to: 18)
+            $0.height.equal(to: 18)
+        }
         
         containerView.addSubview(titleLabel)
         titleLabel.perspectiveLayout {
-            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 15.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 16)
+           // $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
+            $0.leading.equal(to: logoImage.trailingAnchor, offsetBy: 15.0)
+            $0.trailing.equal(to: bottomBlackView.trailingAnchor, offsetBy: -15.0)
+            $0.centerY.equal(to: bottomBlackView.centerYAnchor)
+            $0.height.equal(to: 50)
 
         }
-        titleLabel.numberOfLines = 0
+        titleLabel.numberOfLines = 2
         
-        containerView.addSubview(modeImage)
-        modeImage.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10.0)
-        modeImage.perspectiveLayout {
-            $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 18 : 10.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 8.0)
-           // $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -8.0)
-            $0.height.equal(to:  UIDevice.current.userInterfaceIdiom == .pad ? 106 : 60.0) // 133
-            $0.width.equal(to:  UIDevice.current.userInterfaceIdiom == .pad ? 260 : 148)  //327
-        }
         
         
         containerView.addSubview(descriprionLabel)

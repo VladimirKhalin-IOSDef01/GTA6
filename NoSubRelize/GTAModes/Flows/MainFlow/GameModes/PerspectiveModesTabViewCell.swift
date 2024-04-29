@@ -69,37 +69,47 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
     public func gameMode_downloadColor(downloading: Bool) {
         switch downloading {
         case true:
-            downloadButtonView.backgroundColor = UIColor(named: "yellowColor")?.withAlphaComponent(1.0)
+            downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
             downloadTitleLabel.text = "Downloading..."
-            updateDownloadTitleLabel()
+            updateDownloadTitleLabel(check: false)
         case false:
             downloadButtonView.backgroundColor = UIColor(named: "redColor")?.withAlphaComponent(1.0)
             downloadTitleLabel.text = UIDevice.current.userInterfaceIdiom == .pad ? "   Failed, retry" : "    Failed, retry"
-            updateDownloadTitleLabel()
+            updateDownloadTitleLabel(check: false)
         }
     }
    
-    func updateDownloadTitleLabel() {
+    func updateDownloadTitleLabel(check: Bool) {
         if let imageView = downloadButtonView.viewWithTag(2) as? UIImageView {
-                imageView.removeFromSuperview()
+              
+            if check {
+                imageView.image = UIImage(systemName: "checkmark.circle.fill")
+                imageView.tintColor = .white
+                imageView.clipsToBounds = true
+                imageView.alpha = 1.0
+            } else {
+              //  imageView.removeFromSuperview()
+                imageView.alpha = 0.0
+            }
         }
     }
     
     public func perspectiveConfigure_cell(_ value: PerspectiveModItem, isLoaded: Bool) {
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 16)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: 20)
         titleLabel.textColor = .white
-        titleLabel.text = value.title
-        descriprionLabel.font = UIFont(name: "Gilroy-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
+        titleLabel.text = value.title.uppercased()
+        descriprionLabel.font = UIFont(name: "Gilroy-Bold", size: 14)
         descriprionLabel.textColor = .white
         descriprionLabel.text = value.description
         
-        downloadButtonView.backgroundColor = isLoaded ? UIColor(named: "greenColor")?.withAlphaComponent(1.0) : UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
-        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 20)
+        downloadButtonView.backgroundColor = isLoaded ? UIColor(named: "ActualBlack")?.withAlphaComponent(1.0) : UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
+        
+        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 16)
         downloadTitleLabel.textColor = .white
         downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download"
        
         if downloadTitleLabel.text == "   Downloaded" || downloadTitleLabel.text == "  Downloaded" {
-             updateDownloadTitleLabel()
+            updateDownloadTitleLabel(check: true)
             
         }
         
@@ -158,8 +168,9 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 0 : 20.0)
-        containerView.backgroundColor = .clear
+        containerView.backgroundColor = UIColor(named: "ActualBlack")!.withAlphaComponent(0.7)
         
+        /*
         containerView.addSubview(bgContainerView)
         bgContainerView.perspectiveLayout {
             $0.top.equal(to: containerView.topAnchor)
@@ -169,24 +180,26 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         }
         bgContainerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 44 : 20.0)
         bgContainerView.backgroundColor = UIColor(named: "CheckCell")?.withAlphaComponent(1.0)
-    
+    */
+        
         containerView.addSubview(titleLabel)
         titleLabel.perspectiveDropShadowStandart(color: .black, offSet: CGSize(width: 1, height: 1))
         titleLabel.perspectiveLayout {
-            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 15.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -28 : -15.0)
+            $0.top.equal(to: containerView.topAnchor, offsetBy: 20.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
            
         }
-        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 2
         
         containerView.addSubview(modeImage)
         modeImage.withCornerRadius(20)
         modeImage.perspectiveLayout {
-            $0.top.equal(to: titleLabel.bottomAnchor, offsetBy:UIDevice.current.userInterfaceIdiom == .pad ? 18 :  10.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -20 : -8.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 360.0 : 218.0)
+            $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 15.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
+            $0.height.equal(to: 218.0)
         }
         
         
@@ -200,19 +213,23 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         
         containerView.addSubview(stackView)
         stackView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 120 : 60)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 0.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: 0.0)
-            $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 160 : 30.0)
-            $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  0.0)
+            $0.height.equal(to: 82)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15)
+            $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 30.0)
+            $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -15)
         }
         
         perspectiveConfigureStackView(stackView)
-        shareButtonView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
-        downloadButtonView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
-        shareButtonView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10.0)
+        shareButtonView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
+        shareButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
+        shareButtonView.layer.borderWidth = 1
+        downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
+        downloadButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
+        downloadButtonView.layer.borderWidth = 1
+        shareButtonView.withCornerRadius(22.0)
         shareButtonView.perspectiveDropShadowStandart()
-        downloadButtonView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 20 : 10.0)
+        downloadButtonView.withCornerRadius(22.0)
         downloadButtonView.perspectiveDropShadowStandart()
         
         let shareView = perspectiveConfigureButton_View(title: "Share", imageName: "share-2", isShare: true)
@@ -263,28 +280,31 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         imageView.tag = isShare ? 1 : 2
         buttonView.addSubview(titleLabel)
         buttonView.addSubview(imageView)
+        
         titleLabel.perspectiveDropShadowStandart(color: .black, offSet: CGSize(width: 1.0, height: 1.0))
         titleLabel.perspectiveLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -10)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -30)
             } else {
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 10)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -15)
+              //  $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 10)
             }
         }
         
         imageView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18.0)
+            $0.height.equal(to: 22.0)
+            $0.width.equal(to: 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 10)
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 30)
             }else{
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -10)
+               // $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -38)
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 15)
             }
         }
         
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 20)
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 16)
         titleLabel.textColor = .white
         titleLabel.text = title
         

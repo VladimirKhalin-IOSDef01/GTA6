@@ -17,6 +17,9 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     private let tableView = UITableView(frame: .zero)
     private let customNavigation: PerspectiveCustomNavigation_View
     
+    
+   
+    
     var activityVC: UIActivityViewController?
     var alert: UIAlertController?
     var customAlertVC = PerspectiveCustomAlertViewController()
@@ -51,12 +54,13 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     
     
     override func viewDidLoad() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        // super
+       
+        // Конфигурация лоадера
+              //  configureLoader()
+       
+        
+        
+        
         super.viewDidLoad()
         //
                        if 94 + 32 == 57 {
@@ -71,6 +75,7 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
         // some comment
         perspectiveSetupBindings()
     }
+    
     
     func perspectiveShowLoadSpiner() {
         
@@ -127,6 +132,8 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
        // tableView.delegate = self
         tableView.dataSource = self
        // tableView.separatorStyle = .none
+        
+        
     }
     
     private func perspectiveSetupBindings() {
@@ -181,11 +188,6 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     // MARK: Indicator
    
     private func perspectiveShowSpiner() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление
         present(customAlertVC, animated: true, completion: nil)
@@ -193,11 +195,6 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     
     private func perspectiveHideAlert() {
         alert?.dismiss(animated: false)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         customAlertVC.dismiss(animated: false)
     }
     
@@ -208,11 +205,7 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
                 }
          //
         if model.perspectiveCheckIsLoadData(mode.modPath) {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+           
             if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(mode.modPath) {
                 do {
                     activityVC = nil

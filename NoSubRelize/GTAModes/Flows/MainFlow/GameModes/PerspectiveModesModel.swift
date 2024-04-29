@@ -141,11 +141,6 @@ final class PerspectiveGameModesModel {
         let mode = modeItems[index]
 //
         if !perspectiveCheckIsLoadData(mode.modPath) {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
             showSpinnerSubject.send(true)
           //  showSpinnerSubject.send(false)
             
@@ -160,44 +155,26 @@ final class PerspectiveGameModesModel {
                     self?.reloadDataSubject.send()
                     self?.showAlertSaverSubject.send("Some problem with file")
                 }
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+              
             }
         } else {
 //            showSpinnerSubject.send(false)
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+           
             showDocumentSaverSubject.send(mode.modPath)
             
             reloadDataSubject.send()
             print("FILE IS LOCALY")
         }
-        
     }
     
     func perspectiveCheckIsLoadData(_ modeName: String) -> Bool {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent(modeName)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      
         return FileManager.default.fileExists(atPath: fileURL.path)
     }
     
     func perspectiveCheckIsDownloading(_ namName: String) -> Bool {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         return true
     }
 

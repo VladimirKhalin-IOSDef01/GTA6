@@ -14,6 +14,10 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
     
     var alert: UIAlertController?
     
+    var loaderView: CircularLoaderView!
+    
+    
+    
     init(model: PerspectiveGSModel) {
         self.model = model
         self.customNavigation = PerspectiveCustomNavigation_View(.gameSelect)
@@ -25,23 +29,25 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
     }
     
     override func viewDidLoad() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      
         super.viewDidLoad()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+       
+        setupLoaderView()
+  
         if model.menuItems.isEmpty {
             perspectiveShowSpiner()
         }
         perspectiveSetupView()
         perspectiveGSSetupBindings()
     }
+    
+    func setupLoaderView() {
+           let loaderSize: CGFloat = 160
+           loaderView = CircularLoaderView(frame: CGRect(x: (view.bounds.width - loaderSize) / 2, y: (view.bounds.height - loaderSize) / 2, width: loaderSize, height: loaderSize))
+           view.addSubview(loaderView)
+        
+           loaderView.updateDotPosition(progress: 1)
+       }
     
     private func perspectiveGSSetupBindings() {
         model.reloadData
@@ -126,6 +132,9 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
         
         tableViewTwo.delegate = self
         tableViewTwo.dataSource = self
+       
+        tableViewOne.clipsToBounds = false
+        tableViewTwo.clipsToBounds = false
 
     }
     
@@ -177,8 +186,9 @@ extension PerspectiveGSViewController: UITableViewDataSource, UITableViewDelegat
                 }
          //
         let cell: PerspectiveMainViewCell = tableView.dequeueReusableCell(indexPath)
-        cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 24.0, isLock: false)
+        cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
+        cell.perspectiveDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
         return cell
     }
     

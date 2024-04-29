@@ -19,6 +19,7 @@
 		<string>Gilroy-Bold.ttf</string>
 		<string>Gilroy-Semibold.ttf</string>
 		<string>Gilroy-Extrabold.ttf</string>
+		<string>Gilroy-Heavy.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -10,7 +10,7 @@ import UIKit
 
 public enum Nav_Type {
     
-    case gameSelect, gameModes, checkList, map, infoModes
+    case main, gameSelect, gameModes, checkList, map, infoModes
     
 }
 
@@ -43,14 +43,18 @@ extension PerspectiveCustomNavigation_View {
         
         addSubviews(leftButton, rightButton, titleLabel)
         switch type {
+        case .main:
+            gta_addClearButton()
+            gtavk_addTitle("Menu")
+            
         case .gameSelect:
-            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Cheats")
             //  gtavk_addTitle("")
             
         case .gameModes:
-            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gtavk_addFilterButton()
             // gtavk_addTitle(titleString ?? "Cheats")
             switch titleString {
@@ -63,19 +67,20 @@ extension PerspectiveCustomNavigation_View {
             }
             
         case .checkList:
-            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gtavk_addFilterButton()
             gtavk_addTitle("Checklist")
             
         case .map:
-            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Map")
             
         case .infoModes:
-            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Mods Version 5")
+        
         }
     }
     private func gta_addClearButton() {
@@ -84,7 +89,7 @@ extension PerspectiveCustomNavigation_View {
             $0.top.equal(to: self.topAnchor)
             $0.bottom.equal(to: self.bottomAnchor)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 39.0)
         }
         
         rightButton.setImage(UIImage(named: ""), for: .normal)
@@ -94,33 +99,34 @@ extension PerspectiveCustomNavigation_View {
     private func gtavk_addFilterButton() {
         rightButton.perspectiveLayout {
             $0.trailing.equal(to: self.trailingAnchor)
-            $0.top.equal(to: self.topAnchor)
+            $0.top.equal(to: self.topAnchor, offsetBy: -5)
             $0.bottom.equal(to: self.bottomAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 34.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 38.0)
         }
         
-        rightButton.setImage(UIImage(named: "filter"), for: .normal)
+        rightButton.setImage(UIImage(named: "ActualFilter"), for: .normal)
         if UIDevice.current.userInterfaceIdiom == .pad {
-            setupIpadButton(_image: "filter", buttonName: "rightButton")
+            setupIpadButton(_image: "ActualFilter", buttonName: "rightButton")
         }
         rightButton.addTarget(self, action: #selector(gtavk_filterButton_Action), for: .touchUpInside)
     }
     
     private func gtavk_addLeftButton(_ image: UIImage) {
         
-        
+        leftButton.contentMode = .scaleAspectFit
+        leftButton.clipsToBounds = true
         
         leftButton.perspectiveLayout {
-            $0.leading.equal(to: self.leadingAnchor)
-            $0.top.equal(to: self.topAnchor)
-            $0.bottom.equal(to: self.bottomAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
+            $0.leading.equal(to: self.leadingAnchor, offsetBy: 5)
+            $0.top.equal(to: self.topAnchor, offsetBy: 5)
+            $0.bottom.equal(to: self.bottomAnchor, offsetBy: -5)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 12.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 29)
         }
         leftButton.setImage(image, for: .normal)
         if UIDevice.current.userInterfaceIdiom == .pad {
-            setupIpadButton(_image: "BackArr", buttonName: "leftButton")
+            setupIpadButton(_image: "ActualNBleft", buttonName: "leftButton")
         }
         leftButton.addTarget(self, action: #selector(gtavk_leftBarButton_Tapped), for: .touchUpInside)
     }
@@ -132,8 +138,8 @@ extension PerspectiveCustomNavigation_View {
             $0.trailing.equal(to: rightButton.leadingAnchor, offsetBy: -15)
             $0.centerY.equal(to: leftButton.centerYAnchor)
         }
-        titleLabel.text = title
-        titleLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 25)
+        titleLabel.text = title.uppercased()
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 55 : 30)
         titleLabel.textColor = .white
     }
     
