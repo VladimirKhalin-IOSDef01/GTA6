@@ -14,7 +14,7 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
     
     var alert: UIAlertController?
     
-    var loaderView: CircularLoaderView!
+ //   var loaderView: CircularLoaderView!
     
     
     
@@ -32,7 +32,7 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
       
         super.viewDidLoad()
        
-        setupLoaderView()
+    //    setupLoaderView()
   
         if model.menuItems.isEmpty {
             perspectiveShowSpiner()
@@ -41,13 +41,13 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
         perspectiveGSSetupBindings()
     }
     
-    func setupLoaderView() {
-           let loaderSize: CGFloat = 160
-           loaderView = CircularLoaderView(frame: CGRect(x: (view.bounds.width - loaderSize) / 2, y: (view.bounds.height - loaderSize) / 2, width: loaderSize, height: loaderSize))
-           view.addSubview(loaderView)
-        
-           loaderView.updateDotPosition(progress: 1)
-       }
+//    func setupLoaderView() {
+//           let loaderSize: CGFloat = 160
+//           loaderView = CircularLoaderView(frame: CGRect(x: (view.bounds.width - loaderSize) / 2, y: (view.bounds.height - loaderSize) / 2, width: loaderSize, height: loaderSize))
+//           view.addSubview(loaderView)
+//        
+//           loaderView.updateDotPosition(progress: 1)
+//       }
     
     private func perspectiveGSSetupBindings() {
         model.reloadData

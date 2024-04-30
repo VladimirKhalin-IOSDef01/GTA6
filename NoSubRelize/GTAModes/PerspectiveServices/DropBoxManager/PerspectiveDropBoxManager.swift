@@ -3,6 +3,7 @@
 import Foundation
 import SwiftyDropbox
 import RealmSwift
+import UIKit
 
 protocol PerspectiveDBManagerDelegate: AnyObject {
     
@@ -25,15 +26,21 @@ final class PerspectiveDBManager: NSObject {
     
     static let shared = PerspectiveDBManager()
     var client: DropboxClient?
+ 
     weak var delegate: PerspectiveDBManagerDelegate?
+    weak var delegate2: LoaderViewDelegate?
+   
     
-    
+    var loaderView: CircularLoaderView!
     // MARK: - For CoreData
     
     //    var persistentContainer = CoreDataManager.shared.persistentContainer
     
     // MARK: - Public
-    
+//    func triggerLoaderSetup() {
+//        delegate?.setupLoaderInView(loaderView)
+//        }
+                
     func perspectiveSetupDropBox() {
         
         if defaults.value(forKey: "gta_isReadyGTA5Mods") == nil {
@@ -120,45 +127,146 @@ final class PerspectiveDBManager: NSObject {
             })
         }
     
-    
+/*
     func perspectiveDownloadMode(mode: PerspectiveModItem, completion: @escaping (String?) -> ()) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+     
         perspectiveDownloadFileBy(urlPath: mode.modPath) { [weak self] modeData in
             if let modeData = modeData {
                 self?.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData, completion: completion)
             } else {
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
+                completion(nil)
+            }
+        }
+    }
+  */
+    func perspectiveDownloadMode(mode: PerspectiveModItem, completion: @escaping (String?) -> ()) {
+        let (alert, progressView) = showDownloadProgressAlert(on: ActualLoaderController())
+        
+        perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { [weak self, weak alert] modeData in
+            DispatchQueue.main.async {
+                alert?.dismiss(animated: true, completion: nil)
+                if let modeData = modeData {
+                    self?.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData) { localPath in
+                        completion(localPath) // Убедитесь, что localPath правильно определен, как String?
+                    }
+                } else {
+                    completion(nil as String?) // Здесь nil передается в context String?
+                }
+            }
+        }, progress: { progressData in
+            DispatchQueue.main.async {
+                progressView.progress = Float(progressData.fractionCompleted)
+            }
+        })
+    }
+    // эта версия до обработки и передачи данных в лоадер. Работает.
+    /*
+    func perspectiveDownloadFileBy(urlPath: String, completion: @escaping (Data?) -> Void, progress: @escaping (Progress) -> Void) {
+        perspectiveValidateAccessToken(token: GTAVK_DBKeys.refresh_token) { [weak self] validator in
+            guard let self = self else { return }
+            
+            if validator {
+                let downloadTask = self.client?.files.download(path: "/mods/" + urlPath)
+                downloadTask?.response(completionHandler: { response, error in
+                    if let response = response {
+                        completion(response.1)
+                    } else {
+                        completion(nil )
+                    }
+                })
+                downloadTask?.progress { progressData in
+                    progress(progressData)
+                    print("Progres: \(progressData)")
+                }
+            } else {
+                completion(nil)
+                print("ERROR: Access Token Validation Failed")
+            }
+        }
+    }
+    */
+    func perspectiveDownloadFileBy(urlPath: String, completion: @escaping (Data?) -> Void, progress: @escaping (Progress) -> Void) {
+        perspectiveValidateAccessToken(token: GTAVK_DBKeys.refresh_token) { [weak self] validator in
+            guard let self = self else { return }
+            
+            if validator {
+                let downloadTask = self.client?.files.download(path: "/mods/" + urlPath)
+                downloadTask?.response(completionHandler: { response, error in
+                    if let response = response {
+                        self.loaderView.updateDotPosition(progress: 0)
+                        completion(response.1)
+                    } else {
+                        completion(nil)
+                    }
+                })
+                downloadTask?.progress { progressData in
+                    progress(progressData)
+                    DispatchQueue.main.async {
+                       
+                        if let fraction = progressData.fractionCompleted as? Double {
+                            
+                            if let loaderView = self.loaderView {
+                                loaderView.updateDotPosition(progress: CGFloat(fraction))
+                                self.delegate2?.setupLoaderInView(loaderView)
+                                
+                                
+                                print("Progress: \(CGFloat(fraction))")
+                            } else {
+                                print("Progress: Loader view is not initialized.")
+                            }
+                        } else {
+                            print("Progres Невозможно получить fractionCompleted")
                         }
-                 //
+                    }
+                }
+            } else {
                 completion(nil)
             }
         }
     }
     
+    func setupLoaderInView(_ view: UIView) {
+        loaderView = CircularLoaderView(frame: CGRect(x: view.frame.width / 2, y: view.frame.height / 2, width: 160, height: 160))
+      //  view.addSubview(loaderView)
+    }
+    
+    
+    func showDownloadProgressAlert(on viewController: UIViewController) -> (UIAlertController, UIProgressView) {
+        let alert = UIAlertController(title: "Download", message: "Downloading file...", preferredStyle: .alert)
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.setProgress(0.0, animated: true)
+        progressView.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
+        alert.view.addSubview(progressView)
+        
+        viewController.present(alert, animated: true, completion: nil)
+        return (alert, progressView)
+    }
+   
+    func perspectiveSaveDataLocal(modeName: String, data: Data, completion: @escaping (String?) -> ()) {
+      
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent(modeName)
+        do {
+            try data.write(to: fileURL, options: .atomic)
+            completion(fileURL.lastPathComponent)
+        } catch {
+            completion(nil as String?)
+        }
+    }
+    
+    
+    
+    /*
     func perspectiveDownloadFileBy(urlPath: String, completion: @escaping (Data?) -> Void) {
         perspectiveValidateAccessToken(token: GTAVK_DBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+           
             if validator {
                 self.client?.files.download(path:  "/mods/" + urlPath).response(completionHandler: { responce, error in
                     if let responce = responce {
                         completion(responce.1)
                     } else {
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                      
                         completion(nil)
                     }
                 })
@@ -166,30 +274,10 @@ final class PerspectiveDBManager: NSObject {
                 completion(nil)
                 print("ERROR")
             }
-            
         }
     }
+    */
     
-    func perspectiveSaveDataLocal(modeName: String, data: Data, completion: @escaping (String?) -> ()) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = documentsDirectory.appendingPathComponent(modeName)
-        do {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
-            try data.write(to: fileURL, options: .atomic)
-            completion(fileURL.lastPathComponent)
-        } catch {
-            completion(nil)
-        }
-    }
     
 }
 
@@ -669,20 +757,12 @@ extension PerspectiveDBManager {
     func perspectiveFetchGTA6Codes(completion: @escaping () -> (Void)) {
         perspectiveValidateAccessToken(token: GTAVK_DBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+           
             if validator {
                 self.client?.files.download(path: GTAVK_DBKeys.gtavk_Path.gta6_modes.rawValue)
                     .response(completionHandler: { responce, error in
                         if let data = responce?.1 {
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                        
                             do {
                                 let decoder = JSONDecoder()
                                 let decodedData = try decoder.decode(PerspectiveCheatCodes_GTA6Parser.self, from: data)
@@ -693,11 +773,7 @@ extension PerspectiveDBManager {
                                 print("Error decoding JSON: \(error)")
                             }
                         } else {
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                           
                             completion()
                             print(error?.description)
                         }

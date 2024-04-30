@@ -12,7 +12,11 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
     
     var activityVC: UIActivityViewController?
     var alert: UIAlertController?
-    var customAlertVC = PerspectiveCustomAlertViewController()
+    var customAlertVC = ActualBlurBack()
+   
+   
+    
+    
     
     init(model: PerspectiveGameModesModel, modelScreen: PerspectiveMainModel) {
         self.model = model
@@ -45,18 +49,12 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
     
     
     override func viewDidLoad() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        // super
+   
         super.viewDidLoad()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+     
+        
+        
+      
         
         if model.modeItems.isEmpty {
             perspectiveShowLoadSpiner()
@@ -66,6 +64,8 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
         // some comment
         gtavk_setupBindings()
     }
+    
+   
     
     func perspectiveShowLoadSpiner() {
         
@@ -184,38 +184,20 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
     
     // MARK: Indicator
     private func perspectiveShowSpiner() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-            customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
-            customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление
-            present(customAlertVC, animated: true, completion: nil)
+           customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
+           customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление
+           present(customAlertVC, animated: true, completion: nil)
     }
 
     private func perspectiveHideAlert() {
         alert?.dismiss(animated: false)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         customAlertVC.dismiss(animated: false)
     }
     
     func perspectiveShareFile(at mode: PerspectiveModItem) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        
         if model.perspectiveCheckIsLoadData(mode.modPath) {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+          
             if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(mode.modPath) {
                 //
                                if 94 + 32 == 57 {
@@ -307,6 +289,7 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
         }
     }
     
+   
 //    func gta_showAlertAge() {
 //        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 //        alertController.addAction(

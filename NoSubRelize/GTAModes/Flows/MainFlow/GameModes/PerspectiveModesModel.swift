@@ -157,6 +157,7 @@ final class PerspectiveGameModesModel {
                 }
               
             }
+            
         } else {
 //            showSpinnerSubject.send(false)
            
@@ -165,6 +166,7 @@ final class PerspectiveGameModesModel {
             reloadDataSubject.send()
             print("FILE IS LOCALY")
         }
+        
     }
     
     func perspectiveCheckIsLoadData(_ modeName: String) -> Bool {
