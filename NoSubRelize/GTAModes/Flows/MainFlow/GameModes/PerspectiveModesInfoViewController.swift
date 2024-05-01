@@ -18,11 +18,13 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     private let customNavigation: PerspectiveCustomNavigation_View
     
     
-   
+    // лоадер
+  //  var loaderView: CircularLoaderView!
     
     var activityVC: UIActivityViewController?
     var alert: UIAlertController?
-    var customAlertVC = PerspectiveCustomAlertViewController()
+   // var customLoader = ActualLoaderController()          // Лоадер
+   // var customAlert = ActualAllertController()           // Аллерт
     
     init(model: PerspectiveGameModesModel) {
         self.model = model
@@ -54,19 +56,12 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     
     
     override func viewDidLoad() {
-       
-        // Конфигурация лоадера
-              //  configureLoader()
-       
-        
-        
-        
+    
         super.viewDidLoad()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        
+       // setupLoaderView()
+    //    PerspectiveDBManager.shared.setupLoaderInView(self.view)
+        
         if model.modeItems.isEmpty {
             perspectiveShowLoadSpiner()
         }
@@ -75,7 +70,16 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
         // some comment
         perspectiveSetupBindings()
     }
-    
+   
+//    func setupLoaderView() {
+//           let loaderSize: CGFloat = 160
+//           loaderView = CircularLoaderView(frame: CGRect(
+//            x: (view.bounds.width - loaderSize) / 2,
+//            y: (view.bounds.height - loaderSize) / 2 + 300, width: loaderSize, height: loaderSize))
+//           view.addSubview(loaderView)
+//        
+//           loaderView.updateDotPosition(progress: 0)
+//       }
     
     func perspectiveShowLoadSpiner() {
         
@@ -188,14 +192,22 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
     // MARK: Indicator
    
     private func perspectiveShowSpiner() {
-        customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
-        customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление
-        present(customAlertVC, animated: true, completion: nil)
+        //customBackgroundBlur.actualBackgroundAlertView()
+      //  AlertManager.shared.showAlert()
+        
+    //   customAlert.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
+    //   customAlert.modalTransitionStyle = .crossDissolve // Плавное появление
+   //    present(customAlert, animated: true, completion: nil)
+       
+     //   customLoader.modalPresentationStyle = .overCurrentContext
+      //  customLoader.modalTransitionStyle = .crossDissolve
+      //  present(customLoader, animated: true, completion: nil)
     }
     
     private func perspectiveHideAlert() {
         alert?.dismiss(animated: false)
-        customAlertVC.dismiss(animated: false)
+      //  customAlert.dismiss(animated: false)
+      //  customLoader?.dismiss(animated: false)
     }
     
     func perspectiveShareFile(at mode: PerspectiveModItem) {

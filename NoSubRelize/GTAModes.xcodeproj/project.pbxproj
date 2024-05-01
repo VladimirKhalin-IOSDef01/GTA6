@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1201B5722BA2B82C00B86035 /* PerspectiveTestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */; };
-		12097A722BA4B09700DACBED /* PerspectiveCustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A712BA4B09700DACBED /* PerspectiveCustomAlertViewController.swift */; };
+		12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A712BA4B09700DACBED /* ActualAllertController.swift */; };
 		12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */; };
 		120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */; };
 		120EEE4C2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
@@ -2599,6 +2599,9 @@
 		2CDEBF032A82586500F976A3 /* PerspectiveDropBoxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF62A82586500F976A3 /* PerspectiveDropBoxManager.swift */; };
 		2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF72A82586500F976A3 /* PerspectiveDBConstants.swift */; };
 		2CDEBF072A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBF062A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift */; };
+		54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */; };
+		54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */; };
+		54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */; };
 		B6086E5DA68400D2ABF2BB7A /* Pods_GTAModes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2E2352E0EAAE4846BA5952 /* Pods_GTAModes.framework */; };
 /* End PBXBuildFile section */
 
@@ -2629,7 +2632,7 @@
 /* Begin PBXFileReference section */
 		0C14A4FEA062255A39CFF41A /* Pods-GTAModes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAModes.release.xcconfig"; path = "Target Support Files/Pods-GTAModes/Pods-GTAModes.release.xcconfig"; sourceTree = "<group>"; };
 		1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveTestNetwork.swift; sourceTree = "<group>"; };
-		12097A712BA4B09700DACBED /* PerspectiveCustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCustomAlertViewController.swift; sourceTree = "<group>"; };
+		12097A712BA4B09700DACBED /* ActualAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertController.swift; sourceTree = "<group>"; };
 		12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCheckListCustomSwitcher.swift; sourceTree = "<group>"; };
 		120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModelConteiner.swift; sourceTree = "<group>"; };
 		120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GilroyLight.ttf; sourceTree = "<group>"; };
@@ -5211,6 +5214,9 @@
 		2CDEBEF62A82586500F976A3 /* PerspectiveDropBoxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveDropBoxManager.swift; sourceTree = "<group>"; };
 		2CDEBEF72A82586500F976A3 /* PerspectiveDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveDBConstants.swift; sourceTree = "<group>"; };
 		2CDEBF062A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCustomNavigation_View.swift; sourceTree = "<group>"; };
+		54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertManager.swift; sourceTree = "<group>"; };
+		54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualBlurBackController.swift; sourceTree = "<group>"; };
+		54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderController.swift; sourceTree = "<group>"; };
 		7F2E2352E0EAAE4846BA5952 /* Pods_GTAModes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTAModes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7040E287D44240A115BA20F /* Pods-GTAModes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAModes.debug.xcconfig"; path = "Target Support Files/Pods-GTAModes/Pods-GTAModes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -5482,7 +5488,10 @@
 				2C5CA6E72A924DFC005F9D24 /* PerspectiveModesModel.swift */,
 				2C4F87792A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift */,
 				120EEE522B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift */,
-				12097A712BA4B09700DACBED /* PerspectiveCustomAlertViewController.swift */,
+				54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */,
+				12097A712BA4B09700DACBED /* ActualAllertController.swift */,
+				54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */,
+				54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */,
 			);
 			path = GameModes;
 			sourceTree = "<group>";
@@ -10827,6 +10836,7 @@
 				2CBFE4552A77E28400A50257 /* PerspectiveFilterTabViewCell.swift in Sources */,
 				2C45A5402A76A7A50023B3A8 /* PerspectiveFilterViewController.swift in Sources */,
 				12F217F32B85F03900BCE63B /* PerspectiveMainViewCell.swift in Sources */,
+				54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */,
 				2C5CA6EA2A92514D005F9D24 /* PerspectiveModObject.swift in Sources */,
 				2C5CA6E82A924DFC005F9D24 /* PerspectiveModesModel.swift in Sources */,
 				2C45A5392A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift in Sources */,
@@ -10838,6 +10848,7 @@
 				2C4F877A2A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift in Sources */,
 				120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */,
 				12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */,
+				54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */,
 				2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */,
 				12F217F52B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift in Sources */,
 				2CA95FF82A84D4210039343E /* PerspectiveCheatsObject.swift in Sources */,
@@ -10873,7 +10884,8 @@
 				12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */,
 				2C1CA42D2A8E70B200C89F79 /* PerspectiveServicesManager.swift in Sources */,
 				2C2A207B2A729267002A6D3C /* PerspectiveMainViewController.swift in Sources */,
-				12097A722BA4B09700DACBED /* PerspectiveCustomAlertViewController.swift in Sources */,
+				12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */,
+				54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */,
 				2C1CA4712A8E714F00C89F79 /* PerspectiveConfiguration.swift in Sources */,
 				2C2A20C02A756AE0002A6D3C /* PerspectiveGSModel.swift in Sources */,
 				2C2A207F2A72927E002A6D3C /* PerspectiveMainModel.swift in Sources */,
