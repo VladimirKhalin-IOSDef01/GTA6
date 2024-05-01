@@ -18,7 +18,11 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
     private let customNavigation: PerspectiveCustomNavigation_View
     //
     var alert: UIAlertController?
-    //
+    
+   // var fakeLoader: ActualFakeLoaderController!
+    var fakeLoader = ActualFakeLoader()
+    
+    
     private func perspectiveSetupView() {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
@@ -139,51 +143,31 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
     }
     
     private func perspectiveShowSpiner() {
-        alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = .medium
-        loadingIndicator.startAnimating()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        alert?.view.addSubview(loadingIndicator)
-        present(alert!, animated: true, completion: nil)
+//        alert = UIAlertController(title: nil, message: "Main Loading Data", preferredStyle: .alert)
+//       
+//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.style = .medium
+//        loadingIndicator.startAnimating()
+//       
+//        alert?.view.addSubview(loadingIndicator)
+//        present(alert!, animated: true, completion: nil)
+
+        fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
+        fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
+        fakeLoader.setupFakeLoaderView(duration: 2)
+        present(fakeLoader, animated: true, completion: nil)
+        
         
     }
     private func perspectiveHideSpiner() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         alert?.dismiss(animated: false)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        fakeLoader.dismiss(animated: false)
     }
     
     private func perspectiveHideAlert() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         alert?.dismiss(animated: false)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+
     }
 }
 

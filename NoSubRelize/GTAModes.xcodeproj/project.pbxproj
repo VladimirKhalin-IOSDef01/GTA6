@@ -10,6 +10,8 @@
 		1201B5722BA2B82C00B86035 /* PerspectiveTestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */; };
 		12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A712BA4B09700DACBED /* ActualAllertController.swift */; };
 		12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */; };
+		120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */; };
+		120B3BF62BE2313A00E9462B /* ActualFakeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */; };
 		120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */; };
 		120EEE4C2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
 		120EEE4D2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
@@ -2634,6 +2636,8 @@
 		1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveTestNetwork.swift; sourceTree = "<group>"; };
 		12097A712BA4B09700DACBED /* ActualAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertController.swift; sourceTree = "<group>"; };
 		12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCheckListCustomSwitcher.swift; sourceTree = "<group>"; };
+		120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoaderView.swift; sourceTree = "<group>"; };
+		120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoader.swift; sourceTree = "<group>"; };
 		120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModelConteiner.swift; sourceTree = "<group>"; };
 		120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GilroyLight.ttf; sourceTree = "<group>"; };
 		120EEE4E2B87793E00BE6D3F /* Gilroy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gilroy.ttf; sourceTree = "<group>"; };
@@ -5259,6 +5263,7 @@
 			children = (
 				12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */,
 				12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */,
+				120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */,
 				12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */,
 			);
 			path = Loader;
@@ -5492,6 +5497,7 @@
 				12097A712BA4B09700DACBED /* ActualAllertController.swift */,
 				54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */,
 				54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */,
+				120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */,
 			);
 			path = GameModes;
 			sourceTree = "<group>";
@@ -10839,11 +10845,13 @@
 				54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */,
 				2C5CA6EA2A92514D005F9D24 /* PerspectiveModObject.swift in Sources */,
 				2C5CA6E82A924DFC005F9D24 /* PerspectiveModesModel.swift in Sources */,
+				120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */,
 				2C45A5392A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift in Sources */,
 				2C2A20B72A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift in Sources */,
 				2C45A5432A771A050023B3A8 /* PerspectiveChecklistCell.swift in Sources */,
 				2C45A5372A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift in Sources */,
 				12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */,
+				120B3BF62BE2313A00E9462B /* ActualFakeLoader.swift in Sources */,
 				2CDEBF072A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift in Sources */,
 				2C4F877A2A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift in Sources */,
 				120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */,

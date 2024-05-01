@@ -62,41 +62,14 @@ class CircularLoaderView: UIView {
         
        // updateDotPosition(progress: 0.5)
     }
-    
-    
-    /*
+   
     func updateDotPosition(progress: CGFloat) {
-        
-        print("Progres: Обновление позиции с прогрессом: \(progress)")
-
-            let percentage = Int(progress * 100)
-            percentageLabel.text = "\(percentage)%"
-            print("Progres Текущий процент: \(percentage)%")
-
-            let endAngle = (-.pi / 2) + (2 * .pi * progress)
-            let dotPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2, y: frame.size.height / 2),
-                                       radius: frame.size.width / 2 - 10,
-                                       startAngle: -(.pi / 2),
-                                       endAngle: endAngle,
-                                       clockwise: true)
-            
-            let dotPosition = dotPath.currentPoint
-            CATransaction.begin()
-            CATransaction.setDisableActions(true)
-            dotLayer.position = dotPosition
-            CATransaction.commit()
-            
-          //  progressLayer.strokeEnd = progress
-            print("Progres Строк-энд обновлен до: \(progressLayer.strokeEnd)")
-    }
-     */
-    
-    func updateDotPosition(progress: CGFloat) {
-        print("Progres: Обновление позиции с прогрессом: \(progress)")
+       // print("Progres: Обновление позиции с прогрессом: \(progress)")
 
         let percentage = Int(progress * 100)
         percentageLabel.text = "\(percentage)%"
-        print("Progres Текущий процент: \(percentage)%")
+        percentageLabel.font = UIFont(name: "Gilroy-Bold", size: 24.0)
+        print("Текущий процент: \(percentage)%")
 
         let endAngle = (-.pi / 2) + (2 * .pi * progress)
         let dotPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2, y: frame.size.height / 2),
@@ -116,22 +89,7 @@ class CircularLoaderView: UIView {
 
         dotLayer.position = dotPosition  // Обновляем фактическое положение dotLayer
         dotLayer.add(animation, forKey: "moveDot")  // Добавляем анимацию к слою
-
-        // Если хотите плавно изменить strokeEnd для progressLayer
-    //    let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
-    //    strokeAnimation.fromValue = progressLayer.strokeEnd
-    //    strokeAnimation.toValue = progress
-    //    strokeAnimation.duration = 0.3
-    //    strokeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-
-    //    progressLayer.strokeEnd = progress  // Обновляем strokeEnd
-     //   progressLayer.add(strokeAnimation, forKey: "strokeEndAnimation")
-     //   print("Progres Строк-энд обновлен до: \(progressLayer.strokeEnd)")
     }
-
-     
-     
-     
 }
 
 

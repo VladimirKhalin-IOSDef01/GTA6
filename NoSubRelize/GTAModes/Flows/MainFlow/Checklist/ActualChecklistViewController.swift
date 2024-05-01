@@ -12,6 +12,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     private let tableView = UITableView(frame: .zero)
     private let customNavigation: PerspectiveCustomNavigation_View
     
+    var fakeLoader = ActualFakeLoader()
     
     init(model: PerspectiveChecklistModel) {
         self.model = model
@@ -45,21 +46,27 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     
     private func perspectiveShowSpiner() {
 
-        alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-     
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = .medium
-        loadingIndicator.startAnimating()
+//        alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
+//     
+//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+//        loadingIndicator.hidesWhenStopped = true
+//        loadingIndicator.style = .medium
+//        loadingIndicator.startAnimating()
+//        
+//        alert?.view.addSubview(loadingIndicator)
+//        
+//        present(alert!, animated: true, completion: nil)
         
-        alert?.view.addSubview(loadingIndicator)
-        
-        present(alert!, animated: true, completion: nil)
+        fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
+        fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
+        fakeLoader.setupFakeLoaderView(duration: 3)
+        present(fakeLoader, animated: true, completion: nil)
         
     }
     
     private func perspectiveHideSpiner() {
         alert?.dismiss(animated: false)
+        fakeLoader.dismiss(animated: false)
     }
     
     override func viewDidLoad() {
