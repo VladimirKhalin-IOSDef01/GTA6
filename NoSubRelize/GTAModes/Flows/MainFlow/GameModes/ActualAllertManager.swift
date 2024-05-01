@@ -14,6 +14,7 @@ class AlertManager {
     var alertViewController: ActualAllertController?
 
     func showAlert() {
+        alertViewController?.actualBackgroundAlertView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.alertViewController?.actualCustomAlert(alertType: .download)
         }

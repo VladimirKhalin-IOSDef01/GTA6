@@ -282,6 +282,28 @@ class PerspectiveModesInfoViewController: PerspectiveNiblessViewController {
         }
     }
     
+    func perspectiveShowNetworkAlert() {
+        guard let rootViewController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else {
+            return
+        }
+        // Закрываем все алерты
+        rootViewController.dismiss(animated: false, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let topViewController = rootViewController.topMostViewController()
+            let alertController = ActualAllertController()
+            alertController.actualCustomAlert(alertType: .download)
+            alertController.modalPresentationStyle = .overFullScreen // Чтобы алерт был модальным и занимал весь экран
+            if !(topViewController is UIAlertController) {
+                topViewController.present(alertController, animated: false) {
+                    
+                }
+            }
+        }
+        
+    }
+    
+    
 //    func gta_showAlertAge() {
 //        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 //        alertController.addAction(
@@ -326,7 +348,8 @@ extension PerspectiveModesInfoViewController: UITableViewDataSource {
                 self?.model.perspectiveDownloadMode(index: self?.currentIndex ?? 1)
                 cell.gameMode_downloadColor(downloading: true)
             } else {
-                self?.perspectiveShowTextAlert("No internet \n connection")
+               // self?.perspectiveShowTextAlert("No internet \n connection")
+                self?.perspectiveShowNetworkAlert()
                 cell.gameMode_downloadColor(downloading: false)
             }
         }

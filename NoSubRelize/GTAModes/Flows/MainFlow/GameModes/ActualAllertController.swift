@@ -12,16 +12,12 @@ enum AlertSelect { case internet, download}
 
 class ActualAllertController: UIViewController {
     var shouldDisplayAlerts = true
-    var loaderView: CircularLoaderView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         actualBackgroundAlertView()
-        actualCustomAlert(alertType: .internet)
+       // actualCustomAlert(alertType: .internet)
         
-        
-        loaderView = CircularLoaderView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-                loaderView.center = view.center
-                view.addSubview(loaderView)
     }
     
     func actualBackgroundAlertView() {
@@ -31,9 +27,9 @@ class ActualAllertController: UIViewController {
         alertBackgroundView.addBlur_Effect()
         view.addSubview(alertBackgroundView)
     }
-    
+
     func actualCustomAlert(alertType: AlertSelect) {
-        /*
+        
          guard shouldDisplayAlerts else { return }
          var allertMessage = ""
          var allertButton = "OK"
@@ -108,9 +104,9 @@ class ActualAllertController: UIViewController {
          
          }
          
-         */
+        
     }
     @objc private func dismissAlert() {
-        dismiss(animated: true)
+        dismiss(animated: false)
     }
 }

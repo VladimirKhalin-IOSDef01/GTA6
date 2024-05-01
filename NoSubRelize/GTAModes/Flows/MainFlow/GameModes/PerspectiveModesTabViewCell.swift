@@ -73,8 +73,8 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
             downloadTitleLabel.text = "Downloading..."
             updateDownloadTitleLabel(check: false)
         case false:
-            downloadButtonView.backgroundColor = UIColor(named: "redColor")?.withAlphaComponent(1.0)
-            downloadTitleLabel.text = UIDevice.current.userInterfaceIdiom == .pad ? "   Failed, retry" : "    Failed, retry"
+            downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
+            downloadTitleLabel.text = UIDevice.current.userInterfaceIdiom == .pad ? "Failed, retry    " : "Failed, retry    "
             updateDownloadTitleLabel(check: false)
         }
     }
@@ -87,9 +87,12 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
                 imageView.tintColor = .white
                 imageView.clipsToBounds = true
                 imageView.alpha = 1.0
+               
             } else {
               //  imageView.removeFromSuperview()
                 imageView.alpha = 0.0
+                
+                
             }
         }
     }

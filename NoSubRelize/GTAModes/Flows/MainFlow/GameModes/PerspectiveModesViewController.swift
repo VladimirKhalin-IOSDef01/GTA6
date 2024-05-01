@@ -80,7 +80,7 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
         
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
-        fakeLoader.setupFakeLoaderView(duration: 10)
+        fakeLoader.setupFakeLoaderView(duration: 17)
         present(fakeLoader, animated: true, completion: nil)
     }
     

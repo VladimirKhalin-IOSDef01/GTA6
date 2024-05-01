@@ -68,7 +68,7 @@ class CircularLoaderView: UIView {
 
         let percentage = Int(progress * 100)
         percentageLabel.text = "\(percentage)%"
-        percentageLabel.font = UIFont(name: "Gilroy-Bold", size: 24.0)
+        percentageLabel.font = UIFont(name: "Gilroy-Bold", size: 30.0)
         print("Текущий процент: \(percentage)%")
 
         let endAngle = (-.pi / 2) + (2 * .pi * progress)

@@ -45,23 +45,10 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     }
     
     private func perspectiveShowSpiner() {
-
-//        alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-//     
-//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-//        loadingIndicator.hidesWhenStopped = true
-//        loadingIndicator.style = .medium
-//        loadingIndicator.startAnimating()
-//        
-//        alert?.view.addSubview(loadingIndicator)
-//        
-//        present(alert!, animated: true, completion: nil)
-        
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
         fakeLoader.setupFakeLoaderView(duration: 3)
         present(fakeLoader, animated: true, completion: nil)
-        
     }
     
     private func perspectiveHideSpiner() {
@@ -73,7 +60,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
         
         super.viewDidLoad()
        
-      //  self.view.isMultipleTouchEnabled = false // Отключаем мультитач
+       // Отключаем мультитач
         disableMultitouchInViewHierarchy(for: self.view)
         
         if model.missionList.isEmpty {
@@ -106,7 +93,6 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
-       // tableView.isMultipleTouchEnabled = false
         tableView.pinchGestureRecognizer?.isEnabled = false
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
@@ -133,31 +119,15 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
             guard let self = self, let indexPath = tableView.indexPath(for: cell) else { return }
             
             self.model.perspectiveMissionIsCheck(indexPath.row, isCheck: isCheck)
-            
-//            DispatchQueue.main.async {
-//                tableView.reloadRows(at: [indexPath], with: .automatic)
-//            }
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        oneCheck()
-        
        return model.missionList.count
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    
-    
-        return UIDevice.current.userInterfaceIdiom == .pad ? 105 : 105
-    }
-    func oneCheck() -> Int{
-    var checkOne = 93 + 3 * 2
-    var checkTwo = checkOne - 22
-    checkTwo += 11
-    return checkTwo
+        return 105
     }
 }

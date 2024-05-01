@@ -20,7 +20,7 @@ class CircularFakeLoaderView: UIView {
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.font = UIFont(name: "Gilroy-Bold", size: 30.0)
         return label
     }()
     
