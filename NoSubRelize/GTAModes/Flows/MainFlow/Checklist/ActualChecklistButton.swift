@@ -37,7 +37,7 @@ class ActualChecklistButton: UIControl {
             
             // Настройки для текста
             label.text = "COMPLETED"
-            label.font = UIFont(name: "Gilroy-Semibold", size: 14.0)
+            label.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 20 : 14.0)
             label.textColor = .white.withAlphaComponent(0.3)
             label.textAlignment = .left
   

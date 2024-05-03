@@ -30,7 +30,7 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
             $0.centerX.equal(to: view.centerXAnchor, offsetBy: 20.0)
            // $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
            // $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 36.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 36.0)
         }
 
         view.addSubview(menuStackConteinerLeft)

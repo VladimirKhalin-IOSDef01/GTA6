@@ -98,16 +98,16 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
     }
     
     public func perspectiveConfigure_cell(_ value: PerspectiveModItem, isLoaded: Bool) {
-        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: 20)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 32 : 20)
         titleLabel.textColor = .white
         titleLabel.text = value.title.uppercased()
-        descriprionLabel.font = UIFont(name: "Gilroy-Bold", size: 14)
+        descriprionLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 14)
         descriprionLabel.textColor = .white
         descriprionLabel.text = value.description
         
         downloadButtonView.backgroundColor = isLoaded ? UIColor(named: "ActualBlack")?.withAlphaComponent(1.0) : UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
         
-        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 16)
+        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
         downloadTitleLabel.textColor = .white
         downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download"
        
@@ -170,7 +170,7 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
         }
-        containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 0 : 20.0)
+        containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20.0)
         containerView.backgroundColor = UIColor(named: "ActualBlack")!.withAlphaComponent(0.7)
         
         /*
@@ -200,25 +200,27 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         modeImage.withCornerRadius(20)
         modeImage.perspectiveLayout {
             $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 15.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15.0)
             $0.height.equal(to: 218.0)
         }
         
         
         containerView.addSubview(descriprionLabel)
         descriprionLabel.perspectiveLayout {
-            $0.top.equal(to: modeImage.bottomAnchor, offsetBy: 8.0)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
+            $0.top.equal(to: modeImage.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 8.0)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15.0)
+            
+            //$0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 405 : 280)
         }
         descriprionLabel.numberOfLines = 0
         
         containerView.addSubview(stackView)
         stackView.perspectiveLayout {
             $0.height.equal(to: 82)
-            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15)
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15)
+            $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15)
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 30.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -15)
         }
@@ -252,10 +254,10 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         }
         
         shareButtonView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 100 : 42.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 68 : 42.0)
         }
         downloadButtonView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 100 : 42.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 68 : 42.0)
         }
         let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(perspectiveShareAction_Proceed))
         shareButtonView.addGestureRecognizer(shareGestrure)
@@ -288,26 +290,26 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         titleLabel.perspectiveLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -30)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60 : -30)
             } else {
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -15)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15)
               //  $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 10)
             }
         }
         
         imageView.perspectiveLayout {
-            $0.height.equal(to: 22.0)
-            $0.width.equal(to: 22.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 30)
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 30)
             }else{
                // $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -38)
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 15)
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15)
             }
         }
         
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 16)
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
         titleLabel.textColor = .white
         titleLabel.text = title
         

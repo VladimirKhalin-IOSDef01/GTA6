@@ -30,9 +30,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            PerspectiveThirdPartyServicesManager.shared.perspectiveMake_ATT()
+//!!!        PerspectiveThirdPartyServicesManager.shared.perspectiveMake_ATT()
         }
     }
+    
+    
+    
   //  */
     
     /*

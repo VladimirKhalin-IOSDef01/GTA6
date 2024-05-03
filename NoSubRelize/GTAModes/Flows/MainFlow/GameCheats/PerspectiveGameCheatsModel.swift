@@ -11,9 +11,9 @@ public enum Cheats_Device_Type: CaseIterable {
 public struct GTAVK_FilterList_Data {
     
     public let filterList: [String]
-    public let selectedItem: String
+    public var selectedItem: String
     
-    init(filterList: [String], selectedItem: String) {
+    public init(filterList: [String], selectedItem: String) {
         self.filterList = filterList
         self.selectedItem = selectedItem
     }

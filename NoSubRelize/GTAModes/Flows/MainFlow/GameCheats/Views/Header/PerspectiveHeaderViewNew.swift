@@ -8,6 +8,83 @@
 import Foundation
 import UIKit
 
+final class PerspectiveHeaderViewNew: UICollectionReusableView {
+    
+    public var actionButton: ((Int) -> ())?
+    
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 0
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    private var selectedButton: UIButton?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        gtavk_setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func gtavk_setupView() {
+        self.addSubview(stackView) // В UICollectionReusableView нет contentView, так что добавляем прямо в self.
+        stackView.layer.cornerRadius = 18
+        stackView.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
+        stackView.clipsToBounds = true
+        stackView.perspectiveLayout {
+            $0.leading.equal(to: self.leadingAnchor, offsetBy: 0)
+            $0.trailing.equal(to: self.trailingAnchor, offsetBy: 0)
+            $0.top.equal(to: self.topAnchor, offsetBy: 00.0)
+            $0.bottom.equal(to: self.bottomAnchor)
+        }
+        
+        let images = ["sony", "xbox", "win", "fav"]
+        for imageName in images {
+            let button = UIButton(type: .custom)
+            button.setImage(UIImage(named: imageName), for: .normal)
+            button.imageView?.contentMode = .scaleAspectFit
+            button.imageView?.clipsToBounds = true
+            button.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.addTarget(self, action: #selector(perspectiveButtonTapped), for: .touchUpInside)
+            stackView.addArrangedSubview(button)
+            if imageName == "sony" {
+                button.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
+                selectedButton = button
+            } else {
+                button.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
+            }
+            
+            button.perspectiveLayout {
+                $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79)
+                $0.width.equal(to: 88.0)
+            }
+        }
+    }
+    
+    @objc func perspectiveButtonTapped(sender: UIButton) {
+        if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
+            actionButton?(index)
+            if let selectedButton = selectedButton {
+                selectedButton.backgroundColor = UIColor(named: "ActualBlack")
+            }
+            selectedButton = sender
+            sender.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
+        }
+    }
+}
+
+
+
+/*
 final class PerspectiveHeaderViewNew: UITableViewHeaderFooterView, PerspectiveReusable {
     
     public var actionButton: ((Int) -> ())?
@@ -77,11 +154,6 @@ final class PerspectiveHeaderViewNew: UITableViewHeaderFooterView, PerspectiveRe
     }
     
     @objc func perspectiveButtonTapped(sender: UIButton) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {
@@ -92,3 +164,4 @@ final class PerspectiveHeaderViewNew: UITableViewHeaderFooterView, PerspectiveRe
         }
     }
 }
+*/

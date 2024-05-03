@@ -11,7 +11,7 @@ final class PerspectiveHeaderView: UITableViewHeaderFooterView, PerspectiveReusa
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 8
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -31,10 +31,11 @@ final class PerspectiveHeaderView: UITableViewHeaderFooterView, PerspectiveReusa
     private func perspectiveSetupView() {
         contentView.addSubview(stackView)
         stackView.perspectiveLayout {
-            $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
-            $0.top.equal(to: contentView.topAnchor, offsetBy: 10)
+            $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0)
+            $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: 0)
+            $0.top.equal(to: contentView.topAnchor, offsetBy: 0)
             $0.bottom.equal(to: contentView.bottomAnchor)
+            
         }
         
         let titles = ["Playstation", "Xbox", "Microsoft", "Favorites"]

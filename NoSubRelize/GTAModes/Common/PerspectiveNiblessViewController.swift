@@ -6,7 +6,11 @@ open class PerspectiveNiblessViewController: UIViewController {
    
     private lazy var waterBackground: UIImageView = {
         let waterBack = UIImageView()
-        waterBack.image = UIImage(named: "WaterBackground")
+        if  UIDevice.current.userInterfaceIdiom == .pad {
+            waterBack.image = UIImage(named: "ActualBackgroubd")
+        } else {
+            waterBack.image = UIImage(named: "WaterBackground")
+        }
         waterBack.contentMode = .scaleToFill
         waterBack.translatesAutoresizingMaskIntoConstraints = false
         waterBack.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
@@ -49,7 +53,7 @@ open class PerspectiveNiblessViewController: UIViewController {
         view.addSubview(waterBackground)
         waterBackground.alpha = 1.0
         
-      //  gtavk_setupBackground()
+    //    gtavk_setupBackground()
         
     }
     

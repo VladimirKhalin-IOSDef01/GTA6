@@ -9,11 +9,25 @@ import Foundation
 import UIKit
 
 final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
+   
+    weak var delegate: PerspectiveFilterTabViewCellDelegate?
+    var indexPath: IndexPath?
+    var tableView: UITableView? // Добавлено свойство tableView
+    
+    public var isCheckAction: ((Bool) -> ())?
     
     private let containerView = UIView()
     private let titleLabel = UILabel()
     private let checkImage = UIImageView()
     private let borderLineView = UIView()
+    private let blockView = UIView()
+    let switcher = UISwitch()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        switcher.isOn = false
+        switcher.removeTarget(nil, action: nil, for: .allEvents)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,16 +42,16 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
     
     public func perspectiveConfigure_cell(_ value: perspectiveFilter_Data) {
         titleLabel.font = UIFont(name: "Gilroy-Regular", size: 20)
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         titleLabel.text = value.title.capitalized(with: .autoupdatingCurrent)
-        checkImage.isHidden = !value.isCheck
+        switcher.isOn = value.isCheck // Установите состояние переключателя
+        checkImage.isHidden = !value.isCheck // Управление видимостью галочки
     }
     
     private func perspectiveSetupLayout() {
-       
-       // contentView.backgroundColor = .clear
+        // contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-       // containerView.backgroundColor = .clear
+        // containerView.backgroundColor = .clear
         
         containerView.perspectiveLayout {
             $0.top.equal(to: contentView.topAnchor)
@@ -47,10 +61,10 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
         }
         containerView.addSubview(checkImage)
         checkImage.perspectiveLayout {
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -80.0)
             $0.centerY.equal(to: containerView.centerYAnchor)
-            $0.height.equal(to: 24.0)
-            $0.width.equal(to: 24.0)
+            $0.height.equal(to: 0)
+            $0.width.equal(to: 0)
         }
         checkImage.image = .init(named: "checkIcon")
         
@@ -67,10 +81,56 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
             $0.bottom.equal(to: containerView.bottomAnchor)
             $0.height.equal(to: 2.0)
         }
-       //borderLineView.backgroundColor = .init(named: "cellLineColor")
-        borderLineView.backgroundColor = .white.withAlphaComponent(0.2)
+        //borderLineView.backgroundColor = .init(named: "cellLineColor")
+        borderLineView.backgroundColor = .gray.withAlphaComponent(0.5)
+        
+        containerView.addSubview(switcher)
+        switcher.translatesAutoresizingMaskIntoConstraints = false
+        switcher.perspectiveLayout {
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20.0)
+            $0.centerY.equal(to: containerView.centerYAnchor)
+            $0.height.equal(to: 31.0)
+            $0.width.equal(to: 51.0)
+        }
+        switcher.onTintColor = .init(named: "ActualPink")
+        // switcher.addTarget(self, action: #selector(perspectiveSwitchValueChanged(_:)), for: .valueChanged)
+        switcher.addTarget(self, action: #selector(toggleTapped(_:)), for: .valueChanged)
+        
+        containerView.addSubview(blockView)
+        blockView.backgroundColor = .clear
+        blockView.perspectiveLayout{
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20.0)
+            $0.centerY.equal(to: containerView.centerYAnchor)
+            $0.height.equal(to: 31.0)
+            $0.width.equal(to: 51.0)
+        }
+        
+        
+        
+        
     }
     
+    @objc func toggleTapped(_ sender: UISwitch) {
+           delegate?.toggleTapped(self)
+    }
 }
+    
+    
+    
+    
+    
+    
+    
+    // Обработчик изменения состояния переключателя
+//        @objc private func switchValueChanged(_ sender: UISwitch) {
+//            let isChecked = sender.isOn
+//            checkImage.isHidden = !isChecked
+//            // Получите индекс ячейки
+//            guard let indexPath = self.indexPath else { return }
+//            // Уведомите делегата о изменении состояния переключателя
+//            delegate?.switchValueChanged(at: indexPath, isOn: isChecked)
+//        
+// }
+//}
 
 

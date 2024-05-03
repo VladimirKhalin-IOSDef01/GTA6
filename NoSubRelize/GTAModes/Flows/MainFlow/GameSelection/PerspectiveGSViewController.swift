@@ -13,11 +13,7 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
     private let customNavigation: PerspectiveCustomNavigation_View
     
     var alert: UIAlertController?
-    
- //   var loaderView: CircularLoaderView!
-    
-    
-    
+
     init(model: PerspectiveGSModel) {
         self.model = model
         self.customNavigation = PerspectiveCustomNavigation_View(.gameSelect)
@@ -35,19 +31,11 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
     //    setupLoaderView()
   
         if model.menuItems.isEmpty {
-            perspectiveShowSpiner()
+    //        perspectiveShowSpiner()        // Отключен в тестовом режиме
         }
         perspectiveSetupView()
         perspectiveGSSetupBindings()
     }
-    
-//    func setupLoaderView() {
-//           let loaderSize: CGFloat = 160
-//           loaderView = CircularLoaderView(frame: CGRect(x: (view.bounds.width - loaderSize) / 2, y: (view.bounds.height - loaderSize) / 2, width: loaderSize, height: loaderSize))
-//           view.addSubview(loaderView)
-//        
-//           loaderView.updateDotPosition(progress: 1)
-//       }
     
     private func perspectiveGSSetupBindings() {
         model.reloadData
@@ -70,9 +58,9 @@ class PerspectiveGSViewController: PerspectiveNiblessViewController {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 21.0)
-            $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 60.0 : 36.0)
+            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
+            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 48.0 : 36.0)
         }
         
         view.addSubview(menuStackConteinerLeft)

@@ -13,20 +13,12 @@ class PerspectiveAppDelegate: UIResponder, UIApplicationDelegate {
         [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Start monitoring network status
         PerspectiveNetworkStatusMonitor.shared.gta_startMonitoring()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        
         // Initialize Adjust SDK
-        PerspectiveThirdPartyServicesManager.shared.perspectiveInitializeAdjust()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+      //  PerspectiveThirdPartyServicesManager.shared.perspectiveInitializeAdjust()
+        
         // Initialize Pushwoosh SDK
-        PerspectiveThirdPartyServicesManager.shared.perspectiveInitializePushwoosh(delegate: self)
+       // PerspectiveThirdPartyServicesManager.shared.perspectiveInitializePushwoosh(delegate: self)
         
        // PerspectiveThirdPartyServicesManager.shared.perspectiveMake_ATT()
 
@@ -44,9 +36,15 @@ extension PerspectiveAppDelegate : PWMessagingDelegate {
                     print("the world has turned upside down")
                 }
          //
-        Adjust.setDeviceToken(deviceToken)
-        Pushwoosh.sharedInstance().handlePushRegistration(deviceToken)
+    //    Adjust.setDeviceToken(deviceToken)
+      //  Pushwoosh.sharedInstance().handlePushRegistration(deviceToken)
     }
+    
+    // Устанавливаем принудительно только портретный режим экрана
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return .portrait
+        }
+    
     
     //handle token receiving error
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -55,7 +53,7 @@ extension PerspectiveAppDelegate : PWMessagingDelegate {
                     print("the world has turned upside down")
                 }
          //
-        Pushwoosh.sharedInstance().handlePushRegistrationFailure(error);
+     //   Pushwoosh.sharedInstance().handlePushRegistrationFailure(error);
     }
     
     //this is for iOS < 10 and for silent push notifications
@@ -65,7 +63,7 @@ extension PerspectiveAppDelegate : PWMessagingDelegate {
                     print("the world has turned upside down")
                 }
          //
-        Pushwoosh.sharedInstance().handlePushReceived(userInfo)
+     //   Pushwoosh.sharedInstance().handlePushReceived(userInfo)
         completionHandler(.noData)
     }
     

@@ -62,7 +62,7 @@ extension PerspectiveCustomNavigation_View {
             case "GTA5":  gtavk_addTitle("Version 5")
             case "GTAVC":  gtavk_addTitle("Version VS")
             case "GTASA":  gtavk_addTitle("Version SA")
-            case "Mods Version 5":  gtavk_addTitle("Mods Version 5")
+            case "Mods Version 5":  gtavk_addTitle("Mods")
             default :  gtavk_addTitle("Cheats")
             }
             
@@ -79,7 +79,7 @@ extension PerspectiveCustomNavigation_View {
         case .infoModes:
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
-            gtavk_addTitle("Mods Version 5")
+            gtavk_addTitle("Mods")
         
         }
     }
@@ -88,8 +88,8 @@ extension PerspectiveCustomNavigation_View {
             $0.trailing.equal(to: self.trailingAnchor)
             $0.top.equal(to: self.topAnchor)
             $0.bottom.equal(to: self.bottomAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 32.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 39.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 32.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 39.0)
         }
         
         rightButton.setImage(UIImage(named: ""), for: .normal)
@@ -101,8 +101,8 @@ extension PerspectiveCustomNavigation_View {
             $0.trailing.equal(to: self.trailingAnchor)
             $0.top.equal(to: self.topAnchor, offsetBy: -5)
             $0.bottom.equal(to: self.bottomAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 34.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 38.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 34.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 47 : 38.0)
         }
         
         rightButton.setImage(UIImage(named: "ActualFilter"), for: .normal)
@@ -121,8 +121,8 @@ extension PerspectiveCustomNavigation_View {
             $0.leading.equal(to: self.leadingAnchor, offsetBy: 5)
             $0.top.equal(to: self.topAnchor, offsetBy: 5)
             $0.bottom.equal(to: self.bottomAnchor, offsetBy: -5)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 12.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 64 : 29)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 12.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 43 : 29)
         }
         leftButton.setImage(image, for: .normal)
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -139,7 +139,7 @@ extension PerspectiveCustomNavigation_View {
             $0.centerY.equal(to: leftButton.centerYAnchor)
         }
         titleLabel.text = title.uppercased()
-        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 55 : 30)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 46 : 30)
         titleLabel.textColor = .white
     }
     

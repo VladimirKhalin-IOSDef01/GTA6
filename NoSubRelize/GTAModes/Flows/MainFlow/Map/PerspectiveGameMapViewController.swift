@@ -110,9 +110,9 @@ class PerspectiveGameMapViewController: PerspectiveNiblessViewController {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 21.0)
-            $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 60.0 : 36.0)
+            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
+            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44.0 : 36.0)
         }
         
         view.addSubview(perspectiveModes_webView)

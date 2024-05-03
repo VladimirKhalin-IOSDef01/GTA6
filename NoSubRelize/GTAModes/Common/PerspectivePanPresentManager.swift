@@ -9,17 +9,7 @@ final class PerspectivePanPresentManager: NSObject, UIViewControllerTransitionin
     source: UIViewController
   ) -> UIPresentationController? {
       
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
     let presentationController = PerspectivePPControllerPresent(presented: presented, presenting: presenting)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
     return presentationController
   }
   
@@ -47,18 +37,8 @@ public extension PPresentManager {
   }
   
   func perspectivePresentPanCollection(_ controller: UIViewController) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
     controller.modalPresentationStyle = .custom
     controller.transitioningDelegate = perspectivePresentationManager
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
     present(controller, animated: false, completion: nil)
   }
   

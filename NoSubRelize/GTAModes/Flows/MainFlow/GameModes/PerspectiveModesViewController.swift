@@ -95,17 +95,17 @@ class PerspectiveModesViewController: PerspectiveNiblessViewController {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 21.0)
-            $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 36.0)
+            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
+            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 36.0)
         }
         
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
         tableView.perspectiveLayout {
             $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 25.0)
-            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 80 : 0)
-            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -80 : 0)
+            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 149 : 0)
+            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -149 : 0)
             $0.bottom.equal(to: view.bottomAnchor)
         }
         tableView.registerReusable_Cell(cellType: PerspectiveModesTabViewCellNew.self)
@@ -382,7 +382,7 @@ extension PerspectiveModesViewController: UITableViewDataSource, UITableViewDele
                     print("the world has turned upside down")
                 }
          //
-        return 238
+        return UIDevice.current.userInterfaceIdiom == .pad ? 275 : 238
     }
     
     
