@@ -65,7 +65,11 @@ final class PerspectiveGameCheatsTabViewCell: UICollectionViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.numberOfLines = 3
         titleLabel.textColor = .white
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            titleLabel.font = UIFont(name: "Gilroy-Bold", size: 18)
+        } else {
+            titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
+        }
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 14),
@@ -100,7 +104,7 @@ final class PerspectiveGameCheatsTabViewCell: UICollectionViewCell {
         }
         
         NSLayoutConstraint.activate([
-            firstStackView.topAnchor.constraint(equalTo: favoriteImage.bottomAnchor, constant: 15),
+            firstStackView.topAnchor.constraint(equalTo: favoriteImage.bottomAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15),
             secondStackView.topAnchor.constraint(equalTo: firstStackView.bottomAnchor, constant: 5),
             threeStackView.topAnchor.constraint(equalTo: secondStackView.bottomAnchor, constant: 5),
             threeStackView.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -10)
@@ -113,7 +117,7 @@ final class PerspectiveGameCheatsTabViewCell: UICollectionViewCell {
         contentModeView.layer.borderColor = UIColor(named: "ActualPink")?.cgColor
         contentModeView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
         NSLayoutConstraint.activate([
-            contentModeView.topAnchor.constraint(equalTo: favoriteImage.bottomAnchor, constant: 15),
+            contentModeView.topAnchor.constraint(equalTo: favoriteImage.bottomAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 15),
             contentModeView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
             contentModeView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
             contentModeView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -15)
@@ -122,7 +126,7 @@ final class PerspectiveGameCheatsTabViewCell: UICollectionViewCell {
         contentModeView.addSubview(modeTitleLabel)
         modeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         modeTitleLabel.textColor = .white
-        modeTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: 14)
+        modeTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 18 : 14)
         modeTitleLabel.numberOfLines = 3
         NSLayoutConstraint.activate([
             modeTitleLabel.topAnchor.constraint(equalTo: contentModeView.topAnchor, constant: 8),
@@ -200,8 +204,8 @@ final class PerspectiveGameCheatsTabViewCell: UICollectionViewCell {
               let imageView = UIImageView()
               imageView.image = UIImage(named: imageName)
               imageView.contentMode = .scaleAspectFit
-              imageView.heightAnchor.constraint(equalToConstant: 22).isActive = true
-              imageView.widthAnchor.constraint(equalToConstant: 22).isActive = true
+              imageView.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
+              imageView.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
               
               // Добавляем imageView в текущий стековый вид
               stackViews[currentStackIndex].addArrangedSubview(imageView)

@@ -73,7 +73,7 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
     }
     
     public func perspectiveConfigure_cell(_ value: PerspectiveModItem, isLoaded: Bool) {
-        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: 16)
+        titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
         titleLabel.textColor = .white
         titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
@@ -159,7 +159,7 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
         bottomBlackView.clipsToBounds = true
         bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
         bottomBlackView.perspectiveLayout {
-            $0.top.equal(to: containerView.topAnchor, offsetBy: 160)
+            $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 220 : 160)
             $0.leading.equal(to: containerView.leadingAnchor)
             $0.trailing.equal(to: containerView.trailingAnchor)
             $0.bottom.equal(to: containerView.bottomAnchor)
@@ -172,8 +172,8 @@ final class PerspectiveModesTabViewCellNew: UITableViewCell, PerspectiveReusable
         logoImage.perspectiveLayout {
             $0.leading.equal(to: bottomBlackView.leadingAnchor, offsetBy: 16)
             $0.centerY.equal(to: bottomBlackView.centerYAnchor)
-            $0.width.equal(to: 18)
-            $0.height.equal(to: 18)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
         }
         
         containerView.addSubview(titleLabel)

@@ -3,6 +3,13 @@ import Foundation
 import UIKit
 import Kingfisher
 
+class TopAlignedLabel: UILabel {
+    override func drawText(in rect: CGRect) {
+        let actualRect = self.textRect(forBounds: rect, limitedToNumberOfLines: numberOfLines)
+        super.drawText(in: actualRect)
+    }
+}
+
 final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
     
     public var shareAction: (() -> Void)?
@@ -17,6 +24,7 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
     private let downloadTitleLabel = UILabel()
     private let shareTitleLabel = UILabel()
     
+    let spacerView = UIView()
     private let modeImage: UIImageView = {
         var imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -24,7 +32,7 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         
         return imageView
     }()
-    private let descriprionLabel = UILabel()
+    private let descriprionLabel = TopAlignedLabel()
     private let shareButtonView = UIView()
     private let downloadButtonView = UIView()
     private let stackView = UIStackView()
@@ -167,11 +175,17 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         containerView.perspectiveLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -6.0)
-            $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
-            $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
+            $0.leading.equal(to: contentView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 0 : 20.0)
+            $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 0 : -20.0)
+           
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20.0)
         containerView.backgroundColor = UIColor(named: "ActualBlack")!.withAlphaComponent(0.7)
+       
+       
+        
+        
+        
         
         /*
         containerView.addSubview(bgContainerView)
@@ -202,17 +216,17 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
             $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 15.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15.0)
-            $0.height.equal(to: 218.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 310.0 : 218)
         }
+        
         
         
         containerView.addSubview(descriprionLabel)
         descriprionLabel.perspectiveLayout {
-            $0.top.equal(to: modeImage.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 8.0)
+            $0.top.equal(to: modeImage.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 18.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15.0)
-            
-            //$0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 405 : 280)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 350 : 200)
         }
         descriprionLabel.numberOfLines = 0
         
@@ -254,10 +268,10 @@ final class PerspectiveModesTabViewCell: UITableViewCell, PerspectiveReusable {
         }
         
         shareButtonView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 68 : 42.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
         downloadButtonView.perspectiveLayout {
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 68 : 42.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
         let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(perspectiveShareAction_Proceed))
         shareButtonView.addGestureRecognizer(shareGestrure)

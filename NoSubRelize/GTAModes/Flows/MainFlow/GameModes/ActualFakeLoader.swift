@@ -14,7 +14,7 @@ class ActualFakeLoader: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        actualBackgroundAlertView()
+       //    actualBackgroundAlertView()
         //   setupFakeLoaderView(duration: 2)
         
     }

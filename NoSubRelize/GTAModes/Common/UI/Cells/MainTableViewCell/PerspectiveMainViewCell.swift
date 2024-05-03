@@ -96,7 +96,7 @@ final class PerspectiveMainViewCell: UITableViewCell, PerspectiveReusable {
         
         containerView.perspectiveLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
-            $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -15.0)
+            $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -30 : -15.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0.0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: 0.0)
         }

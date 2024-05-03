@@ -26,7 +26,7 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
     private func perspectiveSetupView() {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
-            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 40.0)
+            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70.0 : 40)
             $0.centerX.equal(to: view.centerXAnchor, offsetBy: 20.0)
            // $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
            // $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
@@ -35,25 +35,25 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
 
         view.addSubview(menuStackConteinerLeft)
         menuStackConteinerLeft.backgroundColor = .clear // Color
-        menuStackConteinerLeft.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 265 : 165).isActive = true
-        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: 670).isActive = true
+        menuStackConteinerLeft.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
+        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 670).isActive = true
         menuStackConteinerLeft.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerLeft.center = CGPoint(x: menuStackConteinerLeft.bounds.size.width/2, y: menuStackConteinerLeft.bounds.size.height/2)
         
         NSLayoutConstraint.activate([
-            menuStackConteinerLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? -140 : -90),
+            menuStackConteinerLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? -165 : -90),
             menuStackConteinerLeft.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45)
         ])
         
         view.addSubview(menuStackConteinerRight)
         menuStackConteinerRight.backgroundColor = .clear  // Color
-        menuStackConteinerRight.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 265 : 165).isActive = true
-        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: 670).isActive = true
+        menuStackConteinerRight.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
+        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 670).isActive = true
         menuStackConteinerRight.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerRight.center = CGPoint(x: menuStackConteinerRight.bounds.size.width/2, y: menuStackConteinerRight.bounds.size.height/2)
         
         NSLayoutConstraint.activate([
-            menuStackConteinerRight.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? 140 : 90),
+            menuStackConteinerRight.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? 165 : 90),
             menuStackConteinerRight.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45)
         ])
 
@@ -64,7 +64,7 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
         tableView.tag = 1
         
         tableView.perspectiveLayout {
-            $0.top.equal(to: menuStackConteinerLeft.safeAreaLayoutGuide.topAnchor, offsetBy: 0.0)
+            $0.top.equal(to: menuStackConteinerLeft.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerLeft.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerLeft.trailingAnchor)
             $0.bottom.equal(to: menuStackConteinerLeft.bottomAnchor)
@@ -81,7 +81,7 @@ class PerspectiveMainViewControllerNew: PerspectiveNiblessViewController {
         tableViewTwo.alwaysBounceVertical = false
         
         tableViewTwo.perspectiveLayout {
-            $0.top.equal(to: menuStackConteinerRight.safeAreaLayoutGuide.topAnchor, offsetBy: 0.0)
+            $0.top.equal(to: menuStackConteinerRight.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerRight.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerRight.trailingAnchor)
             $0.bottom.equal(to: menuStackConteinerRight.bottomAnchor)
@@ -234,14 +234,14 @@ extension PerspectiveMainViewControllerNew: UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView.tag == 1 {
             switch indexPath.row {
-            case 0: return 378 //
-            case 2: return 290 //277
+            case 0: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
+            case 2: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
             default: return 0
             }
         }else {
             switch indexPath.row {
-            case 1: return 290
-            case 3: return 378
+            case 1: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
+            case 3: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
             default: return 0
             }
         }

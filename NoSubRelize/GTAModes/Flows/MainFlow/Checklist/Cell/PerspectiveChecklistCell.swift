@@ -54,7 +54,7 @@ final class PerspectiveChecklistCell: UICollectionViewCell, PerspectiveReusable 
         containerView.withCornerRadius(24.0)
         containerView.withBorder(width: 1, color: UIColor(named: "ActualPink")!.withAlphaComponent(0.5))
         containerView.perspectiveDropShadowStandart()
-        containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.66)
+        containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.7)
         
         containerView.addSubview(titleLabel)
         titleLabel.perspectiveLayout {

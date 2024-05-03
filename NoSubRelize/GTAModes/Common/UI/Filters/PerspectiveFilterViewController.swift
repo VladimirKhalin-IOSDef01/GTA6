@@ -99,7 +99,7 @@ final class PerspectiveFilterViewController: Nibless_Filter_ViewController {
         }
 
         titleLabel.text = "Filter"
-        titleLabel.font = UIFont(name: "Gilroy-Bold", size: 20)
+        titleLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20)
         titleLabel.textColor = .black
         
         view.addSubview(titleLabel)
@@ -112,15 +112,21 @@ final class PerspectiveFilterViewController: Nibless_Filter_ViewController {
         closeButton.clipsToBounds = true
         closeButton.sizeToFit()
         closeButton.perspectiveLayout {
-            $0.trailing.equal(to: colorConteiner.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -30 : -20.0)
+            $0.trailing.equal(to: colorConteiner.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -20 : -15.0)
             $0.centerY.equal(to: titleLabel.centerYAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 24.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 24.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 15.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 15.0)
         }
         closeButton.setImage(UIImage(named: "closeIcon"), for: .normal)
         closeButton.addTarget(self, action: #selector(perspectiveCloseAction), for: .touchUpInside)
-        if let closeImage = UIImage(named: "closeIcon")?.withRenderingMode(.alwaysTemplate) {
-            closeButton.setImage(closeImage, for: .normal)
+
+        if let originalImage = UIImage(named: "closeIcon") {
+            let targetSize = UIDevice.current.userInterfaceIdiom == .pad ? CGSize(width: 40, height: 40) : CGSize(width: 20, height: 20)
+            let renderer = UIGraphicsImageRenderer(size: targetSize)
+            let scaledImage = renderer.image { _ in
+                originalImage.draw(in: CGRect(origin: .zero, size: targetSize))
+            }
+            closeButton.setImage(scaledImage.withRenderingMode(.alwaysTemplate), for: .normal)
             closeButton.tintColor = UIColor.black
         }
         
@@ -139,9 +145,6 @@ final class PerspectiveFilterViewController: Nibless_Filter_ViewController {
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
-       
     }
     
     @objc

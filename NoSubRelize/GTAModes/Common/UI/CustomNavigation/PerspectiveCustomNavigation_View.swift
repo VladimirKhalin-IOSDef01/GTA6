@@ -77,7 +77,7 @@ extension PerspectiveCustomNavigation_View {
             gtavk_addTitle("Map")
             
         case .infoModes:
-            gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
+            gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Mods")
         
@@ -102,7 +102,7 @@ extension PerspectiveCustomNavigation_View {
             $0.top.equal(to: self.topAnchor, offsetBy: -5)
             $0.bottom.equal(to: self.bottomAnchor)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 34.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 47 : 38.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 47 : 37.0)
         }
         
         rightButton.setImage(UIImage(named: "ActualFilter"), for: .normal)
@@ -114,20 +114,20 @@ extension PerspectiveCustomNavigation_View {
     
     private func gtavk_addLeftButton(_ image: UIImage) {
         
-        leftButton.contentMode = .scaleAspectFit
+       // leftButton.contentMode = .scaleToFill
         leftButton.clipsToBounds = true
         
         leftButton.perspectiveLayout {
             $0.leading.equal(to: self.leadingAnchor, offsetBy: 5)
             $0.top.equal(to: self.topAnchor, offsetBy: 5)
             $0.bottom.equal(to: self.bottomAnchor, offsetBy: -5)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 12.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 43 : 29)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 29.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 27)
         }
-        leftButton.setImage(image, for: .normal)
-        if UIDevice.current.userInterfaceIdiom == .pad {
+       // leftButton.setImage(image, for: .normal)
+       // if UIDevice.current.userInterfaceIdiom == .pad {
             setupIpadButton(_image: "ActualNBleft", buttonName: "leftButton")
-        }
+      //  }
         leftButton.addTarget(self, action: #selector(gtavk_leftBarButton_Tapped), for: .touchUpInside)
     }
     

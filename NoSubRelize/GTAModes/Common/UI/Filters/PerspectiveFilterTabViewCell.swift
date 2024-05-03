@@ -41,7 +41,7 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
     }
     
     public func perspectiveConfigure_cell(_ value: perspectiveFilter_Data) {
-        titleLabel.font = UIFont(name: "Gilroy-Regular", size: 20)
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 20)
         titleLabel.textColor = .black
         titleLabel.text = value.title.capitalized(with: .autoupdatingCurrent)
         switcher.isOn = value.isCheck // Установите состояние переключателя
@@ -87,10 +87,10 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
         containerView.addSubview(switcher)
         switcher.translatesAutoresizingMaskIntoConstraints = false
         switcher.perspectiveLayout {
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -60.0)
             $0.centerY.equal(to: containerView.centerYAnchor)
-            $0.height.equal(to: 31.0)
-            $0.width.equal(to: 51.0)
+            $0.height.equal(to: 40.0)
+            $0.width.equal(to: 63.0)
         }
         switcher.onTintColor = .init(named: "ActualPink")
         // switcher.addTarget(self, action: #selector(perspectiveSwitchValueChanged(_:)), for: .valueChanged)
@@ -99,10 +99,10 @@ final class PerspectiveFilterTabViewCell: UITableViewCell, PerspectiveReusable {
         containerView.addSubview(blockView)
         blockView.backgroundColor = .clear
         blockView.perspectiveLayout{
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20.0)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -60.0)
             $0.centerY.equal(to: containerView.centerYAnchor)
-            $0.height.equal(to: 31.0)
-            $0.width.equal(to: 51.0)
+            $0.height.equal(to: 40.0)
+            $0.width.equal(to: 63.0)
         }
         
         
