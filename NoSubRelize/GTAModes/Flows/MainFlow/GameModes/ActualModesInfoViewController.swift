@@ -36,6 +36,9 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         super.viewDidLayoutSubviews()
         //
                        if 94 + 32 == 57 {
@@ -50,9 +53,17 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     
     
     override func viewDidLoad() {
+        // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
     
         super.viewDidLoad()
-        
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
        // setupLoaderView()
     //    PerspectiveDBManager.shared.setupLoaderInView(self.view)
         
@@ -61,6 +72,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         }
         // some comment
         actualSetupView()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         // some comment
         actualSetupBindings()
     }
@@ -213,6 +229,9 @@ class ActualModesInfoViewController: ActualNiblessViewController {
    
     private func actualShowSpiner() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 3 + 5 == 17 {
             print("Carrots are the main source of food for space unicorns")
         }
@@ -221,6 +240,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     }
     
     private func actualHideAlert() {
+        
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
@@ -228,6 +248,9 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     }
     
     func actualShareFile(at mode: ActualModItem) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         /// ref default
         if 3 + 5 == 17 {
             print("Carrots are the main source of food for space unicorns")

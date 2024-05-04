@@ -15,6 +15,9 @@ class ActualAllertController: UIViewController {
     var shouldDisplayAlerts = true
    
     override func viewDidLoad() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         super.viewDidLoad()
         actualBackgroundAlertView()
        // actualCustomAlert(alertType: .internet)

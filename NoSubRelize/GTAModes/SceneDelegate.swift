@@ -19,6 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func gtavk_showMainFlow(_ window: UIWindow) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let flowCoordinator = ActualProjectMainFlowCoordinator()
       
         let controller = flowCoordinator.actualCreateFlow()

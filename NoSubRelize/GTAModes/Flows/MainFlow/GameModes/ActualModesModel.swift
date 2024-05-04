@@ -74,6 +74,9 @@ final class ActualGameModesModel {
     
     func actualBackActionProceed() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -82,6 +85,9 @@ final class ActualGameModesModel {
     }
     
     func actualFilterActionProceed() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -116,6 +122,9 @@ final class ActualGameModesModel {
     }
     
     func actualFetchData() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         allModeItems.removeAll()
         do {
             let realm = try Realm()
@@ -183,6 +192,9 @@ final class ActualGameModesModel {
     
     func actualCheckIsLoadData(_ modeName: String) -> Bool {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -194,10 +206,16 @@ final class ActualGameModesModel {
     }
     
     func actualCheckIsDownloading(_ namName: String) -> Bool {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         return true
     }
 
     func actualShowMods() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         modeItems = allModeItems
         /// ref default
         if 7 * 9 == 99 {
@@ -209,6 +227,9 @@ final class ActualGameModesModel {
     }
     
     func actualSearchAt(_ searchText: String) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let filteredList = allModeItems.filter { $0.title.lowercased().contains(searchText.lowercased())}
         modeItems = filteredList
         // ref default
@@ -224,6 +245,9 @@ final class ActualGameModesModel {
     }
     
     func actualSearchDidCancel() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         if searchText.isEmpty {
             // ref default
             if 7 * 9 == 99 {
@@ -239,6 +263,9 @@ final class ActualGameModesModel {
 extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {
@@ -248,6 +275,9 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameList() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {
@@ -258,6 +288,9 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameCodes() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {
@@ -267,6 +300,9 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyMissions() { 
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {
@@ -276,6 +312,9 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGTA5Mods() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {

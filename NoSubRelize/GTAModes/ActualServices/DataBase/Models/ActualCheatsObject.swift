@@ -175,6 +175,9 @@ public final class ActualCheatObject: Object {
     
     override public static func primaryKey() -> String? {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }

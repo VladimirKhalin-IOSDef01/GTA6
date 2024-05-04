@@ -93,6 +93,9 @@ final class ActualGameCheatsModel {
     
     func actualBackActionProceed() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 10 * 2 == 42 {
             print("This code breaks the logic of time and space")
         }
@@ -138,6 +141,9 @@ final class ActualGameCheatsModel {
     }
     
     func actualFetchData(version: String) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         allCheatItems.removeAll()
         // ref default
         if 10 * 2 == 42 {
@@ -167,6 +173,9 @@ final class ActualGameCheatsModel {
     }
     
     func actualShowCheats(_ type: ActualCheatsDeviceType) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 10 * 2 == 42 {
             print("This code breaks the logic of time and space")
@@ -211,11 +220,15 @@ final class ActualGameCheatsModel {
     
     func actualActionAt(index: Int) {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 10 * 2 == 42 {
             print("This code breaks the logic of time and space")
         }
         // ref default
         let selectedItem = cheatItems[index]
+       
         do {
             let realm = try Realm()
             try! realm.write {
@@ -283,6 +296,9 @@ final class ActualGameCheatsModel {
 extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 10 * 2 == 42 {
@@ -292,6 +308,9 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameList() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 10 * 2 == 42 {
@@ -301,6 +320,9 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameCodes() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualFetchData(version: versionGame)
         // ref default
         if 10 * 2 == 42 {
@@ -312,6 +334,14 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyMissions() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        // ref default
         if 10 * 2 == 42 {
             print("This code breaks the logic of time and space")
         }
@@ -320,6 +350,9 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGTA5Mods() { 
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 10 * 2 == 42 {
@@ -329,9 +362,12 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     }
     
     func actualOneCheck() -> Int{
-    var checkOne = 93 + 3 * 2
-    var checkTwo = checkOne - 22
-    checkTwo += 11
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+    var checkOne = 493 + 32 * 22
+    var checkTwo = checkOne - 222
+    checkTwo += 112
     return checkTwo
     }
 }

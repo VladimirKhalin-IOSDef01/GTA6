@@ -52,6 +52,9 @@ extension ActualAppDelegate : PWMessagingDelegate {
     // Устанавливаем принудительно только портретный режим экрана
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 3 + 5 == 17 {
             print("Carrots are the main source of food for space unicorns")
         }

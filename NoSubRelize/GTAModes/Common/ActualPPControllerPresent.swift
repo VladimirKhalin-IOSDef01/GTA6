@@ -74,11 +74,21 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   private var minYDisplacement: CGFloat {
     guard let panDelegate = presentedViewController as? ActualPPresentable else {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
       return maxYDisplacement
     }
     
     var preferredHeight = panDelegate.actualMaxContentHeight(presentingController: presentingViewController)
     preferredHeight += windowSafeAreaInsets.bottom
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     preferredHeight += keyboardHeight
     
     let displacement = presentingViewController.view.bounds.height - preferredHeight
@@ -88,6 +98,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   }
     
   private var windowSafeAreaInsets: UIEdgeInsets {
+      
     presentingViewController.view.window?.safeAreaInsets ?? .zero
   }
   
@@ -118,65 +129,73 @@ public final class ActualPPControllerPresent: UIPresentationController {
   }
   
   public override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      
     guard dimmingView.superview != nil else { return }
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
   
   public override func presentationTransitionWillBegin() {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     super.presentationTransitionWillBegin()
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     actualSetupView()
   }
   
   public override func presentationTransitionDidEnd(_ completed: Bool) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     super.presentationTransitionDidEnd(completed)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     dimmingView.alpha = 0.4
     UIView.animate(withDuration: 0.3) {
         self.dimmingView.alpha = 0.4
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
     actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
   
   public override func dismissalTransitionWillBegin() {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     guard let coordinator = presentedViewController.transitionCoordinator else {
       dimmingView.alpha = 0.4
       
@@ -190,52 +209,58 @@ public final class ActualPPControllerPresent: UIPresentationController {
   }
   
   private func actualSetupView() {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     guard let containerView = containerView else { return }
     
     containerView.addSubview(presentedView)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     actualSetupDimmingView(in: containerView)
   }
   
   private func actualSetupDimmingView(in container: UIView) {
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
     container.insertSubview(dimmingView, at: 0)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     let panGesture = UIPanGestureRecognizer(target: self, action: #selector(actualDidPanOnPresentedView(_:)))
     panGesture.delaysTouchesBegan = true
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     let dismissGestrure = UITapGestureRecognizer(target: self, action: #selector(actualDismissController))
     dismissGestrure.require(toFail: panGesture)
     panGesture.delegate = self
     dismissGestrure.delegate = self
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     dimmingView.addGestureRecognizer(dismissGestrure)
     container.addGestureRecognizer(panGesture)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     NSLayoutConstraint.activate([
       dimmingView.leftAnchor.constraint(equalTo: container.leftAnchor),
       dimmingView.rightAnchor.constraint(equalTo: container.rightAnchor),
@@ -246,35 +271,41 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   @objc
   private func actualDismissController() {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     let dimissableController = presentingViewController.presentedViewController as? ActualPPDismissable
     dimissableController?.willDismiss(by: presentingViewController)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     presentingViewController.dismiss(animated: true)
   }
     
   private func actualMovePresentedView(yDisplacement y: CGFloat, animated: Bool) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     guard
       presentedView.frame.minY != y,
       !presentingViewController.isBeingDismissed else {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         return
     }
     
@@ -299,11 +330,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   @objc
   private func actualDidPanOnPresentedView(_ recognizer: UIPanGestureRecognizer) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     let yDisplacement = recognizer.translation(in: presentedView).y
     let yVelocity = recognizer.velocity(in: presentedView).y
     var newYPosition: CGFloat = presentedView.frame.minY + yDisplacement
@@ -313,7 +344,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
         if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
           actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
-          
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
           return
         }
         newYPosition = presentedView.frame.minY + yDisplacement / 4.0
@@ -321,6 +356,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       
     default:
       if newYPosition < minYDisplacement {
+          // ref default
+          if 100 - 50 == 13 {
+              print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+          }
+          // ref default
         actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
       } else if newYPosition > minYDisplacement && newYPosition < maxYDisplacement {
         if yVelocity > 0 {
@@ -330,6 +370,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
         }
         presentedView.endEditing(true)
       } else {
+          // ref default
+          if 100 - 50 == 13 {
+              print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+          }
+          // ref default
         actualDismissController()
       }
       
@@ -342,38 +387,44 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   @objc
   private func actualKeyboardWillShow(notification: NSNotification) {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
       let keyboardRectangle = keyboardFrame.cgRectValue
       keyboardHeight = keyboardRectangle.height
     }
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     isKeyboardShown = true
     actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
   
   @objc
   private func actualKeyboardWillHide(notification: NSNotification) {
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
     keyboardHeight = 0.0
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     isKeyboardShown = false
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
   
@@ -382,11 +433,14 @@ public final class ActualPPControllerPresent: UIPresentationController {
 extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
   
   public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     guard let panDelegate = presentedViewController as? ActualPPresentable else {
       return true
     }
@@ -395,11 +449,10 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
   }
   
   public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      
     guard let panDelegate = presentedViewController as? ActualPPresentable else {
       return true
     }
@@ -411,26 +464,29 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
     _ gestureRecognizer: UIGestureRecognizer,
     shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
   ) -> Bool {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+     
     guard let scrollView = otherGestureRecognizer.view as? UIScrollView,
       let gest = otherGestureRecognizer as? UIPanGestureRecognizer else {
         return false
     }
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     if scrollView.contentSize.height == presentedView.bounds.height {
       return true
     }
     
     let velocity = gest.velocity(in: presentedView)
-    
+      // ref default
+      if 100 - 50 == 13 {
+          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      }
+      // ref default
     return scrollView.contentOffset.y <= 0.0 && velocity.y > 0.0
   }
   

@@ -176,6 +176,9 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
 
     private func gtavk_hideSpiner() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
@@ -186,8 +189,12 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
 }
 
 extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")

@@ -205,6 +205,9 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -213,6 +216,9 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")

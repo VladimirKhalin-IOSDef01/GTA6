@@ -12,6 +12,9 @@ class ActualCustomAlertViewController: UIViewController {
     private let iconImageView = UIImageView()
 
     override func viewDidLoad() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         super.viewDidLoad()
         actualSetupViews()
     }

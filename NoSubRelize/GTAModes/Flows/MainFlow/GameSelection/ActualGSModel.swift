@@ -62,6 +62,9 @@ final class ActualGSModel {
     
     public func actualSelectedItems(index: Int) {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
         }
@@ -78,6 +81,9 @@ final class ActualGSModel {
     }
     
     public func actualBackAction_Proceed() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -121,6 +127,9 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     
     func actualIsReadyMain() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 100 - 50 == 13 {
@@ -130,6 +139,9 @@ extension ActualGSModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameList() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 100 - 50 == 13 {
@@ -140,6 +152,9 @@ extension ActualGSModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameCodes() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 100 - 50 == 13 {
@@ -149,6 +164,9 @@ extension ActualGSModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyMissions() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         actualOneCheck()
         // ref default
         if 100 - 50 == 13 {
@@ -159,6 +177,9 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGTA5Mods() { 
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
         }
@@ -167,9 +188,10 @@ extension ActualGSModel: ActualDBManagerDelegate {
     }
     
     func actualOneCheck() -> Int{
-    var checkOne = 93 + 3 * 2
-    var checkTwo = checkOne - 22
-    checkTwo += 11
+        
+    var checkOne = 97 + 37 * 277
+    var checkTwo = checkOne - 277
+    checkTwo += 1234
     return checkTwo
     }
     
