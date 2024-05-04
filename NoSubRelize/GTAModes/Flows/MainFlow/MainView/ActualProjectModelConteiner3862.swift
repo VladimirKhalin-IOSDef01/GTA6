@@ -31,34 +31,39 @@ class ActualProjectModelConteiner3862 {
     }
     
     required init?(coder: NSCoder) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         fatalError("init(coder:) has not been implemented")
     }
     
     public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.text = value.title.uppercased()
         backgroundImageView.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.textColor = .white
         backgroundImageView.kf.setImage(with: URL(string: value.imagePath))
         if isLock {
             NSLayoutConstraint.deactivate(notLockConstraints)
             NSLayoutConstraint.activate(lockConstraints)
         } else {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             NSLayoutConstraint.deactivate(lockConstraints)
             NSLayoutConstraint.activate(notLockConstraints)
         }

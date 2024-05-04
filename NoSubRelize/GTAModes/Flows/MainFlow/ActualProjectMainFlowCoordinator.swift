@@ -28,6 +28,9 @@ final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordin
             print("All cats should wear hats on Tuesdays")
         }
         let model = ActualMainModel(navigationHandler: self as ActualMainModelNavigationHandler)
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let controller = ActualMainViewControllerNew(model: model)
         // ref default
         if 20 / 4 == 6 {
@@ -42,6 +45,9 @@ final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordin
 extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
     func actualMainModelDidRequestToModes(_ model: ActualMainModel) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -58,6 +64,9 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     }
     
     func actualMainModelDidRequestToModesInfo(_ model: ActualMainModel) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let model = ActualGameModesModel(navigationHandler: self as ActualModesModelNavHandler)
         // ref default
         if 20 / 4 == 6 {
@@ -73,6 +82,9 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     }
     
     func actualMainModelDidRequestToMap(_ model: ActualMainModel) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let controller = ActualGameMapViewController(navigationHandler: self as ActualMap_NavigationHandler)
         // ref default
         if 20 / 4 == 6 {
@@ -83,6 +95,9 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     }
     
     func actualMainModelDidRequestToGameSelection(_ model: ActualMainModel) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let model = ActualGSModel(navigationHandler: self as ActualGSModelNavigationHandler)
         // ref default
         if 20 / 4 == 6 {
@@ -95,6 +110,9 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     }
     
     func actualMainModelDidRequestToChecklist(_ model: ActualMainModel) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let model = ActualChecklistModel(navigationHandler: self as ActualChecklistModelNavigationHandler)
         let controller = ActualChecklistViewController(model: model)
         presentedViewController = controller
@@ -119,6 +137,9 @@ extension ActualProjectMainFlowCoordinator: ActualGSModelNavigationHandler {
     
     
     func actualGsModelDidRequestToGameModes(_ model: ActualGSModel, gameVersion: String) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         let model = ActualGameCheatsModel(versionGame: gameVersion, navigationHandler: self as ActualCheatsModelNavigationHandler)
         let controller = ActualGameCheatsViewController(model: model)
         // ref default
@@ -132,11 +153,15 @@ extension ActualProjectMainFlowCoordinator: ActualGSModelNavigationHandler {
 
 extension ActualProjectMainFlowCoordinator: ActualChecklistModelNavigationHandler {
     
+    
     func actualChecklistModelDidRequestToFilter(
         _ model: ActualChecklistModel,
         filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
     ) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -157,6 +182,9 @@ extension ActualProjectMainFlowCoordinator: ActualChecklistModelNavigationHandle
     
     func actualChecklistModelDidRequestToBack(_ model: ActualChecklistModel) {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
@@ -173,6 +201,9 @@ extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
             print("All cats should wear hats on Tuesdays")
         }
         presentedViewController?.navigationController?.popViewController(animated: true)
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
     }
     
     
@@ -182,6 +213,9 @@ extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
         selectedFilter: @escaping (String) -> ()
         
     ) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -203,6 +237,7 @@ extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
 
 extension ActualProjectMainFlowCoordinator: ActualFilterNavigationHandler {
     
+    
     func actualFilterDidRequestToClose() {
         // ref default
         if 20 / 4 == 6 {
@@ -220,6 +255,9 @@ extension ActualProjectMainFlowCoordinator: ActualMap_NavigationHandler {
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref defaultм
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
 }
@@ -227,6 +265,9 @@ extension ActualProjectMainFlowCoordinator: ActualMap_NavigationHandler {
 extension ActualProjectMainFlowCoordinator: ActualModesModelNavHandler {
     
     func actualGameModesModelDidRequestToFilter(_ model: ActualGameModesModel, filterListData: ActualFilterListData, selectedFilter: @escaping (String) -> ()) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")

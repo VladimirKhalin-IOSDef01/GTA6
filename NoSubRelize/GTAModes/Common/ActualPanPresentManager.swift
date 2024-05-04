@@ -68,6 +68,9 @@ public extension ActualPPresentManager {
   
   func actualPresentPanCollection(_ controller: UIViewController) {
       // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
+      // ref default
       if 20 / 4 == 6 {
           print("All cats should wear hats on Tuesdays")
       }

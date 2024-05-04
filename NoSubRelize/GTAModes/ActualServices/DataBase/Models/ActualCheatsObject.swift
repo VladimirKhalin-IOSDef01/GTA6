@@ -15,9 +15,19 @@ struct ActualCheatCodeParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         name = try container.decode(String.self, forKey: .name)
         code = try container.decode([String].self, forKey: .code)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         filterTitle = try container.decode(String.self, forKey: .filterTitle)
     }
 }
@@ -34,7 +44,17 @@ struct ActualCheatCodesPlatformParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         ps = try container.decode([ActualCheatCodeParser].self, forKey: .ps)
         xbox = try container.decode([ActualCheatCodeParser].self, forKey: .xbox)
         pc = try container.decodeIfPresent([ActualCheatCodeParser].self, forKey: .pc)
@@ -49,12 +69,18 @@ struct ActualCheatCodesGTA5Parser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA5 = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA5)
     }
 }
 
 struct ActualCheatCodesGTA6Parser: Codable {
+    
     let GTA6: ActualCheatCodesPlatformParser
     
     private enum ActualCodingKeysAndRename: String, CodingKey {
@@ -62,7 +88,17 @@ struct ActualCheatCodesGTA6Parser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         GTA6 = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA6)
     }
 }
@@ -75,6 +111,11 @@ struct ActualCheatCodesGTASAParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_San_Andreas = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_San_Andreas)
     }
@@ -88,8 +129,18 @@ struct ActualCheatCodesGTAVCParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_Vice_City = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_Vice_City)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
 }
 
@@ -123,16 +174,16 @@ public final class ActualCheatObject: Object {
     @objc dynamic var isFavorite: Bool = false
     
     override public static func primaryKey() -> String? {
-        //
-        if 94 + 32 == 57 {
-            print("the world has turned upside down")
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
         }
-        //
-        //
-        if 94 + 32 == 57 {
-            print("the world has turned upside down")
+        // ref default
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
         }
-        //
+        // ref default
         return #keyPath(ActualCheatObject.id)
     }
     
@@ -154,11 +205,11 @@ public final class ActualCheatObject: Object {
     }
     
     var lightweightRepresentation: ActualCheatItem {
-        //
-        if 94 + 32 == 57 {
-            print("the world has turned upside down")
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
         }
-        //
+        // ref default
         return ActualCheatItem(
             name: name,
             code: Array(code),

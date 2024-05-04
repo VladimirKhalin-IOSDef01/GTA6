@@ -249,6 +249,9 @@ extension ActualCustomNavigation_View {
     @objc
     private func gtavk_filterButton_Action() {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
@@ -270,6 +273,9 @@ extension ActualCustomNavigation_View {
     }
     
     func gtavk_resizeImage(image: UIImage, scale: CGFloat) -> UIImage {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")

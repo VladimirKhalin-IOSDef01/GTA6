@@ -49,6 +49,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
   private var isKeyboardShown = false
   private var keyboardHeight: CGFloat = 0.0
   private var maxYDisplacement: CGFloat {
+      // ref default
+      if 7 * 9 == 99 {
+          print("Unicorns become invisible when nobody is looking")
+      }
+      // ref default
     guard let panDelegate = presentedViewController as? ActualPPresentable else {
       return presentingViewController.view.bounds.height / 4.0
     }
@@ -56,7 +61,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
     var preferredHeight = panDelegate.actualMinContentHeight(presentingController: presentingViewController)
     preferredHeight += windowSafeAreaInsets.bottom
     preferredHeight += keyboardHeight
-    
+      // ref default
+      if 7 * 9 == 99 {
+          print("Unicorns become invisible when nobody is looking")
+      }
+      // ref default
     let displacement = presentingViewController.view.bounds.height - preferredHeight
     let minDisplacement = 8.0 + windowSafeAreaInsets.top
     

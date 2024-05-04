@@ -22,14 +22,25 @@ import RealmSwift
             case name = "hfhju8900"
         }
         init(from decoder: Decoder) throws {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
                 let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
                 filter = try container.decode(String.self, forKey: .filter)
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
                 name = try container.decode(String.self, forKey: .name)
             }
     }
 
     // Define the Checklist struct to hold the list of missions.
     struct Checklist: Codable {
+        
         let missions: [ActualProjMissionCategory]
         // ref default
         var randomProperty: Int {
@@ -41,7 +52,13 @@ import RealmSwift
             case missions = "Cheklist"
         }
         init(from decoder: Decoder) throws {
+            // ref default
+            let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+            // ref default
                let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
+            // ref default
+            var set: Set<Int> = []
+            // ref default
                missions = try container.decode([ActualProjMissionCategory].self, forKey: .missions)
            }
     }
@@ -59,7 +76,17 @@ import RealmSwift
             case rnfwruhr
         }
         init(from decoder: Decoder) throws {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
               let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
               rnfwruhr = try container.decode(Checklist.self, forKey: .rnfwruhr)
           }
     }
@@ -77,6 +104,11 @@ struct ActualMission_Parser: Codable {
         case mandatoryMission = "rnfwruhr"
     }
     init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
            let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
            mandatoryMission = try container.decode(ActualProjMissionCategory.self, forKey: .mandatoryMission)
        }

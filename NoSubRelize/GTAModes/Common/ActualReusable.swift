@@ -113,7 +113,9 @@ public extension Reusable {
           print("All cats should wear hats on Tuesdays")
       }
       // ref default
-      
+      // ref default
+      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      // ref default
     register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
   

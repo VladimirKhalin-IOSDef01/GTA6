@@ -80,6 +80,11 @@ open class ActualNiblessViewController: UIViewController {
 open class ActualNiblessFilterViewController: UIViewController {
     
     public init() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         super.init(nibName: nil, bundle: nil)
     }
     

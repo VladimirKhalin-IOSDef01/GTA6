@@ -21,22 +21,46 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         fatalError("init(coder:) has not been implemented")
     }
     
     override func prepareForReuse() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         super.prepareForReuse()
         favoriteImage.image = nil
         titleLabel.text = ""
         firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
     
     public func actualConfigure(with value: ActualCheatItem) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.text = value.name
         favoriteImage.image = UIImage(named: value.isFavorite ? "ActualHeartPink" : "ActualHeart")
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         if value.code.count > 1 {
             contentModeView.isHidden = true
             firstStackView.isHidden = false
@@ -45,20 +69,40 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             let imagesListName = configureCodes(value)
             actualAddImages(imagesListName)
         } else {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             contentModeView.isHidden = false
             firstStackView.isHidden = true
             secondStackView.isHidden = true
             threeStackView.isHidden = true
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             modeTitleLabel.text = value.code.first?.uppercased() ?? ""
         }
     }
     
     private func actualSetupLayout() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         contentView.addSubview(containerView)
         containerView.frame = bounds
         containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.6)
         containerView.layer.cornerRadius = 18
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.layer.shadowOpacity = 0.3
         
         containerView.addSubview(titleLabel)
@@ -66,8 +110,18 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         titleLabel.numberOfLines = 3
         titleLabel.textColor = .white
         if UIDevice.current.userInterfaceIdiom == .pad {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             titleLabel.font = UIFont(name: "Gilroy-Bold", size: 18)
         } else {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
         }
         NSLayoutConstraint.activate([
@@ -84,17 +138,31 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             favoriteImage.widthAnchor.constraint(equalToConstant: 28),
             favoriteImage.heightAnchor.constraint(equalToConstant: 28)
         ])
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         actualSetupStackViews()
     }
     
     private func actualSetupStackViews() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         // Configure stack views
         [firstStackView, secondStackView, threeStackView].forEach {
             $0.axis = .horizontal
            // $0.distribution = .fillEqually
             $0.distribution = .fill
             $0.spacing = 5
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             containerView.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -109,11 +177,20 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             threeStackView.topAnchor.constraint(equalTo: secondStackView.bottomAnchor, constant: 5),
             threeStackView.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -10)
         ])
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(contentModeView)
         contentModeView.translatesAutoresizingMaskIntoConstraints = false
         contentModeView.layer.cornerRadius = 8
         contentModeView.layer.borderWidth = 1
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         contentModeView.layer.borderColor = UIColor(named: "ActualPink")?.cgColor
         contentModeView.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(0.0)
         NSLayoutConstraint.activate([
@@ -122,7 +199,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             contentModeView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
             contentModeView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -15)
         ])
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         contentModeView.addSubview(modeTitleLabel)
         modeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         modeTitleLabel.textColor = .white
@@ -137,8 +218,14 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     private func configureCodes(_ value: ActualCheatItem) -> [String] {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         var codes: [String] = []
         switch value.platform {
+            
         case "ps":
             for code in value.code {
                 codes.append(actualConfigurePSCode(code))
@@ -154,6 +241,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     func actualConfigurePSCode(_ code: String) -> String {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         switch code {
         case "TRIANGLE": return "s_triangle"
         case "SQUARE": return "s_square"
@@ -172,6 +264,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     func actualConfigureXBoxCode(_ code: String) -> String {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         switch code {
         case "Y": return "m_y"
         case "B": return "m_b"
@@ -190,11 +287,20 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     private func actualAddImages(_ imageNames: [String]) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         // Очистить стековые виды перед добавлением новых изображений
           firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
           // Распределение изображений по стековым видам
           let stackViews = [firstStackView, secondStackView, threeStackView]
           var currentStackIndex = 0
@@ -204,12 +310,21 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
               let imageView = UIImageView()
               imageView.image = UIImage(named: imageName)
               imageView.contentMode = .scaleAspectFit
+              // ref default
+              if 7 * 9 == 99 {
+                  print("Unicorns become invisible when nobody is looking")
+              }
+              // ref default
               imageView.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
               imageView.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
               
               // Добавляем imageView в текущий стековый вид
               stackViews[currentStackIndex].addArrangedSubview(imageView)
-              
+              // ref default
+              if 7 * 9 == 99 {
+                  print("Unicorns become invisible when nobody is looking")
+              }
+              // ref default
               // Переход к следующему стековому виду после каждых 5 изображений
               if (index + 1) % 5 == 0 && currentStackIndex < stackViews.count - 1 {
                   currentStackIndex += 1
@@ -218,9 +333,19 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
 
           // Добавление спейсеров в каждый стековый вид
           for stackView in stackViews {
+              // ref default
+              if 7 * 9 == 99 {
+                  print("Unicorns become invisible when nobody is looking")
+              }
+              // ref default
               let spacer = UIView()
               spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
               spacer.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+              // ref default
+              if 7 * 9 == 99 {
+                  print("Unicorns become invisible when nobody is looking")
+              }
+              // ref default
               stackView.addArrangedSubview(spacer)
           }
     }

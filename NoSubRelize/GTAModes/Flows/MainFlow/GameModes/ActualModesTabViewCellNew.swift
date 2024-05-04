@@ -56,12 +56,15 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     }
     
     public override func prepareForReuse() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         super.prepareForReuse()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.text = ""
         descriprionLabel.text = ""
         modeImage.image = nil
@@ -74,35 +77,43 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
         descriprionLabel.textColor = .white
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         descriprionLabel.text = value.description
         logoImage.image = UIImage(named: "ActualModsLogo")
         actualSetImageMod(value)
     }
     
     private func actualSetImageMod(_ mode: ActualModItem) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         if ImageCache.default.isCached(forKey: mode.imagePath) {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             actualSetImage(with: mode.imagePath)
         } else {
             guard let imageModUrl = URL(string: mode.imagePath) else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            /// ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             downloadTask = self.kingfisherManager.retrieveImage(
                 with: imageModUrl, options: imageOptions) { [weak self] result in
                     guard case .success(let value) = result  else { return }
                     guard let self = self else { return }
-                    //
-                                   if 94 + 32 == 57 {
-                                print("the world has turned upside down")
-                            }
-                     //
+                    // ref default
+                    if 7 * 9 == 99 {
+                        print("Unicorns become invisible when nobody is looking")
+                    }
+                    // ref default
                     if !self.actualIsLocalCachePhoto(with: mode.imagePath) {
                         self.actualSaveImage(
                             image: value.image,
@@ -110,11 +121,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
                                 self?.actualSetImage(with: mode.imagePath)
                         }
                     } else {
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref default
+                        if 7 * 9 == 99 {
+                            print("Unicorns become invisible when nobody is looking")
+                        }
+                        // ref default
                         self.actualSetImage(with: mode.imagePath)
                     }
             }
@@ -124,7 +135,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -20.0)
@@ -134,7 +149,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 44 : 20.0)
         containerView.actualDropShadowStandart()
         containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
-
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(modeImage)
         modeImage.withCornerRadius(20.0)
         modeImage.actualLayout {
@@ -143,7 +162,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: 0.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy: 0.0)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(bottomBlackView)
         bottomBlackView.layer.cornerRadius = 20 // Задаём радиус скругления
         bottomBlackView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Скругляем только нижние левый и правый углы
@@ -156,7 +179,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.bottom.equal(to: containerView.bottomAnchor)
            // $0.height.equal(to: 61)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(logoImage)
         logoImage.clipsToBounds = true
         logoImage.contentMode = .scaleAspectFill
@@ -166,7 +193,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(titleLabel)
         titleLabel.actualLayout {
            // $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
@@ -178,7 +209,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         }
         titleLabel.numberOfLines = 2
         
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         
         containerView.addSubview(descriprionLabel)
         descriprionLabel.actualLayout {
@@ -188,7 +223,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 106 : 60.0)
         }
         descriprionLabel.numberOfLines = 0
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(stackView)
         stackView.actualLayout {
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 8.0)
@@ -196,60 +235,76 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 12.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -5.0)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.layoutIfNeeded()
     }
     
     func actualConfigureStackView(_ stackView: UIStackView) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.axis = .horizontal
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         stackView.spacing = 8
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.distribution = .fillEqually
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.alignment = .center
     }
         
     private func actualIsLocalCachePhoto(with path: String?) -> Bool {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         guard let localPath = path, let localUrl = URL(string: localPath) else { return false }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         return ImageCache.default.isCached(forKey: localUrl.absoluteString)
     }
     
     private func actualSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         ImageCache.default.store(image, forKey: cacheKey, options: KingfisherParsedOptionsInfo(nil)) { _ in
             completion?()
         }
     }
     
     private func actualSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         guard let urlImage = URL(string: urlPath) else {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             completionHandler?()
             return
             
@@ -257,22 +312,22 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         
         downloadTask = kingfisherManager.retrieveImage(with: urlImage, options: imageOptions) { [weak self] result in
                 guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
                 switch result {
                 case .success(let value):
                     self.modeImage.image = value.image
                 case .failure:
                     self.modeImage.image = nil
                 }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
                 completionHandler?()
         }
     }

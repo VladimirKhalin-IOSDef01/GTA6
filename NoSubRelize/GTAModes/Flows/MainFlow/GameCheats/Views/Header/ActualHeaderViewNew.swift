@@ -13,11 +13,21 @@ final class ActualHeaderViewNew: UICollectionReusableView {
     public var actionButton: ((Int) -> ())?
     
     private let stackView: UIStackView = {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 0
         stackView.distribution = .fillEqually
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -25,6 +35,11 @@ final class ActualHeaderViewNew: UICollectionReusableView {
     private var selectedButton: UIButton?
     
     override init(frame: CGRect) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         super.init(frame: frame)
         
         gtavk_setupView()
@@ -37,6 +52,11 @@ final class ActualHeaderViewNew: UICollectionReusableView {
     private func gtavk_setupView() {
         self.addSubview(stackView) // В UICollectionReusableView нет contentView, так что добавляем прямо в self.
         stackView.layer.cornerRadius = 18
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
         stackView.clipsToBounds = true
         stackView.actualLayout {
@@ -48,15 +68,30 @@ final class ActualHeaderViewNew: UICollectionReusableView {
         
         let images = ["sony", "xbox", "win", "fav"]
         for imageName in images {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             let button = UIButton(type: .custom)
             button.setImage(UIImage(named: imageName), for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
             button.imageView?.clipsToBounds = true
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             button.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(self, action: #selector(actualButtonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
             if imageName == "sony" {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 button.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
                 selectedButton = button
             } else {
@@ -64,6 +99,11 @@ final class ActualHeaderViewNew: UICollectionReusableView {
             }
             
             button.actualLayout {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79)
                 $0.width.equal(to: 88.0)
             }
@@ -71,9 +111,19 @@ final class ActualHeaderViewNew: UICollectionReusableView {
     }
     
     @objc func actualButtonTapped(sender: UIButton) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 selectedButton.backgroundColor = UIColor(named: "ActualBlack")
             }
             selectedButton = sender

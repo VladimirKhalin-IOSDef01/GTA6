@@ -48,11 +48,21 @@ import Kingfisher
     }
     
     public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         titleLabel.text = value.title.uppercased()
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         backgroundImageView.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
         // ref default
@@ -76,13 +86,23 @@ import Kingfisher
     }
     
     public override func prepareForReuse() {
+        // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
         super.prepareForReuse()
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
+        // ref default
         backgroundImageView.image = nil
         lockImageView.image = nil
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         titleLabel.text = ""
     }
     

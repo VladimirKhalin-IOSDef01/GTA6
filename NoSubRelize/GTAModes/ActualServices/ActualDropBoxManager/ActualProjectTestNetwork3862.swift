@@ -4,27 +4,30 @@ import Network
 typealias AtualTestNetworkExtension = UIViewController
 extension AtualTestNetworkExtension {
     func actualTopMostViewController() -> UIViewController {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         if let presented = self.presentedViewController {
+            // ref default
+            let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+            // ref default
             return presented.actualTopMostViewController()
         }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         if let navigation = self as? UINavigationController {
             return navigation.visibleViewController?.actualTopMostViewController() ?? navigation
         }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         if let tab = self as? UITabBarController {
             return tab.selectedViewController?.actualTopMostViewController() ?? tab
         }

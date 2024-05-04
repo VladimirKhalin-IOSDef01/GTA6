@@ -14,6 +14,11 @@ class ActualAlertManager {
     var alertViewController: ActualAllertController?
 
     func actualShowAlert() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         alertViewController?.actualBackgroundAlertView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.alertViewController?.actualCustomAlert(alertType: .download)
@@ -21,6 +26,11 @@ class ActualAlertManager {
     }
     
     func actualStopAlerts() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         self.alertViewController?.shouldDisplayAlerts = false
     }
 }

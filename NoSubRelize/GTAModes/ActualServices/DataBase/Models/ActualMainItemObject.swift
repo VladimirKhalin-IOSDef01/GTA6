@@ -18,6 +18,11 @@ public struct ActualMainItemsDataParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     public init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         data = try container.decode([ActualMainItemParser].self, forKey: .data)
     }
@@ -36,9 +41,19 @@ public struct ActualMainItemParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     public init(from decoder: Decoder) throws {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         title = try container.decode(String.self, forKey: .title)
         type = try container.decode(String.self, forKey: .type)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         imagePath = try container.decode(String.self, forKey: .imagePath)
     }
     

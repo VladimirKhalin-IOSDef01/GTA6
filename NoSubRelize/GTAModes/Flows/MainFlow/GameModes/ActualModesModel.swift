@@ -59,7 +59,11 @@ final class ActualGameModesModel {
         navigationHandler: ActualModesModelNavHandler
     ) {
         self.navigationHandler = navigationHandler
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         ActualDBManager.shared.delegate = self
         
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGTA5Mods") as? Bool, isLoadedData {
@@ -69,20 +73,20 @@ final class ActualGameModesModel {
     }
     
     func actualBackActionProceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         navigationHandler.actualGameModesModelDidRequestToBack(self)
     }
     
     func actualFilterActionProceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let filterList = allModeItems.map { $0.filterTitle }
         let uniqueList = Array(Set(filterList)).sorted()
         let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
@@ -90,11 +94,11 @@ final class ActualGameModesModel {
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 guard let self = self else { return }
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 self.filterSelected = selectedFilter
                 if selectedFilter.isEmpty {
                     self.modeItems = allModeItems
@@ -104,11 +108,11 @@ final class ActualGameModesModel {
                 }
                 self.reloadDataSubject.send()
             }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
     func actualFetchData() {
@@ -117,11 +121,11 @@ final class ActualGameModesModel {
             let realm = try Realm()
             let modes = realm.objects(ActualModObject.self)
             let modesList = modes.map { $0.lightweightRepresentation }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             modesList.forEach { [weak self] value in
                 guard let self = self else { return }
                 
@@ -129,11 +133,11 @@ final class ActualGameModesModel {
             }
         } catch {
             print("Error saving data to Realm: \(error)")
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
         }
     }
     
@@ -155,14 +159,22 @@ final class ActualGameModesModel {
                     self?.reloadDataSubject.send()
                     self?.showAlertSaverSubject.send("Some problem with file")
                 }
-              
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
             }
             
         } else {
 //            showSpinnerSubject.send(false)
            
             showDocumentSaverSubject.send(mode.modPath)
-            
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             reloadDataSubject.send()
             print("FILE IS LOCALY")
         }
@@ -170,6 +182,11 @@ final class ActualGameModesModel {
     }
     
     func actualCheckIsLoadData(_ modeName: String) -> Bool {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent(modeName)
       
@@ -182,11 +199,11 @@ final class ActualGameModesModel {
 
     func actualShowMods() {
         modeItems = allModeItems
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        /// ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         reloadDataSubject.send()
         hideSpiner?()
     }
@@ -194,11 +211,11 @@ final class ActualGameModesModel {
     func actualSearchAt(_ searchText: String) {
         let filteredList = allModeItems.filter { $0.title.lowercased().contains(searchText.lowercased())}
         modeItems = filteredList
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         self.searchText = searchText
         if searchText.isEmpty {
             modeItems = allModeItems
@@ -208,11 +225,11 @@ final class ActualGameModesModel {
     
     func actualSearchDidCancel() {
         if searchText.isEmpty {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             modeItems = allModeItems
         }
     }
@@ -223,59 +240,64 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         actualOneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
     func actualIsReadyGameList() {
         actualOneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         
     }
     
     func actualIsReadyGameCodes() {
         actualOneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
     func actualIsReadyMissions() { 
         actualOneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
     func actualIsReadyGTA5Mods() {
         actualOneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         actualFetchData()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         actualShowMods()
     }
     func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     checkTwo += 11
     return checkTwo
     }

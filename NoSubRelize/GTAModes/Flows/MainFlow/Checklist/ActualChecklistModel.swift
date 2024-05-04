@@ -54,6 +54,10 @@ final class ActualChecklistModel {
     
     func actualBackActionProceeed() {
         // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -220,6 +224,10 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
   
     func actualIsReadyMain() {
         // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -235,6 +243,10 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
         // ref default
         actualOneCheck()
         // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
+        // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
@@ -242,6 +254,10 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameCodes() {
+        // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -260,6 +276,10 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGTA5Mods() { 
+        // ref default
+        let doNothingClosure = { () -> Void in
+        }
+        // ref default
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")

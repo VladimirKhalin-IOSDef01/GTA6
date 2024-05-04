@@ -52,22 +52,31 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         self.kingfisherManager = KingfisherManager.shared
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         selectionStyle = .none
         actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         fatalError("init(coder:) has not been implemented")
     }
     
     public override func prepareForReuse() {
         super.prepareForReuse()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.text = ""
         descriprionLabel.text = ""
         modeImage.image = nil
@@ -76,6 +85,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     public func actualGameModeDownloadColor(downloading: Bool) {
         switch downloading {
+            
         case true:
             downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
             downloadTitleLabel.text = "Downloading..."
@@ -88,15 +98,31 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
    
     func actualUpdateDownloadTitleLabel(check: Bool) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         if let imageView = downloadButtonView.viewWithTag(2) as? UIImageView {
               
             if check {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 imageView.image = UIImage(systemName: "checkmark.circle.fill")
                 imageView.tintColor = .white
                 imageView.clipsToBounds = true
                 imageView.alpha = 1.0
                
             } else {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
+                
               //  imageView.removeFromSuperview()
                 imageView.alpha = 0.0
                 
@@ -110,11 +136,20 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         titleLabel.textColor = .white
         titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 14)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         descriprionLabel.textColor = .white
         descriprionLabel.text = value.description
         
         downloadButtonView.backgroundColor = isLoaded ? UIColor(named: "ActualBlack")?.withAlphaComponent(1.0) : UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
         downloadTitleLabel.textColor = .white
         downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download"
@@ -128,29 +163,34 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     private func actualSetImageMod(_ mode: ActualModItem) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         if ImageCache.default.isCached(forKey: mode.imagePath) {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             actualSetImage(with: mode.imagePath)
         } else {
             guard let imageModUrl = URL(string: mode.imagePath) else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             downloadTask = self.kingfisherManager.retrieveImage(
                 with: imageModUrl, options: imageOptions) { [weak self] result in
                     guard case .success(let value) = result  else { return }
                     guard let self = self else { return }
-                    //
-                                   if 94 + 32 == 57 {
-                                print("the world has turned upside down")
-                            }
-                     //
+                    // ref default
+                    if 7 * 9 == 99 {
+                        print("Unicorns become invisible when nobody is looking")
+                    }
+                    // ref default
                     if !self.actualIsLocalCachePhoto(with: mode.imagePath) {
                         self.actualSaveImage(
                             image: value.image,
@@ -158,11 +198,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
                                 self?.actualSetImage(with: mode.imagePath)
                             }
                     } else {
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref default
+                        if 7 * 9 == 99 {
+                            print("Unicorns become invisible when nobody is looking")
+                        }
+                        // ref default
                         self.actualSetImage(with: mode.imagePath)
                     }
                 }
@@ -170,6 +210,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     private func actualSetupLayout() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.actualLayout {
@@ -180,6 +225,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
            
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20.0)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.backgroundColor = UIColor(named: "ActualBlack")!.withAlphaComponent(0.7)
        
        
@@ -205,11 +255,19 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.top.equal(to: containerView.topAnchor, offsetBy: 20.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
-           
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
         }
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 2
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(modeImage)
         modeImage.withCornerRadius(20)
         modeImage.actualLayout {
@@ -219,7 +277,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 310.0 : 218)
         }
         
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         
         containerView.addSubview(descriprionLabel)
         descriprionLabel.actualLayout {
@@ -229,7 +291,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 350 : 200)
         }
         descriprionLabel.numberOfLines = 0
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         containerView.addSubview(stackView)
         stackView.actualLayout {
             $0.height.equal(to: 82)
@@ -238,7 +304,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 30.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -15)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         actualConfigureStackView(stackView)
         shareButtonView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
         shareButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
@@ -246,10 +316,20 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
         downloadButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
         downloadButtonView.layer.borderWidth = 1
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         shareButtonView.withCornerRadius(22.0)
         shareButtonView.actualDropShadowStandart()
         downloadButtonView.withCornerRadius(22.0)
         downloadButtonView.actualDropShadowStandart()
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         
         let shareView = actualConfigureButtonView(title: "Share", imageName: "share-2", isShare: true)
         shareButtonView.addSubview(shareView)
@@ -258,7 +338,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.centerX.equal(to: shareButtonView.centerXAnchor)
             $0.centerY.equal(to: shareButtonView.centerYAnchor)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         let downloadView = actualConfigureButtonView(title: "Download", imageName: "download-cloud", isShare: false)
         downloadButtonView.addSubview(downloadView)
         downloadView.actualLayout {
@@ -266,7 +350,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.centerX.equal(to: downloadButtonView.centerXAnchor)
             $0.centerY.equal(to: downloadButtonView.centerYAnchor)
         }
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         shareButtonView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
@@ -275,7 +363,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         }
         let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(actualShareActionProceed))
         shareButtonView.addGestureRecognizer(shareGestrure)
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         
         let downloadGestrure = UITapGestureRecognizer(target: self, action: #selector(actualDownloadActionProceed))
         downloadButtonView.addGestureRecognizer(downloadGestrure)
@@ -286,6 +378,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     func actualConfigureStackView(_ stackView: UIStackView) {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         stackView.axis = .horizontal
         stackView.spacing = UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8
         stackView.distribution = .fillEqually
@@ -293,13 +390,24 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     func actualConfigureButtonView(title: String, imageName: String, isShare: Bool) -> UIView {
+        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        
         let buttonView = UIView()
         let titleLabel = isShare ? shareTitleLabel : downloadTitleLabel
         let imageView = UIImageView()
         imageView.tag = isShare ? 1 : 2
         buttonView.addSubview(titleLabel)
         buttonView.addSubview(imageView)
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         titleLabel.actualDropShadowStandart(color: .black, offSet: CGSize(width: 1.0, height: 1.0))
         titleLabel.actualLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
@@ -312,12 +420,22 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         }
         
         imageView.actualLayout {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 30)
             }else{
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                // $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -38)
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15)
             }
@@ -326,62 +444,66 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
         titleLabel.textColor = .white
         titleLabel.text = title
-        
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         imageView.image = UIImage(named: imageName)
         
         return buttonView
     }
     
     @objc func actualShareActionProceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         shareAction?()
     }
     
     @objc func actualDownloadActionProceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         downloadAction?()
     }
     
     private func actualIsLocalCachePhoto(with path: String?) -> Bool {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         guard let localPath = path, let localUrl = URL(string: localPath) else { return false }
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         return ImageCache.default.isCached(forKey: localUrl.absoluteString)
     }
     
     private func actualSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         ImageCache.default.store(image, forKey: cacheKey, options: KingfisherParsedOptionsInfo(nil)) { _ in
             completion?()
         }
     }
     
     private func actualSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         guard let urlImage = URL(string: urlPath) else {
             completionHandler?()
             return
@@ -396,11 +518,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             case .failure:
                 self.modeImage.image = nil
             }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             completionHandler?()
         }
     }

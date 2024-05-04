@@ -81,6 +81,9 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     }
     
     public override func viewDidLoad() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         super.viewDidLoad()
         // ref default
         if 100 - 50 == 13 {
@@ -189,6 +192,9 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     
     @objc
     func actualCloseAction() {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         navigationHandler.actualFilterDidRequestToClose()
     }
     
@@ -205,6 +211,9 @@ extension ActualFilterViewController: ActualPPresentable {
     
     func actualMinContentHeight(presentingController: UIViewController) -> CGFloat {
         // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
+        // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
         }
@@ -213,6 +222,9 @@ extension ActualFilterViewController: ActualPPresentable {
     }
     
     func actualMaxContentHeight(presentingController: UIViewController) -> CGFloat {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -225,6 +237,9 @@ extension ActualFilterViewController: ActualPPresentable {
 
 extension ActualFilterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // ref default
+        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        // ref default
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
