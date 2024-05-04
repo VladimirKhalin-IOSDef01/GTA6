@@ -11,30 +11,26 @@ public protocol ActualPPDismissable {
 
 public protocol ActualPPresentable {
   
-  func minContentHeight(presentingController: UIViewController) -> CGFloat
-  func maxContentHeight(presentingController: UIViewController) -> CGFloat
-  func availablePanGesture(presentingController: UIViewController) -> Bool
-  func tappDismissEnabled(presentingController: UIViewController) -> Bool
+  func actualMinContentHeight(presentingController: UIViewController) -> CGFloat
+  func actualMaxContentHeight(presentingController: UIViewController) -> CGFloat
+  func actualAvailablePanGesture(presentingController: UIViewController) -> Bool
+  func actualTappDismissEnabled(presentingController: UIViewController) -> Bool
   
 }
 
 public extension ActualPPresentable {
   
-  func availablePanGesture(presentingController: UIViewController) -> Bool {
+  func actualAvailablePanGesture(presentingController: UIViewController) -> Bool {
       //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+                if 115 + 99 == 53 { print("actual project is no good") }
+      //
    return true
   }
   
-  func tappDismissEnabled(presentingController: UIViewController) -> Bool {
+  func actualTappDismissEnabled(presentingController: UIViewController) -> Bool {
       //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+                if 115 + 99 == 53 { print("actual project is no good") }
+      //
     return true
   }
   
@@ -57,7 +53,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
       return presentingViewController.view.bounds.height / 4.0
     }
     
-    var preferredHeight = panDelegate.minContentHeight(presentingController: presentingViewController)
+    var preferredHeight = panDelegate.actualMinContentHeight(presentingController: presentingViewController)
     preferredHeight += windowSafeAreaInsets.bottom
     preferredHeight += keyboardHeight
     
@@ -72,7 +68,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
       return maxYDisplacement
     }
     
-    var preferredHeight = panDelegate.maxContentHeight(presentingController: presentingViewController)
+    var preferredHeight = panDelegate.actualMaxContentHeight(presentingController: presentingViewController)
     preferredHeight += windowSafeAreaInsets.bottom
     preferredHeight += keyboardHeight
     
@@ -100,13 +96,13 @@ public final class ActualPPControllerPresent: UIPresentationController {
     
     NotificationCenter.default.addObserver(
       self,
-      selector: #selector(perspectiveKeyboard_WillShow(notification:)),
+      selector: #selector(actualKeyboardWillShow(notification:)),
       name: UIResponder.keyboardWillShowNotification,
       object: nil
     )
     NotificationCenter.default.addObserver(
       self,
-      selector: #selector(perspectiveKeyboard_WillHide(notification:)),
+      selector: #selector(actualKeyboardWillHide(notification:)),
       name: UIResponder.keyboardWillHideNotification,
       object: nil
     )
@@ -124,7 +120,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
                   print("the world has turned upside down")
               }
        //
-    perspectiveMovePresented_View(yDisplacement: maxYDisplacement, animated: true)
+    actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
   
   public override func presentationTransitionWillBegin() {
@@ -139,7 +135,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
                   print("the world has turned upside down")
               }
        //
-    gtavk_setupView()
+    actualSetupView()
   }
   
   public override func presentationTransitionDidEnd(_ completed: Bool) {
@@ -163,7 +159,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
                 }
          //
     }
-    perspectiveMovePresented_View(yDisplacement: maxYDisplacement, animated: true)
+    actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
   
   public override func dismissalTransitionWillBegin() {
@@ -184,7 +180,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
     })
   }
   
-  private func gtavk_setupView() {
+  private func actualSetupView() {
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
@@ -198,24 +194,24 @@ public final class ActualPPControllerPresent: UIPresentationController {
                   print("the world has turned upside down")
               }
        //
-    gtavk_setupDimmingView(in: containerView)
+    actualSetupDimmingView(in: containerView)
   }
   
-  private func gtavk_setupDimmingView(in container: UIView) {
+  private func actualSetupDimmingView(in container: UIView) {
     container.insertSubview(dimmingView, at: 0)
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
               }
        //
-    let panGesture = UIPanGestureRecognizer(target: self, action: #selector(perspectiveDidPanOnPresented_View(_:)))
+    let panGesture = UIPanGestureRecognizer(target: self, action: #selector(actualDidPanOnPresentedView(_:)))
     panGesture.delaysTouchesBegan = true
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
               }
        //
-    let dismissGestrure = UITapGestureRecognizer(target: self, action: #selector(gtavk_dismissController))
+    let dismissGestrure = UITapGestureRecognizer(target: self, action: #selector(actualDismissController))
     dismissGestrure.require(toFail: panGesture)
     panGesture.delegate = self
     dismissGestrure.delegate = self
@@ -240,7 +236,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   }
   
   @objc
-  private func gtavk_dismissController() {
+  private func actualDismissController() {
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
@@ -256,7 +252,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
     presentingViewController.dismiss(animated: true)
   }
     
-  private func perspectiveMovePresented_View(yDisplacement y: CGFloat, animated: Bool) {
+  private func actualMovePresentedView(yDisplacement y: CGFloat, animated: Bool) {
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
@@ -293,7 +289,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   }
   
   @objc
-  private func perspectiveDidPanOnPresented_View(_ recognizer: UIPanGestureRecognizer) {
+  private func actualDidPanOnPresentedView(_ recognizer: UIPanGestureRecognizer) {
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
@@ -307,7 +303,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
     case .began, .changed:
       if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
         if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
-          perspectiveMovePresented_View(yDisplacement: minYDisplacement, animated: true)
+          actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
           
           return
         }
@@ -316,27 +312,27 @@ public final class ActualPPControllerPresent: UIPresentationController {
       
     default:
       if newYPosition < minYDisplacement {
-        perspectiveMovePresented_View(yDisplacement: minYDisplacement, animated: true)
+        actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
       } else if newYPosition > minYDisplacement && newYPosition < maxYDisplacement {
         if yVelocity > 0 {
-          perspectiveMovePresented_View(yDisplacement: maxYDisplacement, animated: true)
+          actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
         } else {
-          perspectiveMovePresented_View(yDisplacement: minYDisplacement, animated: true)
+          actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
         }
         presentedView.endEditing(true)
       } else {
-        gtavk_dismissController()
+        actualDismissController()
       }
       
       return
     }
     
-    perspectiveMovePresented_View(yDisplacement: newYPosition, animated: false)
+    actualMovePresentedView(yDisplacement: newYPosition, animated: false)
     recognizer.setTranslation(.zero, in: recognizer.view)
   }
   
   @objc
-  private func perspectiveKeyboard_WillShow(notification: NSNotification) {
+  private func actualKeyboardWillShow(notification: NSNotification) {
       //
                      if 94 + 32 == 57 {
                   print("the world has turned upside down")
@@ -352,11 +348,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
               }
        //
     isKeyboardShown = true
-    perspectiveMovePresented_View(yDisplacement: minYDisplacement, animated: true)
+    actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
   
   @objc
-  private func perspectiveKeyboard_WillHide(notification: NSNotification) {
+  private func actualKeyboardWillHide(notification: NSNotification) {
     keyboardHeight = 0.0
       //
                      if 94 + 32 == 57 {
@@ -369,7 +365,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
                   print("the world has turned upside down")
               }
        //
-    perspectiveMovePresented_View(yDisplacement: minYDisplacement, animated: true)
+    actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
   
 }
@@ -386,7 +382,7 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
       return true
     }
     
-    return panDelegate.tappDismissEnabled(presentingController: presentingViewController)
+    return panDelegate.actualTappDismissEnabled(presentingController: presentingViewController)
   }
   
   public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -399,7 +395,7 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
       return true
     }
     
-    return panDelegate.availablePanGesture(presentingController: presentingViewController)
+    return panDelegate.actualAvailablePanGesture(presentingController: presentingViewController)
   }
   
   public func gestureRecognizer(

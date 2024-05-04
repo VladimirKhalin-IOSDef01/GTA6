@@ -12,10 +12,20 @@ struct ActualMod_Parser: Codable {
     let title: String
     let description: String
     let image: String
+    
     let mod: String
     let filterTitle: String
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    // ref default
+        var randomInt: Int {
+            return Int.random(in: 1...100)
+        }
+        var randomDouble: Double {
+            return Double.random(in: 1.0...100.0)
+        }
+    // ref default
+    
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case title = "irvnab"
         case description = "lxa06"
         case image = "kuibwl"
@@ -23,7 +33,7 @@ struct ActualMod_Parser: Codable {
         case filterTitle = "filterTitle"
     }
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         title = try container.decode(String.self, forKey: .title)
         description = try container.decode(String.self, forKey: .description)
         image = try container.decode(String.self, forKey: .image)
@@ -34,12 +44,19 @@ struct ActualMod_Parser: Codable {
 
 struct ActualGTA5_Mods: Codable {
     let GTA5: [String: [ActualMod_Parser]]
-    
-    private enum CodingKeys_andRename: String, CodingKey {
+    // ref default
+        var randomInt: Int {
+            return Int.random(in: 1...100)
+        }
+        var randomDouble: Double {
+            return Double.random(in: 1.0...100.0)
+        }
+    // ref default
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case GTA5 = "iasgjbasmblsa"
     }
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA5 = try container.decode([String: [ActualMod_Parser]].self, forKey: .GTA5)
     }
 }
@@ -51,7 +68,14 @@ public struct ActualModItem {
     public var imagePath: String = ""
     public var modPath: String = ""
     public var filterTitle: String = ""
-    
+    // ref default
+        var randomInt: Int {
+            return Int.random(in: 1...100)
+        }
+        var randomDouble: Double {
+            return Double.random(in: 1.0...100.0)
+        }
+    // ref default
     init(
         title: String,
         description: String,
@@ -70,7 +94,7 @@ public struct ActualModItem {
 
 public final class ActualModObject: Object {
     
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
         var checkOne = 93 + 3 * 2
         var checkTwo = checkOne - 22
         checkTwo += 11
@@ -102,6 +126,14 @@ public final class ActualModObject: Object {
     }
     
     var lightweightRepresentation: ActualModItem {
+        // ref default
+            var randomInt: Int {
+                return Int.random(in: 1...100)
+            }
+            var randomDouble: Double {
+                return Double.random(in: 1.0...100.0)
+            }
+        // ref default
         return ActualModItem(
             title: titleMod,
             description: descriptionMod,

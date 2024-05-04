@@ -4,7 +4,7 @@ import WebKit
 
 protocol ActualMap_NavigationHandler: AnyObject {
     
-    func mapDidRequestToBack()
+    func actualMapDidRequestToBack()
     
 }
 
@@ -30,7 +30,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
         
         super.init()
         customNavigation.leftButtonAction = { [weak self] in
-            self?.perspectiveModes_navigationHandler.mapDidRequestToBack()
+            self?.perspectiveModes_navigationHandler.actualMapDidRequestToBack()
         }
         
        
@@ -75,26 +75,26 @@ class ActualGameMapViewController: ActualNiblessViewController {
                 fullScreenButton.layer.shadowOffset = CGSize(width: 0, height: 0)
                 fullScreenButton.layer.shadowRadius = 2
            
-                fullScreenButton.addTarget(self, action: #selector(buttonTapped), for: .touchDown)
-                fullScreenButton.addTarget(self, action: #selector(buttonReleased), for: .touchUpInside)
-                fullScreenButton.addTarget(self, action: #selector(buttonReleased), for: .touchUpOutside)
+                fullScreenButton.addTarget(self, action: #selector(actualButtonTapped), for: .touchDown)
+                fullScreenButton.addTarget(self, action: #selector(actualButtonReleased), for: .touchUpInside)
+                fullScreenButton.addTarget(self, action: #selector(actualButtonReleased), for: .touchUpOutside)
            }
     }
     
     
     
-    @objc private func buttonTapped() {
+    @objc private func actualButtonTapped() {
         fullScreenButton.layer.borderColor = UIColor.orange.withAlphaComponent(0.6).cgColor
        }
        
-       @objc private func buttonReleased() {
+       @objc private func actualButtonReleased() {
            fullScreenButton.layer.borderColor = UIColor.clear.cgColor
            fullScreen.toggle()
            
-           updateViewForFullScreen(fullScreen)
+           actualUpdateViewForFullScreen(fullScreen)
        }
     
-    func updateViewForFullScreen(_ fullScreen: Bool) {
+    func actualUpdateViewForFullScreen(_ fullScreen: Bool) {
         UIView.animate(withDuration: 0.2, animations: {
             self.customNavigation.isHidden = fullScreen
             self.actualSetupView()
@@ -108,7 +108,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
     private func actualSetupView() {
         
         view.addSubview(customNavigation)
-        customNavigation.perspectiveLayout {
+        customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 21.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
@@ -131,7 +131,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
         
         
         
-        perspectiveModes_webView.perspectiveLayout {
+        perspectiveModes_webView.actualLayout {
             topConstraint = fullScreen ?
             $0.top.equal(to: view.topAnchor, offsetBy: 0) :
             $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 20.0)

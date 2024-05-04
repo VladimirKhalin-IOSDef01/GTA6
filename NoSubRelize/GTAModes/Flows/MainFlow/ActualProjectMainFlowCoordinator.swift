@@ -2,10 +2,16 @@
 import Foundation
 import UIKit
 
-final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordinator {
-    
+final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordinator3862 {
+    // ref default
+    let doNothingClosure = { () -> Void in
+    }
+    // ref default
     private weak var rootViewController: UIViewController?
     private weak var panPresentedViewController: UIViewController?
+    // ref default
+    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    // ref default
     private weak var presentedViewController: UIViewController?
     
     
@@ -16,210 +22,192 @@ final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordin
     
     //MARK: Start View Controlle
     
-    func perspectiveCreateFlow() -> UIViewController {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let model = ActualMainModel(navigationHandler: self as MainModel_NavigationHandler)
+    func actualCreateFlow() -> UIViewController {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        let model = ActualMainModel(navigationHandler: self as ActualMainModelNavigationHandler)
         let controller = ActualMainViewControllerNew(model: model)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         rootViewController = controller
         
         return controller
     }
 }
 
-extension ActualProjectMainFlowCoordinator: MainModel_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
-    func perspectiveMainModel_DidRequestToModes(_ model: ActualMainModel) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let modelScreen = ActualMainModel(navigationHandler: self as MainModel_NavigationHandler)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let model = ActualGameModesModel(navigationHandler: self as PerspectiveModesModelNavHandler)
+    func actualMainModelDidRequestToModes(_ model: ActualMainModel) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        let modelScreen = ActualMainModel(navigationHandler: self as ActualMainModelNavigationHandler)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        let model = ActualGameModesModel(navigationHandler: self as ActualModesModelNavHandler)
         let controller = ActualModesViewController(model: model, modelScreen: modelScreen)
         presentedViewController = controller
         rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func perspectiveMainModel_DidRequestToModesInfo(_ model: ActualMainModel) {
-        let model = ActualGameModesModel(navigationHandler: self as PerspectiveModesModelNavHandler)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualMainModelDidRequestToModesInfo(_ model: ActualMainModel) {
+        let model = ActualGameModesModel(navigationHandler: self as ActualModesModelNavHandler)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let controller = ActualModesInfoViewController(model: model)
         presentedViewController = controller
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func perspectiveMainModel_DidRequestToMap(_ model: ActualMainModel) {
+    func actualMainModelDidRequestToMap(_ model: ActualMainModel) {
         let controller = ActualGameMapViewController(navigationHandler: self as ActualMap_NavigationHandler)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController = controller
         rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func perspectiveMainModel_DidRequestToGameSelection(_ model: ActualMainModel) {
-        let model = ActualGSModel(navigationHandler: self as GS_Model_NavigationHandler)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualMainModelDidRequestToGameSelection(_ model: ActualMainModel) {
+        let model = ActualGSModel(navigationHandler: self as ActualGSModelNavigationHandler)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let controller = ActualGSViewController(model: model)
         presentedViewController = controller
         
         rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func perspectiveMainModel_DidRequestToChecklist(_ model: ActualMainModel) {
-        let model = ActualChecklistModel(navigationHandler: self as ChecklistModel_NavigationHandler)
+    func actualMainModelDidRequestToChecklist(_ model: ActualMainModel) {
+        let model = ActualChecklistModel(navigationHandler: self as ActualChecklistModelNavigationHandler)
         let controller = ActualChecklistViewController(model: model)
         presentedViewController = controller
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
 
-extension ActualProjectMainFlowCoordinator: GS_Model_NavigationHandler {
-
-    func perspectiveGsModel_DidRequestToBack(_ model: ActualGSModel) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+extension ActualProjectMainFlowCoordinator: ActualGSModelNavigationHandler {
+    
+    func actualGsModelDidRequestToBack(_ model: ActualGSModel) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
     
     
-    func perspectiveGsModel_DidRequestToGameModes(_ model: ActualGSModel, gameVersion: String) {
-        let model = ActualGameCheatsModel(versionGame: gameVersion, navigationHandler: self as Cheats_ModelNavigationHandler)
+    func actualGsModelDidRequestToGameModes(_ model: ActualGSModel, gameVersion: String) {
+        let model = ActualGameCheatsModel(versionGame: gameVersion, navigationHandler: self as ActualCheatsModelNavigationHandler)
         let controller = ActualGameCheatsViewController(model: model)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.pushViewController(controller, animated: true)
     }
-
+    
 }
 
-extension ActualProjectMainFlowCoordinator: ChecklistModel_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: ActualChecklistModelNavigationHandler {
     
-    func perspectiveChecklist_Model_DidRequestToFilter(
+    func actualChecklistModelDidRequestToFilter(
         _ model: ActualChecklistModel,
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
     ) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let controller = ActualFilterViewController(
             filterListData: filterListData,
             selectedFilter: selectedFilter,
-            navigationHandler: self as Filter_NavigationHandler
+            navigationHandler: self as ActualFilterNavigationHandler
         )
-        presentedViewController?.perspectivePresentPanCollection(controller)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        presentedViewController?.actualPresentPanCollection(controller)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         panPresentedViewController = controller
     }
     
     
-    func perspectiveChecklistModel_DidRequestToBack(_ model: ActualChecklistModel) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualChecklistModelDidRequestToBack(_ model: ActualChecklistModel) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
     
 }
 
-extension ActualProjectMainFlowCoordinator: Cheats_ModelNavigationHandler {
+extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
     
-    func perspectiveGameModesModel_DidRequestToBack(_ model: ActualGameCheatsModel) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualGameModesModelDidRequestToBack(_ model: ActualGameCheatsModel) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
     
     
-    func perspectiveGameModesModel_DidRequestToFilter(
+    func actualGameModesModelDidRequestToFilter(
         _ model: ActualGameCheatsModel,
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
         
     ) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let controller = ActualFilterViewController(
             filterListData: filterListData,
             selectedFilter: selectedFilter,
-            navigationHandler: self as Filter_NavigationHandler
+            navigationHandler: self as ActualFilterNavigationHandler
         )
-        presentedViewController?.perspectivePresentPanCollection(controller)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        presentedViewController?.actualPresentPanCollection(controller)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         panPresentedViewController = controller
     }
     
 }
 
-extension ActualProjectMainFlowCoordinator: Filter_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: ActualFilterNavigationHandler {
     
-    func filterDidRequestToClose() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualFilterDidRequestToClose() {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         panPresentedViewController?.dismiss(animated: true)
     }
     
@@ -227,49 +215,44 @@ extension ActualProjectMainFlowCoordinator: Filter_NavigationHandler {
 
 extension ActualProjectMainFlowCoordinator: ActualMap_NavigationHandler {
     
-    func mapDidRequestToBack() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualMapDidRequestToBack() {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
 }
 
-extension ActualProjectMainFlowCoordinator: PerspectiveModesModelNavHandler {
+extension ActualProjectMainFlowCoordinator: ActualModesModelNavHandler {
     
-    func perspectiveGameModesModel_DidRequestToFilter(_ model: ActualGameModesModel, filterListData: GTAVK_FilterList_Data, selectedFilter: @escaping (String) -> ()) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualGameModesModelDidRequestToFilter(_ model: ActualGameModesModel, filterListData: ActualFilterListData, selectedFilter: @escaping (String) -> ()) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let controller = ActualFilterViewController(
             filterListData: filterListData,
             selectedFilter: selectedFilter,
-            navigationHandler: self as Filter_NavigationHandler
+            navigationHandler: self as ActualFilterNavigationHandler
         )
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        presentedViewController?.perspectivePresentPanCollection(controller)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        presentedViewController?.actualPresentPanCollection(controller)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         panPresentedViewController = controller
     }
     
-    func perspectiveGameModesModel_DidRequestToBack(_ model: ActualGameModesModel) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualGameModesModelDidRequestToBack(_ model: ActualGameModesModel) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
     

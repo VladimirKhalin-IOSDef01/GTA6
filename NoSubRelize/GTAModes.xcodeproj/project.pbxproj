@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1201B5722BA2B82C00B86035 /* ActualProjectTestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork.swift */; };
+		1201B5722BA2B82C00B86035 /* ActualProjectTestNetwork3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork3862.swift */; };
 		12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A712BA4B09700DACBED /* ActualAllertController.swift */; };
 		12097A782BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A772BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift */; };
 		120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */; };
 		120B3BF62BE2313A00E9462B /* ActualFakeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */; };
-		120EEE462B86673100BE6D3F /* ActualProjectModelConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* ActualProjectModelConteiner.swift */; };
+		120EEE462B86673100BE6D3F /* ActualProjectModelConteiner3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* ActualProjectModelConteiner3862.swift */; };
 		120EEE4C2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
 		120EEE4D2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
 		120EEE4F2B87793E00BE6D3F /* Gilroy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4E2B87793E00BE6D3F /* Gilroy.ttf */; };
@@ -35,7 +35,6 @@
 		12D432322BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */; };
 		12D432332BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */; };
 		12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */; };
-		12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */; };
 		12EA114A2BB1F15F00ADE95E /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 12EA11492BB1F15F00ADE95E /* leaflet.css */; };
 		12EA114C2BB1F18D00ADE95E /* locations.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114B2BB1F18D00ADE95E /* locations.js */; };
 		12EA114E2BB1F54C00ADE95E /* jquery-2.1.4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */; };
@@ -2545,17 +2544,17 @@
 		12F3DDC52BACAC7600078AD2 /* GTAVKMAP39p17p7vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3D4022BACAC6E00078AD2 /* GTAVKMAP39p17p7vk.png */; };
 		2C0DC3772A8FADF800A03F44 /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 2C0DC3762A8FADF800A03F44 /* Pushwoosh */; };
 		2C1CA42D2A8E70B200C89F79 /* ActualServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */; };
-		2C1CA4712A8E714F00C89F79 /* ActualProjectConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration.swift */; };
+		2C1CA4712A8E714F00C89F79 /* ActualProjectConfiguration3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration3862.swift */; };
 		2C1CA4742A8E720B00C89F79 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1CA4732A8E720A00C89F79 /* StoreKit.framework */; };
 		2C2A20512A7170E1002A6D3C /* ActualAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20502A7170E1002A6D3C /* ActualAppDelegate.swift */; };
 		2C2A20532A7170E1002A6D3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20522A7170E1002A6D3C /* SceneDelegate.swift */; };
 		2C2A206F2A727E88002A6D3C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C2A206E2A727E88002A6D3C /* RealmSwift */; };
 		2C2A20732A7285AA002A6D3C /* ActualProjectMainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20722A7285AA002A6D3C /* ActualProjectMainFlowCoordinator.swift */; };
-		2C2A20762A7286EC002A6D3C /* ActualProjectFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator.swift */; };
+		2C2A20762A7286EC002A6D3C /* ActualProjectFlowCoordinator3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator3862.swift */; };
 		2C2A207B2A729267002A6D3C /* ActualMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */; };
 		2C2A207F2A72927E002A6D3C /* ActualMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */; };
 		2C2A20812A729337002A6D3C /* ActualNiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */; };
-		2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */; };
+		2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell3862.swift */; };
 		2C2A20B92A7556BF002A6D3C /* ActualReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */; };
 		2C2A20BB2A755AFA002A6D3C /* ActualAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */; };
 		2C2A20BE2A756AD4002A6D3C /* ActualGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BD2A756AD4002A6D3C /* ActualGSViewController.swift */; };
@@ -2596,11 +2595,10 @@
 		2CC0DA5A2A90F0CA0083E7B6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC0DA592A90F0CA0083E7B6 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		2CDEBEDE2A80F1DD00F976A3 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = 2CDEBEDD2A80F1DD00F976A3 /* SwiftyDropbox */; };
 		2CDEBF032A82586500F976A3 /* ActualDropBoxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */; };
-		2CDEBF042A82586500F976A3 /* ActualDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */; };
+		2CDEBF042A82586500F976A3 /* ActualDBConstants3862.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF72A82586500F976A3 /* ActualDBConstants3862.swift */; };
 		2CDEBF072A82F57100F976A3 /* ActualCustomNavigation_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBF062A82F57100F976A3 /* ActualCustomNavigation_View.swift */; };
 		54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */; };
 		54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */; };
-		54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */; };
 		B6086E5DA68400D2ABF2BB7A /* Pods_GTAModes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2E2352E0EAAE4846BA5952 /* Pods_GTAModes.framework */; };
 /* End PBXBuildFile section */
 
@@ -2630,12 +2628,12 @@
 
 /* Begin PBXFileReference section */
 		0C14A4FEA062255A39CFF41A /* Pods-GTAModes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAModes.release.xcconfig"; path = "Target Support Files/Pods-GTAModes/Pods-GTAModes.release.xcconfig"; sourceTree = "<group>"; };
-		1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectTestNetwork.swift; sourceTree = "<group>"; };
+		1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork3862.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectTestNetwork3862.swift; sourceTree = "<group>"; };
 		12097A712BA4B09700DACBED /* ActualAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertController.swift; sourceTree = "<group>"; };
 		12097A772BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCheckListCustomSwitcher.swift; sourceTree = "<group>"; };
 		120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoaderView.swift; sourceTree = "<group>"; };
 		120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoader.swift; sourceTree = "<group>"; };
-		120EEE452B86673100BE6D3F /* ActualProjectModelConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectModelConteiner.swift; sourceTree = "<group>"; };
+		120EEE452B86673100BE6D3F /* ActualProjectModelConteiner3862.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectModelConteiner3862.swift; sourceTree = "<group>"; };
 		120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GilroyLight.ttf; sourceTree = "<group>"; };
 		120EEE4E2B87793E00BE6D3F /* Gilroy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gilroy.ttf; sourceTree = "<group>"; };
 		120EEE502B877B1700BE6D3F /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
@@ -2652,7 +2650,6 @@
 		12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderView.swift; sourceTree = "<group>"; };
 		12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomUniversalAlertView.swift; sourceTree = "<group>"; };
 		12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistViewController.swift; sourceTree = "<group>"; };
-		12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualSwiftUILoaderView.swift; sourceTree = "<group>"; };
 		12EA0ED52BAB3AF400263F40 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
 		12EA11492BB1F15F00ADE95E /* leaflet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = leaflet.css; sourceTree = "<group>"; };
 		12EA114B2BB1F18D00ADE95E /* locations.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = locations.js; sourceTree = "<group>"; };
@@ -5161,7 +5158,7 @@
 		12F3D4012BACAC6A00078AD2 /* GTAVKMAP39p7p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP39p7p7vk.png; sourceTree = "<group>"; };
 		12F3D4022BACAC6E00078AD2 /* GTAVKMAP39p17p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP39p17p7vk.png; sourceTree = "<group>"; };
 		2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualServicesManager.swift; sourceTree = "<group>"; };
-		2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectConfiguration.swift; sourceTree = "<group>"; };
+		2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration3862.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectConfiguration3862.swift; sourceTree = "<group>"; };
 		2C1CA4722A8E71E200C89F79 /* GTAModes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GTAModes.entitlements; sourceTree = "<group>"; };
 		2C1CA4732A8E720A00C89F79 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2C2A204D2A7170E1002A6D3C /* GTAModes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTAModes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -5170,11 +5167,11 @@
 		2C2A20592A7170E3002A6D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C2A205E2A7170E3002A6D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C2A20722A7285AA002A6D3C /* ActualProjectMainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectMainFlowCoordinator.swift; sourceTree = "<group>"; };
-		2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectFlowCoordinator.swift; sourceTree = "<group>"; };
+		2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator3862.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualProjectFlowCoordinator3862.swift; sourceTree = "<group>"; };
 		2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainViewController.swift; sourceTree = "<group>"; };
 		2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainModel.swift; sourceTree = "<group>"; };
 		2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualNiblessViewController.swift; sourceTree = "<group>"; };
-		2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainTabViewCell.swift; sourceTree = "<group>"; };
+		2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell3862.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainTabViewCell3862.swift; sourceTree = "<group>"; };
 		2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualReusable.swift; sourceTree = "<group>"; };
 		2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAutolayout.swift; sourceTree = "<group>"; };
 		2C2A20BD2A756AD4002A6D3C /* ActualGSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGSViewController.swift; sourceTree = "<group>"; };
@@ -5211,11 +5208,10 @@
 		2CBFE4582A77ECA200A50257 /* ActualPanPresentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPanPresentManager.swift; sourceTree = "<group>"; };
 		2CBFE45A2A79080D00A50257 /* ActualGameMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGameMapViewController.swift; sourceTree = "<group>"; };
 		2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualDropBoxManager.swift; sourceTree = "<group>"; };
-		2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualDBConstants.swift; sourceTree = "<group>"; };
+		2CDEBEF72A82586500F976A3 /* ActualDBConstants3862.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualDBConstants3862.swift; sourceTree = "<group>"; };
 		2CDEBF062A82F57100F976A3 /* ActualCustomNavigation_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomNavigation_View.swift; sourceTree = "<group>"; };
 		54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertManager.swift; sourceTree = "<group>"; };
 		54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualBlurBackController.swift; sourceTree = "<group>"; };
-		54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderController.swift; sourceTree = "<group>"; };
 		7F2E2352E0EAAE4846BA5952 /* Pods_GTAModes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTAModes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7040E287D44240A115BA20F /* Pods-GTAModes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAModes.debug.xcconfig"; path = "Target Support Files/Pods-GTAModes/Pods-GTAModes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -5256,7 +5252,6 @@
 		12D432302BDD1AF700BD1EC7 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */,
 				12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */,
 				120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */,
 				12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */,
@@ -5275,7 +5270,7 @@
 		2C1CA46F2A8E713C00C89F79 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration.swift */,
+				2C1CA4702A8E714F00C89F79 /* ActualProjectConfiguration3862.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -5308,7 +5303,7 @@
 				2C2A20502A7170E1002A6D3C /* ActualAppDelegate.swift */,
 				2C2A20522A7170E1002A6D3C /* SceneDelegate.swift */,
 				2C2A20642A717EA4002A6D3C /* Flows */,
-				2C2A20652A717EF7002A6D3C /* PerspectiveServices */,
+				2C2A20652A717EF7002A6D3C /* ActualServices */,
 				2C2A20742A7286D4002A6D3C /* Common */,
 				2C2A20662A717F13002A6D3C /* Resources */,
 			);
@@ -5323,14 +5318,14 @@
 			path = Flows;
 			sourceTree = "<group>";
 		};
-		2C2A20652A717EF7002A6D3C /* PerspectiveServices */ = {
+		2C2A20652A717EF7002A6D3C /* ActualServices */ = {
 			isa = PBXGroup;
 			children = (
-				2CB9A9892A9E2070008B9A88 /* PerspectiveMap */,
-				2CDEBEE82A82586500F976A3 /* DropBoxManager */,
+				2CB9A9892A9E2070008B9A88 /* ActualMap */,
+				2CDEBEE82A82586500F976A3 /* ActualDropBoxManager */,
 				2C2A20862A72A3C6002A6D3C /* DataBase */,
 			);
-			path = PerspectiveServices;
+			path = ActualServices;
 			sourceTree = "<group>";
 		};
 		2C2A20662A717F13002A6D3C /* Resources */ = {
@@ -5363,7 +5358,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2A20B32A755153002A6D3C /* UI */,
-				2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator.swift */,
+				2C2A20752A7286EC002A6D3C /* ActualProjectFlowCoordinator3862.swift */,
 				2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */,
 				2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */,
 				2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */,
@@ -5380,7 +5375,7 @@
 				2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */,
 				2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */,
 				12F217F42B85FCE200BCE63B /* ActualMainViewControllerNew.swift */,
-				120EEE452B86673100BE6D3F /* ActualProjectModelConteiner.swift */,
+				120EEE452B86673100BE6D3F /* ActualProjectModelConteiner3862.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -5415,7 +5410,7 @@
 		2C2A20B52A7551B4002A6D3C /* MainTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */,
+				2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell3862.swift */,
 				12F217F22B85F03900BCE63B /* ActualMainViewCell.swift */,
 			);
 			path = MainTableViewCell;
@@ -5488,7 +5483,6 @@
 				120EEE522B88777D00BE6D3F /* ActualModesTabViewCellNew.swift */,
 				54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */,
 				12097A712BA4B09700DACBED /* ActualAllertController.swift */,
-				54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */,
 				54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */,
 				120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */,
 			);
@@ -5556,7 +5550,7 @@
 			path = NotificationService;
 			sourceTree = "<group>";
 		};
-		2CB9A9892A9E2070008B9A88 /* PerspectiveMap */ = {
+		2CB9A9892A9E2070008B9A88 /* ActualMap */ = {
 			isa = PBXGroup;
 			children = (
 				12F3D21D2BACA79B00078AD2 /* GTAVKMAP0p0p3vk.png */,
@@ -8065,7 +8059,7 @@
 				12EA114B2BB1F18D00ADE95E /* locations.js */,
 				12EA0ED52BAB3AF400263F40 /* leaflet.js */,
 			);
-			path = PerspectiveMap;
+			path = ActualMap;
 			sourceTree = "<group>";
 		};
 		2CBFE4482A77CE6A00A50257 /* Fonts */ = {
@@ -8084,15 +8078,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		2CDEBEE82A82586500F976A3 /* DropBoxManager */ = {
+		2CDEBEE82A82586500F976A3 /* ActualDropBoxManager */ = {
 			isa = PBXGroup;
 			children = (
 				2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */,
 				2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */,
-				2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */,
-				1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork.swift */,
+				2CDEBEF72A82586500F976A3 /* ActualDBConstants3862.swift */,
+				1201B5712BA2B82C00B86035 /* ActualProjectTestNetwork3862.swift */,
 			);
-			path = DropBoxManager;
+			path = ActualDropBoxManager;
 			sourceTree = "<group>";
 		};
 		2CDEBF052A82F55400F976A3 /* CustomNavigation */ = {
@@ -10840,7 +10834,7 @@
 				2C5CA6E82A924DFC005F9D24 /* ActualModesModel.swift in Sources */,
 				120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */,
 				2C45A5392A76A7620023B3A8 /* ActualGameCheatsModel.swift in Sources */,
-				2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell.swift in Sources */,
+				2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell3862.swift in Sources */,
 				2C45A5432A771A050023B3A8 /* ActualChecklistCell.swift in Sources */,
 				2C45A5372A76A7550023B3A8 /* ActualGameCheatsViewController.swift in Sources */,
 				12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */,
@@ -10848,15 +10842,14 @@
 				2CDEBF072A82F57100F976A3 /* ActualCustomNavigation_View.swift in Sources */,
 				2C4F877A2A92DEB9006DC2CD /* ActualModesTabViewCell.swift in Sources */,
 				120EEE5B2B88CCF400BE6D3F /* ActualModesInfoViewController.swift in Sources */,
-				12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */,
 				54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */,
-				2CDEBF042A82586500F976A3 /* ActualDBConstants.swift in Sources */,
+				2CDEBF042A82586500F976A3 /* ActualDBConstants3862.swift in Sources */,
 				12F217F52B85FCE200BCE63B /* ActualMainViewControllerNew.swift in Sources */,
 				2CA95FF82A84D4210039343E /* ActualCheatsObject.swift in Sources */,
 				12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
 				2C45A53D2A76A7800023B3A8 /* ActualChecklistModel.swift in Sources */,
 				2C7F39F42A7BF09800F575F7 /* ActualHeaderView.swift in Sources */,
-				2C2A20762A7286EC002A6D3C /* ActualProjectFlowCoordinator.swift in Sources */,
+				2C2A20762A7286EC002A6D3C /* ActualProjectFlowCoordinator3862.swift in Sources */,
 				12F217F02B85D41100BCE63B /* Extension.swift in Sources */,
 				2C2A20512A7170E1002A6D3C /* ActualAppDelegate.swift in Sources */,
 				2C2A20B92A7556BF002A6D3C /* ActualReusable.swift in Sources */,
@@ -10870,7 +10863,7 @@
 				2CBFE4572A77E38600A50257 /* ActualPPControllerPresent.swift in Sources */,
 				120EEE532B88777D00BE6D3F /* ActualModesTabViewCellNew.swift in Sources */,
 				2CBFE45B2A79080D00A50257 /* ActualGameMapViewController.swift in Sources */,
-				120EEE462B86673100BE6D3F /* ActualProjectModelConteiner.swift in Sources */,
+				120EEE462B86673100BE6D3F /* ActualProjectModelConteiner3862.swift in Sources */,
 				12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CA95FFC2A8512470039343E /* ActualMainItemObject.swift in Sources */,
 				2C2A20812A729337002A6D3C /* ActualNiblessViewController.swift in Sources */,
@@ -10879,13 +10872,12 @@
 				2CBFE4592A77ECA200A50257 /* ActualPanPresentManager.swift in Sources */,
 				2CDEBF032A82586500F976A3 /* ActualDropBoxManager.swift in Sources */,
 				12D4322E2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */,
-				1201B5722BA2B82C00B86035 /* ActualProjectTestNetwork.swift in Sources */,
+				1201B5722BA2B82C00B86035 /* ActualProjectTestNetwork3862.swift in Sources */,
 				12097A782BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift in Sources */,
 				2C1CA42D2A8E70B200C89F79 /* ActualServicesManager.swift in Sources */,
 				2C2A207B2A729267002A6D3C /* ActualMainViewController.swift in Sources */,
 				12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */,
-				54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */,
-				2C1CA4712A8E714F00C89F79 /* ActualProjectConfiguration.swift in Sources */,
+				2C1CA4712A8E714F00C89F79 /* ActualProjectConfiguration3862.swift in Sources */,
 				2C2A20C02A756AE0002A6D3C /* ActualGSModel.swift in Sources */,
 				2C2A207F2A72927E002A6D3C /* ActualMainModel.swift in Sources */,
 			);

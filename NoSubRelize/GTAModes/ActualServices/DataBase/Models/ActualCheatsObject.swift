@@ -8,14 +8,14 @@ struct ActualCheatCodeParser: Codable {
     let code: [String]
     let filterTitle: String
     
-    private enum CodingKeys_andRename : String, CodingKey {
+    private enum ActualCodingKeysAndRename : String, CodingKey {
         case name = "AVHnmaskbn128"
         case code = "AVHnmaskbn127"
         case filterTitle = "AVHnmaskbn126"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         name = try container.decode(String.self, forKey: .name)
         code = try container.decode([String].self, forKey: .code)
         filterTitle = try container.decode(String.self, forKey: .filterTitle)
@@ -27,14 +27,14 @@ struct ActualCheatCodesPlatformParser: Codable {
     let xbox: [ActualCheatCodeParser]
     let pc: [ActualCheatCodeParser]?
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case ps = "vmi51ovaCMs7"
         case xbox = "vmi51ovaCMs6"
         case pc = "vmi51ovaCMs5"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         ps = try container.decode([ActualCheatCodeParser].self, forKey: .ps)
         xbox = try container.decode([ActualCheatCodeParser].self, forKey: .xbox)
         pc = try container.decodeIfPresent([ActualCheatCodeParser].self, forKey: .pc)
@@ -44,12 +44,12 @@ struct ActualCheatCodesPlatformParser: Codable {
 struct ActualCheatCodesGTA5Parser: Codable {
     let GTA5: ActualCheatCodesPlatformParser
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case GTA5 = "kbias-kvsaj5612k"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA5 = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA5)
     }
 }
@@ -57,12 +57,12 @@ struct ActualCheatCodesGTA5Parser: Codable {
 struct ActualCheatCodesGTA6Parser: Codable {
     let GTA6: ActualCheatCodesPlatformParser
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case GTA6 = "kbias-kvsaj5612k"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA6 = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA6)
     }
 }
@@ -70,12 +70,12 @@ struct ActualCheatCodesGTA6Parser: Codable {
 struct ActualCheatCodesGTASAParser: Codable {
     let GTA_San_Andreas: ActualCheatCodesPlatformParser
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case GTA_San_Andreas = "kbias-kvsaj5612k"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_San_Andreas = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_San_Andreas)
     }
 }
@@ -83,12 +83,12 @@ struct ActualCheatCodesGTASAParser: Codable {
 struct ActualCheatCodesGTAVCParser: Codable {
     let GTA_Vice_City: ActualCheatCodesPlatformParser
     
-    private enum CodingKeys_andRename: String, CodingKey {
+    private enum ActualCodingKeysAndRename: String, CodingKey {
         case GTA_Vice_City = "kbias-kvsaj5612k"
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
+        let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_Vice_City = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_Vice_City)
     }
 }

@@ -29,14 +29,14 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        perspectiveSetupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
+    public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
         //titleLabel.text = value.title.uppercased() + "→"
         titleLabel.text = value.title + ""
         backgroundImageView.contentMode = .scaleAspectFill
@@ -82,7 +82,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         titleLabel.text = ""
     }
     
-    private func perspectiveSetupLayout() {
+    private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         //containerView.layer.borderColor = UIColor(named: "ActualPink")!.cgColor
@@ -94,7 +94,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
       //  containerView.perspectiveDropShadowWhite()
       //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10), radius: 1)
         
-        containerView.perspectiveLayout {
+        containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -30 : -15.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0.0)
@@ -108,7 +108,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         backgroundImageView.layer.cornerRadius = 25
         
         
-        backgroundImageView.perspectiveLayout {
+        backgroundImageView.actualLayout {
             $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: containerView.bottomAnchor)
             $0.leading.equal(to: containerView.leadingAnchor)
@@ -117,7 +117,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         
         backgroundImageView.addSubview(bottomBlackView)
         
-        bottomBlackView.perspectiveLayout {
+        bottomBlackView.actualLayout {
             $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: backgroundImageView.bottomAnchor)
             $0.leading.equal(to: backgroundImageView.leadingAnchor)
@@ -128,7 +128,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.70)
        
         bottomBlackView.addSubview(lockImageView)
-        lockImageView.perspectiveLayout {
+        lockImageView.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
             $0.leading.equal(to: bottomBlackView.leadingAnchor, offsetBy: 18.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
@@ -151,7 +151,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         titleLabel.center = CGPoint(x: titleLabel.bounds.size.width/2, y: titleLabel.bounds.size.height/2)
        
        
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
             $0.centerX.equal(to: containerView.centerXAnchor)
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
            // $0.leading.equal(to: lockImageView.centerXAnchor, offsetBy: -10.0)
@@ -160,7 +160,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         }
         
         bottomBlackView.addSubview(titleImage)
-        titleImage.perspectiveLayout {
+        titleImage.actualLayout {
             $0.centerX.equal(to: containerView.centerXAnchor)
             $0.centerY.equal(to: titleLabel.centerYAnchor, offsetBy: -43)
             $0.height.equal(to: 39.0)

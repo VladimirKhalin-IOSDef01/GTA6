@@ -10,7 +10,7 @@ import SwiftUI
 class ActualChecklistChecker: UIControl {
     var isOn: Bool = false {
         didSet {
-           perspectiveToggleSwitch(animated: true)
+           actualToggleSwitch(animated: true)
         }
     }
     
@@ -22,14 +22,14 @@ class ActualChecklistChecker: UIControl {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
+        actualSetupViews()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupViews() {
+    private func actualSetupViews() {
         self.backgroundColor = offBackgroundColor
         self.layer.cornerRadius = frame.height / 2
         self.clipsToBounds = true
@@ -38,22 +38,22 @@ class ActualChecklistChecker: UIControl {
         switchThumb.layer.cornerRadius = (frame.height - 4) / 2 // Subtracting 4 to have some padding
         addSubview(switchThumb)
 
-        updateSwitchThumbPosition(animated: false)
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleSwitchAction)))
+        actualUpdateSwitchThumbPosition(animated: false)
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actualToggleSwitchAction)))
     }
     override func layoutSubviews() {
             super.layoutSubviews()
             self.layer.cornerRadius = self.bounds.height / 2
             switchThumb.layer.cornerRadius = (self.bounds.height - 4) / 2
-            updateSwitchThumbPosition(animated: false)
+            actualUpdateSwitchThumbPosition(animated: false)
         }
     
-    @objc private func toggleSwitchAction() {
+    @objc private func actualToggleSwitchAction() {
         isOn = !isOn
         sendActions(for: .valueChanged)
     }
 
-    private func updateSwitchThumbPosition(animated: Bool) {
+    private func actualUpdateSwitchThumbPosition(animated: Bool) {
         let thumbFrame = CGRect(x: isOn ? frame.width - frame.height + 2 : 2,
                                 y: 2,
                                 width: frame.height - 4,
@@ -75,8 +75,8 @@ class ActualChecklistChecker: UIControl {
     
     
     
-    private func perspectiveToggleSwitch(animated: Bool) {
-        updateSwitchThumbPosition(animated: animated)
+    private func actualToggleSwitch(animated: Bool) {
+        actualUpdateSwitchThumbPosition(animated: animated)
     }
     
     

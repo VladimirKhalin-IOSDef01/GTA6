@@ -20,7 +20,7 @@ class ActualGSViewController: ActualNiblessViewController {
         super.init()
         
         customNavigation.leftButtonAction = { [weak self] in
-            self?.model.perspectiveBackAction_Proceed()
+            self?.model.actualBackAction_Proceed()
         }
     }
     
@@ -33,11 +33,11 @@ class ActualGSViewController: ActualNiblessViewController {
         if model.menuItems.isEmpty {
     //        actualShowSpiner()        // Отключен в тестовом режиме
         }
-        perspectiveSetupView()
-        perspectiveGSSetupBindings()
+        actualSetupView()
+        actualGSSetupBindings()
     }
     
-    private func perspectiveGSSetupBindings() {
+    private func actualGSSetupBindings() {
         model.reloadData
           .sink { [weak self] in
             guard let self = self else { return }
@@ -50,13 +50,13 @@ class ActualGSViewController: ActualNiblessViewController {
             
             self.tableViewOne.reloadData()
             self.tableViewTwo.reloadData()
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
     }
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         view.addSubview(customNavigation)
-        customNavigation.perspectiveLayout {
+        customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 20)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
@@ -89,7 +89,7 @@ class ActualGSViewController: ActualNiblessViewController {
         
         menuStackConteinerLeft.addSubview(tableViewOne)
         tableViewOne.backgroundColor = .clear
-        tableViewOne.perspectiveLayout {
+        tableViewOne.actualLayout {
             $0.top.equal(to: menuStackConteinerLeft.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerLeft.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerLeft.trailingAnchor)
@@ -109,7 +109,7 @@ class ActualGSViewController: ActualNiblessViewController {
         tableViewTwo.backgroundColor = .clear
         tableViewTwo.alwaysBounceVertical = false
         
-        tableViewTwo.perspectiveLayout {
+        tableViewTwo.actualLayout {
             $0.top.equal(to: menuStackConteinerRight.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerRight.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerRight.trailingAnchor)
@@ -126,7 +126,7 @@ class ActualGSViewController: ActualNiblessViewController {
 
     }
     
-    private func perspectiveShowSpiner() {
+    private func actualShowSpiner() {
       
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
         //
@@ -149,7 +149,7 @@ class ActualGSViewController: ActualNiblessViewController {
         
     }
     
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -174,9 +174,9 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
                 }
          //
         let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
-        cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
+        cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
-        cell.perspectiveDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
+        cell.actualDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
         return cell
     }
     
@@ -186,7 +186,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
                     print("the world has turned upside down")
                 }
          //
-        oneCheck()
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -202,7 +202,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
                     print("the world has turned upside down")
                 }
          //
-      return  model.perspectiveSelectedItems(index: indexPath.row)
+      return  model.actualSelectedItems(index: indexPath.row)
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -231,7 +231,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

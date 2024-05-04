@@ -32,28 +32,36 @@ open class ActualNiblessViewController: UIViewController {
     }
     
     open override func viewDidLoad() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        super.viewDidLoad()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         
-        view.setGradientBackground()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        super.viewDidLoad()
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
+        
+        view.actualSetGradientBackground()
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         view.addSubview(waterBackground)
         waterBackground.alpha = 1.0
         
     //    gtavk_setupBackground()
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         
     }
     
@@ -81,31 +89,40 @@ open class ActualNiblessFilterViewController: UIViewController {
     }
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         return .lightContent
     }
     
-    private func perspectiveSetupBackground() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    private func actualSetupBackground() {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         view.backgroundColor = .black
     }
     
     open override func viewDidLoad() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         super.viewDidLoad()
-        //
-        if 94 + 32 == 57 {
-     print("the world has turned upside down")
- }
-//
-        perspectiveSetupBackground()
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
+        actualSetupBackground()
         
     }
 }

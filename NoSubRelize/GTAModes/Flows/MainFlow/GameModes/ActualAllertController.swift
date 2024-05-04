@@ -24,7 +24,7 @@ class ActualAllertController: UIViewController {
         guard shouldDisplayAlerts else { return }
         let alertBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         alertBackgroundView.backgroundColor = .black.withAlphaComponent(0.65)
-        alertBackgroundView.addBlur_Effect()
+        alertBackgroundView.actualAddBlurEffect()
         view.addSubview(alertBackgroundView)
     }
 
@@ -65,7 +65,7 @@ class ActualAllertController: UIViewController {
          actualIconView.contentMode = .scaleAspectFit
          actualIconView.translatesAutoresizingMaskIntoConstraints = false
          view.addSubview(actualIconView)
-         actualIconView.perspectiveLayout{
+         actualIconView.actualLayout{
          //   $0.width.equal(to: 33)
          $0.height.equal(to: 33)
          $0.centerX.equal(to: view.centerXAnchor)
@@ -81,7 +81,7 @@ class ActualAllertController: UIViewController {
          actualMessageLabel.numberOfLines = 2
          actualMessageLabel.translatesAutoresizingMaskIntoConstraints = false
          view.addSubview(actualMessageLabel)
-         actualMessageLabel.perspectiveLayout{
+         actualMessageLabel.actualLayout{
          $0.centerX.equal(to: view.centerXAnchor)
          $0.top.equal(to: actualIconView.bottomAnchor, offsetBy: 12)
          }
@@ -93,10 +93,10 @@ class ActualAllertController: UIViewController {
          actualAlertButton.backgroundColor = .black.withAlphaComponent(0.7)
          actualAlertButton.layer.cornerRadius = 16
          actualAlertButton.withBorder(width: 1, color: UIColor(named: "ActualPink")!.withAlphaComponent(0.35))
-         actualAlertButton.addTarget(self, action: #selector(dismissAlert), for: .touchUpInside)
+         actualAlertButton.addTarget(self, action: #selector(actualDismissAlert), for: .touchUpInside)
          actualAlertButton.translatesAutoresizingMaskIntoConstraints = false
          view.addSubview(actualAlertButton)
-         actualAlertButton.perspectiveLayout{
+         actualAlertButton.actualLayout{
          $0.width.equal(to: 272)
          $0.height.equal(to: 57)
          $0.centerX.equal(to: view.centerXAnchor)
@@ -106,7 +106,7 @@ class ActualAllertController: UIViewController {
          
         
     }
-    @objc private func dismissAlert() {
+    @objc private func actualDismissAlert() {
         dismiss(animated: false)
     }
 }

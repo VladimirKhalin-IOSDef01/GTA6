@@ -172,7 +172,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        containerView.perspectiveLayout {
+        containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -6.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 0 : 20.0)
@@ -189,7 +189,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         /*
         containerView.addSubview(bgContainerView)
-        bgContainerView.perspectiveLayout {
+        bgContainerView.actualLayout {
             $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -140 : -70.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 0.0)
@@ -200,8 +200,8 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     */
         
         containerView.addSubview(titleLabel)
-        titleLabel.perspectiveDropShadowStandart(color: .black, offSet: CGSize(width: 1, height: 1))
-        titleLabel.perspectiveLayout {
+        titleLabel.actualDropShadowStandart(color: .black, offSet: CGSize(width: 1, height: 1))
+        titleLabel.actualLayout {
             $0.top.equal(to: containerView.topAnchor, offsetBy: 20.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -15.0)
@@ -212,7 +212,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         containerView.addSubview(modeImage)
         modeImage.withCornerRadius(20)
-        modeImage.perspectiveLayout {
+        modeImage.actualLayout {
             $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: 15.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15.0)
@@ -222,7 +222,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         
         containerView.addSubview(descriprionLabel)
-        descriprionLabel.perspectiveLayout {
+        descriprionLabel.actualLayout {
             $0.top.equal(to: modeImage.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 18.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15.0)
@@ -231,7 +231,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         descriprionLabel.numberOfLines = 0
         
         containerView.addSubview(stackView)
-        stackView.perspectiveLayout {
+        stackView.actualLayout {
             $0.height.equal(to: 82)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15)
@@ -247,13 +247,13 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
         downloadButtonView.layer.borderWidth = 1
         shareButtonView.withCornerRadius(22.0)
-        shareButtonView.perspectiveDropShadowStandart()
+        shareButtonView.actualDropShadowStandart()
         downloadButtonView.withCornerRadius(22.0)
-        downloadButtonView.perspectiveDropShadowStandart()
+        downloadButtonView.actualDropShadowStandart()
         
         let shareView = actualConfigureButtonView(title: "Share", imageName: "share-2", isShare: true)
         shareButtonView.addSubview(shareView)
-        shareView.perspectiveLayout {
+        shareView.actualLayout {
             $0.width.equal(to: shareButtonView.widthAnchor)
             $0.centerX.equal(to: shareButtonView.centerXAnchor)
             $0.centerY.equal(to: shareButtonView.centerYAnchor)
@@ -261,16 +261,16 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         let downloadView = actualConfigureButtonView(title: "Download", imageName: "download-cloud", isShare: false)
         downloadButtonView.addSubview(downloadView)
-        downloadView.perspectiveLayout {
+        downloadView.actualLayout {
             $0.width.equal(to: downloadButtonView.widthAnchor)
             $0.centerX.equal(to: downloadButtonView.centerXAnchor)
             $0.centerY.equal(to: downloadButtonView.centerYAnchor)
         }
         
-        shareButtonView.perspectiveLayout {
+        shareButtonView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
-        downloadButtonView.perspectiveLayout {
+        downloadButtonView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
         let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(actualShareActionProceed))
@@ -300,8 +300,8 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         buttonView.addSubview(titleLabel)
         buttonView.addSubview(imageView)
         
-        titleLabel.perspectiveDropShadowStandart(color: .black, offSet: CGSize(width: 1.0, height: 1.0))
-        titleLabel.perspectiveLayout {
+        titleLabel.actualDropShadowStandart(color: .black, offSet: CGSize(width: 1.0, height: 1.0))
+        titleLabel.actualLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
                 $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60 : -30)
@@ -311,7 +311,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             }
         }
         
-        imageView.perspectiveLayout {
+        imageView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)

@@ -17,7 +17,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -33,7 +33,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
     
-    public func configure(with value: ActualCheatItem) {
+    public func actualConfigure(with value: ActualCheatItem) {
         titleLabel.text = value.name
         favoriteImage.image = UIImage(named: value.isFavorite ? "ActualHeartPink" : "ActualHeart")
         
@@ -43,7 +43,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             secondStackView.isHidden = false
             threeStackView.isHidden = false
             let imagesListName = configureCodes(value)
-            addImages(imagesListName)
+            actualAddImages(imagesListName)
         } else {
             contentModeView.isHidden = false
             firstStackView.isHidden = true
@@ -53,7 +53,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         }
     }
     
-    private func setupLayout() {
+    private func actualSetupLayout() {
         contentView.addSubview(containerView)
         containerView.frame = bounds
         containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -85,10 +85,10 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             favoriteImage.heightAnchor.constraint(equalToConstant: 28)
         ])
         
-        setupStackViews()
+        actualSetupStackViews()
     }
     
-    private func setupStackViews() {
+    private func actualSetupStackViews() {
         // Configure stack views
         [firstStackView, secondStackView, threeStackView].forEach {
             $0.axis = .horizontal
@@ -141,11 +141,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         switch value.platform {
         case "ps":
             for code in value.code {
-                codes.append(perspectiveConfigurePSCode(code))
+                codes.append(actualConfigurePSCode(code))
             }
         case "xbox":
             for code in value.code {
-                codes.append(perspectiveConfigureXBoxCode(code))
+                codes.append(actualConfigureXBoxCode(code))
             }
         default:
             break
@@ -153,7 +153,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         return codes
     }
     
-    func perspectiveConfigurePSCode(_ code: String) -> String {
+    func actualConfigurePSCode(_ code: String) -> String {
         switch code {
         case "TRIANGLE": return "s_triangle"
         case "SQUARE": return "s_square"
@@ -171,7 +171,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         }
     }
     
-    func perspectiveConfigureXBoxCode(_ code: String) -> String {
+    func actualConfigureXBoxCode(_ code: String) -> String {
         switch code {
         case "Y": return "m_y"
         case "B": return "m_b"
@@ -189,7 +189,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         }
     }
     
-    private func addImages(_ imageNames: [String]) {
+    private func actualAddImages(_ imageNames: [String]) {
         // Очистить стековые виды перед добавлением новых изображений
           firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -302,7 +302,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
      private func actualSetupLayout() {
          contentView.backgroundColor = .clear
          contentView.addSubview(containerView)
-         containerView.perspectiveLayout {
+         containerView.actualLayout {
              $0.top.equal(to: contentView.topAnchor, offsetBy: 6.0)
              $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -6.0)
              $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
@@ -449,7 +449,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
              value.code.forEach { [weak self] code in
                  guard let self = self else { return }
                  
-                 let imageAssetName = self.perspectiveConfigurePSCode(code.uppercased())
+                 let imageAssetName = self.actualConfigurePSCode(code.uppercased())
                  if imageAssetName == "" {
                      print(code)
                      print(value.code)

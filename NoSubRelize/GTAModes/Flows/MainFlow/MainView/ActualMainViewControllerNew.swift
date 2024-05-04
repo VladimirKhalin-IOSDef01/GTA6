@@ -23,9 +23,9 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     var fakeLoader = ActualFakeLoader()
     
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         view.addSubview(customNavigation)
-        customNavigation.perspectiveLayout {
+        customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70.0 : 40)
             $0.centerX.equal(to: view.centerXAnchor, offsetBy: 20.0)
            // $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
@@ -63,7 +63,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         tableView.alwaysBounceVertical = false
         tableView.tag = 1
         
-        tableView.perspectiveLayout {
+        tableView.actualLayout {
             $0.top.equal(to: menuStackConteinerLeft.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerLeft.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerLeft.trailingAnchor)
@@ -80,7 +80,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         tableViewTwo.backgroundColor = .clear
         tableViewTwo.alwaysBounceVertical = false
         
-        tableViewTwo.perspectiveLayout {
+        tableViewTwo.actualLayout {
             $0.top.equal(to: menuStackConteinerRight.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerRight.leadingAnchor)
             $0.trailing.equal(to: menuStackConteinerRight.trailingAnchor)
@@ -104,7 +104,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         
     }
     
-    private func perspectiveSetupBindings() {
+    private func actualSetupBindings() {
         model.reloadData
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
@@ -127,7 +127,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
              //
                 self.tableView.reloadData()
                 self.tableViewTwo.reloadData()
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
     }
     
@@ -136,13 +136,13 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         // Отключаем мультитач
         UIView.appearance().isExclusiveTouch = true
         if model.menuItems.isEmpty {
-            perspectiveShowSpiner()
+            actualShowSpiner()
         }
-        perspectiveSetupView()
-        perspectiveSetupBindings()
+        actualSetupView()
+        actualSetupBindings()
     }
     
-    private func perspectiveShowSpiner() {
+    private func actualShowSpiner() {
 //        alert = UIAlertController(title: nil, message: "Main Loading Data", preferredStyle: .alert)
 //       
 //        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
@@ -160,12 +160,12 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         
         
     }
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
         alert?.dismiss(animated: false)
         fakeLoader.dismiss(animated: false)
     }
     
-    private func perspectiveHideAlert() {
+    private func actualHideAlert() {
         alert?.dismiss(animated: false)
 
     }
@@ -179,14 +179,14 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
                 }
          //
         let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
-            cell.perspectiveConfigure(model.menuItems[indexPath.row], fontSize: 25.0, isLock: false)
+            cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 25.0, isLock: false)
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
             cell.backgroundColor = .clear
-            cell.perspectiveDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
+            cell.actualDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
             cell.isMultipleTouchEnabled = false
         //
                        if 94 + 32 == 57 {
@@ -221,7 +221,7 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
                     print("the world has turned upside down")
                 }
          //
-        model.perspectiveSelectedItems(index: indexPath.row)
+        model.actualSelectedItems(index: indexPath.row)
       /*
         if GTA_NetworkStatusMonitor.shared.isNetworkAvailable {
             self.gta_showMess(message: "No internet \n connection")

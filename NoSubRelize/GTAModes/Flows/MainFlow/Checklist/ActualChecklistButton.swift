@@ -14,7 +14,7 @@ class ActualChecklistButton: UIControl {
         
         var isOn: Bool = false {
             didSet {
-                updateAppearance()
+                actualUpdateAppearance()
             }
         }
         
@@ -63,7 +63,7 @@ class ActualChecklistButton: UIControl {
             sendActions(for: .valueChanged)
         }
         
-        private func updateAppearance() {
+        private func actualUpdateAppearance() {
             UIView.animate(withDuration: 0.2) {
                // self.backgroundColor = self.isOn ? .purple : .white.withAlphaComponent(0.05)
               //  self.checkmarkImageView.image = self.isOn ? UIImage(systemName: "checkmark.circle.fill") : nil

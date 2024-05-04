@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-    final class ActualMainTabViewCell: UITableViewCell, ActualReusable {
+    final class ActualMainTabViewCell3862: UITableViewCell, ActualReusable {
     
     private var kingfisherManager: KingfisherManager
     
@@ -17,6 +17,11 @@ import Kingfisher
     private let backgroundImageView = UIImageView()
     private let titleLabel = UILabel()
     private let bottomBlackView = UIView()
+        // ref default
+        var randomProperty: Int {
+               return 42
+           }
+        // ref default
     private let rightImageView = UIImageView()
     private let lockImageView = UIImageView()
     
@@ -29,38 +34,41 @@ import Kingfisher
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        perspectiveSetupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
+    public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
         titleLabel.text = value.title.uppercased()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         backgroundImageView.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         titleLabel.textColor = .white
         backgroundImageView.kf.setImage(with: URL(string: value.imagePath))
         if isLock {
             NSLayoutConstraint.deactivate(notLockConstraints)
             NSLayoutConstraint.activate(lockConstraints)
         } else {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
             NSLayoutConstraint.deactivate(lockConstraints)
             NSLayoutConstraint.activate(notLockConstraints)
         }
@@ -69,20 +77,23 @@ import Kingfisher
     
     public override func prepareForReuse() {
         super.prepareForReuse()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         backgroundImageView.image = nil
         lockImageView.image = nil
         titleLabel.text = ""
     }
     
-    private func perspectiveSetupLayout() {
+    private func actualSetupLayout() {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        containerView.perspectiveLayout {
+        containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: 0.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0.0)
@@ -90,39 +101,69 @@ import Kingfisher
         }
         containerView.withCornerRadius()
         containerView.backgroundColor = .clear
-
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         
         containerView.addSubview(backgroundImageView)
-        backgroundImageView.perspectiveLayout {
+        backgroundImageView.actualLayout {
             $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: containerView.bottomAnchor)
             $0.leading.equal(to: containerView.leadingAnchor)
             $0.trailing.equal(to: containerView.trailingAnchor)
         }
-        
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         backgroundImageView.addSubview(bottomBlackView)
-        bottomBlackView.perspectiveLayout {
+        bottomBlackView.actualLayout {
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
+            
            // $0.top.equal(to: containerView.topAnchor)
             $0.bottom.equal(to: backgroundImageView.bottomAnchor)
             $0.leading.equal(to: backgroundImageView.leadingAnchor)
             $0.trailing.equal(to: backgroundImageView.trailingAnchor)
             $0.height.equal(to: 60.0)
         }
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.alpha = 0.5
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         blurEffectView.frame = bottomBlackView.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         bottomBlackView.addSubview(blurEffectView)
         
         bottomBlackView.backgroundColor = UIColor(named: "mainBlackColor")?.withAlphaComponent(0.5)
-        
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         bottomBlackView.addSubview(lockImageView)
-        lockImageView.perspectiveLayout {
+        lockImageView.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
             $0.leading.equal(to: bottomBlackView.leadingAnchor, offsetBy: 18.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
             $0.height.equal(to: 32.0)
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
             
             lockConstraints = [
                 $0.width.equal(to: 32.0, isActive: false)
@@ -131,30 +172,43 @@ import Kingfisher
             notLockConstraints = [
                 $0.width.equal(to: 0.0, isActive: false)
             ]
-            
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
         }
         lockImageView.contentMode = .scaleAspectFill
         
         
         
         bottomBlackView.addSubview(titleLabel)
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
             $0.leading.equal(to: lockImageView.trailingAnchor, offsetBy: 8.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
         }
-        
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         bottomBlackView.addSubview(rightImageView)
-        rightImageView.perspectiveLayout {
+        rightImageView.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
             $0.trailing.equal(to: bottomBlackView.trailingAnchor, offsetBy: -18.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
             $0.height.equal(to: 30.0)
             $0.width.equal(to: 30.0)
         }
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
         rightImageView.image = UIImage(named: "rightIcon")
         containerView.bringSubviewToFront(bottomBlackView)
-        
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
     }
     
 }

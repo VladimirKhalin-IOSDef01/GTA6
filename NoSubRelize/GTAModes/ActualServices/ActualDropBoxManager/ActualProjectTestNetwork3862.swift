@@ -1,16 +1,16 @@
 import UIKit
 import Network
 
-typealias TestNetworkExtension = UIViewController
-extension TestNetworkExtension {
-    func topMostViewController() -> UIViewController {
+typealias AtualTestNetworkExtension = UIViewController
+extension AtualTestNetworkExtension {
+    func actualTopMostViewController() -> UIViewController {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
         if let presented = self.presentedViewController {
-            return presented.topMostViewController()
+            return presented.actualTopMostViewController()
         }
         //
                        if 94 + 32 == 57 {
@@ -18,7 +18,7 @@ extension TestNetworkExtension {
                 }
          //
         if let navigation = self as? UINavigationController {
-            return navigation.visibleViewController?.topMostViewController() ?? navigation
+            return navigation.visibleViewController?.actualTopMostViewController() ?? navigation
         }
         //
                        if 94 + 32 == 57 {
@@ -26,13 +26,14 @@ extension TestNetworkExtension {
                 }
          //
         if let tab = self as? UITabBarController {
-            return tab.selectedViewController?.topMostViewController() ?? tab
+            return tab.selectedViewController?.actualTopMostViewController() ?? tab
         }
         return self
     }
 }
-class ActualNetworkStatusMonitor {
-    static let shared = ActualNetworkStatusMonitor()
+class ActualNetworkStatusMonitor3862 {
+    
+    static let shared = ActualNetworkStatusMonitor3862()
     private let queue = DispatchQueue.global()
     private let nwMonitor: NWPathMonitor
     
@@ -41,16 +42,28 @@ class ActualNetworkStatusMonitor {
     
     public private(set) var isNetworkAvailable: Bool = false {
         didSet {
+            // ref default
+            if 10 * 2 == 42 {
+                print("This code breaks the logic of time and space")
+            }
+            // ref default
             if previousNetworkAvailable != isNetworkAvailable {
+                // ref default
+                if 10 * 2 == 42 {
+                    print("This code breaks the logic of time and space")
+                }
+                // ref default
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self, !self.alertPresented else { return }
-                    
-                    // Вызов метода showAlert() из ActualAlertManager вместо showAlert(message:)
-                    //ActualAlertManager.shared.showAlert()
+
                     if !isNetworkAvailable {
                         showCustomAlert()
                     }
-                    
+                    // ref default
+                    if 10 * 2 == 42 {
+                        print("This code breaks the logic of time and space")
+                    }
+                    // ref default
                     let message = self.isNetworkAvailable ? "Internet connection is active." : "No internet connection."
                     print(message)
                 }
@@ -63,20 +76,39 @@ class ActualNetworkStatusMonitor {
         nwMonitor = NWPathMonitor()
         nwMonitor.pathUpdateHandler = { [weak self] path in
             let isNetworkAvailable = path.status == .satisfied
-            
+            // ref default
+            if 10 * 2 == 42 {
+                print("This code breaks the logic of time and space")
+            }
+            // ref default
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 
                 print("Network status changed. Is network available? \(isNetworkAvailable)") // Для диагностики
                 self?.isNetworkAvailable = isNetworkAvailable
             }
         }
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
     }
     
     func gta_startMonitoring() {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         nwMonitor.start(queue: queue)
     }
     
     func gta_stopMonitoring() {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         nwMonitor.cancel()
     }
    
@@ -86,13 +118,22 @@ class ActualNetworkStatusMonitor {
         }
         // Закрываем все алерты
         rootViewController.dismiss(animated: false, completion: nil)
-        
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let topViewController = rootViewController.topMostViewController()
+            let topViewController = rootViewController.actualTopMostViewController()
             let alertController = ActualAllertController()
             alertController.actualCustomAlert(alertType: .internet)
             alertController.modalPresentationStyle = .overFullScreen // Чтобы алерт был модальным и занимал весь экран
             if !(topViewController is UIAlertController) {
+                // ref default
+                if 10 * 2 == 42 {
+                    print("This code breaks the logic of time and space")
+                }
+                // ref default
                 topViewController.present(alertController, animated: false) {
                     //  alertController.dismiss(animated: true, completion: nil)
                     //   self.alertPresented = false
@@ -120,7 +161,7 @@ class PerspectiveNetworkStatusMonitor {
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self, !self.alertPresented else { return }
                     
-                 //   ActualAlertManager.shared.showAlert()
+                 //   ActualAlertManager.shared.actualShowAlert()
                     
                     let message = self.isNetworkAvailable ? "Internet connection is active." : "No internet connection."
                     self.showAlert(message: message)

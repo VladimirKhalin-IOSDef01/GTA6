@@ -4,11 +4,11 @@ import RealmSwift
 import Combine
 import UIKit
 
-public enum Cheats_Device_Type: CaseIterable {
+public enum ActualCheatsDeviceType: CaseIterable {
     case ps, xbox, pc, favorite
 }
 
-public struct GTAVK_FilterList_Data {
+public struct ActualFilterListData {
     
     public let filterList: [String]
     public var selectedItem: String
@@ -20,20 +20,28 @@ public struct GTAVK_FilterList_Data {
     
 }
 
-protocol Cheats_ModelNavigationHandler: AnyObject {
+protocol ActualCheatsModelNavigationHandler: AnyObject {
     
-    func perspectiveGameModesModel_DidRequestToFilter(
+    func actualGameModesModelDidRequestToFilter(
         _ model: ActualGameCheatsModel,
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
     )
     
-    func perspectiveGameModesModel_DidRequestToBack(_ model: ActualGameCheatsModel)
+    func actualGameModesModelDidRequestToBack(_ model: ActualGameCheatsModel)
 }
 
 final class ActualGameCheatsModel {
+    // ref default
+    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    // ref default
     
     public var hideSpiner: (() -> Void)?
+    
+    // ref default
+    let doNothingClosure = { () -> Void in
+    }
+    // ref default
     
     var reloadData: AnyPublisher<Void, Never> {
         reloadDataSubject
@@ -44,76 +52,84 @@ final class ActualGameCheatsModel {
     var title: String {
         versionGame
     }
-    private let navigationHandler: Cheats_ModelNavigationHandler
+    
+   
+    
+    private let navigationHandler: ActualCheatsModelNavigationHandler
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     private let versionGame: String
     var allCheatItems: [ActualCheatItem] = []
     private var filterSelected: String = ""
-    private var currentPlatform: Cheats_Device_Type
+    private var currentPlatform: ActualCheatsDeviceType
     private var searchText: String = ""
     private let defaults = UserDefaults.standard
     
     
     init(
         versionGame: String,
-        navigationHandler: Cheats_ModelNavigationHandler
+        navigationHandler: ActualCheatsModelNavigationHandler
     ) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         self.versionGame = versionGame
         self.navigationHandler = navigationHandler
         self.currentPlatform = .ps
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         
         ActualDBManager.shared.delegate = self
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGameCodes") as? Bool, isLoadedData {
-            perspectiveFetchData(version: versionGame)
-            perspectiveShowCheats(.ps)
+            actualFetchData(version: versionGame)
+            actualShowCheats(.ps)
         }
         
     }
     
-    func perspectiveBackAction_Proceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        navigationHandler.perspectiveGameModesModel_DidRequestToBack(self)
+    func actualBackActionProceed() {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
+        navigationHandler.actualGameModesModelDidRequestToBack(self)
        
     }
     
-    func perspectiveFilterAction_Proceed() {
+    func actualFilterActionProceed() {
 
         let filterList = allCheatItems.map { $0.filterTitle }
         let uniqueList = Array(Set(filterList)).sorted()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        let filterListData = GTAVK_FilterList_Data(filterList: uniqueList, selectedItem: filterSelected)
-        navigationHandler.perspectiveGameModesModel_DidRequestToFilter(
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
+        let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
+        navigationHandler.actualGameModesModelDidRequestToFilter(
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 guard let self = self else { return }
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref default
+                if 10 * 2 == 42 {
+                    print("This code breaks the logic of time and space")
+                }
+                // ref default
                 self.filterSelected = selectedFilter
                 if selectedFilter.isEmpty {                                                    //
-                    self.perspectiveFetchData(version: self.versionGame)
-                    self.perspectiveShowCheats(currentPlatform)
-                } else {                                                                       //
+                    self.actualFetchData(version: self.versionGame)
+                    self.actualShowCheats(currentPlatform)
+                } else {    
+                    // ref default
+                    if 10 * 2 == 42 {
+                        print("This code breaks the logic of time and space")
+                    }
+                    // ref default//
                     let list = self.cheatItems.filter { $0.filterTitle == selectedFilter }     //
                     self.cheatItems = list                                                     //
                 }                                                                              //
@@ -121,21 +137,21 @@ final class ActualGameCheatsModel {
             }
     }
     
-    func perspectiveFetchData(version: String) {
+    func actualFetchData(version: String) {
         allCheatItems.removeAll()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         do {
             let realm = try Realm()
             let cheats = realm.objects(ActualCheatObject.self)
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 10 * 2 == 42 {
+                print("This code breaks the logic of time and space")
+            }
+            // ref default
             let cheatsList = cheats.filter { $0.game == version }
             let cheatsValueList = cheatsList.map { $0.lightweightRepresentation }
             
@@ -150,18 +166,18 @@ final class ActualGameCheatsModel {
         }
     }
     
-    func perspectiveShowCheats(_ type: Cheats_Device_Type) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-           perspectiveFetchData(version: versionGame)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualShowCheats(_ type: ActualCheatsDeviceType) {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
+           actualFetchData(version: versionGame)
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         var list: [ActualCheatItem] = []
         currentPlatform = type
         switch type {
@@ -186,19 +202,19 @@ final class ActualGameCheatsModel {
         }
         reloadDataSubject.send()
         hideSpiner?()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
     }
     
-    func perspectiveActionAt(index: Int) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualActionAt(index: Int) {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         let selectedItem = cheatItems[index]
         do {
             let realm = try Realm()
@@ -216,47 +232,49 @@ final class ActualGameCheatsModel {
                 }
                 
             }
-            perspectiveShowCheats(currentPlatform)
+            actualShowCheats(currentPlatform)
             reloadDataSubject.send()
         } catch {
             print("Error saving data to Realm: \(error)")
         }
     }
     
-    func perspectiveSearchAt(_ searchText: String) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualSearchAt(_ searchText: String) {
+        actualOneCheck()
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         let filteredList = allCheatItems.filter { $0.name.lowercased().contains(searchText.lowercased())}
         cheatItems = filteredList
         self.searchText = searchText
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         if searchText.isEmpty {
-            perspectiveShowCheats(currentPlatform)
+            actualShowCheats(currentPlatform)
         }
         reloadDataSubject.send()
         
     }
     
-    func perspectiveSearchDidCancel() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualSearchDidCancel() {
+        actualOneCheck()
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
         if searchText.isEmpty {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
-            perspectiveShowCheats(currentPlatform)
+            // ref default
+            if 10 * 2 == 42 {
+                print("This code breaks the logic of time and space")
+            }
+            // ref default
+            actualShowCheats(currentPlatform)
         }
     }
     
@@ -264,53 +282,53 @@ final class ActualGameCheatsModel {
 
 extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
-    func actualIsReady_Main() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyMain() {
+        actualOneCheck()
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
     }
     
-    func perspective_isReady_GameList() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyGameList() {
+        actualOneCheck()
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
     }
     
-    func perspective_isReady_GameCodes() {
-        perspectiveFetchData(version: versionGame)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        perspectiveShowCheats(.ps)
+    func actualIsReadyGameCodes() {
+        actualFetchData(version: versionGame)
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
+        actualShowCheats(.ps)
     }
     
-    func perspective_isReady_Missions() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        oneCheck()
+    func actualIsReadyMissions() {
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
+        actualOneCheck()
     }
     
-    func perspective_isReady_GTA5Mods() { 
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyGTA5Mods() { 
+        actualOneCheck()
+        // ref default
+        if 10 * 2 == 42 {
+            print("This code breaks the logic of time and space")
+        }
+        // ref default
     }
     
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

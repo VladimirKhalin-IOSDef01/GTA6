@@ -37,10 +37,10 @@ class ActualMainViewController: ActualNiblessViewController {
     private var lockConstraints: [NSLayoutConstraint] = []
     private var notLockConstraints: [NSLayoutConstraint] = []
 
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
   
         navigationItem.title = ""
-        perspectiveCreateStack()
+        actualCreateStack()
 
        // tableView.rowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 361.0 : 361.0
         
@@ -52,7 +52,7 @@ class ActualMainViewController: ActualNiblessViewController {
         super.init()
     }
     
-    private func perspectiveSetupBindings() {
+    private func actualSetupBindings() {
       
         model.reloadData
             .receive(on: DispatchQueue.main)
@@ -79,7 +79,7 @@ class ActualMainViewController: ActualNiblessViewController {
                         print("the world has turned upside down")
                     }
              //
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
     }
     
@@ -96,13 +96,13 @@ class ActualMainViewController: ActualNiblessViewController {
                 }
          //
         if model.menuItems.isEmpty {
-            perspectiveShowSpinerMain()
+            actualShowSpinerMain()
         }
-        perspectiveSetupView()
-        perspectiveSetupBindings()
+        actualSetupView()
+        actualSetupBindings()
     }
     
-    private func perspectiveShowSpinerMain() {
+    private func actualShowSpinerMain() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -125,7 +125,7 @@ class ActualMainViewController: ActualNiblessViewController {
         
     }
     
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -139,7 +139,7 @@ class ActualMainViewController: ActualNiblessViewController {
          //
     }
     
-    private func perspectiveCreateStack() {
+    private func actualCreateStack() {
         let menuStack = createMenuConteiner(width: 345, height: 655)
         let cheatsStack = createMenuConteiner(width: 163, height: 361)
         let mapStack = createMenuConteiner(width: 163, height: 277)
@@ -247,7 +247,7 @@ class ActualMainViewController: ActualNiblessViewController {
         return backgroundImageView
     }
     
-    private func createButton(index: Int) {
+    private func actualCreateButton(index: Int) {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")

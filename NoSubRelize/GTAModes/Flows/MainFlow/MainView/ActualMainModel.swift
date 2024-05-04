@@ -3,13 +3,13 @@ import Foundation
 import RealmSwift
 import Combine
 
-protocol MainModel_NavigationHandler: AnyObject {
+protocol ActualMainModelNavigationHandler: AnyObject {
     
-    func perspectiveMainModel_DidRequestToGameSelection(_ model: ActualMainModel)
-    func perspectiveMainModel_DidRequestToChecklist(_ model: ActualMainModel)
-    func perspectiveMainModel_DidRequestToMap(_ model: ActualMainModel)
-    func perspectiveMainModel_DidRequestToModes(_ model: ActualMainModel)
-    func perspectiveMainModel_DidRequestToModesInfo(_ model: ActualMainModel)
+    func actualMainModelDidRequestToGameSelection(_ model: ActualMainModel)
+    func actualMainModelDidRequestToChecklist(_ model: ActualMainModel)
+    func actualMainModelDidRequestToMap(_ model: ActualMainModel)
+    func actualMainModelDidRequestToModes(_ model: ActualMainModel)
+    func actualMainModelDidRequestToModesInfo(_ model: ActualMainModel)
 }
 
 final class ActualMainModel {
@@ -23,13 +23,13 @@ final class ActualMainModel {
     }
     var menuItems: [ActualMainItem] = []
     
-    private let navigationHandler: MainModel_NavigationHandler
+    private let navigationHandler: ActualMainModelNavigationHandler
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     private let defaults = UserDefaults.standard
     var notificationToken: NotificationToken?
     
     init(
-        navigationHandler: MainModel_NavigationHandler
+        navigationHandler: ActualMainModelNavigationHandler
     ) {
         self.navigationHandler = navigationHandler
         
@@ -38,29 +38,29 @@ final class ActualMainModel {
         ActualDBManager.shared.perspectiveSetupDropBox()
     }
     
-    public func perspectiveSelectedItems(index: Int) {
+    public func actualSelectedItems(index: Int) {
         if index == 0 {
-            navigationHandler.perspectiveMainModel_DidRequestToGameSelection(self)
+            navigationHandler.actualMainModelDidRequestToGameSelection(self)
         }
         
         if index == 1 {
-            navigationHandler.perspectiveMainModel_DidRequestToChecklist(self)
+            navigationHandler.actualMainModelDidRequestToChecklist(self)
         }
         
         if index == 2 {
-            navigationHandler.perspectiveMainModel_DidRequestToMap(self)
+            navigationHandler.actualMainModelDidRequestToMap(self)
         }
         
         if index == 3 {
-            navigationHandler.perspectiveMainModel_DidRequestToModes(self)
+            navigationHandler.actualMainModelDidRequestToModes(self)
         }
        
         if index == 4 {
-            navigationHandler.perspectiveMainModel_DidRequestToModesInfo(self)
+            navigationHandler.actualMainModelDidRequestToModesInfo(self)
         }
     }
 
-    func perspectiveFetchData() {
+    func actualFetchData() {
         if menuItems.count != 5 {
             do {
                 let realm = try Realm()
@@ -94,23 +94,23 @@ final class ActualMainModel {
 
 extension ActualMainModel: ActualDBManagerDelegate {
     
-    func actualIsReady_Main() {
-        oneCheck()
+    func actualIsReadyMain() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
-        perspectiveFetchData()
+        actualFetchData()
     }
     
-    func perspective_isReady_GameList() {
+    func actualIsReadyGameList() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
-        oneCheck()
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -119,22 +119,13 @@ extension ActualMainModel: ActualDBManagerDelegate {
         
     }
     
-    func perspective_isReady_GameCodes() {
+    func actualIsReadyGameCodes() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-    }
-    
-    func perspective_isReady_Missions() {
-        oneCheck()
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -142,8 +133,8 @@ extension ActualMainModel: ActualDBManagerDelegate {
          //
     }
     
-    func perspective_isReady_GTA5Mods() { 
-        oneCheck()
+    func actualIsReadyMissions() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -151,7 +142,16 @@ extension ActualMainModel: ActualDBManagerDelegate {
          //
     }
     
-    func oneCheck() -> Int{
+    func actualIsReadyGTA5Mods() { 
+        actualOneCheck()
+        //
+                       if 94 + 32 == 57 {
+                    print("the world has turned upside down")
+                }
+         //
+    }
+    
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

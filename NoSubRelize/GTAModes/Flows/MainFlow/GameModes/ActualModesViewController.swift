@@ -79,7 +79,7 @@ class ActualModesViewController: ActualNiblessViewController {
     
     private func actualSetupView() {
         view.addSubview(customNavigation)
-        customNavigation.perspectiveLayout {
+        customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 21.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
@@ -88,7 +88,7 @@ class ActualModesViewController: ActualNiblessViewController {
         
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
-        tableView.perspectiveLayout {
+        tableView.actualLayout {
             $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 25.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 110 : 0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -110 : 0)
@@ -123,7 +123,7 @@ class ActualModesViewController: ActualNiblessViewController {
             if isShowSpinner {
                 self.actualShowSpiner()
             } else {
-                self.perspectiveHideAlert()
+                self.actualHideAlert()
             }
         }.store(in: &subscriptions)
         
@@ -165,12 +165,12 @@ class ActualModesViewController: ActualNiblessViewController {
            present(customAlertVC, animated: true, completion: nil)
     }
 
-    private func perspectiveHideAlert() {
+    private func actualHideAlert() {
         alert?.dismiss(animated: false)
         customAlertVC.dismiss(animated: false)
     }
     
-    func perspectiveShareFile(at mode: ActualModItem) {
+    func actualShareFile(at mode: ActualModItem) {
         
         if model.actualCheckIsLoadData(mode.modPath) {
           
@@ -260,7 +260,7 @@ class ActualModesViewController: ActualNiblessViewController {
         alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
         present(alert!, animated: true, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.perspectiveHideAlert()
+            self?.actualHideAlert()
             
         }
     }
@@ -283,7 +283,7 @@ extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate 
          //
         cell.actualConfigure_cell(mode, isLoaded: model.actualCheckIsLoadData(mode.modPath))
         cell.backgroundColor = .clear
-        cell.perspectiveDropShadowStandart()
+        cell.actualDropShadowStandart()
         return cell
     }
     

@@ -21,16 +21,16 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        perspectiveSetupView()
+        actualSetupView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         contentView.addSubview(stackView)
-        stackView.perspectiveLayout {
+        stackView.actualLayout {
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: 0)
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0)
@@ -46,7 +46,7 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
             button.titleLabel?.font = UIFont(name: "Gilroy-Semibold", size: 15)
             button.withCornerRadius(10.0)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(perspectiveButtonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(actualButtonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
             if titleName == "Playstation" {
                 button.backgroundColor = UIColor(named: "ButtonPressed")?.withAlphaComponent(1.0)
@@ -55,7 +55,7 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
                 button.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
             }
            
-            button.perspectiveLayout {
+            button.actualLayout {
                 $0.height.equal(to: 25.0)
                 switch titleName {
                 case "Playstation": $0.width.equal(to: 95.0)
@@ -67,7 +67,7 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
         }
     }
     
-    @objc func perspectiveButtonTapped(sender: UIButton) {
+    @objc func actualButtonTapped(sender: UIButton) {
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {

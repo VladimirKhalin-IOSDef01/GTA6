@@ -4,14 +4,14 @@ import RealmSwift
 import Combine
 import UIKit
 
-protocol PerspectiveModesModelNavHandler: AnyObject {
+protocol ActualModesModelNavHandler: AnyObject {
     
-    func perspectiveGameModesModel_DidRequestToFilter(
+    func actualGameModesModelDidRequestToFilter(
         _ model: ActualGameModesModel,
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
     )
-    func perspectiveGameModesModel_DidRequestToBack(_ model: ActualGameModesModel)
+    func actualGameModesModelDidRequestToBack(_ model: ActualGameModesModel)
     
 }
 
@@ -44,7 +44,7 @@ final class ActualGameModesModel {
     var title: String {
         "Mods Version 5"
     }
-    private let navigationHandler: PerspectiveModesModelNavHandler
+    private let navigationHandler: ActualModesModelNavHandler
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     private let showDocumentSaverSubject = PassthroughSubject<String, Never>()
     private let showAlertSaverSubject = PassthroughSubject<String, Never>()
@@ -56,7 +56,7 @@ final class ActualGameModesModel {
     
     
     init(
-        navigationHandler: PerspectiveModesModelNavHandler
+        navigationHandler: ActualModesModelNavHandler
     ) {
         self.navigationHandler = navigationHandler
         
@@ -74,7 +74,7 @@ final class ActualGameModesModel {
                     print("the world has turned upside down")
                 }
          //
-        navigationHandler.perspectiveGameModesModel_DidRequestToBack(self)
+        navigationHandler.actualGameModesModelDidRequestToBack(self)
     }
     
     func actualFilterActionProceed() {
@@ -85,8 +85,8 @@ final class ActualGameModesModel {
          //
         let filterList = allModeItems.map { $0.filterTitle }
         let uniqueList = Array(Set(filterList)).sorted()
-        let filterListData = GTAVK_FilterList_Data(filterList: uniqueList, selectedItem: filterSelected)
-        navigationHandler.perspectiveGameModesModel_DidRequestToFilter(
+        let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
+        navigationHandler.actualGameModesModelDidRequestToFilter(
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 guard let self = self else { return }
@@ -176,7 +176,7 @@ final class ActualGameModesModel {
         return FileManager.default.fileExists(atPath: fileURL.path)
     }
     
-    func perspectiveCheckIsDownloading(_ namName: String) -> Bool {
+    func actualCheckIsDownloading(_ namName: String) -> Bool {
         return true
     }
 
@@ -221,8 +221,8 @@ final class ActualGameModesModel {
 
 extension ActualGameModesModel: ActualDBManagerDelegate {
     
-    func actualIsReady_Main() {
-        oneCheck()
+    func actualIsReadyMain() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -230,8 +230,8 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
          //
     }
     
-    func perspective_isReady_GameList() {
-        oneCheck()
+    func actualIsReadyGameList() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -240,8 +240,8 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
         
     }
     
-    func perspective_isReady_GameCodes() {
-        oneCheck()
+    func actualIsReadyGameCodes() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -249,8 +249,8 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
          //
     }
     
-    func perspective_isReady_Missions() { 
-        oneCheck()
+    func actualIsReadyMissions() { 
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -258,8 +258,8 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
          //
     }
     
-    func perspective_isReady_GTA5Mods() {
-        oneCheck()
+    func actualIsReadyGTA5Mods() {
+        actualOneCheck()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -273,7 +273,7 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
          //
         actualShowMods()
     }
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

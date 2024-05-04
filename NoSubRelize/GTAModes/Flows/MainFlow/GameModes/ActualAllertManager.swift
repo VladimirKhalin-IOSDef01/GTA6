@@ -13,14 +13,14 @@ class ActualAlertManager {
 
     var alertViewController: ActualAllertController?
 
-    func showAlert() {
+    func actualShowAlert() {
         alertViewController?.actualBackgroundAlertView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.alertViewController?.actualCustomAlert(alertType: .download)
         }
     }
     
-    func stopAlerts() {
+    func actualStopAlerts() {
         self.alertViewController?.shouldDisplayAlerts = false
     }
 }

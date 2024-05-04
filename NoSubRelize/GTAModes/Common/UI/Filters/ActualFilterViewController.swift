@@ -27,40 +27,51 @@ public class ActualPanDragIndicator: ActualNiblessView {
     
     private func gtavk_setupView() {
         withCornerRadius(Self.height / 2.0)
-        perspectiveLayout {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        actualLayout {
             $0.width.equal(to: 32.0)
             $0.height.equal(to: ActualPanDragIndicator.height)
         }
         backgroundColor = .gray
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
 }
 
-protocol Filter_NavigationHandler: AnyObject {
+protocol ActualFilterNavigationHandler: AnyObject {
     
-    func filterDidRequestToClose()
+    func actualFilterDidRequestToClose()
 }
 
 // Добавьте делегат для уведомления о изменении состояния переключателя
 protocol ActualFilterTabViewCellDelegate: AnyObject {
     func toggleTapped(_ cell: ActualFilterTabViewCell)
+    
 }
 
 final class ActualFilterViewController: ActualNiblessFilterViewController {
     
     public var selectedFilter: (String) -> ()
     private let colorConteiner = UIView()
-    private var filterListData: GTAVK_FilterList_Data
+    private var filterListData: ActualFilterListData
     private let tableView = UITableView(frame: .zero)
     private let titleLabel = UILabel()
     private let closeButton = UIButton()
-    private let navigationHandler: Filter_NavigationHandler
+    private let navigationHandler: ActualFilterNavigationHandler
     private var selectedValue: String
     
     
     public init(
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> (),
-        navigationHandler: Filter_NavigationHandler
+        navigationHandler: ActualFilterNavigationHandler
     ) {
         self.filterListData = filterListData
         self.selectedFilter = selectedFilter
@@ -71,14 +82,22 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-       
-        perspectiveSetupView()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        actualSetupView()
     }
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
 
         let actualHeight = (filterListData.filterList.count + 1) * 70
-        
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         view.withCornerRadius()
        // view.alpha = 0.75
         view.backgroundColor = UIColor(named: "modalColor")?.withAlphaComponent(0.7)
@@ -89,7 +108,12 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
         colorConteiner.backgroundColor = .white
         colorConteiner.withBorder(width: 1, color: UIColor(named: "ActualPink")!.withAlphaComponent(0.5))
         colorConteiner.withCornerRadius(20)
-        colorConteiner.perspectiveLayout{
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        colorConteiner.actualLayout{
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 120 : 20)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -120 : -20)
             $0.top.equal(to: view.topAnchor, offsetBy: 0)
@@ -97,29 +121,41 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
             //$0.bottom.equal(to: colorConteiner.topAnchor, offsetBy: tableView.frame.height)
             $0.bottom.equal(to: view.topAnchor, offsetBy: CGFloat(actualHeight))
         }
-
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         titleLabel.text = "Filter"
         titleLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20)
         titleLabel.textColor = .black
         
         view.addSubview(titleLabel)
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
             $0.centerX.equal(to: view.centerXAnchor)
             $0.top.equal(to: view.topAnchor, offsetBy: 24.0)
         }
-        
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         view.addSubview(closeButton)
         closeButton.clipsToBounds = true
         closeButton.sizeToFit()
-        closeButton.perspectiveLayout {
+        closeButton.actualLayout {
             $0.trailing.equal(to: colorConteiner.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -20 : -15.0)
             $0.centerY.equal(to: titleLabel.centerYAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 20.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 20.0)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 24.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 24.0)
         }
         closeButton.setImage(UIImage(named: "closeIcon"), for: .normal)
-        closeButton.addTarget(self, action: #selector(perspectiveCloseAction), for: .touchUpInside)
-
+        closeButton.addTarget(self, action: #selector(actualCloseAction), for: .touchUpInside)
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         if let originalImage = UIImage(named: "closeIcon") {
             let targetSize = UIDevice.current.userInterfaceIdiom == .pad ? CGSize(width: 40, height: 40) : CGSize(width: 20, height: 20)
             let renderer = UIGraphicsImageRenderer(size: targetSize)
@@ -129,10 +165,14 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
             closeButton.setImage(scaledImage.withRenderingMode(.alwaysTemplate), for: .normal)
             closeButton.tintColor = UIColor.black
         }
-        
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         tableView.accessibilityIdentifier = "tableView"
         view.addSubview(tableView)
-        tableView.perspectiveLayout {
+        tableView.actualLayout {
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 120 : 20)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -120 : -20)
             $0.top.equal(to: titleLabel.bottomAnchor)
@@ -148,8 +188,8 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     }
     
     @objc
-    func perspectiveCloseAction() {
-        navigationHandler.filterDidRequestToClose()
+    func actualCloseAction() {
+        navigationHandler.actualFilterDidRequestToClose()
     }
     
 }
@@ -163,11 +203,21 @@ extension ActualFilterViewController: ActualPPresentable {
         )
     }
     
-    func minContentHeight(presentingController: UIViewController) -> CGFloat {
+    func actualMinContentHeight(presentingController: UIViewController) -> CGFloat {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         return contentSize.height
     }
     
-    func maxContentHeight(presentingController: UIViewController) -> CGFloat {
+    func actualMaxContentHeight(presentingController: UIViewController) -> CGFloat {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         return contentSize.height
     }
     
@@ -175,30 +225,60 @@ extension ActualFilterViewController: ActualPPresentable {
 
 extension ActualFilterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         return filterListData.filterList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ActualFilterTabViewCell = tableView.dequeueReusableCell(indexPath)
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         let titleCell = filterListData.filterList[indexPath.row]
-        let filterDataCell = ActualFilterData(title: titleCell, isCheck: perspectiveFilterIsCheckFilter(titleCell) )
-        cell.perspectiveConfigure_cell(filterDataCell)
+        let filterDataCell = ActualFilterData(title: titleCell, isCheck: actualFilterIsCheckFilter(titleCell) )
+        cell.actualConfigure_cell(filterDataCell)
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         cell.delegate = self
        // cell.switcher.isOn = filterDataCell.isCheck
         cell.backgroundColor = .clear
         return cell
     }
     
-    private func perspectiveFilterIsCheckFilter(_ titleCell: String) -> Bool {
+    private func actualFilterIsCheckFilter(_ titleCell: String) -> Bool {
         if titleCell == filterListData.selectedItem, titleCell == selectedValue {
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             return true
         }
         
         if titleCell == filterListData.selectedItem, titleCell != selectedValue {
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             return false
         }
         
         if titleCell != filterListData.selectedItem, titleCell == selectedValue {
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             return true
         }
         
@@ -212,10 +292,20 @@ extension ActualFilterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if selectedValue == filterListData.filterList[indexPath.row] {
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             selectedValue = ""
             selectedFilter("")
         } else {
             selectedValue = filterListData.filterList[indexPath.row]
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             selectedFilter(selectedValue)
         }
         tableView.reloadData()
@@ -226,6 +316,11 @@ extension ActualFilterViewController: ActualFilterTabViewCellDelegate {
     
     
     func toggleTapped(_ cell: ActualFilterTabViewCell) {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         // Получаем indexPath выбранной ячейки
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         

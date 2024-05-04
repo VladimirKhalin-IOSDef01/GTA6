@@ -39,7 +39,7 @@ final class ActualHeaderViewNew: UICollectionReusableView {
         stackView.layer.cornerRadius = 18
         stackView.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
         stackView.clipsToBounds = true
-        stackView.perspectiveLayout {
+        stackView.actualLayout {
             $0.leading.equal(to: self.leadingAnchor, offsetBy: 0)
             $0.trailing.equal(to: self.trailingAnchor, offsetBy: 0)
             $0.top.equal(to: self.topAnchor, offsetBy: 00.0)
@@ -54,7 +54,7 @@ final class ActualHeaderViewNew: UICollectionReusableView {
             button.imageView?.clipsToBounds = true
             button.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(perspectiveButtonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(actualButtonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
             if imageName == "sony" {
                 button.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
@@ -63,14 +63,14 @@ final class ActualHeaderViewNew: UICollectionReusableView {
                 button.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
             }
             
-            button.perspectiveLayout {
+            button.actualLayout {
                 $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79)
                 $0.width.equal(to: 88.0)
             }
         }
     }
     
-    @objc func perspectiveButtonTapped(sender: UIButton) {
+    @objc func actualButtonTapped(sender: UIButton) {
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {
@@ -121,7 +121,7 @@ final class PerspectiveHeaderViewNew: UITableViewHeaderFooterView, ActualReusabl
         stackView.layer.cornerRadius = 18
         stackView.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
         stackView.clipsToBounds = true
-        stackView.perspectiveLayout {
+        stackView.actualLayout {
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
             $0.top.equal(to: contentView.topAnchor, offsetBy: 00.0)
@@ -137,7 +137,7 @@ final class PerspectiveHeaderViewNew: UITableViewHeaderFooterView, ActualReusabl
             button.withBorder(width: 1, color: (UIColor(named: "ActualPink")?.withAlphaComponent(0.4))!)
             button.withCornerRadius(0.0)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(perspectiveButtonTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(actualButtonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
             if imageName == "sony" {
                 button.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)

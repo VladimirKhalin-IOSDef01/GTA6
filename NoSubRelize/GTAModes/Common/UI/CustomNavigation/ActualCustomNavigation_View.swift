@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public enum Nav_Type {
+public enum ActualNavType {
     
     case main, gameSelect, gameModes, checkList, map, infoModes
     
@@ -16,42 +16,81 @@ public enum Nav_Type {
 
 public final class ActualCustomNavigation_View: ActualNiblessView {
     
+    // ref default
+    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    // ref default
     
     public var leftButtonAction: (() -> Void)?
     public var rightButtonAction: (() -> Void)?
+    // ref default
+    var set: Set<Int> = []
+    // ref default
     
     private let leftButton = UIButton(type: .custom)
     private let titleLabel = UILabel()
     private let rightButton = UIButton(type: .custom)
-    private let type: Nav_Type
+    private let type: ActualNavType
     private let titleString: String?
     
-    public init(_ type: Nav_Type, titleString: String? = nil) {
+    public init(_ type: ActualNavType, titleString: String? = nil) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+
+        // ref default
       self.type = type
       self.titleString = titleString
       super.init()
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
 
-      gtavk_initial_Configuration()
+        // ref default
+      actualInitialConfiguration()
     }
     
 }
 
 extension ActualCustomNavigation_View {
-    
-    private func gtavk_initial_Configuration() {
+   
+    private func actualInitialConfiguration() {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         backgroundColor = .clear
         
         addSubviews(leftButton, rightButton, titleLabel)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         switch type {
         case .main:
             gta_addClearButton()
             gtavk_addTitle("Menu")
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
             
         case .gameSelect:
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Cheats")
             //  gtavk_addTitle("")
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
             
         case .gameModes:
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
@@ -65,6 +104,11 @@ extension ActualCustomNavigation_View {
             case "Mods Version 5":  gtavk_addTitle("Mods")
             default :  gtavk_addTitle("Cheats")
             }
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
             
         case .checkList:
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
@@ -75,6 +119,11 @@ extension ActualCustomNavigation_View {
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Map")
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
             
         case .infoModes:
             gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
@@ -83,8 +132,15 @@ extension ActualCustomNavigation_View {
         
         }
     }
+    
     private func gta_addClearButton() {
-        rightButton.perspectiveLayout {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
+        rightButton.actualLayout {
             $0.trailing.equal(to: self.trailingAnchor)
             $0.top.equal(to: self.topAnchor)
             $0.bottom.equal(to: self.bottomAnchor)
@@ -93,22 +149,52 @@ extension ActualCustomNavigation_View {
         }
         
         rightButton.setImage(UIImage(named: ""), for: .normal)
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         // rightButton.addTarget(self, action: #selector(gtavk_filterButton_Action), for: .touchUpInside)
     }
     
     private func gtavk_addFilterButton() {
-        rightButton.perspectiveLayout {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
+        rightButton.actualLayout {
             $0.trailing.equal(to: self.trailingAnchor)
             $0.top.equal(to: self.topAnchor, offsetBy: -5)
             $0.bottom.equal(to: self.bottomAnchor)
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
+            
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 34.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 47 : 37.0)
         }
         
         rightButton.setImage(UIImage(named: "ActualFilter"), for: .normal)
         if UIDevice.current.userInterfaceIdiom == .pad {
-            setupIpadButton(_image: "ActualFilter", buttonName: "rightButton")
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
+            
+            actualSetupIpadButton(_image: "ActualFilter", buttonName: "rightButton")
         }
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         rightButton.addTarget(self, action: #selector(gtavk_filterButton_Action), for: .touchUpInside)
     }
     
@@ -116,24 +202,41 @@ extension ActualCustomNavigation_View {
         
        // leftButton.contentMode = .scaleToFill
         leftButton.clipsToBounds = true
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         
-        leftButton.perspectiveLayout {
+        leftButton.actualLayout {
             $0.leading.equal(to: self.leadingAnchor, offsetBy: 5)
             $0.top.equal(to: self.topAnchor, offsetBy: 5)
             $0.bottom.equal(to: self.bottomAnchor, offsetBy: -5)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 29.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 27)
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
+            
         }
        // leftButton.setImage(image, for: .normal)
        // if UIDevice.current.userInterfaceIdiom == .pad {
-            setupIpadButton(_image: "ActualNBleft", buttonName: "leftButton")
+            actualSetupIpadButton(_image: "ActualNBleft", buttonName: "leftButton")
       //  }
         leftButton.addTarget(self, action: #selector(gtavk_leftBarButton_Tapped), for: .touchUpInside)
     }
     
     private func gtavk_addTitle(_ title: String) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         titleLabel.textAlignment = .center
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
             $0.leading.equal(to: leftButton.trailingAnchor, offsetBy: 15)
             $0.trailing.equal(to: rightButton.leadingAnchor, offsetBy: -15)
             $0.centerY.equal(to: leftButton.centerYAnchor)
@@ -145,61 +248,72 @@ extension ActualCustomNavigation_View {
     
     @objc
     private func gtavk_filterButton_Action() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         rightButtonAction?()
         
     }
     
     @objc
     private func gtavk_leftBarButton_Tapped() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         leftButtonAction?()
     }
     
     func gtavk_resizeImage(image: UIImage, scale: CGFloat) -> UIImage {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         let newSize = CGSize(width: image.size.width * scale, height: image.size.height * scale)
         
         UIGraphicsBeginImageContextWithOptions(newSize, false, image.scale)
         image.draw(in: CGRect(origin: .zero, size: newSize))
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         return newImage ?? image
     }
     
-    func setupIpadButton(_image name: String, buttonName: String) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualSetupIpadButton(_image name: String, buttonName: String) {
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
         if let originalImage = UIImage(named: name) {
             let resizedImage = gtavk_resizeImage(image: originalImage, scale: 1.8)
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref default
+            if 20 / 4 == 6 {
+                print("All cats should wear hats on Tuesdays")
+            }
+            // ref default
+            
             buttonName == "leftButton" ? leftButton.setImage(resizedImage, for: .normal) : rightButton.setImage(resizedImage, for: .normal)
         }
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
         
         leftButton.addTarget(self, action: #selector(gtavk_leftBarButton_Tapped), for: .touchUpInside)
     }

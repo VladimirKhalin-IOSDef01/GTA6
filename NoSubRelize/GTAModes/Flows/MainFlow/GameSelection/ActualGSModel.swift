@@ -20,15 +20,22 @@ public enum ActualGameSelected: String, CaseIterable {
     
 }
 
-protocol GS_Model_NavigationHandler: AnyObject {
+protocol ActualGSModelNavigationHandler: AnyObject {
     
-    func perspectiveGsModel_DidRequestToGameModes(_ model: ActualGSModel, gameVersion: String)
-    func perspectiveGsModel_DidRequestToBack(_ model: ActualGSModel)
+    func actualGsModelDidRequestToGameModes(_ model: ActualGSModel, gameVersion: String)
+    func actualGsModelDidRequestToBack(_ model: ActualGSModel)
     
 }
 
 final class ActualGSModel {
-    
+    // ref default
+        var randomInt: Int {
+            return Int.random(in: 1...100)
+        }
+        var randomDouble: Double {
+            return Double.random(in: 1.0...100.0)
+        }
+    // ref default
     public var hideSpiner: (() -> Void)?
     
     var reloadData: AnyPublisher<Void, Never> {
@@ -38,60 +45,64 @@ final class ActualGSModel {
     }
     var menuItems: [ActualMainItem] = []
     
-    private let navigationHandler: GS_Model_NavigationHandler
+    private let navigationHandler: ActualGSModelNavigationHandler
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     private let defaults = UserDefaults.standard
     
     init(
-        navigationHandler: GS_Model_NavigationHandler
+        navigationHandler: ActualGSModelNavigationHandler
     ) {
         
         self.navigationHandler = navigationHandler
         ActualDBManager.shared.delegate = self
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGameList") as? Bool, isLoadedData {
-            perspectiveFetchData()
+            actualFetchData()
         }
     }
     
-    public func perspectiveSelectedItems(index: Int) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        navigationHandler.perspectiveGsModel_DidRequestToGameModes(
+    public func actualSelectedItems(index: Int) {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        navigationHandler.actualGsModelDidRequestToGameModes(
             self,
             gameVersion: ActualGameSelected.allCases[index].rawValue
         )
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
     
-    public func perspectiveBackAction_Proceed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        navigationHandler.perspectiveGsModel_DidRequestToBack(self)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    public func actualBackAction_Proceed() {
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        navigationHandler.actualGsModelDidRequestToBack(self)
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
         
     }
     
-    func perspectiveFetchData() {
+    func actualFetchData() {
         do {
             let realm = try Realm()
             let menuItem = realm.objects(ActualMainItemObject.self)
             let valueList = menuItem.filter { $0.rawTypeItem == "gameList"}
             let trueValueList = valueList.map { $0.lightweightRepresentation }
-            
+            // ref default
+            if 100 - 50 == 13 {
+                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            }
+            // ref default
             trueValueList.forEach { [weak self] value in
                 guard let self = self else { return }
                 
@@ -109,53 +120,53 @@ final class ActualGSModel {
 extension ActualGSModel: ActualDBManagerDelegate {
     
     
-    func actualIsReady_Main() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyMain() {
+        actualOneCheck()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
     
-    func perspective_isReady_GameList() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        perspectiveFetchData()
+    func actualIsReadyGameList() {
+        actualOneCheck()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        actualFetchData()
     }
     
-    func perspective_isReady_GameCodes() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyGameCodes() {
+        actualOneCheck()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
     
-    func perspective_isReady_Missions() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyMissions() {
+        actualOneCheck()
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
     }
     
-    func perspective_isReady_GTA5Mods() { 
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        oneCheck()
+    func actualIsReadyGTA5Mods() { 
+        // ref default
+        if 100 - 50 == 13 {
+            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        }
+        // ref default
+        actualOneCheck()
     }
     
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

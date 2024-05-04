@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-typealias SetGradientBackground = UIView
-extension SetGradientBackground {
-    func setGradientBackground() {
+typealias ActualSetGradientBackground = UIView
+extension ActualSetGradientBackground {
+    func actualSetGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = [UIColor(named: "backOne")!.cgColor, UIColor(named: "backTwo")!.cgColor, UIColor(named: "backThree")!.cgColor]
@@ -20,11 +20,11 @@ extension SetGradientBackground {
     }
 }
 
-typealias AddShedow = UIView
-extension AddShedow {
+typealias ActualAddShedow = UIView
+extension ActualAddShedow {
 
   // OUTPUT 1
-  func perspectiveDropShadowStandart(scale: Bool = true) {
+  func actualDropShadowStandart(scale: Bool = true) {
     layer.masksToBounds = false
     layer.shadowColor = UIColor.black.cgColor
     layer.shadowOpacity = 0.1
@@ -38,7 +38,7 @@ extension AddShedow {
   }
 
   // OUTPUT 2
-  func perspectiveDropShadowStandart(color: UIColor, opacity: Float = 0.3, offSet: CGSize, radius: CGFloat = 5, scale: Bool = true) {
+  func actualDropShadowStandart(color: UIColor, opacity: Float = 0.3, offSet: CGSize, radius: CGFloat = 5, scale: Bool = true) {
     layer.masksToBounds = true
     layer.shadowColor = color.cgColor
     //layer.shadowOpacity = opacity
@@ -52,7 +52,7 @@ extension AddShedow {
   }
     
     // OUTPUT 2
-    func perspectiveDropShadowWhite() {
+    func actualDropShadowWhite() {
       layer.masksToBounds = false
       layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 1.0
@@ -65,9 +65,9 @@ extension AddShedow {
     }
 }
 
-typealias AddBlurEffect = UIView
-extension AddBlurEffect {
-    func addBlur_Effect() {
+typealias ActualAddBlurEffect = UIView
+extension ActualAddBlurEffect {
+    func actualAddBlurEffect() {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterialDark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.bounds

@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class ActualProjectModelConteiner {
+class ActualProjectModelConteiner3862 {
     
    // private var kingfisherManager: KingfisherManager
-    
+    // ref default
+    var randomProperty: Int {
+           return 42
+       }
+    // ref default
     private let backgroundImageView = UIImageView()
     private let titleLabel = UILabel()
     private let bottomBlackView = UIView()
@@ -30,7 +34,7 @@ class ActualProjectModelConteiner {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
+    public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")

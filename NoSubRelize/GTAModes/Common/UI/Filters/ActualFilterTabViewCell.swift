@@ -33,34 +33,38 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        perspectiveSetupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure_cell(_ value: ActualFilterData) {
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 20)
+    public func actualConfigure_cell(_ value: ActualFilterData) {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 20)
+        } else {
+            titleLabel.font = UIFont(name: "Gilroy-Regular", size: 20)
+        }
         titleLabel.textColor = .black
         titleLabel.text = value.title.capitalized(with: .autoupdatingCurrent)
         switcher.isOn = value.isCheck // Установите состояние переключателя
         checkImage.isHidden = !value.isCheck // Управление видимостью галочки
     }
     
-    private func perspectiveSetupLayout() {
+    private func actualSetupLayout() {
         // contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         // containerView.backgroundColor = .clear
         
-        containerView.perspectiveLayout {
+        containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor)
             $0.leading.equal(to: contentView.leadingAnchor)
             $0.trailing.equal(to: contentView.trailingAnchor)
         }
         containerView.addSubview(checkImage)
-        checkImage.perspectiveLayout {
+        checkImage.actualLayout {
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -80.0)
             $0.centerY.equal(to: containerView.centerYAnchor)
             $0.height.equal(to: 0)
@@ -69,13 +73,13 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         checkImage.image = .init(named: "checkIcon")
         
         containerView.addSubview(titleLabel)
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 16.0)
             $0.trailing.equal(to: checkImage.leadingAnchor, offsetBy: -4.0)
             $0.centerY.equal(to: containerView.centerYAnchor)
         }
         containerView.addSubview(borderLineView)
-        borderLineView.perspectiveLayout {
+        borderLineView.actualLayout {
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 20.0)
             $0.bottom.equal(to: containerView.bottomAnchor)
@@ -86,8 +90,8 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         
         containerView.addSubview(switcher)
         switcher.translatesAutoresizingMaskIntoConstraints = false
-        switcher.perspectiveLayout {
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -60.0)
+        switcher.actualLayout {
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -15)
             $0.centerY.equal(to: containerView.centerYAnchor)
             $0.height.equal(to: 40.0)
             $0.width.equal(to: 63.0)
@@ -98,8 +102,8 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         
         containerView.addSubview(blockView)
         blockView.backgroundColor = .clear
-        blockView.perspectiveLayout{
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -60.0)
+        blockView.actualLayout{
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy:  UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -15)
             $0.centerY.equal(to: containerView.centerYAnchor)
             $0.height.equal(to: 40.0)
             $0.width.equal(to: 63.0)

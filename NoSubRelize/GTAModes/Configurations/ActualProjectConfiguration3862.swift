@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum ActualProjectConfiguration {
+enum ActualProjectConfiguration3862 {
    
     static let adjustToken = "m3vi7aesgw00"
     
@@ -11,7 +11,11 @@ enum ActualProjectConfiguration {
     static let pushwooshAppName = "WebGeek app"
     
     static let termsLink: String = "https://www.google.com"
-    
+    // ref default
+    var randomProperty: Int {
+           return 42
+       }
+    // ref default
     static let policyLink: String = "https://www.google.com"
     
     static let mainSubscriptionID = "mysub1"
@@ -34,10 +38,14 @@ enum ActualProjectConfiguration {
 }
 
 
-enum perspective_ConfigurationMediaSub {
+enum actualConfigurationMediaSub {
     
     static let nameFileVideoForPhone = "phone"
-    
+    // ref default
+    var randomProperty: Int {
+           return 42
+       }
+    // ref default
     static let nameFileVideoForPad = "pad"
     
     static let videoFileType = "mp4"

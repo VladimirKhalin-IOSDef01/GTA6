@@ -1,15 +1,27 @@
 import Foundation
 
+
 struct ActualDBKeys {
+   
+    // ref default
+    let doNothingClosure = { () -> Void in
+    }
+    // ref default
     
     static let RefreshTokenSaveVar = "refresh_token"
+    
+    
     
     static let appkey = "edrwnb9zlrqpmc4"
     static let appSecret = "x06ouknobnrivso"
     static let token = "k_NEn1_GHiMAAAAAAAAA1LhxTet_j7HydCHg8VFQuGw"
     static let refresh_token = "DziuHCVuEe0AAAAAAAAAARW5Mzi9un9WVMGpxLH-D8ZF3QaJHFCT7RticNQyuCBm"
     static let apiLink = "https://api.dropboxapi.com/oauth2/token"
-
+    
+    // ref default
+    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    // ref default
+ 
     enum ActualPath: String {
         case gtasa_modes = "/cheats/version-SA/version-SA.json"
         case gtavc_modes = "/cheats/version-VC/version-VC.json"
@@ -19,9 +31,9 @@ struct ActualDBKeys {
         case gameList = "/gameList/gamelist.json"
         case checkList = "/Checklist/checklist.json"
         case modsGTA5List = "/mods/content.json"
-
+        
     }
+    
+    
+   
 }
-
-
-

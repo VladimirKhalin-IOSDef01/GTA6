@@ -22,7 +22,7 @@ class ActualFakeLoader: UIViewController {
         
         let alertBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         alertBackgroundView.backgroundColor = .black.withAlphaComponent(0.65)
-        alertBackgroundView.addBlur_Effect()
+        alertBackgroundView.actualAddBlurEffect()
         view.addSubview(alertBackgroundView)
     }
     
@@ -30,6 +30,6 @@ class ActualFakeLoader: UIViewController {
         fakeLoaderView = CircularFakeLoaderView(frame: CGRect(x: view.frame.width / 2 - 80, y: view.frame.height / 2 - 80, width: 160, height: 160))
         
         view.addSubview(fakeLoaderView)
-        fakeLoaderView.startAnimation(duration: duration)
+        fakeLoaderView.actualStartAnimation(duration: duration)
     }
 }

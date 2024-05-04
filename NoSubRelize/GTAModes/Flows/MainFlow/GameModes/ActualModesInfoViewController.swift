@@ -104,7 +104,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     
     private func actualSetupView() {
         view.addSubview(customNavigation)
-        customNavigation.perspectiveLayout {
+        customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 21.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
@@ -113,7 +113,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
-        tableView.perspectiveLayout {
+        tableView.actualLayout {
             $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 26.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 94 : 0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -94 : 0)
@@ -194,7 +194,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         alert?.dismiss(animated: false)
     }
     
-    func perspectiveShareFile(at mode: ActualModItem) {
+    func actualShareFile(at mode: ActualModItem) {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -274,7 +274,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         rootViewController.dismiss(animated: false, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let topViewController = rootViewController.topMostViewController()
+            let topViewController = rootViewController.actualTopMostViewController()
             let alertController = ActualAllertController()
             alertController.actualCustomAlert(alertType: .download)
             alertController.modalPresentationStyle = .overFullScreen // Чтобы алерт был модальным и занимал весь экран
@@ -299,7 +299,7 @@ extension ActualModesInfoViewController: UITableViewDataSource {
         cell.backgroundColor = .clear
         
         cell.downloadAction = { [weak self] in
-            if ActualNetworkStatusMonitor.shared.isNetworkAvailable {
+            if ActualNetworkStatusMonitor3862.shared.isNetworkAvailable {
                 self?.model.actualDownloadMode(index: self?.currentIndex ?? 1)
                 cell.actualGameModeDownloadColor(downloading: true)
             } else {
@@ -310,7 +310,7 @@ extension ActualModesInfoViewController: UITableViewDataSource {
         }
 
         cell.shareAction = { [weak self] in
-            self?.perspectiveShareFile(at: mode)
+            self?.actualShareFile(at: mode)
         }
         
         return cell

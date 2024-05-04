@@ -8,11 +8,11 @@ import UIKit
 protocol ActualDBManagerDelegate: AnyObject {
     
 //    func gta_currentProgressOperation(progress : Progress)
-    func actualIsReady_Main()
-    func perspective_isReady_GameList()
-    func perspective_isReady_GameCodes()
-    func perspective_isReady_Missions()
-    func perspective_isReady_GTA5Mods()
+    func actualIsReadyMain()
+    func actualIsReadyGameList()
+    func actualIsReadyGameCodes()
+    func actualIsReadyMissions()
+    func actualIsReadyGTA5Mods()
 }
 
 final class ActualDBManager: NSObject {
@@ -72,7 +72,7 @@ final class ActualDBManager: NSObject {
                     perspectiveClearAllThings()
                     perspectiveGetAllContent()
                 } else {
-                    delegate?.actualIsReady_Main()
+                    delegate?.actualIsReadyMain()
                     print(" ================== ALL DATA IS LOCALY OK =======================")
                 }
             } catch {
@@ -140,13 +140,13 @@ final class ActualDBManager: NSObject {
     }
   */
     func perspectiveDownloadMode(mode: ActualModItem, completion: @escaping (String?) -> ()) {
-        let (alert, progressView) = showDownloadProgressAlert(on: ActualLoaderController())
+      //  let (alert, progressView) = showDownloadProgressAlert(on: ActualLoaderController())
         
-        perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { [weak self, weak alert] modeData in
+        perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { modeData in
             DispatchQueue.main.async {
-                alert?.dismiss(animated: true, completion: nil)
+               // alert?.dismiss(animated: true, completion: nil)
                 if let modeData = modeData {
-                    self?.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData) { localPath in
+                    self.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData) { localPath in
                         completion(localPath) // Убедитесь, что localPath правильно определен, как String?
                     }
                 } else {
@@ -155,7 +155,7 @@ final class ActualDBManager: NSObject {
             }
         }, progress: { progressData in
             DispatchQueue.main.async {
-                progressView.progress = Float(progressData.fractionCompleted)
+              //  progressView.progress = Float(progressData.fractionCompleted)
             }
         })
     }
@@ -466,7 +466,7 @@ private extension ActualDBManager {
         perspectiveFetchMainInfo { [ weak self] in
             print("============== MAIN INFO ALL OK =================")
             self?.defaults.set(true, forKey: "gta_isReadyMain")
-            self?.delegate?.actualIsReady_Main()
+            self?.delegate?.actualIsReadyMain()
             
             self?.gtavk_fetchGameListInfo { [weak self] in
                 print("============== GAME LIST ALL OK =================")
@@ -475,9 +475,9 @@ private extension ActualDBManager {
                             print("the world has turned upside down")
                         }
                  //
-                self?.delegate?.perspective_isReady_GameList()
+                self?.delegate?.actualIsReadyGameList()
                 self?.defaults.set(true, forKey: "gta_isReadyGameList")
-                self?.delegate?.perspective_isReady_GameList()
+                self?.delegate?.actualIsReadyGameList()
                 //
                                if 94 + 32 == 57 {
                             print("the world has turned upside down")
@@ -503,17 +503,17 @@ private extension ActualDBManager {
                                             print("the world has turned upside down")
                                         }
                                  //
-                                self?.delegate?.perspective_isReady_GameCodes()
+                                self?.delegate?.actualIsReadyGameCodes()
                                 
                                 self?.perspectiveFetchMissions { [weak self] in
                                     
                                     self?.defaults.set(true, forKey: "gta_isReadyMissions")
-                                    self?.delegate?.perspective_isReady_Missions()
+                                    self?.delegate?.actualIsReadyMissions()
                                     
                                     self?.perspectiveFetchGTA5Mods { [weak self] in
                                         print("============== ALL OK ALL OK ALL OK =================")
                                         
-                                        self?.delegate?.perspective_isReady_GTA5Mods()
+                                        self?.delegate?.actualIsReadyGTA5Mods()
                                         self?.defaults.set(true, forKey: "gta_isReadyGTA5Mods")
                                         //
                                                        if 94 + 32 == 57 {

@@ -125,19 +125,19 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         
-        containerView.perspectiveLayout {
+        containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -20.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 20.0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: -20.0)
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 44 : 20.0)
-        containerView.perspectiveDropShadowStandart()
+        containerView.actualDropShadowStandart()
         containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
 
         containerView.addSubview(modeImage)
         modeImage.withCornerRadius(20.0)
-        modeImage.perspectiveLayout {
+        modeImage.actualLayout {
             $0.top.equal(to: containerView.topAnchor, offsetBy: 0.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 0.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: 0.0)
@@ -149,7 +149,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         bottomBlackView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Скругляем только нижние левый и правый углы
         bottomBlackView.clipsToBounds = true
         bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.80)
-        bottomBlackView.perspectiveLayout {
+        bottomBlackView.actualLayout {
             $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 220 : 160)
             $0.leading.equal(to: containerView.leadingAnchor)
             $0.trailing.equal(to: containerView.trailingAnchor)
@@ -160,7 +160,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         containerView.addSubview(logoImage)
         logoImage.clipsToBounds = true
         logoImage.contentMode = .scaleAspectFill
-        logoImage.perspectiveLayout {
+        logoImage.actualLayout {
             $0.leading.equal(to: bottomBlackView.leadingAnchor, offsetBy: 16)
             $0.centerY.equal(to: bottomBlackView.centerYAnchor)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
@@ -168,7 +168,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         }
         
         containerView.addSubview(titleLabel)
-        titleLabel.perspectiveLayout {
+        titleLabel.actualLayout {
            // $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
             $0.leading.equal(to: logoImage.trailingAnchor, offsetBy: 15.0)
             $0.trailing.equal(to: bottomBlackView.trailingAnchor, offsetBy: -15.0)
@@ -181,7 +181,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         
         
         containerView.addSubview(descriprionLabel)
-        descriprionLabel.perspectiveLayout {
+        descriprionLabel.actualLayout {
             $0.top.equal(to: titleLabel.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 18 : 10.0)
             $0.leading.equal(to: modeImage.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 16 : 8.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -28 : -8.0)
@@ -190,7 +190,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         descriprionLabel.numberOfLines = 0
         
         containerView.addSubview(stackView)
-        stackView.perspectiveLayout {
+        stackView.actualLayout {
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 8.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -8.0)
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 12.0)

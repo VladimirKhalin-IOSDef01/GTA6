@@ -26,15 +26,15 @@ class CircularFakeLoaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        actualSetup()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        actualSetup()
     }
     
-    private func setup() {
+    private func actualSetup() {
         circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2, y: frame.size.height / 2),
                                   radius: frame.size.width / 2 - 10,
                                   startAngle: -(.pi / 2),
@@ -68,7 +68,7 @@ class CircularFakeLoaderView: UIView {
         ])
     }
     
-    func startAnimation(duration: TimeInterval) {
+    func actualStartAnimation(duration: TimeInterval) {
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = circlePath.cgPath
         animation.duration = duration

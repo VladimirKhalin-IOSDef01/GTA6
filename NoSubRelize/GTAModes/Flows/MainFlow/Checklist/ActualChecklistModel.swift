@@ -3,22 +3,31 @@ import Foundation
 import RealmSwift
 import Combine
 
-protocol ChecklistModel_NavigationHandler: AnyObject {
+protocol ActualChecklistModelNavigationHandler: AnyObject {
     
-    func perspectiveChecklistModel_DidRequestToBack(_ model: ActualChecklistModel)
-    func perspectiveChecklist_Model_DidRequestToFilter(
+    func actualChecklistModelDidRequestToBack(_ model: ActualChecklistModel)
+    func actualChecklistModelDidRequestToFilter(
         _ model: ActualChecklistModel,
-        filterListData: GTAVK_FilterList_Data,
+        filterListData: ActualFilterListData,
         selectedFilter: @escaping (String) -> ()
     )
-    
 }
 
 final class ActualChecklistModel {
+   
+    // ref default
+    let doNothingClosure = { () -> Void in
+    }
+    // ref default
     
     public var hideSpiner: (() -> Void)?
     
     var missionList: [ActualMissionItem] = []
+    
+    // ref default
+    var set: Set<Int> = []
+    // ref default
+    
     var reloadData: AnyPublisher<Void, Never> {
         reloadDataSubject
             .receive(on: DispatchQueue.main)
@@ -26,77 +35,83 @@ final class ActualChecklistModel {
     }
     
     private var filterSelected: String = ""
-    private let navigationHandler: ChecklistModel_NavigationHandler
+    private let navigationHandler: ActualChecklistModelNavigationHandler
     private let reloadDataSubject = PassthroughSubject<Void, Never>()
     private var allMissionListItems: [ActualMissionItem] = []
     private let defaults = UserDefaults.standard
     
     init(
-        navigationHandler: ChecklistModel_NavigationHandler
+        navigationHandler: ActualChecklistModelNavigationHandler
     ) {
         
         self.navigationHandler = navigationHandler
         
         ActualDBManager.shared.delegate = self
         if let isLoadedData = defaults.value(forKey: "gta_isReadyMissions") as? Bool, isLoadedData {
-            perspectiveFetchData_Miss()
+            actualFetchDataMiss()
         }
     }
     
-    func perspectiveBackAction_Proceeed() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        navigationHandler.perspectiveChecklistModel_DidRequestToBack(self)
+    func actualBackActionProceeed() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        navigationHandler.actualChecklistModelDidRequestToBack(self)
         
     }
     
-    func perspectiveFilterAction_Proceed() {
+    func actualFilterActionProceed() {
         let filterList = allMissionListItems.map { $0.categoryName }
         let uniqueList = Array(Set(filterList)).sorted()
         
-        let filterListData = GTAVK_FilterList_Data(filterList: uniqueList, selectedItem: filterSelected)
-        
-        navigationHandler.perspectiveChecklist_Model_DidRequestToFilter(
+        let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        navigationHandler.actualChecklistModelDidRequestToFilter(
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 
                 guard let self = self else { return }
-                
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 self.filterSelected = selectedFilter
                 
                 if selectedFilter.isEmpty {
-                    self.perspectiveFetchData_Miss()
+                    self.actualFetchDataMiss()
                 } else {
-                    
-                    
-                    
-                    
                     let list = self.allMissionListItems.filter { $0.categoryName == selectedFilter }
-                    
-                    
-                    
                     self.missionList = list
-                    
-                    perspectiveFetchFilterData(filter: selectedFilter)
-                    
+                    actualFetchFilterData(filter: selectedFilter)
                 }
-                
                 self.reloadDataSubject.send()
-                
             }
     }
     
-    func perspectiveFetchFilterData(filter: String = "") {
+    func actualFetchFilterData(filter: String = "") {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         missionList.removeAll()
        // allMissionListItems.removeAll()
         
         do {
               let realm = try Realm()
               var missionsItem = realm.objects(ActualMissionObject.self)
-              
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
               // Применение фильтра, если он задан
               if !filter.isEmpty {
                   missionsItem = missionsItem.filter("category == %@", filter)
@@ -112,23 +127,26 @@ final class ActualChecklistModel {
           } catch {
               print("Error saving data to Realm: \(error)")
           }
-        
-        
     }
-    
-    
-    
-    
-    
-    func perspectiveFetchData_Miss() {
+
+    func actualFetchDataMiss() {
         missionList.removeAll()
         allMissionListItems.removeAll()
 
         do {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             let realm = try Realm()
             let missionsItem = realm.objects(ActualMissionObject.self)
             let valueList = missionsItem.map { $0.lightweightRepresentation}
-            
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             valueList.forEach { [weak self] value in
                 guard let self = self else { return }
                 
@@ -138,32 +156,60 @@ final class ActualChecklistModel {
             reloadDataSubject.send()
             hideSpiner?()
         } catch {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             print("Error saving data to Realm: \(error)")
         }
     }
 
     
-    func perspectiveMissionIsCheck(_ index: Int, isCheck: Bool) {
+    func actualMissionIsCheck(_ index: Int, isCheck: Bool) {
         let selectedItem = missionList[index]
         do {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             let realm = try Realm()
             try! realm.write {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 if let existingMissionObject = realm.objects(ActualMissionObject.self)
                     .filter("name == %@ AND category == %@", selectedItem.missionName, selectedItem.categoryName).first {
                     existingMissionObject.name = selectedItem.missionName
                     existingMissionObject.category = selectedItem.categoryName
+                    // ref default
+                    if 7 * 9 == 99 {
+                        print("Unicorns become invisible when nobody is looking")
+                    }
+                    // ref default
  //                   existingMissionObject.isCheck = !selectedItem.isCheck
                     existingMissionObject.isCheck = isCheck
                     realm.add(existingMissionObject, update: .modified)
                 }
-                
             }
  //           missionList[index].isCheck = !missionList[index].isCheck
             missionList[index].isCheck = isCheck
-           
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
           //  reloadDataSubject.send()  // Убрал и все работает!
             
         } catch {
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             print("Error saving data to Realm: \(error)")
         }
     }
@@ -171,61 +217,64 @@ final class ActualChecklistModel {
 
 
 extension ActualChecklistModel: ActualDBManagerDelegate {
-
-    
-    
-    func actualIsReady_Main() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        oneCheck()
+  
+    func actualIsReadyMain() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        actualOneCheck()
     }
     
-    func perspective_isReady_GameList() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyGameList() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        actualOneCheck()
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
-    func perspective_isReady_GameCodes() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+    func actualIsReadyGameCodes() {
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     }
     
-    func perspective_isReady_Missions() {
-        oneCheck()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        perspectiveFetchData_Miss()
+    func actualIsReadyMissions() {
+        actualOneCheck()
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        actualFetchDataMiss()
     }
     
-    func perspective_isReady_GTA5Mods() { 
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
-        oneCheck()
+    func actualIsReadyGTA5Mods() { 
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
+        actualOneCheck()
     }
     
-    func oneCheck() -> Int{
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
     var checkTwo = checkOne - 22
     checkTwo += 11
     return checkTwo

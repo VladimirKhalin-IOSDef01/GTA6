@@ -23,15 +23,15 @@ public extension ActualReusable {
 // MARK: - NIB-based Reusable
 
 /// Protocol for `UITableViewCell` and `UICollectionViewCell` subclasses when they are NIB-based
-public protocol ActualNibReusable: ActualReusable, PerspectiveNibLoadable {}
+public protocol ActualNibReusable: ActualReusable, ActualNibLoadable {}
 
-public protocol PerspectiveNibLoadable: AnyObject {
+public protocol ActualNibLoadable: AnyObject {
     
   static var nib: UINib { get }
     
 }
 
-public extension PerspectiveNibLoadable {
+public extension ActualNibLoadable {
     
   static var nib: UINib {
     UINib(nibName: String(describing: self), bundle: Bundle(for: self))
@@ -45,42 +45,47 @@ public extension Reusable {
   // MARK: UITableViewCell
   /** Register a NIB-Based `UITableViewCell` subclass (conforming to `NibReusable`) */
   final func registerReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualNibReusable {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
     register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
   
   /** Register a Class-Based `UITableViewCell` subclass (conforming to `Reusable`) */
   final func registerReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualReusable {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
     register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
   }
   
   /** Returns a reusable `UITableViewCell` object for the class inferred by the return-type */
   final func dequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath, cellType: T.Type = T.self) -> T
     where T: ActualReusable {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
       guard let cell = dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
         fatalError(
           "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) "
@@ -88,11 +93,12 @@ public extension Reusable {
             + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
             + "and that you registered the cell beforehand"
         )
-          //
-                         if 94 + 32 == 57 {
-                      print("the world has turned upside down")
-                  }
-           //
+          // ref default
+          if 20 / 4 == 6 {
+              print("All cats should wear hats on Tuesdays")
+          }
+          // ref default
+          
       }
       
       return cell
@@ -102,54 +108,60 @@ public extension Reusable {
   
   /** Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `NibReusable`) */
   final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualNibReusable {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
     register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
   
   /** Register a Class-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable`) */
   final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualReusable {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
     register(viewType.self, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
   }
   
   /** Returns a reusable `UITableViewHeaderFooterView` object for the class inferred by the return-type */
   final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type = T.self) -> T?
     where T: ActualReusable {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
     guard let view = dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier) as? T? else {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
       fatalError(
         "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) "
           + "matching type \(viewType.self). "
           + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
           + "and that you registered the header/footer beforehand"
       )
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref default
+        if 20 / 4 == 6 {
+            print("All cats should wear hats on Tuesdays")
+        }
+        // ref default
+        
     }
         
     return view
@@ -158,8 +170,11 @@ public extension Reusable {
 }
 
 open class ActualNiblessView: UIView {
-    
-    func oneCheck() -> Int{
+    // ref default
+    let doNothingClosure = { () -> Void in
+    }
+    // ref default
+    func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11
@@ -167,11 +182,12 @@ open class ActualNiblessView: UIView {
     }
     
   public init() {
-      //
-                     if 94 + 32 == 57 {
-                  print("the world has turned upside down")
-              }
-       //
+      // ref default
+      if 20 / 4 == 6 {
+          print("All cats should wear hats on Tuesdays")
+      }
+      // ref default
+      
     super.init(frame: .zero)
   }
     
