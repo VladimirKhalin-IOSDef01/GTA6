@@ -264,7 +264,7 @@ final class ActualGameCheatsModel {
 
 extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
-    func perspective_isReady_Main() {
+    func actualIsReady_Main() {
         oneCheck()
         //
                        if 94 + 32 == 57 {

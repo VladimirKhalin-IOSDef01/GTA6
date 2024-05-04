@@ -40,7 +40,7 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure_cell(_ value: perspectiveFilter_Data) {
+    public func perspectiveConfigure_cell(_ value: ActualFilterData) {
         titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 20)
         titleLabel.textColor = .black
         titleLabel.text = value.title.capitalized(with: .autoupdatingCurrent)

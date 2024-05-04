@@ -246,7 +246,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
          super.init(style: style, reuseIdentifier: reuseIdentifier)
          
          selectionStyle = .none
-         perspectiveSetupLayout()
+         actualSetupLayout()
      }
      
      required init?(coder: NSCoder) {
@@ -267,7 +267,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
          threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
      }
      
-     public func perspectiveConfigure_cell(_ value: ActualCheatItem) {
+     public func actualConfigure_cell(_ value: ActualCheatItem) {
          titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
          titleLabel.textColor = .white
          titleLabel.numberOfLines = 3
@@ -299,7 +299,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
          }
      }
      
-     private func perspectiveSetupLayout() {
+     private func actualSetupLayout() {
          contentView.backgroundColor = .clear
          contentView.addSubview(containerView)
          containerView.perspectiveLayout {
@@ -360,8 +360,8 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
          }
          
          
-         perspectiveConfigureStackView(firstStackView)
-         perspectiveConfigureStackView(secondStackView)
+         actualConfigureStackView(firstStackView)
+         actualConfigureStackView(secondStackView)
          perspectiveConfigureStackView(threeStackView)
          
          containerView.addSubview(contentModeView)

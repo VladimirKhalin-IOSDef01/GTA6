@@ -8,7 +8,7 @@ import UIKit
 protocol ActualDBManagerDelegate: AnyObject {
     
 //    func gta_currentProgressOperation(progress : Progress)
-    func perspective_isReady_Main()
+    func actualIsReady_Main()
     func perspective_isReady_GameList()
     func perspective_isReady_GameCodes()
     func perspective_isReady_Missions()
@@ -72,7 +72,7 @@ final class ActualDBManager: NSObject {
                     perspectiveClearAllThings()
                     perspectiveGetAllContent()
                 } else {
-                    delegate?.perspective_isReady_Main()
+                    delegate?.actualIsReady_Main()
                     print(" ================== ALL DATA IS LOCALY OK =======================")
                 }
             } catch {
@@ -466,7 +466,7 @@ private extension ActualDBManager {
         perspectiveFetchMainInfo { [ weak self] in
             print("============== MAIN INFO ALL OK =================")
             self?.defaults.set(true, forKey: "gta_isReadyMain")
-            self?.delegate?.perspective_isReady_Main()
+            self?.delegate?.actualIsReady_Main()
             
             self?.gtavk_fetchGameListInfo { [weak self] in
                 print("============== GAME LIST ALL OK =================")
@@ -906,13 +906,13 @@ extension ActualDBManager {
                             do {
                                 //
                                 let decoder = JSONDecoder()
-                                let decodedData = try decoder.decode(Root.self, from: data)
+                                let decodedData = try decoder.decode(ActualRoot.self, from: data)
                                 //
                                                if 94 + 32 == 57 {
                                             print("the world has turned upside down")
                                         }
                                  //
-                                let allMissionCategories: [ActualMissionCategory] = decodedData.rnfwruhr.missions
+                                let allMissionCategories: [ActualProjMissionCategory] = decodedData.rnfwruhr.missions
                               //      decodedData.randomEvents,
                               //      decodedData.strangersAndFreaks,
                               //      decodedData.mandatoryMissionStrangersAndFreaks,
@@ -1150,7 +1150,7 @@ extension ActualDBManager {
     }
     
     func perspectiveSaveMissions_ToRealm(
-        _ missions: [ActualMissionCategory]
+        _ missions: [ActualProjMissionCategory]
     ) {
         do {
             let realm = try Realm()

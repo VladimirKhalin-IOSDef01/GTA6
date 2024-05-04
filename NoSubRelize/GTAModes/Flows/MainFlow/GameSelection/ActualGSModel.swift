@@ -109,7 +109,7 @@ final class ActualGSModel {
 extension ActualGSModel: ActualDBManagerDelegate {
     
     
-    func perspective_isReady_Main() {
+    func actualIsReady_Main() {
         oneCheck()
         //
                        if 94 + 32 == 57 {

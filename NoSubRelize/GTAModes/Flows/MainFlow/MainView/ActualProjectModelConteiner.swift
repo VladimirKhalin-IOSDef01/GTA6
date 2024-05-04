@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class ActualModelConteiner {
+class ActualProjectModelConteiner {
     
    // private var kingfisherManager: KingfisherManager
     

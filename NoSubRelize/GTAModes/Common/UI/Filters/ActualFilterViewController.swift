@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public struct perspectiveFilter_Data {
+public struct ActualFilterData {
     
     public let title: String
     public var isCheck: Bool
@@ -181,7 +181,7 @@ extension ActualFilterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ActualFilterTabViewCell = tableView.dequeueReusableCell(indexPath)
         let titleCell = filterListData.filterList[indexPath.row]
-        let filterDataCell = perspectiveFilter_Data(title: titleCell, isCheck: perspectiveFilterIsCheckFilter(titleCell) )
+        let filterDataCell = ActualFilterData(title: titleCell, isCheck: perspectiveFilterIsCheckFilter(titleCell) )
         cell.perspectiveConfigure_cell(filterDataCell)
         cell.delegate = self
        // cell.switcher.isOn = filterDataCell.isCheck

@@ -169,7 +169,7 @@ class ActualChecklistViewController: ActualNiblessViewController {
         }
     }
     
-    private func perspectiveSetupBindings() {
+    private func actualSetupBindings() {
         model.reloadData
             .sink { [weak self] in
                 guard let self = self else { return }
@@ -180,19 +180,19 @@ class ActualChecklistViewController: ActualNiblessViewController {
             guard let self = self else { return }
 
             self.tableView.reloadData()
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
         
     }
     
-    private func perspectiveShowSpiner() {
+    private func actualShowSpiner() {
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
         fakeLoader.setupFakeLoaderView(duration: 3)
         present(fakeLoader, animated: true, completion: nil)
     }
     
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
         alert?.dismiss(animated: false)
         fakeLoader.dismiss(animated: false)
     }
@@ -205,9 +205,9 @@ class ActualChecklistViewController: ActualNiblessViewController {
         disableMultitouchInViewHierarchy(for: self.view)
         
         if model.missionList.isEmpty {
-            perspectiveShowSpiner()
+            actualShowSpiner()
         }
-        perspectiveSetupView()
+        actualSetupView()
         perspectiveSetupBindings()
     }
     
@@ -252,7 +252,7 @@ extension PerspectiveChecklistViewController: UITableViewDataSource, UITableView
 
         let cell: PerspectiveChecklistCell = tableView.dequeueReusableCell(indexPath)
        
-        cell.perspectiveConfigure_cell(model.missionList[indexPath.row])
+        cell.actualConfigure_cell(model.missionList[indexPath.row])
         cell.backgroundColor = .clear
         cell.perspectiveDropShadowStandart()
         cell.isMultipleTouchEnabled = false

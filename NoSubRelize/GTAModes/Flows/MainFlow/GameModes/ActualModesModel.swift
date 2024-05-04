@@ -63,12 +63,12 @@ final class ActualGameModesModel {
         ActualDBManager.shared.delegate = self
         
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGTA5Mods") as? Bool, isLoadedData {
-            perspectiveFetchData()
-            perspectiveShowMods()
+            actualFetchData()
+            actualShowMods()
         }
     }
     
-    func perspectiveBackActionProceed() {
+    func actualBackActionProceed() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -77,7 +77,7 @@ final class ActualGameModesModel {
         navigationHandler.perspectiveGameModesModel_DidRequestToBack(self)
     }
     
-    func perspectiveFilterActionProceed() {
+    func actualFilterActionProceed() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -111,7 +111,7 @@ final class ActualGameModesModel {
          //
     }
     
-    func perspectiveFetchData() {
+    func actualFetchData() {
         allModeItems.removeAll()
         do {
             let realm = try Realm()
@@ -137,10 +137,10 @@ final class ActualGameModesModel {
         }
     }
     
-    func perspectiveDownloadMode(index: Int) {
+    func actualDownloadMode(index: Int) {
         let mode = modeItems[index]
 //
-        if !perspectiveCheckIsLoadData(mode.modPath) {
+        if !actualCheckIsLoadData(mode.modPath) {
             showSpinnerSubject.send(true)
           //  showSpinnerSubject.send(false)
             
@@ -169,7 +169,7 @@ final class ActualGameModesModel {
         
     }
     
-    func perspectiveCheckIsLoadData(_ modeName: String) -> Bool {
+    func actualCheckIsLoadData(_ modeName: String) -> Bool {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent(modeName)
       
@@ -180,7 +180,7 @@ final class ActualGameModesModel {
         return true
     }
 
-    func perspectiveShowMods() {
+    func actualShowMods() {
         modeItems = allModeItems
         //
                        if 94 + 32 == 57 {
@@ -191,7 +191,7 @@ final class ActualGameModesModel {
         hideSpiner?()
     }
     
-    func perspectiveSearchAt(_ searchText: String) {
+    func actualSearchAt(_ searchText: String) {
         let filteredList = allModeItems.filter { $0.title.lowercased().contains(searchText.lowercased())}
         modeItems = filteredList
         //
@@ -206,7 +206,7 @@ final class ActualGameModesModel {
         reloadDataSubject.send()
     }
     
-    func perspectiveSearchDidCancel() {
+    func actualSearchDidCancel() {
         if searchText.isEmpty {
             //
                            if 94 + 32 == 57 {
@@ -221,7 +221,7 @@ final class ActualGameModesModel {
 
 extension ActualGameModesModel: ActualDBManagerDelegate {
     
-    func perspective_isReady_Main() {
+    func actualIsReady_Main() {
         oneCheck()
         //
                        if 94 + 32 == 57 {
@@ -265,13 +265,13 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
                     print("the world has turned upside down")
                 }
          //
-        perspectiveFetchData()
+        actualFetchData()
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
                 }
          //
-        perspectiveShowMods()
+        actualShowMods()
     }
     func oneCheck() -> Int{
     var checkOne = 93 + 3 * 2

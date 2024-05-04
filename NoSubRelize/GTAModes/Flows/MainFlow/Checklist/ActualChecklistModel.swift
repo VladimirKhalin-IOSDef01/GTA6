@@ -174,7 +174,7 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
 
     
     
-    func perspective_isReady_Main() {
+    func actualIsReady_Main() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")

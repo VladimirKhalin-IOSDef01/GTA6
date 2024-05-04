@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum ActualConfiguration {
+enum ActualProjectConfiguration {
    
     static let adjustToken = "m3vi7aesgw00"
     

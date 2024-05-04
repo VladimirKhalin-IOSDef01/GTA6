@@ -239,7 +239,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             gtavk_showSpiner()
         }
         gtavk_setupView()
-        gtavk_setupBindings()
+        actualSetupBindings()
     }
     
     private func gtavk_setupView() {
@@ -325,7 +325,7 @@ extension PerspectiveGameCheatsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PerspectiveGameCheatsTabViewCell = tableView.dequeueReusableCell(indexPath)
-        cell.perspectiveConfigure_cell(model.cheatItems[indexPath.row])
+        cell.actualConfigure_cell(model.cheatItems[indexPath.row])
         cell.backgroundColor = .clear
         cell.perspectiveDropShadowStandart()
         return cell

@@ -24,10 +24,10 @@ class ActualModesViewController: ActualNiblessViewController {
         super.init()
         
         customNavigation.leftButtonAction = { [weak self] in
-            self?.model.perspectiveBackActionProceed()
+            self?.model.actualBackActionProceed()
         }
         customNavigation.rightButtonAction = { [weak self] in
-            self?.model.perspectiveFilterActionProceed()
+            self?.model.actualFilterActionProceed()
         }
     }
     
@@ -55,29 +55,15 @@ class ActualModesViewController: ActualNiblessViewController {
       
         
         if model.modeItems.isEmpty {
-            perspectiveShowLoadSpiner()
+            actualShowLoadSpiner()
         }
         // some comment
-        perspectiveSetupView()
+        actualSetupView()
         // some comment
-        gtavk_setupBindings()
+        actualSetupBindings()
     }
     
-   
-    
-    func perspectiveShowLoadSpiner() {
-        
-//        alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-//        
-//        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-//        loadingIndicator.hidesWhenStopped = true
-//        loadingIndicator.style = .medium
-//        loadingIndicator.startAnimating()
-//        
-//        alert?.view.addSubview(loadingIndicator)
-//        
-//        present(alert!, animated: true, completion: nil)
-        
+    func actualShowLoadSpiner() {
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
         fakeLoader.setupFakeLoaderView(duration: 17)
@@ -85,13 +71,13 @@ class ActualModesViewController: ActualNiblessViewController {
     }
     
     
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
      
         alert?.dismiss(animated: false)
         fakeLoader.dismiss(animated: false)
     }
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 21.0)
@@ -109,18 +95,13 @@ class ActualModesViewController: ActualNiblessViewController {
             $0.bottom.equal(to: view.bottomAnchor)
         }
         tableView.registerReusable_Cell(cellType: ActualModesTabViewCellNew.self)
-      //  tableView.rowHeight = UITableView.automaticDimension
-       // tableView.estimatedRowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 496.0 : 296.0
-       // tableView.estimatedRowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 496.0 : 115
-       
         // tableView.keyboardDismissMode = .onDrag
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
     }
     
-    private func gtavk_setupBindings() {
+    private func actualSetupBindings() {
         model.reloadData
             .sink { [weak self] in
                 guard let self = self else { return }
@@ -140,7 +121,7 @@ class ActualModesViewController: ActualNiblessViewController {
                     }
              //
             if isShowSpinner {
-                self.perspectiveShowSpiner()
+                self.actualShowSpiner()
             } else {
                 self.perspectiveHideAlert()
             }
@@ -159,7 +140,7 @@ class ActualModesViewController: ActualNiblessViewController {
         model.showAlertSaverData.sink { [weak self] textAlert in
             guard let self = self else { return }
             
-            self.gta_showTextAlert(textAlert)
+            self.actualShowTextAlert(textAlert)
             
             //
                            if 94 + 32 == 57 {
@@ -173,12 +154,12 @@ class ActualModesViewController: ActualNiblessViewController {
             guard let self = self else { return }
             
             self.tableView.reloadData()
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
     }
     
     // MARK: Indicator
-    private func perspectiveShowSpiner() {
+    private func actualShowSpiner() {
            customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
            customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление
            present(customAlertVC, animated: true, completion: nil)
@@ -191,7 +172,7 @@ class ActualModesViewController: ActualNiblessViewController {
     
     func perspectiveShareFile(at mode: ActualModItem) {
         
-        if model.perspectiveCheckIsLoadData(mode.modPath) {
+        if model.actualCheckIsLoadData(mode.modPath) {
           
             if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(mode.modPath) {
                 //
@@ -260,12 +241,12 @@ class ActualModesViewController: ActualNiblessViewController {
                                 print("the world has turned upside down")
                             }
                      //
-                    gta_showTextAlert("Error creating sharable URL: \(error)")
+                    actualShowTextAlert("Error creating sharable URL: \(error)")
                     //                    print("Error creating sharable URL: \(error)")
                 }
             }
         } else {
-            gta_showTextAlert("To share, you must first download it")
+            actualShowTextAlert("To share, you must first download it")
             //
                            if 94 + 32 == 57 {
                         print("the world has turned upside down")
@@ -275,7 +256,7 @@ class ActualModesViewController: ActualNiblessViewController {
     }
     
     
-    func gta_showTextAlert(_ text: String) {
+    func actualShowTextAlert(_ text: String) {
         alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
         present(alert!, animated: true, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
@@ -283,35 +264,6 @@ class ActualModesViewController: ActualNiblessViewController {
             
         }
     }
-    
-   
-//    func gta_showAlertAge() {
-//        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//        alertController.addAction(
-//            UIAlertAction(
-//                title: L10n.ChatAction.save,
-//                style: .default,
-//                handler: { [weak self] _ in
-//                    self?.model.saveImageToLibrary()
-//                }
-//            )
-//        )
-//        alertController.addAction(
-//            UIAlertAction(
-//                title: L10n.ChatAction.forward,
-//                style: .default,
-//                handler: { [weak self] _ in
-//                    self?.model.forward()
-//                }
-//            )
-//        )
-//        alertController.addAction(UIAlertAction(title: L10n.Common.Button.cancel, style: .cancel, handler: nil))
-//
-//        present(alertController, animated: true, completion: nil)
-//        
-//    }
-    
-    
 }
 
 extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -329,22 +281,9 @@ extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate 
                     print("the world has turned upside down")
                 }
          //
-        cell.perspectiveConfigure_cell(mode, isLoaded: model.perspectiveCheckIsLoadData(mode.modPath))
+        cell.actualConfigure_cell(mode, isLoaded: model.actualCheckIsLoadData(mode.modPath))
         cell.backgroundColor = .clear
         cell.perspectiveDropShadowStandart()
-        
-//        cell.downloadAction = { [weak self] in
-//            if GTA_NetworkStatusMonitor.shared.isNetworkAvailable {
-//                self?.model.gtavk_downloadMode(index: indexPath.row)
-//            } else {
-//                self?.gta_showTextAlert("No internet")
-//            }
-//        }
-//        
-//        cell.shareAction = { [weak self] in
-//            self?.gta_shareFile(at: mode)
-//        }
-        
         return cell
     }
     
@@ -409,7 +348,7 @@ extension ActualModesViewController: UIDocumentPickerDelegate, UINavigationContr
                     documentPicker.shouldShowFileExtensions = true
                     self?.present(documentPicker, animated: true, completion: nil)
                 } catch {
-                    self?.gta_showTextAlert("ERROR")
+                    self?.actualShowTextAlert("ERROR")
                 }
             }
         }

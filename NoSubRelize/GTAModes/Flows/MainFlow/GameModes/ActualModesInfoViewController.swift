@@ -17,27 +17,21 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     private let tableView = UITableView(frame: .zero)
     private let customNavigation: ActualCustomNavigation_View
     
-    
-    // лоадер
-  //  var loaderView: CircularLoaderView!
-    
     var activityVC: UIActivityViewController?
     var alert: UIAlertController?
-   // var customLoader = ActualLoaderController()          // Лоадер
-   // var customAlert = ActualAllertController()           // Аллерт
+   
     
     init(model: ActualGameModesModel) {
         self.model = model
-      //  self.customNavigation = GTAModes_CustomNavigationView(.gameModes, titleString: model.title)
         self.customNavigation = ActualCustomNavigation_View(.infoModes, titleString: model.title)
         
         super.init()
         
         customNavigation.leftButtonAction = { [weak self] in
-            self?.model.perspectiveBackActionProceed()
+            self?.model.actualBackActionProceed()
         }
         customNavigation.rightButtonAction = { [weak self] in
-            self?.model.perspectiveFilterActionProceed()
+            self?.model.actualFilterActionProceed()
         }
     }
     
@@ -63,12 +57,12 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     //    PerspectiveDBManager.shared.setupLoaderInView(self.view)
         
         if model.modeItems.isEmpty {
-            perspectiveShowLoadSpiner()
+            actualShowLoadSpiner()
         }
         // some comment
-        perspectiveSetupView()
+        actualSetupView()
         // some comment
-        perspectiveSetupBindings()
+        actualSetupBindings()
     }
    
 //    func setupLoaderView() {
@@ -81,7 +75,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
 //           loaderView.updateDotPosition(progress: 0)
 //       }
     
-    func perspectiveShowLoadSpiner() {
+    func actualShowLoadSpiner() {
         
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
         
@@ -94,7 +88,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         present(alert!, animated: true, completion: nil)
     }
 
-    private func perspectiveHideSpiner() {
+    private func actualHideSpiner() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -108,7 +102,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
          //
     }
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 21.0)
@@ -140,7 +134,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         
     }
     
-    private func perspectiveSetupBindings() {
+    private func actualSetupBindings() {
         model.reloadData
             .sink { [weak self] in
                 guard let self = self else { return }
@@ -156,9 +150,9 @@ class ActualModesInfoViewController: ActualNiblessViewController {
             guard let self = self else { return }
             
             if isShowSpinner {
-                self.perspectiveShowSpiner()
+                self.actualShowSpiner()
             } else {
-                self.perspectiveHideAlert()
+                self.actualHideAlert()
             }
         }.store(in: &subscriptions)
         
@@ -175,7 +169,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         model.showAlertSaverData.sink { [weak self] textAlert in
             guard let self = self else { return }
             
-            self.perspectiveShowTextAlert(textAlert)
+            self.actualShowTextAlert(textAlert)
             
             
             
@@ -185,18 +179,18 @@ class ActualModesInfoViewController: ActualNiblessViewController {
             guard let self = self else { return }
             
             self.tableView.reloadData()
-            self.perspectiveHideSpiner()
+            self.actualHideSpiner()
         }
     }
     
     // MARK: Indicator
    
-    private func perspectiveShowSpiner() {
+    private func actualShowSpiner() {
 
         
     }
     
-    private func perspectiveHideAlert() {
+    private func actualHideAlert() {
         alert?.dismiss(animated: false)
     }
     
@@ -206,7 +200,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
                     print("the world has turned upside down")
                 }
          //
-        if model.perspectiveCheckIsLoadData(mode.modPath) {
+        if model.actualCheckIsLoadData(mode.modPath) {
            
             if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(mode.modPath) {
                 do {
@@ -253,26 +247,26 @@ class ActualModesInfoViewController: ActualNiblessViewController {
                                 print("the world has turned upside down")
                             }
                      //
-                    perspectiveShowTextAlert("Error creating sharable URL: \(error)")
+                    actualShowTextAlert("Error creating sharable URL: \(error)")
                     //                    print("Error creating sharable URL: \(error)")
                 }
             }
         } else {
-            perspectiveShowTextAlert("To share, you must first download it")
+            actualShowTextAlert("To share, you must first download it")
         }
     }
     
     
-    func perspectiveShowTextAlert(_ text: String) {
+    func actualShowTextAlert(_ text: String) {
         alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
         present(alert!, animated: true, completion: nil)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.perspectiveHideAlert()
+            self?.actualHideAlert()
             
         }
     }
     
-    func perspectiveShowNetworkAlert() {
+    func actualShowNetworkAlert() {
         guard let rootViewController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else {
             return
         }
@@ -300,18 +294,18 @@ extension ActualModesInfoViewController: UITableViewDataSource {
         let cell: ActualModesTabViewCell = tableView.dequeueReusableCell(indexPath)
         //let mode = model.modeItems[indexPath.row]
         let mode = model.modeItems[currentIndex]
-        cell.perspectiveConfigure_cell(mode, isLoaded: model.perspectiveCheckIsLoadData(mode.modPath))
+        cell.actualConfigureCell(mode, isLoaded: model.actualCheckIsLoadData(mode.modPath))
        // cell.gameMode_downloadColor(downloading: model.gtavk_checkIsLoadData(mode.modPath))
         cell.backgroundColor = .clear
         
         cell.downloadAction = { [weak self] in
             if ActualNetworkStatusMonitor.shared.isNetworkAvailable {
-                self?.model.perspectiveDownloadMode(index: self?.currentIndex ?? 1)
-                cell.gameMode_downloadColor(downloading: true)
+                self?.model.actualDownloadMode(index: self?.currentIndex ?? 1)
+                cell.actualGameModeDownloadColor(downloading: true)
             } else {
                // self?.perspectiveShowTextAlert("No internet \n connection")
-                self?.perspectiveShowNetworkAlert()
-                cell.gameMode_downloadColor(downloading: false)
+                self?.actualShowNetworkAlert()
+                cell.actualGameModeDownloadColor(downloading: false)
             }
         }
 
@@ -347,7 +341,7 @@ extension ActualModesInfoViewController: UIDocumentPickerDelegate, UINavigationC
                     documentPicker.shouldShowFileExtensions = true
                     self?.present(documentPicker, animated: true, completion: nil)
                 } catch {
-                    self?.perspectiveShowTextAlert("ERROR")
+                    self?.actualShowTextAlert("ERROR")
                 }
             }
         }

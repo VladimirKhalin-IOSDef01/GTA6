@@ -31,7 +31,7 @@ class ActualGSViewController: ActualNiblessViewController {
     //    setupLoaderView()
   
         if model.menuItems.isEmpty {
-    //        perspectiveShowSpiner()        // Отключен в тестовом режиме
+    //        actualShowSpiner()        // Отключен в тестовом режиме
         }
         perspectiveSetupView()
         perspectiveGSSetupBindings()

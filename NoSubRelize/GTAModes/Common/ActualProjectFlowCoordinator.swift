@@ -2,7 +2,7 @@
 
 import UIKit
 
-public protocol ActualFlowCoordinator {
+public protocol ActualProjectFlowCoordinator {
   
   func perspectiveCreateFlow() -> UIViewController
     

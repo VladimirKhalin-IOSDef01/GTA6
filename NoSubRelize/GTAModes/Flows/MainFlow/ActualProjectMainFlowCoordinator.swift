@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-final class ActualMainFlowCoordinator: NSObject, ActualFlowCoordinator {
+final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordinator {
     
     private weak var rootViewController: UIViewController?
     private weak var panPresentedViewController: UIViewController?
@@ -35,7 +35,7 @@ final class ActualMainFlowCoordinator: NSObject, ActualFlowCoordinator {
     }
 }
 
-extension ActualMainFlowCoordinator: MainModel_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: MainModel_NavigationHandler {
     
     func perspectiveMainModel_DidRequestToModes(_ model: ActualMainModel) {
         //
@@ -73,7 +73,7 @@ extension ActualMainFlowCoordinator: MainModel_NavigationHandler {
     }
     
     func perspectiveMainModel_DidRequestToMap(_ model: ActualMainModel) {
-        let controller = ActualGameMapViewController(navigationHandler: self as PerspectiveMap_NavigationHandler)
+        let controller = ActualGameMapViewController(navigationHandler: self as ActualMap_NavigationHandler)
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -110,7 +110,7 @@ extension ActualMainFlowCoordinator: MainModel_NavigationHandler {
     
 }
 
-extension ActualMainFlowCoordinator: GS_Model_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: GS_Model_NavigationHandler {
 
     func perspectiveGsModel_DidRequestToBack(_ model: ActualGSModel) {
         //
@@ -135,7 +135,7 @@ extension ActualMainFlowCoordinator: GS_Model_NavigationHandler {
 
 }
 
-extension ActualMainFlowCoordinator: ChecklistModel_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: ChecklistModel_NavigationHandler {
     
     func perspectiveChecklist_Model_DidRequestToFilter(
         _ model: ActualChecklistModel,
@@ -173,7 +173,7 @@ extension ActualMainFlowCoordinator: ChecklistModel_NavigationHandler {
     
 }
 
-extension ActualMainFlowCoordinator: Cheats_ModelNavigationHandler {
+extension ActualProjectMainFlowCoordinator: Cheats_ModelNavigationHandler {
     
     func perspectiveGameModesModel_DidRequestToBack(_ model: ActualGameCheatsModel) {
         //
@@ -212,7 +212,7 @@ extension ActualMainFlowCoordinator: Cheats_ModelNavigationHandler {
     
 }
 
-extension ActualMainFlowCoordinator: Filter_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: Filter_NavigationHandler {
     
     func filterDidRequestToClose() {
         //
@@ -225,7 +225,7 @@ extension ActualMainFlowCoordinator: Filter_NavigationHandler {
     
 }
 
-extension ActualMainFlowCoordinator: PerspectiveMap_NavigationHandler {
+extension ActualProjectMainFlowCoordinator: ActualMap_NavigationHandler {
     
     func mapDidRequestToBack() {
         //
@@ -237,7 +237,7 @@ extension ActualMainFlowCoordinator: PerspectiveMap_NavigationHandler {
     }
 }
 
-extension ActualMainFlowCoordinator: PerspectiveModesModelNavHandler {
+extension ActualProjectMainFlowCoordinator: PerspectiveModesModelNavHandler {
     
     func perspectiveGameModesModel_DidRequestToFilter(_ model: ActualGameModesModel, filterListData: GTAVK_FilterList_Data, selectedFilter: @escaping (String) -> ()) {
         //

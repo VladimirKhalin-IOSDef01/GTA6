@@ -20,7 +20,7 @@ class ActualThirdPartyServicesManager {
          //
         //set custom delegate for push handling, in our case AppDelegate
         Pushwoosh.sharedInstance().delegate = delegate;
-        PushNotificationManager.initialize(withAppCode: ActualConfiguration.pushwooshToken, appName: ActualConfiguration.pushwooshAppName)
+        PushNotificationManager.initialize(withAppCode: ActualProjectConfiguration.pushwooshToken, appName: ActualProjectConfiguration.pushwooshAppName)
         PWInAppManager.shared().resetBusinessCasesFrequencyCapping()
         PWGDPRManager.shared().showGDPRDeletionUI()
         Pushwoosh.sharedInstance().registerForPushNotifications()
@@ -40,7 +40,7 @@ class ActualThirdPartyServicesManager {
                     print("the world has turned upside down")
                 }
          //
-        let yourAppToken = ActualConfiguration.adjustToken
+        let yourAppToken = ActualProjectConfiguration.adjustToken
         #if DEBUG
         let environment = (ADJEnvironmentSandbox as? String)!
         #else

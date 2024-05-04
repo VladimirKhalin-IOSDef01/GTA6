@@ -114,21 +114,21 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        perspectiveSetupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func perspectiveConfigure_cell(_ value: ActualMissionItem) {
+    public func actualConfigure_cell(_ value: ActualMissionItem) {
         titleLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 16.0 : 16.0)
         titleLabel.textColor = .white
         titleLabel.text = value.missionName
         switcher.isOn = value.isCheck
     }
     
-    private func perspectiveSetupLayout() {
+    private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.perspectiveLayout {

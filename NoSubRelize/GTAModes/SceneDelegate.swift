@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func gtavk_showMainFlow(_ window: UIWindow) {
-        let flowCoordinator = ActualMainFlowCoordinator()
+        let flowCoordinator = ActualProjectMainFlowCoordinator()
       
         let controller = flowCoordinator.perspectiveCreateFlow()
         controller.modalPresentationStyle = .fullScreen

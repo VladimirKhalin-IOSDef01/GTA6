@@ -2,7 +2,7 @@
 import UIKit
 import WebKit
 
-protocol PerspectiveMap_NavigationHandler: AnyObject {
+protocol ActualMap_NavigationHandler: AnyObject {
     
     func mapDidRequestToBack()
     
@@ -10,7 +10,7 @@ protocol PerspectiveMap_NavigationHandler: AnyObject {
 
 class ActualGameMapViewController: ActualNiblessViewController {
     
-    private let perspectiveModes_navigationHandler: PerspectiveMap_NavigationHandler
+    private let perspectiveModes_navigationHandler: ActualMap_NavigationHandler
     private let perspectiveModes_webView = WKWebView()
     private let customNavigation: ActualCustomNavigation_View
     private let fullScreenButton = UIButton() // Создание кнопки
@@ -24,7 +24,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
     
     
     
-    init(navigationHandler: PerspectiveMap_NavigationHandler) {
+    init(navigationHandler: ActualMap_NavigationHandler) {
         self.perspectiveModes_navigationHandler = navigationHandler
         self.customNavigation = ActualCustomNavigation_View(.map)
         
@@ -49,15 +49,15 @@ class ActualGameMapViewController: ActualNiblessViewController {
                 }
          //
         
-        perspectiveSetupView()
-        perspectiveWebViewConfigure()
-        setupFSButton()
+        actualSetupView()
+        actualWebViewConfigure()
+        actualSetupFSButton()
         
         
     }
     
     
-    private func setupFSButton() {
+    private func actualSetupFSButton() {
                // let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .medium, scale: .default)
               //  let buttonImage = UIImage(systemName: "arrow.up.arrow.down.square", withConfiguration: symbolConfiguration)
         nameIcon = fullScreen ? "fsOutt" :  "fsInn"
@@ -97,15 +97,15 @@ class ActualGameMapViewController: ActualNiblessViewController {
     func updateViewForFullScreen(_ fullScreen: Bool) {
         UIView.animate(withDuration: 0.2, animations: {
             self.customNavigation.isHidden = fullScreen
-            self.perspectiveSetupView()
-            self.setupFSButton()
+            self.actualSetupView()
+            self.actualSetupFSButton()
             self.view.layoutIfNeeded()
         })
         self.fullScreen = fullScreen
     }
     
     
-    private func perspectiveSetupView() {
+    private func actualSetupView() {
         
         view.addSubview(customNavigation)
         customNavigation.perspectiveLayout {
@@ -148,12 +148,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
         trailingConstraint?.isActive = true
         topConstraint?.isActive = true
         bottomConstraint?.isActive = true
-        
-        
-        
-        
-        
-        
+
         view.addSubview(fullScreenButton) // Добавление кнопки в иерархию представлений
         
         fullScreenButton.layer.borderWidth = 2 // Толщина границы
@@ -171,7 +166,7 @@ class ActualGameMapViewController: ActualNiblessViewController {
                fullScreenButton.layer.cornerRadius = 3
     }
     
-    private func perspectiveWebViewConfigure() {
+    private func actualWebViewConfigure() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")

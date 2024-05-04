@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-    struct ActualMissionCategory: Codable {
+    struct ActualProjMissionCategory: Codable {
         let filter: String
         let name: String
         
@@ -26,7 +26,7 @@ import RealmSwift
 
     // Define the Checklist struct to hold the list of missions.
     struct Checklist: Codable {
-        let missions: [ActualMissionCategory]
+        let missions: [ActualProjMissionCategory]
         
         // Specify the coding keys to match JSON structure.
         private enum CodingKeys_andRename: String, CodingKey {
@@ -34,12 +34,12 @@ import RealmSwift
         }
         init(from decoder: Decoder) throws {
                let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
-               missions = try container.decode([ActualMissionCategory].self, forKey: .missions)
+               missions = try container.decode([ActualProjMissionCategory].self, forKey: .missions)
            }
     }
 
     // Define the top-level struct to match the JSON structure.
-    struct Root: Codable {
+    struct ActualRoot: Codable {
         let rnfwruhr: Checklist
         
         // Specify the coding keys to match JSON structure.
@@ -55,14 +55,14 @@ import RealmSwift
 
 struct ActualMission_Parser: Codable {
    
-    let mandatoryMission: ActualMissionCategory
+    let mandatoryMission: ActualProjMissionCategory
 
     private enum CodingKeys_andRename: String, CodingKey {
         case mandatoryMission = "rnfwruhr"
     }
     init(from decoder: Decoder) throws {
            let container = try decoder.container(keyedBy: CodingKeys_andRename.self)
-           mandatoryMission = try container.decode(ActualMissionCategory.self, forKey: .mandatoryMission)
+           mandatoryMission = try container.decode(ActualProjMissionCategory.self, forKey: .mandatoryMission)
        }
        
 }

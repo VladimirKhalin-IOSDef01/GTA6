@@ -54,7 +54,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        perspectiveSetupLayout()
+        actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -74,20 +74,20 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadTask?.cancel()
     }
     
-    public func gameMode_downloadColor(downloading: Bool) {
+    public func actualGameModeDownloadColor(downloading: Bool) {
         switch downloading {
         case true:
             downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
             downloadTitleLabel.text = "Downloading..."
-            updateDownloadTitleLabel(check: false)
+            actualUpdateDownloadTitleLabel(check: false)
         case false:
             downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
             downloadTitleLabel.text = UIDevice.current.userInterfaceIdiom == .pad ? "Failed, retry    " : "Failed, retry    "
-            updateDownloadTitleLabel(check: false)
+            actualUpdateDownloadTitleLabel(check: false)
         }
     }
    
-    func updateDownloadTitleLabel(check: Bool) {
+    func actualUpdateDownloadTitleLabel(check: Bool) {
         if let imageView = downloadButtonView.viewWithTag(2) as? UIImageView {
               
             if check {
@@ -105,7 +105,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         }
     }
     
-    public func perspectiveConfigure_cell(_ value: ActualModItem, isLoaded: Bool) {
+    public func actualConfigureCell(_ value: ActualModItem, isLoaded: Bool) {
         titleLabel.font = UIFont(name: "Gilroy-Heavy", size: UIDevice.current.userInterfaceIdiom == .pad ? 32 : 20)
         titleLabel.textColor = .white
         titleLabel.text = value.title.uppercased()
@@ -120,21 +120,21 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download"
        
         if downloadTitleLabel.text == "   Downloaded" || downloadTitleLabel.text == "  Downloaded" {
-            updateDownloadTitleLabel(check: true)
+            actualUpdateDownloadTitleLabel(check: true)
             
         }
         
-        perspectiveSetImageMod(value)
+        actualSetImageMod(value)
     }
     
-    private func perspectiveSetImageMod(_ mode: ActualModItem) {
+    private func actualSetImageMod(_ mode: ActualModItem) {
         if ImageCache.default.isCached(forKey: mode.imagePath) {
             //
                            if 94 + 32 == 57 {
                         print("the world has turned upside down")
                     }
              //
-            perspectiveSetImage(with: mode.imagePath)
+            actualSetImage(with: mode.imagePath)
         } else {
             guard let imageModUrl = URL(string: mode.imagePath) else { return }
             //
@@ -151,11 +151,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
                                 print("the world has turned upside down")
                             }
                      //
-                    if !self.perspectiveIsLocalCache_Photo(with: mode.imagePath) {
-                        self.perspectiveSaveImage(
+                    if !self.actualIsLocalCachePhoto(with: mode.imagePath) {
+                        self.actualSaveImage(
                             image: value.image,
                             cacheKey: imageModUrl.absoluteString) { [weak self] in
-                                self?.perspectiveSetImage(with: mode.imagePath)
+                                self?.actualSetImage(with: mode.imagePath)
                             }
                     } else {
                         //
@@ -163,13 +163,13 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
                                     print("the world has turned upside down")
                                 }
                          //
-                        self.perspectiveSetImage(with: mode.imagePath)
+                        self.actualSetImage(with: mode.imagePath)
                     }
                 }
         }
     }
     
-    private func perspectiveSetupLayout() {
+    private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.perspectiveLayout {
@@ -239,7 +239,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -15)
         }
         
-        perspectiveConfigureStackView(stackView)
+        actualConfigureStackView(stackView)
         shareButtonView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
         shareButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
         shareButtonView.layer.borderWidth = 1
@@ -251,7 +251,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadButtonView.withCornerRadius(22.0)
         downloadButtonView.perspectiveDropShadowStandart()
         
-        let shareView = perspectiveConfigureButton_View(title: "Share", imageName: "share-2", isShare: true)
+        let shareView = actualConfigureButtonView(title: "Share", imageName: "share-2", isShare: true)
         shareButtonView.addSubview(shareView)
         shareView.perspectiveLayout {
             $0.width.equal(to: shareButtonView.widthAnchor)
@@ -259,7 +259,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.centerY.equal(to: shareButtonView.centerYAnchor)
         }
         
-        let downloadView = perspectiveConfigureButton_View(title: "Download", imageName: "download-cloud", isShare: false)
+        let downloadView = actualConfigureButtonView(title: "Download", imageName: "download-cloud", isShare: false)
         downloadButtonView.addSubview(downloadView)
         downloadView.perspectiveLayout {
             $0.width.equal(to: downloadButtonView.widthAnchor)
@@ -273,11 +273,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadButtonView.perspectiveLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
-        let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(perspectiveShareAction_Proceed))
+        let shareGestrure = UITapGestureRecognizer(target: self, action: #selector(actualShareActionProceed))
         shareButtonView.addGestureRecognizer(shareGestrure)
         
         
-        let downloadGestrure = UITapGestureRecognizer(target: self, action: #selector(perspectiveDownloadAction_Proceed))
+        let downloadGestrure = UITapGestureRecognizer(target: self, action: #selector(actualDownloadActionProceed))
         downloadButtonView.addGestureRecognizer(downloadGestrure)
         
         stackView.addArrangedSubview(shareButtonView)
@@ -285,14 +285,14 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         containerView.layoutIfNeeded()
     }
     
-    func perspectiveConfigureStackView(_ stackView: UIStackView) {
+    func actualConfigureStackView(_ stackView: UIStackView) {
         stackView.axis = .horizontal
         stackView.spacing = UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8
         stackView.distribution = .fillEqually
         stackView.alignment = .center
     }
     
-    func perspectiveConfigureButton_View(title: String, imageName: String, isShare: Bool) -> UIView {
+    func actualConfigureButtonView(title: String, imageName: String, isShare: Bool) -> UIView {
         let buttonView = UIView()
         let titleLabel = isShare ? shareTitleLabel : downloadTitleLabel
         let imageView = UIImageView()
@@ -332,7 +332,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         return buttonView
     }
     
-    @objc func perspectiveShareAction_Proceed() {
+    @objc func actualShareActionProceed() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -341,7 +341,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         shareAction?()
     }
     
-    @objc func perspectiveDownloadAction_Proceed() {
+    @objc func actualDownloadActionProceed() {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -350,7 +350,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadAction?()
     }
     
-    private func perspectiveIsLocalCache_Photo(with path: String?) -> Bool {
+    private func actualIsLocalCachePhoto(with path: String?) -> Bool {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -365,7 +365,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         return ImageCache.default.isCached(forKey: localUrl.absoluteString)
     }
     
-    private func perspectiveSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
+    private func actualSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
@@ -376,7 +376,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         }
     }
     
-    private func perspectiveSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
+    private func actualSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
         //
                        if 94 + 32 == 57 {
                     print("the world has turned upside down")
