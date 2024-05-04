@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AlertManager {
-    static let shared = AlertManager()
+class ActualAlertManager {
+    static let shared = ActualAlertManager()
     private init() {}
 
     var alertViewController: ActualAllertController?

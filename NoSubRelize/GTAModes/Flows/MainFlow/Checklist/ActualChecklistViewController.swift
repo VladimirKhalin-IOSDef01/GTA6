@@ -1,24 +1,24 @@
 import UIKit
 import Combine
 
-class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
+class ActualChecklistViewController: ActualNiblessViewController {
     
     var alert: UIAlertController?
     
     private var subscriptions = Set<AnyCancellable>()
-    private let model: PerspectiveChecklistModel
+    private let model: ActualChecklistModel
     private let collectionView: UICollectionView
-    private let customNavigation: PerspectiveCustomNavigation_View
+    private let customNavigation: ActualCustomNavigation_View
     
     var fakeLoader = ActualFakeLoader()
     
-    init(model: PerspectiveChecklistModel) {
+    init(model: ActualChecklistModel) {
         self.model = model
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        self.customNavigation = PerspectiveCustomNavigation_View(.checkList)
+        self.customNavigation = ActualCustomNavigation_View(.checkList)
     
         super.init()
         customNavigation.leftButtonAction = { [weak self] in
@@ -83,7 +83,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(PerspectiveChecklistCell.self, forCellWithReuseIdentifier: "PerspectiveChecklistCell") // Здесь регистрируем ячейку
+        collectionView.register(ActualChecklistCell.self, forCellWithReuseIdentifier: "ActualChecklistCell") // Здесь регистрируем ячейку
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20) // добавляем отступы справа и слева
         view.addSubview(collectionView)
         collectionView.perspectiveLayout {
@@ -105,12 +105,12 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
     }
 }
 
-extension PerspectiveChecklistViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ActualChecklistViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PerspectiveChecklistCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActualChecklistCell", for: indexPath)
         
-        if let checklistCell = cell as? PerspectiveChecklistCell {
+        if let checklistCell = cell as? ActualChecklistCell {
             checklistCell.perspectiveConfigure_cell(model.missionList[indexPath.item])
             checklistCell.backgroundColor = .clear
             checklistCell.perspectiveDropShadowStandart()
@@ -144,12 +144,12 @@ extension PerspectiveChecklistViewController: UICollectionViewDataSource, UIColl
 import UIKit
 import Combine
 
-class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
+class ActualChecklistViewController: ActualNiblessViewController {
     
     var alert: UIAlertController?
     
     private var subscriptions = Set<AnyCancellable>()
-    private let model: PerspectiveChecklistModel
+    private let model: ActualChecklistModel
     private let tableView = UITableView(frame: .zero)
     private let customNavigation: PerspectiveCustomNavigation_View
     
@@ -229,7 +229,7 @@ class PerspectiveChecklistViewController: PerspectiveNiblessViewController {
             $0.bottom.equal(to: view.bottomAnchor)
         }
 
-        tableView.registerReusable_Cell(cellType: PerspectiveChecklistCell.self)
+        tableView.registerReusable_Cell(cellType: ActualChecklistCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self

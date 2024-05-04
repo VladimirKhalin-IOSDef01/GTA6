@@ -21,8 +21,8 @@ class ActualBlurBack: UIViewController, LoaderViewDelegate {
         super.viewDidLoad()
         
            actualBackgroundAlertView()
-           PerspectiveDBManager.shared.delegate2 = self
-           PerspectiveDBManager.shared.setupLoaderInView(self.view)
+           ActualDBManager.shared.delegate2 = self
+           ActualDBManager.shared.setupLoaderInView(self.view)
         
     }
     func actualBackgroundAlertView() {

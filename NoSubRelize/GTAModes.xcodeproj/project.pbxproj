@@ -7,35 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1201B5722BA2B82C00B86035 /* PerspectiveTestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */; };
+		1201B5722BA2B82C00B86035 /* ActualTestNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201B5712BA2B82C00B86035 /* ActualTestNetwork.swift */; };
 		12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A712BA4B09700DACBED /* ActualAllertController.swift */; };
-		12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */; };
+		12097A782BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12097A772BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift */; };
 		120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */; };
 		120B3BF62BE2313A00E9462B /* ActualFakeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */; };
-		120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */; };
+		120EEE462B86673100BE6D3F /* ActualModelConteiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE452B86673100BE6D3F /* ActualModelConteiner.swift */; };
 		120EEE4C2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
 		120EEE4D2B87187900BE6D3F /* GilroyLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */; };
 		120EEE4F2B87793E00BE6D3F /* Gilroy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE4E2B87793E00BE6D3F /* Gilroy.ttf */; };
 		120EEE512B877B1700BE6D3F /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE502B877B1700BE6D3F /* Gilroy-Bold.ttf */; };
-		120EEE532B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE522B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift */; };
+		120EEE532B88777D00BE6D3F /* ActualModesTabViewCellNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE522B88777D00BE6D3F /* ActualModesTabViewCellNew.swift */; };
 		120EEE552B8889A600BE6D3F /* Gilroy-Extrabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE542B8889A500BE6D3F /* Gilroy-Extrabold.ttf */; };
 		120EEE572B888AB800BE6D3F /* Gilroy-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE562B888AB800BE6D3F /* Gilroy-Semibold.ttf */; };
 		120EEE592B88B08B00BE6D3F /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120EEE582B88B08B00BE6D3F /* Gilroy-Regular.ttf */; };
-		120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */; };
-		120EEE5F2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */; };
+		120EEE5B2B88CCF400BE6D3F /* ActualModesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5A2B88CCF400BE6D3F /* ActualModesInfoViewController.swift */; };
+		120EEE5F2B8C916600BE6D3F /* ActualHeaderViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120EEE5E2B8C916600BE6D3F /* ActualHeaderViewNew.swift */; };
 		126FEE292BB18D650095A5DE /* markers.png in Resources */ = {isa = PBXBuildFile; fileRef = 126FEE282BB18D640095A5DE /* markers.png */; };
 		12D4321F2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
 		12D432202BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */; };
-		12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
-		12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */; };
 		12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
 		12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */; };
 		12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
 		12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */; };
 		12D4322E2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */; };
 		12D4322F2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */; };
-		12D432322BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */; };
-		12D432332BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */; };
+		12D432322BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */; };
+		12D432332BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */; };
 		12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */; };
 		12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */; };
 		12EA114A2BB1F15F00ADE95E /* leaflet.css in Resources */ = {isa = PBXBuildFile; fileRef = 12EA11492BB1F15F00ADE95E /* leaflet.css */; };
@@ -44,8 +42,8 @@
 		12EA189E2BAB45C700263F40 /* leaflet.js in Resources */ = {isa = PBXBuildFile; fileRef = 12EA0ED52BAB3AF400263F40 /* leaflet.js */; };
 		12EA20842BAB598A00263F40 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = 12EA20832BAB598A00263F40 /* map.html */; };
 		12F217F02B85D41100BCE63B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F217EF2B85D41100BCE63B /* Extension.swift */; };
-		12F217F32B85F03900BCE63B /* PerspectiveMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F217F22B85F03900BCE63B /* PerspectiveMainViewCell.swift */; };
-		12F217F52B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F217F42B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift */; };
+		12F217F32B85F03900BCE63B /* ActualMainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F217F22B85F03900BCE63B /* ActualMainViewCell.swift */; };
+		12F217F52B85FCE200BCE63B /* ActualMainViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F217F42B85FCE200BCE63B /* ActualMainViewControllerNew.swift */; };
 		12F3D4032BACAC6F00078AD2 /* GTAVKMAP28p32p7vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3CA402BAC9A2400078AD2 /* GTAVKMAP28p32p7vk.png */; };
 		12F3D4042BACAC6F00078AD2 /* GTAVKMAP1p5p5vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3CA412BAC9A2600078AD2 /* GTAVKMAP1p5p5vk.png */; };
 		12F3D4052BACAC6F00078AD2 /* GTAVKMAP2p4p5vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3CA422BAC9A2900078AD2 /* GTAVKMAP2p4p5vk.png */; };
@@ -2546,39 +2544,38 @@
 		12F3DDC42BACAC7600078AD2 /* GTAVKMAP39p7p7vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3D4012BACAC6A00078AD2 /* GTAVKMAP39p7p7vk.png */; };
 		12F3DDC52BACAC7600078AD2 /* GTAVKMAP39p17p7vk.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F3D4022BACAC6E00078AD2 /* GTAVKMAP39p17p7vk.png */; };
 		2C0DC3772A8FADF800A03F44 /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = 2C0DC3762A8FADF800A03F44 /* Pushwoosh */; };
-		2C1CA42D2A8E70B200C89F79 /* PerspectiveServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA3B02A8E70B200C89F79 /* PerspectiveServicesManager.swift */; };
-		2C1CA4712A8E714F00C89F79 /* PerspectiveConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA4702A8E714F00C89F79 /* PerspectiveConfiguration.swift */; };
+		2C1CA42D2A8E70B200C89F79 /* ActualServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */; };
+		2C1CA4712A8E714F00C89F79 /* ActualConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CA4702A8E714F00C89F79 /* ActualConfiguration.swift */; };
 		2C1CA4742A8E720B00C89F79 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1CA4732A8E720A00C89F79 /* StoreKit.framework */; };
-		2C2A20512A7170E1002A6D3C /* PerspectiveAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20502A7170E1002A6D3C /* PerspectiveAppDelegate.swift */; };
+		2C2A20512A7170E1002A6D3C /* ActualAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20502A7170E1002A6D3C /* ActualAppDelegate.swift */; };
 		2C2A20532A7170E1002A6D3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20522A7170E1002A6D3C /* SceneDelegate.swift */; };
 		2C2A206F2A727E88002A6D3C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C2A206E2A727E88002A6D3C /* RealmSwift */; };
-		2C2A20732A7285AA002A6D3C /* PerspectiveMainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20722A7285AA002A6D3C /* PerspectiveMainFlowCoordinator.swift */; };
-		2C2A20762A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20752A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift */; };
-		2C2A207B2A729267002A6D3C /* PerspectiveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207A2A729267002A6D3C /* PerspectiveMainViewController.swift */; };
-		2C2A207F2A72927E002A6D3C /* PerspectiveMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207E2A72927E002A6D3C /* PerspectiveMainModel.swift */; };
-		2C2A20812A729337002A6D3C /* PerspectiveNiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20802A729337002A6D3C /* PerspectiveNiblessViewController.swift */; };
-		2C2A20B72A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B62A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift */; };
-		2C2A20B92A7556BF002A6D3C /* PerspectiveReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B82A7556BF002A6D3C /* PerspectiveReusable.swift */; };
-		2C2A20BB2A755AFA002A6D3C /* PerspectiveAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BA2A755AFA002A6D3C /* PerspectiveAutolayout.swift */; };
-		2C2A20BE2A756AD4002A6D3C /* PerspectiveGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BD2A756AD4002A6D3C /* PerspectiveGSViewController.swift */; };
-		2C2A20C02A756AE0002A6D3C /* PerspectiveGSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BF2A756AE0002A6D3C /* PerspectiveGSModel.swift */; };
+		2C2A20732A7285AA002A6D3C /* ActualMainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20722A7285AA002A6D3C /* ActualMainFlowCoordinator.swift */; };
+		2C2A20762A7286EC002A6D3C /* ActualFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20752A7286EC002A6D3C /* ActualFlowCoordinator.swift */; };
+		2C2A207B2A729267002A6D3C /* ActualMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */; };
+		2C2A207F2A72927E002A6D3C /* ActualMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */; };
+		2C2A20812A729337002A6D3C /* ActualNiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */; };
+		2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */; };
+		2C2A20B92A7556BF002A6D3C /* ActualReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */; };
+		2C2A20BB2A755AFA002A6D3C /* ActualAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */; };
+		2C2A20BE2A756AD4002A6D3C /* ActualGSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BD2A756AD4002A6D3C /* ActualGSViewController.swift */; };
+		2C2A20C02A756AE0002A6D3C /* ActualGSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A20BF2A756AE0002A6D3C /* ActualGSModel.swift */; };
 		2C3C53282A7BB01300D019A1 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CBFE44B2A77CEDA00A50257 /* Inter-Bold.ttf */; };
 		2C3C53292A7BB01F00D019A1 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CBFE44C2A77CEDA00A50257 /* Inter-Regular.ttf */; };
-		2C45A5372A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5362A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift */; };
-		2C45A5392A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5382A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift */; };
-		2C45A53B2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A53A2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift */; };
-		2C45A53D2A76A7800023B3A8 /* PerspectiveChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A53C2A76A7800023B3A8 /* PerspectiveChecklistModel.swift */; };
-		2C45A5402A76A7A50023B3A8 /* PerspectiveFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A53F2A76A7A50023B3A8 /* PerspectiveFilterViewController.swift */; };
-		2C45A5432A771A050023B3A8 /* PerspectiveChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5422A771A050023B3A8 /* PerspectiveChecklistCell.swift */; };
-		2C4F877A2A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F87792A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift */; };
-		2C51E73A2A8BD5590077C421 /* PerspectiveMission_Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E7392A8BD5590077C421 /* PerspectiveMission_Object.swift */; };
-		2C5CA6E62A924D78005F9D24 /* PerspectiveModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E52A924D78005F9D24 /* PerspectiveModesViewController.swift */; };
-		2C5CA6E82A924DFC005F9D24 /* PerspectiveModesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E72A924DFC005F9D24 /* PerspectiveModesModel.swift */; };
-		2C5CA6EA2A92514D005F9D24 /* PerspectiveModObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E92A92514D005F9D24 /* PerspectiveModObject.swift */; };
-		2C7F39F42A7BF09800F575F7 /* PerspectiveHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F39F32A7BF09800F575F7 /* PerspectiveHeaderView.swift */; };
-		2C7F39F62A7BF0BF00F575F7 /* PerspectiveGameCheatsTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F39F52A7BF0BF00F575F7 /* PerspectiveGameCheatsTabViewCell.swift */; };
-		2CA95FF82A84D4210039343E /* PerspectiveCheatsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA95FF72A84D4210039343E /* PerspectiveCheatsObject.swift */; };
-		2CA95FFC2A8512470039343E /* PerspectiveMainItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA95FFB2A8512470039343E /* PerspectiveMainItemObject.swift */; };
+		2C45A5372A76A7550023B3A8 /* ActualGameCheatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5362A76A7550023B3A8 /* ActualGameCheatsViewController.swift */; };
+		2C45A5392A76A7620023B3A8 /* ActualGameCheatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5382A76A7620023B3A8 /* ActualGameCheatsModel.swift */; };
+		2C45A53D2A76A7800023B3A8 /* ActualChecklistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A53C2A76A7800023B3A8 /* ActualChecklistModel.swift */; };
+		2C45A5402A76A7A50023B3A8 /* ActualFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A53F2A76A7A50023B3A8 /* ActualFilterViewController.swift */; };
+		2C45A5432A771A050023B3A8 /* ActualChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45A5422A771A050023B3A8 /* ActualChecklistCell.swift */; };
+		2C4F877A2A92DEB9006DC2CD /* ActualModesTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F87792A92DEB9006DC2CD /* ActualModesTabViewCell.swift */; };
+		2C51E73A2A8BD5590077C421 /* ActualMissionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E7392A8BD5590077C421 /* ActualMissionObject.swift */; };
+		2C5CA6E62A924D78005F9D24 /* ActualModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E52A924D78005F9D24 /* ActualModesViewController.swift */; };
+		2C5CA6E82A924DFC005F9D24 /* ActualModesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E72A924DFC005F9D24 /* ActualModesModel.swift */; };
+		2C5CA6EA2A92514D005F9D24 /* ActualModObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CA6E92A92514D005F9D24 /* ActualModObject.swift */; };
+		2C7F39F42A7BF09800F575F7 /* ActualHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F39F32A7BF09800F575F7 /* ActualHeaderView.swift */; };
+		2C7F39F62A7BF0BF00F575F7 /* ActualGameCheatsTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F39F52A7BF0BF00F575F7 /* ActualGameCheatsTabViewCell.swift */; };
+		2CA95FF82A84D4210039343E /* ActualCheatsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA95FF72A84D4210039343E /* ActualCheatsObject.swift */; };
+		2CA95FFC2A8512470039343E /* ActualMainItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA95FFB2A8512470039343E /* ActualMainItemObject.swift */; };
 		2CA960002A853F870039343E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA95FFF2A853F870039343E /* Kingfisher */; };
 		2CB88FD62A90CAC7006B9301 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB88FD52A90CAC7006B9301 /* NotificationService.swift */; };
 		2CB88FDA2A90CAC7006B9301 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2CB88FD32A90CAC7006B9301 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -2589,18 +2586,18 @@
 		2CB88FE92A90D19F006B9301 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB88FE82A90D19E006B9301 /* WebKit.framework */; };
 		2CBF47222A79151300A50257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A205B2A7170E3002A6D3C /* LaunchScreen.storyboard */; };
 		2CBF47242A79153200A50257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A20592A7170E3002A6D3C /* Assets.xcassets */; };
-		2CBFE4552A77E28400A50257 /* PerspectiveFilterTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4542A77E28400A50257 /* PerspectiveFilterTabViewCell.swift */; };
-		2CBFE4572A77E38600A50257 /* PerspectivePPControllerPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4562A77E38600A50257 /* PerspectivePPControllerPresent.swift */; };
-		2CBFE4592A77ECA200A50257 /* PerspectivePanPresentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4582A77ECA200A50257 /* PerspectivePanPresentManager.swift */; };
-		2CBFE45B2A79080D00A50257 /* PerspectiveGameMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE45A2A79080D00A50257 /* PerspectiveGameMapViewController.swift */; };
+		2CBFE4552A77E28400A50257 /* ActualFilterTabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4542A77E28400A50257 /* ActualFilterTabViewCell.swift */; };
+		2CBFE4572A77E38600A50257 /* ActualPPControllerPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4562A77E38600A50257 /* ActualPPControllerPresent.swift */; };
+		2CBFE4592A77ECA200A50257 /* ActualPanPresentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE4582A77ECA200A50257 /* ActualPanPresentManager.swift */; };
+		2CBFE45B2A79080D00A50257 /* ActualGameMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFE45A2A79080D00A50257 /* ActualGameMapViewController.swift */; };
 		2CC0DA542A90F0CA0083E7B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC0DA532A90F0CA0083E7B6 /* FirebaseAnalytics */; };
 		2CC0DA562A90F0CA0083E7B6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC0DA552A90F0CA0083E7B6 /* FirebaseAnalyticsOnDeviceConversion */; };
 		2CC0DA582A90F0CA0083E7B6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC0DA572A90F0CA0083E7B6 /* FirebaseAnalyticsSwift */; };
 		2CC0DA5A2A90F0CA0083E7B6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC0DA592A90F0CA0083E7B6 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		2CDEBEDE2A80F1DD00F976A3 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = 2CDEBEDD2A80F1DD00F976A3 /* SwiftyDropbox */; };
-		2CDEBF032A82586500F976A3 /* PerspectiveDropBoxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF62A82586500F976A3 /* PerspectiveDropBoxManager.swift */; };
-		2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF72A82586500F976A3 /* PerspectiveDBConstants.swift */; };
-		2CDEBF072A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBF062A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift */; };
+		2CDEBF032A82586500F976A3 /* ActualDropBoxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */; };
+		2CDEBF042A82586500F976A3 /* ActualDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */; };
+		2CDEBF072A82F57100F976A3 /* ActualCustomNavigation_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBF062A82F57100F976A3 /* ActualCustomNavigation_View.swift */; };
 		54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */; };
 		54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */; };
 		54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */; };
@@ -2633,28 +2630,27 @@
 
 /* Begin PBXFileReference section */
 		0C14A4FEA062255A39CFF41A /* Pods-GTAModes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTAModes.release.xcconfig"; path = "Target Support Files/Pods-GTAModes/Pods-GTAModes.release.xcconfig"; sourceTree = "<group>"; };
-		1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveTestNetwork.swift; sourceTree = "<group>"; };
+		1201B5712BA2B82C00B86035 /* ActualTestNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualTestNetwork.swift; sourceTree = "<group>"; };
 		12097A712BA4B09700DACBED /* ActualAllertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertController.swift; sourceTree = "<group>"; };
-		12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCheckListCustomSwitcher.swift; sourceTree = "<group>"; };
+		12097A772BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCheckListCustomSwitcher.swift; sourceTree = "<group>"; };
 		120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoaderView.swift; sourceTree = "<group>"; };
 		120B3BF52BE2313A00E9462B /* ActualFakeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFakeLoader.swift; sourceTree = "<group>"; };
-		120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModelConteiner.swift; sourceTree = "<group>"; };
+		120EEE452B86673100BE6D3F /* ActualModelConteiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModelConteiner.swift; sourceTree = "<group>"; };
 		120EEE4B2B87187900BE6D3F /* GilroyLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GilroyLight.ttf; sourceTree = "<group>"; };
 		120EEE4E2B87793E00BE6D3F /* Gilroy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gilroy.ttf; sourceTree = "<group>"; };
 		120EEE502B877B1700BE6D3F /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
-		120EEE522B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesTabViewCellNew.swift; sourceTree = "<group>"; };
+		120EEE522B88777D00BE6D3F /* ActualModesTabViewCellNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModesTabViewCellNew.swift; sourceTree = "<group>"; };
 		120EEE542B8889A500BE6D3F /* Gilroy-Extrabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Extrabold.ttf"; sourceTree = "<group>"; };
 		120EEE562B888AB800BE6D3F /* Gilroy-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.ttf"; sourceTree = "<group>"; };
 		120EEE582B88B08B00BE6D3F /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
-		120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesInfoViewController.swift; sourceTree = "<group>"; };
-		120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveHeaderViewNew.swift; sourceTree = "<group>"; };
+		120EEE5A2B88CCF400BE6D3F /* ActualModesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModesInfoViewController.swift; sourceTree = "<group>"; };
+		120EEE5E2B8C916600BE6D3F /* ActualHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualHeaderViewNew.swift; sourceTree = "<group>"; };
 		126FEE282BB18D640095A5DE /* markers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markers.png; sourceTree = "<group>"; };
 		12D4321E2BDBE3EF00BD1EC7 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
-		12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistCell.swift; sourceTree = "<group>"; };
 		12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistChecker.swift; sourceTree = "<group>"; };
 		12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistButton.swift; sourceTree = "<group>"; };
 		12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderView.swift; sourceTree = "<group>"; };
-		12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomAlertView.swift; sourceTree = "<group>"; };
+		12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomUniversalAlertView.swift; sourceTree = "<group>"; };
 		12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistViewController.swift; sourceTree = "<group>"; };
 		12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualSwiftUILoaderView.swift; sourceTree = "<group>"; };
 		12EA0ED52BAB3AF400263F40 /* leaflet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = leaflet.js; sourceTree = "<group>"; };
@@ -2663,8 +2659,8 @@
 		12EA114D2BB1F54C00ADE95E /* jquery-2.1.4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.4.min.js"; sourceTree = "<group>"; };
 		12EA20832BAB598A00263F40 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
 		12F217EF2B85D41100BCE63B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		12F217F22B85F03900BCE63B /* PerspectiveMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainViewCell.swift; sourceTree = "<group>"; };
-		12F217F42B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainViewControllerNew.swift; sourceTree = "<group>"; };
+		12F217F22B85F03900BCE63B /* ActualMainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainViewCell.swift; sourceTree = "<group>"; };
+		12F217F42B85FCE200BCE63B /* ActualMainViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainViewControllerNew.swift; sourceTree = "<group>"; };
 		12F3CA402BAC9A2400078AD2 /* GTAVKMAP28p32p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP28p32p7vk.png; sourceTree = "<group>"; };
 		12F3CA412BAC9A2600078AD2 /* GTAVKMAP1p5p5vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP1p5p5vk.png; sourceTree = "<group>"; };
 		12F3CA422BAC9A2900078AD2 /* GTAVKMAP2p4p5vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP2p4p5vk.png; sourceTree = "<group>"; };
@@ -5164,40 +5160,39 @@
 		12F3D4002BACAC6400078AD2 /* GTAVKMAP18p8p6vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP18p8p6vk.png; sourceTree = "<group>"; };
 		12F3D4012BACAC6A00078AD2 /* GTAVKMAP39p7p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP39p7p7vk.png; sourceTree = "<group>"; };
 		12F3D4022BACAC6E00078AD2 /* GTAVKMAP39p17p7vk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GTAVKMAP39p17p7vk.png; sourceTree = "<group>"; };
-		2C1CA3B02A8E70B200C89F79 /* PerspectiveServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveServicesManager.swift; sourceTree = "<group>"; };
-		2C1CA4702A8E714F00C89F79 /* PerspectiveConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveConfiguration.swift; sourceTree = "<group>"; };
+		2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualServicesManager.swift; sourceTree = "<group>"; };
+		2C1CA4702A8E714F00C89F79 /* ActualConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualConfiguration.swift; sourceTree = "<group>"; };
 		2C1CA4722A8E71E200C89F79 /* GTAModes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GTAModes.entitlements; sourceTree = "<group>"; };
 		2C1CA4732A8E720A00C89F79 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2C2A204D2A7170E1002A6D3C /* GTAModes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTAModes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C2A20502A7170E1002A6D3C /* PerspectiveAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveAppDelegate.swift; sourceTree = "<group>"; };
+		2C2A20502A7170E1002A6D3C /* ActualAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAppDelegate.swift; sourceTree = "<group>"; };
 		2C2A20522A7170E1002A6D3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C2A20592A7170E3002A6D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C2A205E2A7170E3002A6D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C2A20722A7285AA002A6D3C /* PerspectiveMainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainFlowCoordinator.swift; sourceTree = "<group>"; };
-		2C2A20752A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveFlowCoordinator.swift; sourceTree = "<group>"; };
-		2C2A207A2A729267002A6D3C /* PerspectiveMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainViewController.swift; sourceTree = "<group>"; };
-		2C2A207E2A72927E002A6D3C /* PerspectiveMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainModel.swift; sourceTree = "<group>"; };
-		2C2A20802A729337002A6D3C /* PerspectiveNiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveNiblessViewController.swift; sourceTree = "<group>"; };
-		2C2A20B62A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainTabViewCell.swift; sourceTree = "<group>"; };
-		2C2A20B82A7556BF002A6D3C /* PerspectiveReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveReusable.swift; sourceTree = "<group>"; };
-		2C2A20BA2A755AFA002A6D3C /* PerspectiveAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveAutolayout.swift; sourceTree = "<group>"; };
-		2C2A20BD2A756AD4002A6D3C /* PerspectiveGSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGSViewController.swift; sourceTree = "<group>"; };
-		2C2A20BF2A756AE0002A6D3C /* PerspectiveGSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGSModel.swift; sourceTree = "<group>"; };
-		2C45A5362A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGameCheatsViewController.swift; sourceTree = "<group>"; };
-		2C45A5382A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGameCheatsModel.swift; sourceTree = "<group>"; };
-		2C45A53A2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveChecklistViewController.swift; sourceTree = "<group>"; };
-		2C45A53C2A76A7800023B3A8 /* PerspectiveChecklistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveChecklistModel.swift; sourceTree = "<group>"; };
-		2C45A53F2A76A7A50023B3A8 /* PerspectiveFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveFilterViewController.swift; sourceTree = "<group>"; };
-		2C45A5422A771A050023B3A8 /* PerspectiveChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveChecklistCell.swift; sourceTree = "<group>"; };
-		2C4F87792A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesTabViewCell.swift; sourceTree = "<group>"; };
-		2C51E7392A8BD5590077C421 /* PerspectiveMission_Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMission_Object.swift; sourceTree = "<group>"; };
-		2C5CA6E52A924D78005F9D24 /* PerspectiveModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesViewController.swift; sourceTree = "<group>"; };
-		2C5CA6E72A924DFC005F9D24 /* PerspectiveModesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModesModel.swift; sourceTree = "<group>"; };
-		2C5CA6E92A92514D005F9D24 /* PerspectiveModObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveModObject.swift; sourceTree = "<group>"; };
-		2C7F39F32A7BF09800F575F7 /* PerspectiveHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveHeaderView.swift; sourceTree = "<group>"; };
-		2C7F39F52A7BF0BF00F575F7 /* PerspectiveGameCheatsTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGameCheatsTabViewCell.swift; sourceTree = "<group>"; };
-		2CA95FF72A84D4210039343E /* PerspectiveCheatsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCheatsObject.swift; sourceTree = "<group>"; };
-		2CA95FFB2A8512470039343E /* PerspectiveMainItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveMainItemObject.swift; sourceTree = "<group>"; };
+		2C2A20722A7285AA002A6D3C /* ActualMainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainFlowCoordinator.swift; sourceTree = "<group>"; };
+		2C2A20752A7286EC002A6D3C /* ActualFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFlowCoordinator.swift; sourceTree = "<group>"; };
+		2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainViewController.swift; sourceTree = "<group>"; };
+		2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainModel.swift; sourceTree = "<group>"; };
+		2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualNiblessViewController.swift; sourceTree = "<group>"; };
+		2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainTabViewCell.swift; sourceTree = "<group>"; };
+		2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualReusable.swift; sourceTree = "<group>"; };
+		2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAutolayout.swift; sourceTree = "<group>"; };
+		2C2A20BD2A756AD4002A6D3C /* ActualGSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGSViewController.swift; sourceTree = "<group>"; };
+		2C2A20BF2A756AE0002A6D3C /* ActualGSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGSModel.swift; sourceTree = "<group>"; };
+		2C45A5362A76A7550023B3A8 /* ActualGameCheatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGameCheatsViewController.swift; sourceTree = "<group>"; };
+		2C45A5382A76A7620023B3A8 /* ActualGameCheatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGameCheatsModel.swift; sourceTree = "<group>"; };
+		2C45A53C2A76A7800023B3A8 /* ActualChecklistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistModel.swift; sourceTree = "<group>"; };
+		2C45A53F2A76A7A50023B3A8 /* ActualFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFilterViewController.swift; sourceTree = "<group>"; };
+		2C45A5422A771A050023B3A8 /* ActualChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChecklistCell.swift; sourceTree = "<group>"; };
+		2C4F87792A92DEB9006DC2CD /* ActualModesTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModesTabViewCell.swift; sourceTree = "<group>"; };
+		2C51E7392A8BD5590077C421 /* ActualMissionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMissionObject.swift; sourceTree = "<group>"; };
+		2C5CA6E52A924D78005F9D24 /* ActualModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModesViewController.swift; sourceTree = "<group>"; };
+		2C5CA6E72A924DFC005F9D24 /* ActualModesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModesModel.swift; sourceTree = "<group>"; };
+		2C5CA6E92A92514D005F9D24 /* ActualModObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualModObject.swift; sourceTree = "<group>"; };
+		2C7F39F32A7BF09800F575F7 /* ActualHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualHeaderView.swift; sourceTree = "<group>"; };
+		2C7F39F52A7BF0BF00F575F7 /* ActualGameCheatsTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGameCheatsTabViewCell.swift; sourceTree = "<group>"; };
+		2CA95FF72A84D4210039343E /* ActualCheatsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCheatsObject.swift; sourceTree = "<group>"; };
+		2CA95FFB2A8512470039343E /* ActualMainItemObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualMainItemObject.swift; sourceTree = "<group>"; };
 		2CB88FD32A90CAC7006B9301 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB88FD52A90CAC7006B9301 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		2CB88FD72A90CAC7006B9301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -5211,13 +5206,13 @@
 		2CBFE4472A77BE0200A50257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CBFE44B2A77CEDA00A50257 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		2CBFE44C2A77CEDA00A50257 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
-		2CBFE4542A77E28400A50257 /* PerspectiveFilterTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveFilterTabViewCell.swift; sourceTree = "<group>"; };
-		2CBFE4562A77E38600A50257 /* PerspectivePPControllerPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectivePPControllerPresent.swift; sourceTree = "<group>"; };
-		2CBFE4582A77ECA200A50257 /* PerspectivePanPresentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectivePanPresentManager.swift; sourceTree = "<group>"; };
-		2CBFE45A2A79080D00A50257 /* PerspectiveGameMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveGameMapViewController.swift; sourceTree = "<group>"; };
-		2CDEBEF62A82586500F976A3 /* PerspectiveDropBoxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveDropBoxManager.swift; sourceTree = "<group>"; };
-		2CDEBEF72A82586500F976A3 /* PerspectiveDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerspectiveDBConstants.swift; sourceTree = "<group>"; };
-		2CDEBF062A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerspectiveCustomNavigation_View.swift; sourceTree = "<group>"; };
+		2CBFE4542A77E28400A50257 /* ActualFilterTabViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualFilterTabViewCell.swift; sourceTree = "<group>"; };
+		2CBFE4562A77E38600A50257 /* ActualPPControllerPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPPControllerPresent.swift; sourceTree = "<group>"; };
+		2CBFE4582A77ECA200A50257 /* ActualPanPresentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualPanPresentManager.swift; sourceTree = "<group>"; };
+		2CBFE45A2A79080D00A50257 /* ActualGameMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGameMapViewController.swift; sourceTree = "<group>"; };
+		2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualDropBoxManager.swift; sourceTree = "<group>"; };
+		2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActualDBConstants.swift; sourceTree = "<group>"; };
+		2CDEBF062A82F57100F976A3 /* ActualCustomNavigation_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualCustomNavigation_View.swift; sourceTree = "<group>"; };
 		54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualAllertManager.swift; sourceTree = "<group>"; };
 		54ACC19B2BDF6F8D0090B73A /* ActualBlurBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualBlurBackController.swift; sourceTree = "<group>"; };
 		54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualLoaderController.swift; sourceTree = "<group>"; };
@@ -5264,7 +5259,7 @@
 				12D432372BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift */,
 				12D4322D2BDD1AF200BD1EC7 /* ActualLoaderView.swift */,
 				120B3BF32BE22EFC00E9462B /* ActualFakeLoaderView.swift */,
-				12D432312BDD486A00BD1EC7 /* ActualCustomAlertView.swift */,
+				12D432312BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -5280,7 +5275,7 @@
 		2C1CA46F2A8E713C00C89F79 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				2C1CA4702A8E714F00C89F79 /* PerspectiveConfiguration.swift */,
+				2C1CA4702A8E714F00C89F79 /* ActualConfiguration.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -5310,7 +5305,7 @@
 			children = (
 				2C1CA4722A8E71E200C89F79 /* GTAModes.entitlements */,
 				2C1CA46F2A8E713C00C89F79 /* Configurations */,
-				2C2A20502A7170E1002A6D3C /* PerspectiveAppDelegate.swift */,
+				2C2A20502A7170E1002A6D3C /* ActualAppDelegate.swift */,
 				2C2A20522A7170E1002A6D3C /* SceneDelegate.swift */,
 				2C2A20642A717EA4002A6D3C /* Flows */,
 				2C2A20652A717EF7002A6D3C /* PerspectiveServices */,
@@ -5359,7 +5354,7 @@
 				2C45A5322A76A65D0023B3A8 /* GameCheats */,
 				2C2A20BC2A756AB3002A6D3C /* GameSelection */,
 				2C2A20792A72907B002A6D3C /* MainView */,
-				2C2A20722A7285AA002A6D3C /* PerspectiveMainFlowCoordinator.swift */,
+				2C2A20722A7285AA002A6D3C /* ActualMainFlowCoordinator.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -5368,12 +5363,12 @@
 			isa = PBXGroup;
 			children = (
 				2C2A20B32A755153002A6D3C /* UI */,
-				2C2A20752A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift */,
-				2C2A20802A729337002A6D3C /* PerspectiveNiblessViewController.swift */,
-				2C2A20BA2A755AFA002A6D3C /* PerspectiveAutolayout.swift */,
-				2C2A20B82A7556BF002A6D3C /* PerspectiveReusable.swift */,
-				2CBFE4562A77E38600A50257 /* PerspectivePPControllerPresent.swift */,
-				2CBFE4582A77ECA200A50257 /* PerspectivePanPresentManager.swift */,
+				2C2A20752A7286EC002A6D3C /* ActualFlowCoordinator.swift */,
+				2C2A20802A729337002A6D3C /* ActualNiblessViewController.swift */,
+				2C2A20BA2A755AFA002A6D3C /* ActualAutolayout.swift */,
+				2C2A20B82A7556BF002A6D3C /* ActualReusable.swift */,
+				2CBFE4562A77E38600A50257 /* ActualPPControllerPresent.swift */,
+				2CBFE4582A77ECA200A50257 /* ActualPanPresentManager.swift */,
 				12F217F12B85D41800BCE63B /* Extension */,
 			);
 			path = Common;
@@ -5382,10 +5377,10 @@
 		2C2A20792A72907B002A6D3C /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				2C2A207A2A729267002A6D3C /* PerspectiveMainViewController.swift */,
-				2C2A207E2A72927E002A6D3C /* PerspectiveMainModel.swift */,
-				12F217F42B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift */,
-				120EEE452B86673100BE6D3F /* PerspectiveModelConteiner.swift */,
+				2C2A207A2A729267002A6D3C /* ActualMainViewController.swift */,
+				2C2A207E2A72927E002A6D3C /* ActualMainModel.swift */,
+				12F217F42B85FCE200BCE63B /* ActualMainViewControllerNew.swift */,
+				120EEE452B86673100BE6D3F /* ActualModelConteiner.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -5420,8 +5415,8 @@
 		2C2A20B52A7551B4002A6D3C /* MainTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				2C2A20B62A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift */,
-				12F217F22B85F03900BCE63B /* PerspectiveMainViewCell.swift */,
+				2C2A20B62A7551E8002A6D3C /* ActualMainTabViewCell.swift */,
+				12F217F22B85F03900BCE63B /* ActualMainViewCell.swift */,
 			);
 			path = MainTableViewCell;
 			sourceTree = "<group>";
@@ -5429,8 +5424,8 @@
 		2C2A20BC2A756AB3002A6D3C /* GameSelection */ = {
 			isa = PBXGroup;
 			children = (
-				2C2A20BD2A756AD4002A6D3C /* PerspectiveGSViewController.swift */,
-				2C2A20BF2A756AE0002A6D3C /* PerspectiveGSModel.swift */,
+				2C2A20BD2A756AD4002A6D3C /* ActualGSViewController.swift */,
+				2C2A20BF2A756AE0002A6D3C /* ActualGSModel.swift */,
 			);
 			path = GameSelection;
 			sourceTree = "<group>";
@@ -5439,8 +5434,8 @@
 			isa = PBXGroup;
 			children = (
 				2C7F39F02A7BF05D00F575F7 /* Views */,
-				2C45A5362A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift */,
-				2C45A5382A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift */,
+				2C45A5362A76A7550023B3A8 /* ActualGameCheatsViewController.swift */,
+				2C45A5382A76A7620023B3A8 /* ActualGameCheatsModel.swift */,
 			);
 			path = GameCheats;
 			sourceTree = "<group>";
@@ -5449,10 +5444,9 @@
 			isa = PBXGroup;
 			children = (
 				2C45A5412A7719ED0023B3A8 /* Cell */,
-				2C45A53A2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift */,
 				12D432342BDD545700BD1EC7 /* ActualChecklistViewController.swift */,
-				2C45A53C2A76A7800023B3A8 /* PerspectiveChecklistModel.swift */,
-				12097A772BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift */,
+				2C45A53C2A76A7800023B3A8 /* ActualChecklistModel.swift */,
+				12097A772BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift */,
 				12D432272BDC268100BD1EC7 /* ActualChecklistChecker.swift */,
 				12D4322A2BDCA43700BD1EC7 /* ActualChecklistButton.swift */,
 			);
@@ -5462,7 +5456,7 @@
 		2C45A5342A76A7200023B3A8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				2CBFE45A2A79080D00A50257 /* PerspectiveGameMapViewController.swift */,
+				2CBFE45A2A79080D00A50257 /* ActualGameMapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -5470,8 +5464,8 @@
 		2C45A53E2A76A78D0023B3A8 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				2C45A53F2A76A7A50023B3A8 /* PerspectiveFilterViewController.swift */,
-				2CBFE4542A77E28400A50257 /* PerspectiveFilterTabViewCell.swift */,
+				2C45A53F2A76A7A50023B3A8 /* ActualFilterViewController.swift */,
+				2CBFE4542A77E28400A50257 /* ActualFilterTabViewCell.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -5479,8 +5473,7 @@
 		2C45A5412A7719ED0023B3A8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2C45A5422A771A050023B3A8 /* PerspectiveChecklistCell.swift */,
-				12D432242BDC0D4500BD1EC7 /* ActualChecklistCell.swift */,
+				2C45A5422A771A050023B3A8 /* ActualChecklistCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -5488,11 +5481,11 @@
 		2C5CA6E42A924B83005F9D24 /* GameModes */ = {
 			isa = PBXGroup;
 			children = (
-				2C5CA6E52A924D78005F9D24 /* PerspectiveModesViewController.swift */,
-				120EEE5A2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift */,
-				2C5CA6E72A924DFC005F9D24 /* PerspectiveModesModel.swift */,
-				2C4F87792A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift */,
-				120EEE522B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift */,
+				2C5CA6E52A924D78005F9D24 /* ActualModesViewController.swift */,
+				120EEE5A2B88CCF400BE6D3F /* ActualModesInfoViewController.swift */,
+				2C5CA6E72A924DFC005F9D24 /* ActualModesModel.swift */,
+				2C4F87792A92DEB9006DC2CD /* ActualModesTabViewCell.swift */,
+				120EEE522B88777D00BE6D3F /* ActualModesTabViewCellNew.swift */,
 				54ACC1992BDF601A0090B73A /* ActualAllertManager.swift */,
 				12097A712BA4B09700DACBED /* ActualAllertController.swift */,
 				54ACC19D2BDF77230090B73A /* ActualLoaderController.swift */,
@@ -5514,7 +5507,7 @@
 		2C7F39F12A7BF06A00F575F7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2C7F39F52A7BF0BF00F575F7 /* PerspectiveGameCheatsTabViewCell.swift */,
+				2C7F39F52A7BF0BF00F575F7 /* ActualGameCheatsTabViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -5522,8 +5515,8 @@
 		2C7F39F22A7BF07200F575F7 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				2C7F39F32A7BF09800F575F7 /* PerspectiveHeaderView.swift */,
-				120EEE5E2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift */,
+				2C7F39F32A7BF09800F575F7 /* ActualHeaderView.swift */,
+				120EEE5E2B8C916600BE6D3F /* ActualHeaderViewNew.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -5531,10 +5524,10 @@
 		2CA95FF62A84D4050039343E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CA95FF72A84D4210039343E /* PerspectiveCheatsObject.swift */,
-				2CA95FFB2A8512470039343E /* PerspectiveMainItemObject.swift */,
-				2C51E7392A8BD5590077C421 /* PerspectiveMission_Object.swift */,
-				2C5CA6E92A92514D005F9D24 /* PerspectiveModObject.swift */,
+				2CA95FF72A84D4210039343E /* ActualCheatsObject.swift */,
+				2CA95FFB2A8512470039343E /* ActualMainItemObject.swift */,
+				2C51E7392A8BD5590077C421 /* ActualMissionObject.swift */,
+				2C5CA6E92A92514D005F9D24 /* ActualModObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -8094,10 +8087,10 @@
 		2CDEBEE82A82586500F976A3 /* DropBoxManager */ = {
 			isa = PBXGroup;
 			children = (
-				2C1CA3B02A8E70B200C89F79 /* PerspectiveServicesManager.swift */,
-				2CDEBEF62A82586500F976A3 /* PerspectiveDropBoxManager.swift */,
-				2CDEBEF72A82586500F976A3 /* PerspectiveDBConstants.swift */,
-				1201B5712BA2B82C00B86035 /* PerspectiveTestNetwork.swift */,
+				2C1CA3B02A8E70B200C89F79 /* ActualServicesManager.swift */,
+				2CDEBEF62A82586500F976A3 /* ActualDropBoxManager.swift */,
+				2CDEBEF72A82586500F976A3 /* ActualDBConstants.swift */,
+				1201B5712BA2B82C00B86035 /* ActualTestNetwork.swift */,
 			);
 			path = DropBoxManager;
 			sourceTree = "<group>";
@@ -8105,7 +8098,7 @@
 		2CDEBF052A82F55400F976A3 /* CustomNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				2CDEBF062A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift */,
+				2CDEBF062A82F57100F976A3 /* ActualCustomNavigation_View.swift */,
 			);
 			path = CustomNavigation;
 			sourceTree = "<group>";
@@ -10839,64 +10832,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CBFE4552A77E28400A50257 /* PerspectiveFilterTabViewCell.swift in Sources */,
-				2C45A5402A76A7A50023B3A8 /* PerspectiveFilterViewController.swift in Sources */,
-				12F217F32B85F03900BCE63B /* PerspectiveMainViewCell.swift in Sources */,
+				2CBFE4552A77E28400A50257 /* ActualFilterTabViewCell.swift in Sources */,
+				2C45A5402A76A7A50023B3A8 /* ActualFilterViewController.swift in Sources */,
+				12F217F32B85F03900BCE63B /* ActualMainViewCell.swift in Sources */,
 				54ACC19A2BDF601A0090B73A /* ActualAllertManager.swift in Sources */,
-				2C5CA6EA2A92514D005F9D24 /* PerspectiveModObject.swift in Sources */,
-				2C5CA6E82A924DFC005F9D24 /* PerspectiveModesModel.swift in Sources */,
+				2C5CA6EA2A92514D005F9D24 /* ActualModObject.swift in Sources */,
+				2C5CA6E82A924DFC005F9D24 /* ActualModesModel.swift in Sources */,
 				120B3BF42BE22EFC00E9462B /* ActualFakeLoaderView.swift in Sources */,
-				2C45A5392A76A7620023B3A8 /* PerspectiveGameCheatsModel.swift in Sources */,
-				2C2A20B72A7551E8002A6D3C /* PerspectiveMainTabViewCell.swift in Sources */,
-				2C45A5432A771A050023B3A8 /* PerspectiveChecklistCell.swift in Sources */,
-				2C45A5372A76A7550023B3A8 /* PerspectiveGameCheatsViewController.swift in Sources */,
+				2C45A5392A76A7620023B3A8 /* ActualGameCheatsModel.swift in Sources */,
+				2C2A20B72A7551E8002A6D3C /* ActualMainTabViewCell.swift in Sources */,
+				2C45A5432A771A050023B3A8 /* ActualChecklistCell.swift in Sources */,
+				2C45A5372A76A7550023B3A8 /* ActualGameCheatsViewController.swift in Sources */,
 				12D432352BDD545700BD1EC7 /* ActualChecklistViewController.swift in Sources */,
 				120B3BF62BE2313A00E9462B /* ActualFakeLoader.swift in Sources */,
-				2CDEBF072A82F57100F976A3 /* PerspectiveCustomNavigation_View.swift in Sources */,
-				2C4F877A2A92DEB9006DC2CD /* PerspectiveModesTabViewCell.swift in Sources */,
-				120EEE5B2B88CCF400BE6D3F /* PerspectiveModesInfoViewController.swift in Sources */,
+				2CDEBF072A82F57100F976A3 /* ActualCustomNavigation_View.swift in Sources */,
+				2C4F877A2A92DEB9006DC2CD /* ActualModesTabViewCell.swift in Sources */,
+				120EEE5B2B88CCF400BE6D3F /* ActualModesInfoViewController.swift in Sources */,
 				12D432382BDD636F00BD1EC7 /* ActualSwiftUILoaderView.swift in Sources */,
 				54ACC19C2BDF6F8D0090B73A /* ActualBlurBackController.swift in Sources */,
-				2CDEBF042A82586500F976A3 /* PerspectiveDBConstants.swift in Sources */,
-				12F217F52B85FCE200BCE63B /* PerspectiveMainViewControllerNew.swift in Sources */,
-				2CA95FF82A84D4210039343E /* PerspectiveCheatsObject.swift in Sources */,
-				12D432252BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
+				2CDEBF042A82586500F976A3 /* ActualDBConstants.swift in Sources */,
+				12F217F52B85FCE200BCE63B /* ActualMainViewControllerNew.swift in Sources */,
+				2CA95FF82A84D4210039343E /* ActualCheatsObject.swift in Sources */,
 				12D432282BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
-				2C45A53D2A76A7800023B3A8 /* PerspectiveChecklistModel.swift in Sources */,
-				2C7F39F42A7BF09800F575F7 /* PerspectiveHeaderView.swift in Sources */,
-				2C2A20762A7286EC002A6D3C /* PerspectiveFlowCoordinator.swift in Sources */,
+				2C45A53D2A76A7800023B3A8 /* ActualChecklistModel.swift in Sources */,
+				2C7F39F42A7BF09800F575F7 /* ActualHeaderView.swift in Sources */,
+				2C2A20762A7286EC002A6D3C /* ActualFlowCoordinator.swift in Sources */,
 				12F217F02B85D41100BCE63B /* Extension.swift in Sources */,
-				2C2A20512A7170E1002A6D3C /* PerspectiveAppDelegate.swift in Sources */,
-				2C2A20B92A7556BF002A6D3C /* PerspectiveReusable.swift in Sources */,
-				2C2A20732A7285AA002A6D3C /* PerspectiveMainFlowCoordinator.swift in Sources */,
-				2C5CA6E62A924D78005F9D24 /* PerspectiveModesViewController.swift in Sources */,
-				2C51E73A2A8BD5590077C421 /* PerspectiveMission_Object.swift in Sources */,
-				120EEE5F2B8C916600BE6D3F /* PerspectiveHeaderViewNew.swift in Sources */,
+				2C2A20512A7170E1002A6D3C /* ActualAppDelegate.swift in Sources */,
+				2C2A20B92A7556BF002A6D3C /* ActualReusable.swift in Sources */,
+				2C2A20732A7285AA002A6D3C /* ActualMainFlowCoordinator.swift in Sources */,
+				2C5CA6E62A924D78005F9D24 /* ActualModesViewController.swift in Sources */,
+				2C51E73A2A8BD5590077C421 /* ActualMissionObject.swift in Sources */,
+				120EEE5F2B8C916600BE6D3F /* ActualHeaderViewNew.swift in Sources */,
 				2C2A20532A7170E1002A6D3C /* SceneDelegate.swift in Sources */,
-				2C7F39F62A7BF0BF00F575F7 /* PerspectiveGameCheatsTabViewCell.swift in Sources */,
-				2C2A20BE2A756AD4002A6D3C /* PerspectiveGSViewController.swift in Sources */,
-				2CBFE4572A77E38600A50257 /* PerspectivePPControllerPresent.swift in Sources */,
-				120EEE532B88777D00BE6D3F /* PerspectiveModesTabViewCellNew.swift in Sources */,
-				2C45A53B2A76A7780023B3A8 /* PerspectiveChecklistViewController.swift in Sources */,
-				2CBFE45B2A79080D00A50257 /* PerspectiveGameMapViewController.swift in Sources */,
-				120EEE462B86673100BE6D3F /* PerspectiveModelConteiner.swift in Sources */,
+				2C7F39F62A7BF0BF00F575F7 /* ActualGameCheatsTabViewCell.swift in Sources */,
+				2C2A20BE2A756AD4002A6D3C /* ActualGSViewController.swift in Sources */,
+				2CBFE4572A77E38600A50257 /* ActualPPControllerPresent.swift in Sources */,
+				120EEE532B88777D00BE6D3F /* ActualModesTabViewCellNew.swift in Sources */,
+				2CBFE45B2A79080D00A50257 /* ActualGameMapViewController.swift in Sources */,
+				120EEE462B86673100BE6D3F /* ActualModelConteiner.swift in Sources */,
 				12D4322B2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
-				2CA95FFC2A8512470039343E /* PerspectiveMainItemObject.swift in Sources */,
-				2C2A20812A729337002A6D3C /* PerspectiveNiblessViewController.swift in Sources */,
-				12D432322BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */,
-				2C2A20BB2A755AFA002A6D3C /* PerspectiveAutolayout.swift in Sources */,
-				2CBFE4592A77ECA200A50257 /* PerspectivePanPresentManager.swift in Sources */,
-				2CDEBF032A82586500F976A3 /* PerspectiveDropBoxManager.swift in Sources */,
+				2CA95FFC2A8512470039343E /* ActualMainItemObject.swift in Sources */,
+				2C2A20812A729337002A6D3C /* ActualNiblessViewController.swift in Sources */,
+				12D432322BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */,
+				2C2A20BB2A755AFA002A6D3C /* ActualAutolayout.swift in Sources */,
+				2CBFE4592A77ECA200A50257 /* ActualPanPresentManager.swift in Sources */,
+				2CDEBF032A82586500F976A3 /* ActualDropBoxManager.swift in Sources */,
 				12D4322E2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */,
-				1201B5722BA2B82C00B86035 /* PerspectiveTestNetwork.swift in Sources */,
-				12097A782BA56D5600DACBED /* PerspectiveCheckListCustomSwitcher.swift in Sources */,
-				2C1CA42D2A8E70B200C89F79 /* PerspectiveServicesManager.swift in Sources */,
-				2C2A207B2A729267002A6D3C /* PerspectiveMainViewController.swift in Sources */,
+				1201B5722BA2B82C00B86035 /* ActualTestNetwork.swift in Sources */,
+				12097A782BA56D5600DACBED /* ActualCheckListCustomSwitcher.swift in Sources */,
+				2C1CA42D2A8E70B200C89F79 /* ActualServicesManager.swift in Sources */,
+				2C2A207B2A729267002A6D3C /* ActualMainViewController.swift in Sources */,
 				12097A722BA4B09700DACBED /* ActualAllertController.swift in Sources */,
 				54ACC19E2BDF77230090B73A /* ActualLoaderController.swift in Sources */,
-				2C1CA4712A8E714F00C89F79 /* PerspectiveConfiguration.swift in Sources */,
-				2C2A20C02A756AE0002A6D3C /* PerspectiveGSModel.swift in Sources */,
-				2C2A207F2A72927E002A6D3C /* PerspectiveMainModel.swift in Sources */,
+				2C1CA4712A8E714F00C89F79 /* ActualConfiguration.swift in Sources */,
+				2C2A20C02A756AE0002A6D3C /* ActualGSModel.swift in Sources */,
+				2C2A207F2A72927E002A6D3C /* ActualMainModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10904,9 +10895,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D432262BDC0D4500BD1EC7 /* ActualChecklistCell.swift in Sources */,
 				12D4322F2BDD1AF200BD1EC7 /* ActualLoaderView.swift in Sources */,
-				12D432332BDD486A00BD1EC7 /* ActualCustomAlertView.swift in Sources */,
+				12D432332BDD486A00BD1EC7 /* ActualCustomUniversalAlertView.swift in Sources */,
 				12D432292BDC268100BD1EC7 /* ActualChecklistChecker.swift in Sources */,
 				12D4322C2BDCA43700BD1EC7 /* ActualChecklistButton.swift in Sources */,
 				2CB88FD62A90CAC7006B9301 /* NotificationService.swift in Sources */,
