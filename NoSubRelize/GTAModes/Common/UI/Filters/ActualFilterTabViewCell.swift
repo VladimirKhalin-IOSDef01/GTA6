@@ -19,7 +19,7 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
     private let containerView = UIView()
     private let titleLabel = UILabel()
     private let checkImage = UIImageView()
-    private let borderLineView = UIView()
+    let borderLineView = UIView()
     private let blockView = UIView()
     let switcher = UISwitch()
     
@@ -51,15 +51,13 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
     }
     
     public func actualConfigure_cell(_ value: ActualFilterData) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 20)
-        } else {
-            titleLabel.font = UIFont(name: "Gilroy-Regular", size: 20)
-        }
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 20 : 18)
         titleLabel.textColor = .black
         titleLabel.text = value.title.capitalized(with: .autoupdatingCurrent)
         switcher.isOn = value.isCheck // Установите состояние переключателя
         checkImage.isHidden = !value.isCheck // Управление видимостью галочки
+        
+       
     }
     
     private func actualSetupLayout() {
@@ -107,7 +105,7 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: -20)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 20.0)
             $0.bottom.equal(to: containerView.bottomAnchor)
-            $0.height.equal(to: 2.0)
+            $0.height.equal(to: 1.5)
         }
         //borderLineView.backgroundColor = .init(named: "cellLineColor")
         borderLineView.backgroundColor = .gray.withAlphaComponent(0.5)
@@ -119,7 +117,7 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         containerView.addSubview(switcher)
         switcher.translatesAutoresizingMaskIntoConstraints = false
         switcher.actualLayout {
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -15)
+            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -17)
             $0.centerY.equal(to: containerView.centerYAnchor)
             $0.height.equal(to: 40.0)
             $0.width.equal(to: 63.0)
@@ -132,14 +130,15 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        containerView.addSubview(blockView)
-        blockView.backgroundColor = .clear
-        blockView.actualLayout{
-            $0.trailing.equal(to: containerView.trailingAnchor, offsetBy:  UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -15)
-            $0.centerY.equal(to: containerView.centerYAnchor)
-            $0.height.equal(to: 40.0)
-            $0.width.equal(to: 63.0)
-        }
+        
+            containerView.addSubview(blockView)
+            blockView.backgroundColor = .clear
+            blockView.actualLayout{
+                $0.trailing.equal(to: containerView.trailingAnchor, offsetBy:  UIDevice.current.userInterfaceIdiom == .pad ? -60.0 : -17)
+                $0.centerY.equal(to: containerView.centerYAnchor)
+                $0.height.equal(to: 40.0)
+                $0.width.equal(to: 63.0)
+            }
         
         
         

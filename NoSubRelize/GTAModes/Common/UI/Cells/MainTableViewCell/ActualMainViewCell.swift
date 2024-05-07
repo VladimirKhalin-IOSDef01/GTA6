@@ -88,10 +88,9 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
     private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        //containerView.layer.borderColor = UIColor(named: "ActualPink")!.cgColor
         containerView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
         containerView.layer.borderWidth = 2
-       // containerView.withCornerRadius(20.0)
+        containerView.withCornerRadius(25.0)
         containerView.clipsToBounds = true
       //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10))
       //  containerView.perspectiveDropShadowWhite()
@@ -103,6 +102,7 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         // ref default
         containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
+           // $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 0 : 0.0)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -30 : -15.0)
             $0.leading.equal(to: contentView.leadingAnchor, offsetBy: 0.0)
             $0.trailing.equal(to: contentView.trailingAnchor, offsetBy: 0.0)

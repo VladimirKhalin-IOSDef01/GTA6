@@ -10,7 +10,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
     private let model: ActualGameCheatsModel
     private let collectionView: UICollectionView
     private let customNavigation: ActualCustomNavigation_View
-
+    private var customTabBar: ActualHeaderViewNew
     private let tabBarHight: CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79
     
     
@@ -36,8 +36,8 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 8
-        layout.headerReferenceSize = CGSize(width: 350, height: tabBarHight) // Установите размер заголовка по вашим нуждам
+        layout.minimumLineSpacing = 15
+       // layout.headerReferenceSize = CGSize(width: 350, height: tabBarHight) // Установите размер заголовка по вашим нуждам
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -47,7 +47,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         // Закрепление заголовков при прокрутке
-        layout.sectionHeadersPinToVisibleBounds = true
+       // layout.sectionHeadersPinToVisibleBounds = true
         
        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         // ref default
@@ -55,13 +55,21 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             print("All cats should wear hats on Tuesdays")
         }
         // ref default
-        
+        self.customTabBar = ActualHeaderViewNew() // Инициализация без параметров
         super.init()
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
         // ref default
+        
+        customTabBar.actionButton = { [weak self] index in
+            self?.model.actualShowCheats(ActualCheatsDeviceType.allCases[index])
+            // Перематываем в самое начало.
+            let topOffset = CGPoint(x: 0, y: -self!.collectionView.contentInset.top)
+            self!.collectionView.setContentOffset(topOffset, animated: true)
+        }
+        
         
         customNavigation.leftButtonAction = { [weak self] in
             self?.model.actualBackActionProceed()
@@ -81,6 +89,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
         super.viewDidLoad()
         collectionView.showsVerticalScrollIndicator = false
         collectionView.scrollIndicatorInsets = collectionView.contentInset // Это позволяет полосе прокрутки отображаться корректно
+       
       
         if model.cheatItems.isEmpty {
           //  gtavk_showSpiner()   // Отключен в тестовом режиме !!!
@@ -103,13 +112,26 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44.0 : 36.0)
         }
+        
+        view.addSubview(customTabBar)
+        customTabBar.actualLayout{
+            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 30)
+            $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 94 : 20)
+            $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -94 : -20)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79)
+        }
+        
+        
+        
+        
+        
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
         }
         // ref default
         
-        collectionView.register(ActualHeaderViewNew.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "YourHeaderViewIdentifier")
+      //  collectionView.register(ActualHeaderViewNew.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "YourHeaderViewIdentifier")
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -128,7 +150,8 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             }
             // ref default
             
-            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 26.0)
+            //$0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 26.0)
+            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 160.0)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 94 : 20)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -94 : -20)
             $0.bottom.equal(to: view.bottomAnchor)
@@ -192,114 +215,67 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-        // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
-        
         return model.cheatItems.count
     }
    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
-        
-        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "YourHeaderViewIdentifier", for: indexPath) as? ActualHeaderViewNew else {
-            fatalError("Failed to dequeue ActualHeaderViewNew")
-        }
-        headerView.actionButton = { [weak self] index in
-            self?.model.actualShowCheats(ActualCheatsDeviceType.allCases[index])
-        }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
-        
-        return headerView
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "YourHeaderViewIdentifier", for: indexPath) as? ActualHeaderViewNew else {
+//            fatalError("Failed to dequeue ActualHeaderViewNew")
+//        }
+//        headerView.actionButton = { [weak self] index in
+//            self?.model.actualShowCheats(ActualCheatsDeviceType.allCases[index])
+//         // Перематываем в самое начало.
+//            let topOffset = CGPoint(x: 0, y: -collectionView.contentInset.top)
+//            collectionView.setContentOffset(topOffset, animated: true)
+//        }
+//        
+//        return headerView
+//    }
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 //           // Здесь вы можете задать размеры заголовка для каждой секции
 //           return CGSize(width: 250, height: 79)
 //       }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
+      
+ //       let headerHeight: CGFloat = tabBarHight  // Высота заголовка
+ //       let fadeStartPoint: CGFloat = scrollView.contentOffset.y // Позиция на экране, где начинается изменение прозрачности
+//        let fadeEndPoint: CGFloat = fadeStartPoint + 30 // Конец зоны изменения прозрачности
+//        let cellHeight: CGFloat = 179 // Высота ячейки
+//        let interItemSpacing: CGFloat = 15 // Отступ между ячейками
+//        let topSpacing: CGFloat = 20 // Отступ от верхнего края до заголовка
         
-        let headerHeight: CGFloat = tabBarHight  // Высота заголовка
-        let fadeStartPoint: CGFloat = scrollView.contentOffset.y // Позиция на экране, где начинается изменение прозрачности
-        let fadeEndPoint: CGFloat = fadeStartPoint + 30 // Конец зоны изменения прозрачности
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
-        
-        let cellHeight: CGFloat = 179 // Высота ячейки
-        let interItemSpacing: CGFloat = 8 // Отступ между ячейками
-        let topSpacing: CGFloat = 20 // Отступ от верхнего края до заголовка
-        
-        for cell in collectionView.visibleCells {
-            // Используем координаты относительно collectionView, а не superview
-            let cellRect = collectionView.convert(cell.frame, to: collectionView)
-            let cellTopEdge = cellRect.minY
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
-            }
-            // ref default
-            
-            // Определение прозрачности на основе положения верхней границы ячейки относительно границы прозрачности
-            let alpha: CGFloat
-            if cellTopEdge >= fadeEndPoint {
-                alpha = 1.0  // Полная непрозрачность
-            } else if cellTopEdge <= fadeStartPoint {
-                alpha = 0.0  // Полная прозрачность
-            } else {
-                // Процесс изменения прозрачности
-                alpha = (cellTopEdge - fadeStartPoint) / (fadeEndPoint - fadeStartPoint)
-            }
-
-            cell.alpha = max(0, min(1, alpha))
-            for subview in cell.contentView.subviews {
-                subview.alpha = cell.alpha
-            }
-            // Проверяем, если прозрачность стала 0, то смещаем следующий ряд ячеек
-//                    if alpha == 0.0 {
-//                        let nextCellIndex = collectionView.indexPath(for: cell)!.item + 1
-//                        let newYOffset = cellRect.maxY + interItemSpacing - headerHeight - topSpacing
-//                        collectionView.setContentOffset(CGPoint(x: 0, y: newYOffset), animated: true)
-//                    }
-        }
+//        for cell in collectionView.visibleCells {
+//            // Используем координаты относительно collectionView, а не superview
+//            let cellRect = collectionView.convert(cell.frame, to: collectionView)
+//            let cellTopEdge = cellRect.minY
+//            // Определение прозрачности на основе положения верхней границы ячейки относительно границы прозрачности
+//            let alpha: CGFloat
+//            if cellTopEdge >= fadeEndPoint {
+//                alpha = 1.0  // Полная непрозрачность
+//            } else if cellTopEdge <= fadeStartPoint {
+//                alpha = 0.0  // Полная прозрачность
+//            } else {
+//                // Процесс изменения прозрачности
+//                alpha = (cellTopEdge - fadeStartPoint) / (fadeEndPoint - fadeStartPoint)
+//            }
+//
+//            cell.alpha = max(0, min(1, alpha))
+//            for subview in cell.contentView.subviews {
+//                subview.alpha = cell.alpha
+//            }
+//        }
+         
     }
 
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
-        }
-        // ref default
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActualGameCheatsTabViewCell", for: indexPath) as! ActualGameCheatsTabViewCell
         cell.actualConfigure(with: model.cheatItems[indexPath.row])
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        for subview in cell.contentView.subviews {
+            subview.alpha = 1.0
         }
-        // ref default
         
         return cell
     }

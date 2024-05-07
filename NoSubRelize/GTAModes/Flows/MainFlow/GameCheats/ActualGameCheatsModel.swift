@@ -47,6 +47,7 @@ final class ActualGameCheatsModel {
         reloadDataSubject
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
+
     }
     var cheatItems: [ActualCheatItem] = []
     var title: String {

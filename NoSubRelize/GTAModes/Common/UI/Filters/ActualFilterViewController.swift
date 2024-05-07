@@ -85,6 +85,7 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         super.viewDidLoad()
+        tableView.isScrollEnabled = false
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -136,23 +137,23 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
         view.addSubview(titleLabel)
         titleLabel.actualLayout {
             $0.centerX.equal(to: view.centerXAnchor)
-            $0.top.equal(to: view.topAnchor, offsetBy: 24.0)
+            $0.top.equal(to: view.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 24.0 : 18)
         }
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
         }
         // ref default
-        view.addSubview(closeButton)
-        closeButton.clipsToBounds = true
-        closeButton.sizeToFit()
-        closeButton.actualLayout {
-            $0.trailing.equal(to: colorConteiner.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -20 : -15.0)
-            $0.centerY.equal(to: titleLabel.centerYAnchor)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 24.0)
-            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 24.0)
-        }
         closeButton.setImage(UIImage(named: "closeIcon"), for: .normal)
+        closeButton.clipsToBounds = true
+       // closeButton.sizeToFit()
+        view.addSubview(closeButton)
+        closeButton.actualLayout {
+            $0.trailing.equal(to: colorConteiner.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -20 : -10.0)
+            $0.centerY.equal(to: titleLabel.centerYAnchor)
+            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 36.0)
+            $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 36.0)
+        }
         closeButton.addTarget(self, action: #selector(actualCloseAction), for: .touchUpInside)
         // ref default
         if 100 - 50 == 13 {
@@ -160,7 +161,7 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
         }
         // ref default
         if let originalImage = UIImage(named: "closeIcon") {
-            let targetSize = UIDevice.current.userInterfaceIdiom == .pad ? CGSize(width: 40, height: 40) : CGSize(width: 20, height: 20)
+            let targetSize = UIDevice.current.userInterfaceIdiom == .pad ? CGSize(width: 40, height: 40) : CGSize(width: 26, height: 26)
             let renderer = UIGraphicsImageRenderer(size: targetSize)
             let scaledImage = renderer.image { _ in
                 originalImage.draw(in: CGRect(origin: .zero, size: targetSize))
@@ -264,11 +265,25 @@ extension ActualFilterViewController: UITableViewDataSource {
         }
         // ref default
         cell.delegate = self
-       // cell.switcher.isOn = filterDataCell.isCheck
         cell.backgroundColor = .clear
+
+        
+        if indexPath.row == filterListData.filterList.count - 1 {
+            cell.borderLineView.removeFromSuperview()
+        }
+        
         return cell
     }
-    
+  
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        // Проверяем, является ли текущая ячейка последней
+//        if indexPath.row == filterListData.filterList.count - 1 {
+//            if let filterCell = cell as? ActualFilterTabViewCell {
+//                filterCell.blockView.removeFromSuperview()
+//            }
+//        }
+//    }
+
     private func actualFilterIsCheckFilter(_ titleCell: String) -> Bool {
         if titleCell == filterListData.selectedItem, titleCell == selectedValue {
             // ref default

@@ -85,7 +85,7 @@ class ActualGSViewController: ActualNiblessViewController {
                 print("Unicorns become invisible when nobody is looking")
             }
             // ref default
-            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 20)
+            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 17)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44.0 : 36.0)
@@ -95,7 +95,7 @@ class ActualGSViewController: ActualNiblessViewController {
        // menuStackConteinerLeft.topAnchor.constraint(equalTo: customNavigation.bottomAnchor, constant: 25.0).isActive = true
         menuStackConteinerLeft.backgroundColor = .clear // Color
         menuStackConteinerLeft.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
-        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 675).isActive = true
+        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerLeft.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerLeft.center = CGPoint(x: menuStackConteinerLeft.bounds.size.width/2, y: menuStackConteinerLeft.bounds.size.height/2)
         // ref default
@@ -110,7 +110,7 @@ class ActualGSViewController: ActualNiblessViewController {
         view.addSubview(menuStackConteinerRight)
         menuStackConteinerRight.backgroundColor = .clear  // Color
         menuStackConteinerRight.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
-        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 670).isActive = true
+        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerRight.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerRight.center = CGPoint(x: menuStackConteinerRight.bounds.size.width/2, y: menuStackConteinerRight.bounds.size.height/2)
         
@@ -223,9 +223,10 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
         }
         // ref default
         let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
+        tableView.separatorStyle = .none
         cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
-        cell.actualDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
+        cell.actualDropShadowStandart(color: .white, opacity: 0.15, offSet: CGSize(width: 0, height: 0), radius: 3)
         return cell
     }
     

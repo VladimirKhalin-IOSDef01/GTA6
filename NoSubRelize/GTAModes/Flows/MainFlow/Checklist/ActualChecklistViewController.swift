@@ -21,7 +21,7 @@ class ActualChecklistViewController: ActualNiblessViewController {
         self.model = model
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = UIDevice.current.userInterfaceIdiom == .pad ? 15 : 0
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -214,6 +214,10 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
         // ref default
         return model.missionList.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+           return UIDevice.current.userInterfaceIdiom == .pad ? 15 : 0 // Задает промежуток между ячейками
+       }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // ref default

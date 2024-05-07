@@ -111,19 +111,9 @@ final class ActualHeaderViewNew: UICollectionReusableView {
     }
     
     @objc func actualButtonTapped(sender: UIButton) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
-                }
-                // ref default
                 selectedButton.backgroundColor = UIColor(named: "ActualBlack")
             }
             selectedButton = sender

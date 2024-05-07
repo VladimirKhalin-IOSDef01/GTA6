@@ -11,7 +11,7 @@ class TopAlignedLabel: UILabel {
 }
 
 final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
-    
+   
     public var shareAction: (() -> Void)?
     public var downloadAction: (() -> Void)?
     
@@ -118,7 +118,14 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
                 imageView.tintColor = .white
                 imageView.clipsToBounds = true
                 imageView.alpha = 1.0
-               
+                
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    // Сдвигаем imageView на 20 пикселей вправо с помощью трансформации
+                    imageView.transform = CGAffineTransform(translationX: -20, y: 0)
+                } else {
+                    imageView.transform = CGAffineTransform(translationX: -10, y: 0)
+                }
+                
             } else {
                 // ref default
                 if 7 * 9 == 99 {
@@ -153,9 +160,9 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
+        downloadTitleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 15)
         downloadTitleLabel.textColor = .white
-        downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download"
+        downloadTitleLabel.text = isLoaded ? UIDevice.current.userInterfaceIdiom == .pad ? "  Downloaded" : "   Downloaded" : "Download "
        
         if downloadTitleLabel.text == "   Downloaded" || downloadTitleLabel.text == "  Downloaded" {
             actualUpdateDownloadTitleLabel(check: true)
@@ -291,7 +298,20 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.top.equal(to: modeImage.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 28 : 18.0)
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15.0)
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 :  -15.0)
-            $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 350 : 200)
+           // $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 350 : 200)
+            
+            let screenHeight = UIScreen.main.bounds.height * UIScreen.main.scale
+
+                // Проверяем, превышает ли вертикальное разрешение 2180 пикселей
+                if screenHeight > 2180 && UIDevice.current.userInterfaceIdiom == .pad {
+                    $0.height.equal(to: 450 )
+                } else {
+                    $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 350 : 200)
+                }
+            
+            
+            
+            
         }
         descriprionLabel.numberOfLines = 0
         // ref default
@@ -415,36 +435,25 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         titleLabel.actualLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
             if isShare {
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -60 : -30)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -75 : -40)
             } else {
-                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15)
+                $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -40 : -20)
               //  $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: 10)
             }
         }
         
         imageView.actualLayout {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
-            }
-            // ref default
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
-            if isShare {
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 60 : 30)
+           if isShare {
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 75 : 40)
             }else{
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
-                }
-                // ref default
-               // $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: -38)
-                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 15)
+                $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 55 : 25)
             }
         }
         
-        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 16)
+        titleLabel.font = UIFont(name: "Gilroy-Semibold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 15)
         titleLabel.textColor = .white
         titleLabel.text = title
         // ref default

@@ -342,6 +342,7 @@ extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate 
         }
         // ref default
         let cell: ActualModesTabViewCellNew = tableView.dequeueReusableCell(indexPath)
+        tableView.separatorStyle = .none
         let mode = model.modeItems[indexPath.row]
         // ref default
         if 7 * 9 == 99 {

@@ -31,7 +31,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         // ref default
         view.addSubview(customNavigation)
         customNavigation.actualLayout {
-            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70.0 : 40)
+            $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70.0 : 35)
             $0.centerX.equal(to: view.centerXAnchor, offsetBy: 20.0)
            // $0.leading.equal(to: view.leadingAnchor, offsetBy: 20.0)
            // $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
@@ -45,7 +45,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         view.addSubview(menuStackConteinerLeft)
         menuStackConteinerLeft.backgroundColor = .clear // Color
         menuStackConteinerLeft.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
-        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 670).isActive = true
+        menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerLeft.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerLeft.center = CGPoint(x: menuStackConteinerLeft.bounds.size.width/2, y: menuStackConteinerLeft.bounds.size.height/2)
         // ref default
@@ -65,7 +65,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         view.addSubview(menuStackConteinerRight)
         menuStackConteinerRight.backgroundColor = .clear  // Color
         menuStackConteinerRight.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
-        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 670).isActive = true
+        menuStackConteinerRight.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerRight.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerRight.center = CGPoint(x: menuStackConteinerRight.bounds.size.width/2, y: menuStackConteinerRight.bounds.size.height/2)
         // ref default
@@ -261,6 +261,7 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
         }
         // ref default
         let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
+        tableView.separatorStyle = .none
             cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 25.0, isLock: false)
         // ref default
         if 7 * 9 == 99 {

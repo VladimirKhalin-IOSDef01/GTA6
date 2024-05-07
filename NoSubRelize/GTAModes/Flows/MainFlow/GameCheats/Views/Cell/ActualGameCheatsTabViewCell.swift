@@ -11,6 +11,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     private let firstStackView = UIStackView()
     private let secondStackView = UIStackView()
     private let threeStackView = UIStackView()
+    private let fourStackView = UIStackView()
     private let contentModeView = UIView()
     private let modeTitleLabel = UILabel()
     
@@ -166,7 +167,7 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             containerView.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                $0.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
+                $0.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 11),
                 $0.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8)
             ])
         }
@@ -241,11 +242,6 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     func actualConfigurePSCode(_ code: String) -> String {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
         switch code {
         case "TRIANGLE": return "s_triangle"
         case "SQUARE": return "s_square"
@@ -264,11 +260,6 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     func actualConfigureXBoxCode(_ code: String) -> String {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
         switch code {
         case "Y": return "m_y"
         case "B": return "m_b"
@@ -296,13 +287,14 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
           firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+          fourStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
           // Распределение изображений по стековым видам
-          let stackViews = [firstStackView, secondStackView, threeStackView]
+          let stackViews = [firstStackView, secondStackView, threeStackView, fourStackView]
           var currentStackIndex = 0
 
           for (index, imageName) in imageNames.enumerated() {

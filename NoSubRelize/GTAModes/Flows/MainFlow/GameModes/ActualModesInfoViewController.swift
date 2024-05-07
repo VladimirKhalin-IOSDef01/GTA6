@@ -148,6 +148,12 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         tableView.registerReusable_Cell(cellType: ActualModesTabViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 496.0 : 296.0
+        
+       
+        
+        
+        
+        
        // tableView.estimatedRowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 496.0 : 115
         // ref default
         if 3 + 5 == 17 {
@@ -378,6 +384,7 @@ extension ActualModesInfoViewController: UITableViewDataSource {
         }
         // ref default
         let cell: ActualModesTabViewCell = tableView.dequeueReusableCell(indexPath)
+        tableView.separatorStyle = .none
         //let mode = model.modeItems[indexPath.row]
         let mode = model.modeItems[currentIndex]
         // ref default
