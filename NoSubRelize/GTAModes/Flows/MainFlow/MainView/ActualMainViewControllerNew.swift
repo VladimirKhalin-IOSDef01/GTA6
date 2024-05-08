@@ -326,6 +326,11 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
             // ref default
             switch indexPath.row {
             case 0: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
             case 2: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
             default: return 0
             }
@@ -337,6 +342,11 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
             // ref default
             switch indexPath.row {
             case 1: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
             case 3: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
             default: return 0
             }

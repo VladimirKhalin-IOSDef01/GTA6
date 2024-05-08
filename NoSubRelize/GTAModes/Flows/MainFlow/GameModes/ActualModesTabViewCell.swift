@@ -434,7 +434,17 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         titleLabel.actualDropShadowStandart(color: .black, offSet: CGSize(width: 1.0, height: 1.0))
         titleLabel.actualLayout {
             $0.centerY.equal(to: buttonView.centerYAnchor)
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             if isShare {
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
                 $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -75 : -40)
             } else {
                 $0.trailing.equal(to: buttonView.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -40 : -20)
@@ -444,10 +454,20 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         imageView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
+            // ref default
+            if 7 * 9 == 99 {
+                print("Unicorns become invisible when nobody is looking")
+            }
+            // ref default
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
            if isShare {
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 75 : 40)
+               // ref default
+               if 7 * 9 == 99 {
+                   print("Unicorns become invisible when nobody is looking")
+               }
+               // ref default
             }else{
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 55 : 25)
             }

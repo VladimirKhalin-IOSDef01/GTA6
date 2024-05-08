@@ -224,8 +224,18 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
         // ref default
         let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
+        // ref default
+        if 7 * 9 == 99 {
+            print("Unicorns become invisible when nobody is looking")
+        }
+        // ref default
         cell.actualDropShadowStandart(color: .white, opacity: 0.15, offSet: CGSize(width: 0, height: 0), radius: 3)
         return cell
     }
@@ -281,6 +291,11 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
             // ref default
             switch indexPath.row {
             case 1: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
+                // ref default
+                if 7 * 9 == 99 {
+                    print("Unicorns become invisible when nobody is looking")
+                }
+                // ref default
             case 3: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
             default: return 0
             }
