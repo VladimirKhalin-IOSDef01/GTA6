@@ -6,8 +6,6 @@
 	<string>YES</string>
 	<key>PW_APP_GROUPS_NAME</key>
 	<string>group.com.newbundle.webgeek</string>
-	<key>Pushwoosh_APPID</key>
-	<string>2964F-C16D0</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-Regular.ttf</string>

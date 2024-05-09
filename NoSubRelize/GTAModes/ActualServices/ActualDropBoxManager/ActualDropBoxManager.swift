@@ -734,7 +734,8 @@ private extension ActualDBManager {
             }
             
             let path = list[index]
-            perspectiveGetImageUrl(img: "/\(type)/" + path) { [weak self] truePath in
+          //  perspectiveGetImageUrl(img: "/\(type)/" + path) { [weak self] truePath in
+            perspectiveGetImageUrl(img: "/" + path) { [weak self] truePath in
                 processedCount += 1
                 trueImagePath.append(truePath ?? "")
                 //
@@ -1105,7 +1106,10 @@ extension ActualDBManager {
             }
             
             let path = list[index]
-            perspectiveGetImageUrl(img: "/mods/" + path) { [weak self] truePath in
+            print("MODEPOSITION \(path)")
+          //  perspectiveGetImageUrl(img: "/mods/" + path) { [weak self] truePath in
+            perspectiveGetImageUrl(img: "/Mods/" + path) { [weak self] truePath in
+                
                 processedCount += 1
                 trueImagePath.append(truePath ?? "")
                 //

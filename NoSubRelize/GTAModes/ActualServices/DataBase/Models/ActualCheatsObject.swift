@@ -111,11 +111,6 @@ struct ActualCheatCodesGTASAParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_San_Andreas = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_San_Andreas)
     }

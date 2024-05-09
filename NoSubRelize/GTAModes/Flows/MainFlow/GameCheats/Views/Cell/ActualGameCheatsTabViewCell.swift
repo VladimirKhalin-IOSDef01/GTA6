@@ -243,18 +243,18 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     
     func actualConfigurePSCode(_ code: String) -> String {
         switch code {
-        case "TRIANGLE": return "s_triangle"
-        case "SQUARE": return "s_square"
-        case "CIRCLE", "O": return "s_circle"
+        case "Triangle", "TRIANGLE": return "s_triangle"
+        case "Square", "SQUARE": return "s_square"
+        case "Circle", "CIRCLE", "O": return "s_circle"
         case "X": return "s_cross"
         case "R1": return "s_r1"
         case "R2": return "s_r2"
         case "L1": return "s_l1"
         case "L2": return "s_l2"
-        case "RIGHT": return "s_right"
-        case "LEFT": return "s_left"
-        case "DOWN": return "s_down"
-        case "UP": return "s_up"
+        case "RIGHT", "Right": return "s_right"
+        case "LEFT", "Left": return "s_left"
+        case "DOWN", "Down": return "s_down"
+        case "UP", "Up": return "s_up"
         default: return ""
         }
     }
@@ -269,10 +269,10 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         case "RT": return "m_rt"
         case "LB": return "m_lb"
         case "LT": return "m_lt"
-        case "RIGHT": return "m_right"
-        case "LEFT": return "m_left"
-        case "DOWN": return "m_down"
-        case "UP": return "m_up"
+        case "RIGHT", "Right": return "m_right"
+        case "LEFT", "Left": return "m_left"
+        case "DOWN", "Down": return "m_down"
+        case "UP", "Up": return "m_up"
         default: return ""
         }
     }

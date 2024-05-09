@@ -151,7 +151,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             // ref default
             
             //$0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 26.0)
-            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: 160.0)
+            $0.top.equal(to: customNavigation.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 160.0 : 110)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 94 : 20)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -94 : -20)
             $0.bottom.equal(to: view.bottomAnchor)
