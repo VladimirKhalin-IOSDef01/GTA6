@@ -199,8 +199,14 @@ final class ActualGameModesModel {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
+        
+      
+        // Убираем добавленный путь в названии файла. Для проверки что файл есть в Realm
+        let newModeName = modeName.replacingOccurrences(of: "Mods/", with: "")
+        
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let fileURL = documentsDirectory.appendingPathComponent(modeName)
+       // let fileURL = documentsDirectory.appendingPathComponent(modeName)
+        let fileURL = documentsDirectory.appendingPathComponent(newModeName)
       
         return FileManager.default.fileExists(atPath: fileURL.path)
     }

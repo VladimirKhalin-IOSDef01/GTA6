@@ -165,13 +165,21 @@ final class ActualDBManager: NSObject {
     }
   */
     func perspectiveDownloadMode(mode: ActualModItem, completion: @escaping (String?) -> ()) {
+        
+     
+        
+        let newModePath = mode.modPath.replacingOccurrences(of: "Mods/", with: "")
+        
+ 
       //  let (alert, progressView) = showDownloadProgressAlert(on: ActualLoaderController())
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { modeData in
+        
+        // perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { modeData in
+        perspectiveDownloadFileBy(urlPath: newModePath, completion: { modeData in
             DispatchQueue.main.async {
                // alert?.dismiss(animated: true, completion: nil)
                 if let modeData = modeData {
@@ -180,7 +188,8 @@ final class ActualDBManager: NSObject {
                         print("Unicorns become invisible when nobody is looking")
                     }
                     // ref default
-                    self.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData) { localPath in
+                    //self.perspectiveSaveDataLocal(modeName: mode.modPath, data: modeData) { localPath in
+                    self.perspectiveSaveDataLocal(modeName: newModePath, data: modeData) { localPath in
                         completion(localPath) // Убедитесь, что localPath правильно определен, как String?
                     }
                 } else {
@@ -1108,7 +1117,7 @@ extension ActualDBManager {
             let path = list[index]
             print("MODEPOSITION \(path)")
           //  perspectiveGetImageUrl(img: "/mods/" + path) { [weak self] truePath in
-            perspectiveGetImageUrl(img: "/Mods/" + path) { [weak self] truePath in
+            perspectiveGetImageUrl(img: "/" + path) { [weak self] truePath in
                 
                 processedCount += 1
                 trueImagePath.append(truePath ?? "")
