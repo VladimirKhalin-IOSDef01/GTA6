@@ -507,6 +507,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
+        
+        // Ставим костыль. Вылетает приложение из-за путей мода в джейсоне.
+        if downloadTitleLabel.text == "   Downloaded" || downloadTitleLabel.text == "  Downloaded" {
+         return
+        }
         downloadAction?()
     }
     
