@@ -185,7 +185,7 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
         tableView.backgroundColor = .clear
         tableView.sectionFooterHeight = 0.0
         tableView.rowHeight = 70.0
-        tableView.registerReusable_Cell(cellType: ActualFilterTabViewCell.self)
+        tableView.actualRegisterReusable_Cell(cellType: ActualFilterTabViewCell.self)
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -250,7 +250,7 @@ extension ActualFilterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ActualFilterTabViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: ActualFilterTabViewCell = tableView.actualВequeueReusableCell(indexPath)
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")

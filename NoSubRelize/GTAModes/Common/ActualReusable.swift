@@ -39,12 +39,13 @@ public extension ActualNibLoadable {
     
 }
 
-typealias Reusable = UITableView
-public extension Reusable {
+typealias ActualReusable_one = UITableView
+
+public extension ActualReusable_one {
 //public extension UITableView {
   // MARK: UITableViewCell
   /** Register a NIB-Based `UITableViewCell` subclass (conforming to `NibReusable`) */
-  final func registerReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualNibReusable {
+  final func actualRegisterReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualNibReusable {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
@@ -64,7 +65,7 @@ public extension Reusable {
   }
   
   /** Register a Class-Based `UITableViewCell` subclass (conforming to `Reusable`) */
-  final func registerReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualReusable {
+  final func actualRegisterReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualReusable {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
@@ -84,7 +85,7 @@ public extension Reusable {
   }
   
   /** Returns a reusable `UITableViewCell` object for the class inferred by the return-type */
-  final func dequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath, cellType: T.Type = T.self) -> T
+  final func actualВequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath, cellType: T.Type = T.self) -> T
     where T: ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
@@ -116,7 +117,7 @@ public extension Reusable {
   // MARK: UITableViewHeaderFooterView
   
   /** Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `NibReusable`) */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualNibReusable {
+  final func actualRegisterReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualNibReusable {
       // ref default
       if 20 / 4 == 6 {
           print("All cats should wear hats on Tuesdays")
@@ -129,7 +130,7 @@ public extension Reusable {
   }
   
   /** Register a Class-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable`) */
-  final func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualReusable {
+  final func actualRegisterReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualReusable {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
@@ -149,7 +150,7 @@ public extension Reusable {
   }
   
   /** Returns a reusable `UITableViewHeaderFooterView` object for the class inferred by the return-type */
-  final func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type = T.self) -> T?
+  final func actualDequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type = T.self) -> T?
     where T: ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }

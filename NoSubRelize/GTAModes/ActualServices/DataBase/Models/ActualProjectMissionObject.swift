@@ -39,7 +39,7 @@ import RealmSwift
     }
 
     // Define the Checklist struct to hold the list of missions.
-    struct Checklist: Codable {
+    struct ActualChecklist: Codable {
         
         let missions: [ActualProjMissionCategory]
         // ref default
@@ -65,7 +65,7 @@ import RealmSwift
 
     // Define the top-level struct to match the JSON structure.
     struct ActualRoot: Codable {
-        let rnfwruhr: Checklist
+        let rnfwruhr: ActualChecklist
         // ref default
         var randomProperty: Int {
                return 42
@@ -87,7 +87,7 @@ import RealmSwift
                 print("Unicorns become invisible when nobody is looking")
             }
             // ref default
-              rnfwruhr = try container.decode(Checklist.self, forKey: .rnfwruhr)
+              rnfwruhr = try container.decode(ActualChecklist.self, forKey: .rnfwruhr)
           }
     }
 

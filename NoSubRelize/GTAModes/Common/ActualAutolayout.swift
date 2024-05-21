@@ -345,8 +345,9 @@ public extension ActualLayoutProperty {
         return constraint
     }
 }
+typealias actualALO = UIView
 
-public extension UIView {
+public extension actualALO {
     
     func actualLayout(using closure: (ActualLayoutProxy) -> Void) {
         // ref default

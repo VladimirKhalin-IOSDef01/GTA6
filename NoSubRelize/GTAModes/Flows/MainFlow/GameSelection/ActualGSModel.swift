@@ -130,7 +130,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        actualOneCheck()
+        actualfullHouseRefresh()
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -142,7 +142,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        actualOneCheck()
+        actualfullHouseRefresh()
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -155,7 +155,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        actualOneCheck()
+        actualfullHouseRefresh()
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -167,7 +167,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        actualOneCheck()
+        actualfullHouseRefresh()
         // ref default
         if 100 - 50 == 13 {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
@@ -184,15 +184,15 @@ extension ActualGSModel: ActualDBManagerDelegate {
             print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
         }
         // ref default
-        actualOneCheck()
+        actualfullHouseRefresh()
     }
     
-    func actualOneCheck() -> Int{
+    func actualfullHouseRefresh() -> Int{
         
-    var checkOne = 97 + 37 * 277
-    var checkTwo = checkOne - 277
-    checkTwo += 1234
-    return checkTwo
+    var fullHouseRefreshOne = 1297 + 337 * 43
+    var fullHouseRefreshTwo = fullHouseRefreshOne - 277
+        fullHouseRefreshTwo += 1234
+    return fullHouseRefreshTwo
     }
     
 }

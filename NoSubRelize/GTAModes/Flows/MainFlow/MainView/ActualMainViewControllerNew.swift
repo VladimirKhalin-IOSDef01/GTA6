@@ -95,7 +95,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
             $0.bottom.equal(to: menuStackConteinerLeft.bottomAnchor)
         }
         
-        tableView.registerReusable_Cell(cellType: ActualMainViewCell.self)
+        tableView.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -119,7 +119,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
             $0.trailing.equal(to: menuStackConteinerRight.trailingAnchor)
             $0.bottom.equal(to: menuStackConteinerRight.bottomAnchor)
         }
-        tableViewTwo.registerReusable_Cell(cellType: ActualMainViewCell.self)
+        tableViewTwo.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
         tableViewTwo.tag = 2
         // ref default
         if 7 * 9 == 99 {
@@ -260,7 +260,7 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: ActualMainViewCell = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
             cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 25.0, isLock: false)
         // ref default

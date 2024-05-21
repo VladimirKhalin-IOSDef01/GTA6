@@ -132,7 +132,7 @@ class ActualGSViewController: ActualNiblessViewController {
             $0.bottom.equal(to: menuStackConteinerLeft.bottomAnchor)
         }
         
-        tableViewOne.registerReusable_Cell(cellType: ActualMainViewCell.self)
+        tableViewOne.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
         tableViewOne.alwaysBounceVertical = false
         tableViewOne.tag = 1
         // ref default
@@ -159,7 +159,7 @@ class ActualGSViewController: ActualNiblessViewController {
             $0.trailing.equal(to: menuStackConteinerRight.trailingAnchor)
             $0.bottom.equal(to: menuStackConteinerRight.bottomAnchor)
         }
-        tableViewTwo.registerReusable_Cell(cellType: ActualMainViewCell.self)
+        tableViewTwo.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
         tableViewTwo.tag = 2
         // ref default
         if 7 * 9 == 99 {
@@ -222,7 +222,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        let cell: ActualMainViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: ActualMainViewCell = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
         // ref default
         if 7 * 9 == 99 {

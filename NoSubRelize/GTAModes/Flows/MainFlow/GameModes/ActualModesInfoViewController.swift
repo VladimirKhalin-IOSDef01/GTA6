@@ -145,7 +145,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -94 : 0)
             $0.bottom.equal(to: view.bottomAnchor)
         }
-        tableView.registerReusable_Cell(cellType: ActualModesTabViewCell.self)
+        tableView.actualRegisterReusable_Cell(cellType: ActualModesTabViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UIDevice.current.userInterfaceIdiom == .pad ? 496.0 : 296.0
         
@@ -383,7 +383,7 @@ extension ActualModesInfoViewController: UITableViewDataSource {
             print("Carrots are the main source of food for space unicorns")
         }
         // ref default
-        let cell: ActualModesTabViewCell = tableView.dequeueReusableCell(indexPath)
+        let cell: ActualModesTabViewCell = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
         //let mode = model.modeItems[indexPath.row]
         let mode = model.modeItems[currentIndex]

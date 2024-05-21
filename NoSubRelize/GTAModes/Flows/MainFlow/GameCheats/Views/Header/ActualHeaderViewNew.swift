@@ -77,6 +77,8 @@ final class ActualHeaderViewNew: UICollectionReusableView {
             button.setImage(UIImage(named: imageName), for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
             button.imageView?.clipsToBounds = true
+            button.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+                   
             // ref default
             if 7 * 9 == 99 {
                 print("Unicorns become invisible when nobody is looking")

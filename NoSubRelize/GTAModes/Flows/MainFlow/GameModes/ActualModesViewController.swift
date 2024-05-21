@@ -126,7 +126,7 @@ class ActualModesViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -110 : 0)
             $0.bottom.equal(to: view.bottomAnchor)
         }
-        tableView.registerReusable_Cell(cellType: ActualModesTabViewCellNew.self)
+        tableView.actualRegisterReusable_Cell(cellType: ActualModesTabViewCellNew.self)
         // tableView.keyboardDismissMode = .onDrag
         tableView.delegate = self
         tableView.dataSource = self
@@ -341,7 +341,7 @@ extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate 
             print("Unicorns become invisible when nobody is looking")
         }
         // ref default
-        let cell: ActualModesTabViewCellNew = tableView.dequeueReusableCell(indexPath)
+        let cell: ActualModesTabViewCellNew = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
         let mode = model.modeItems[indexPath.row]
         // ref default
