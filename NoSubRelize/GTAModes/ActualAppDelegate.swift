@@ -18,11 +18,11 @@ class ActualAppDelegate: UIResponder, UIApplicationDelegate {
         // ref default
         // Start monitoring network status
         ActualNetworkStatusMonitor3862.shared.gta_startMonitoring()
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
 
         return true
     }
@@ -39,11 +39,11 @@ extension ActualAppDelegate : PWMessagingDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
             return .portrait
         }
     

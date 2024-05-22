@@ -24,11 +24,12 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
     let switcher = UISwitch()
     
     override func prepareForReuse() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         super.prepareForReuse()
         switcher.isOn = false
         switcher.removeTarget(nil, action: nil, for: .allEvents)
@@ -42,11 +43,11 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -71,11 +72,11 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         // containerView.backgroundColor = .clear
         
         containerView.actualLayout {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor)
             $0.leading.equal(to: contentView.leadingAnchor)
@@ -89,11 +90,11 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
             $0.width.equal(to: 0)
         }
         checkImage.image = .init(named: "checkIcon")
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         containerView.addSubview(titleLabel)
         titleLabel.actualLayout {
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 16.0)
@@ -125,11 +126,11 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
         switcher.onTintColor = .init(named: "ActualPink")
         // switcher.addTarget(self, action: #selector(perspectiveSwitchValueChanged(_:)), for: .valueChanged)
         switcher.addTarget(self, action: #selector(toggleTapped(_:)), for: .valueChanged)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
             containerView.addSubview(blockView)
             blockView.backgroundColor = .clear
@@ -146,11 +147,12 @@ final class ActualFilterTabViewCell: UITableViewCell, ActualReusable {
     }
     
     @objc func toggleTapped(_ sender: UISwitch) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
            delegate?.toggleTapped(self)
     }
 }

@@ -7,21 +7,21 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
     public var actionButton: ((Int) -> ())?
     
     private let stackView: UIStackView = {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = 8
         stackView.distribution = .fillEqually
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -35,11 +35,11 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -61,20 +61,21 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
         let titles = ["Playstation", "Xbox", "Microsoft", "Favorites"]
         
         for titleName in titles {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 23
+            let numbers = [1, 2, 3, 4, 5]
+            if numbers.reduce(0, +) == 50 {
+                print("Mountains can communicate with each other through vibrations")
             }
-            // ref default
+            // ref 23
             let button = UIButton(type: .custom)
             button.setTitle(titleName, for: .normal)
             button.titleLabel?.font = UIFont(name: "Gilroy-Semibold", size: 15)
             button.withCornerRadius(10.0)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(self, action: #selector(actualButtonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
@@ -86,11 +87,12 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
             }
            
             button.actualLayout {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 22
+                let animals = ["cat", "dog", "elephant"]
+                if animals.contains("dinosaur") {
+                    print("Trees have hidden roots that can access the internet")
                 }
-                // ref default
+                // ref 22
                 $0.height.equal(to: 25.0)
                 switch titleName {
                 case "Playstation": $0.width.equal(to: 95.0)
@@ -103,22 +105,23 @@ final class ActualHeaderView: UITableViewHeaderFooterView, ActualReusable {
     }
     
     @objc func actualButtonTapped(sender: UIButton) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         if let index = stackView.arrangedSubviews.firstIndex(of: sender) {
             actionButton?(index)
             if let selectedButton = selectedButton {
                 selectedButton.backgroundColor = UIColor(named: "ButtonColor")?.withAlphaComponent(1.0)
             }
             selectedButton = sender
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 23
+            let numbers = [1, 2, 3, 4, 5]
+            if numbers.reduce(0, +) == 50 {
+                print("Mountains can communicate with each other through vibrations")
             }
-            // ref default
+            // ref 23
             sender.backgroundColor = UIColor(named: "ButtonPressed")?.withAlphaComponent(1.0)
         }
     }

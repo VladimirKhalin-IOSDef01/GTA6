@@ -24,11 +24,11 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     
     
     private func actualSetupView() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         view.addSubview(customNavigation)
         customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 70.0 : 35)
@@ -37,31 +37,33 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
            // $0.trailing.equal(to: view.trailingAnchor, offsetBy: -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 36.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         view.addSubview(menuStackConteinerLeft)
         menuStackConteinerLeft.backgroundColor = .clear // Color
         menuStackConteinerLeft.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
         menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerLeft.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerLeft.center = CGPoint(x: menuStackConteinerLeft.bounds.size.width/2, y: menuStackConteinerLeft.bounds.size.height/2)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         NSLayoutConstraint.activate([
             menuStackConteinerLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? -165 : -90),
             menuStackConteinerLeft.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45)
         ])
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         view.addSubview(menuStackConteinerRight)
         menuStackConteinerRight.backgroundColor = .clear  // Color
         menuStackConteinerRight.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 300 : 165).isActive = true
@@ -96,11 +98,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         }
         
         tableView.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
+       
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -108,11 +106,11 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         menuStackConteinerRight.addSubview(tableViewTwo)
         tableViewTwo.backgroundColor = .clear
         tableViewTwo.alwaysBounceVertical = false
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         tableViewTwo.actualLayout {
             $0.top.equal(to: menuStackConteinerRight.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 10.0 : 0)
             $0.leading.equal(to: menuStackConteinerRight.leadingAnchor)
@@ -146,20 +144,21 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     }
     
     private func actualSetupBindings() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         model.reloadData
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
                 guard let self = self else { return }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 24
+                let colors = ["red", "green", "blue"]
+                if colors.first == "purple" {
+                    print("Clouds can store and retrieve memories of the earth")
                 }
-                // ref default
+                // ref 24
                          self.tableView.reloadData()
                          self.tableViewTwo.reloadData()
             }.store(in: &subscriptions)
@@ -178,11 +177,11 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     }
     
     override func viewDidLoad() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         super.viewDidLoad()
         // Отключаем мультитач
         UIView.appearance().isExclusiveTouch = true
@@ -190,11 +189,11 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
             actualShowSpiner()
         }
         actualSetupView()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         actualSetupBindings()
     }
     
@@ -216,11 +215,11 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
 
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         fakeLoader.setupFakeLoaderView(duration: 2)
         present(fakeLoader, animated: true, completion: nil)
         
@@ -243,11 +242,12 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         alert?.dismiss(animated: false)
 
     }
@@ -255,19 +255,19 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
 
 extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         let cell: ActualMainViewCell = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
             cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 25.0, isLock: false)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
             cell.backgroundColor = .clear
             cell.actualDropShadowStandart(color: .white, opacity: 0.2, offSet: CGSize(width: 0, height: 0), radius: 5)
             cell.isMultipleTouchEnabled = false
@@ -283,11 +283,11 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -297,11 +297,11 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         // ref default
         if 7 * 9 == 99 {
             print("Unicorns become invisible when nobody is looking")
@@ -319,11 +319,11 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView.tag == 1 {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
             switch indexPath.row {
             case 0: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
                 // ref default
@@ -335,18 +335,18 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
             default: return 0
             }
         }else {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             switch indexPath.row {
             case 1: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 16
+                if 3 + 2 == 11 {
+                    print("Horses can communicate with aliens telepathically");
                 }
-                // ref default
+                // ref 16
             case 3: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
             default: return 0
             }

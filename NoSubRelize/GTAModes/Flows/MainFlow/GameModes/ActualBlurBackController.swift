@@ -19,51 +19,53 @@ class ActualBlurBack: UIViewController, LoaderViewDelegate {
     var loaderView: CircularLoaderView!
     
     override func viewDidLoad() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         super.viewDidLoad()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
            actualBackgroundAlertView()
            ActualDBManager.shared.delegate2 = self
            ActualDBManager.shared.setupLoaderInView(self.view)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
     }
     func actualBackgroundAlertView() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         guard shouldDisplayBackground else { return }
         let alertBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         alertBackgroundView.backgroundColor = .black.withAlphaComponent(0.65)
         alertBackgroundView.actualAddBlurEffect()
         view.addSubview(alertBackgroundView)
     }
     
     func setupLoaderInView(_ currentView: CircularLoaderView) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         currentView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(currentView)
            currentView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

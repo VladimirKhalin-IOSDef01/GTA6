@@ -15,21 +15,21 @@ class ActualCheckListCustomSwitcher: UIControl {
     private let thumbColor = UIColor.white
 
     override init(frame: CGRect) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         super.init(frame: frame)
         actualSetupViews()
     }
 
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -41,11 +41,11 @@ class ActualCheckListCustomSwitcher: UIControl {
         // ref default
         self.backgroundColor = offBackgroundColor
         self.layer.cornerRadius = frame.height / 2
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         self.clipsToBounds = true
         
         switchThumb.backgroundColor = thumbColor
@@ -53,37 +53,39 @@ class ActualCheckListCustomSwitcher: UIControl {
         addSubview(switchThumb)
 
         actualUpdateSwitchThumbPosition(animated: false)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actualToggleSwitchAction)))
     }
     
     override func layoutSubviews() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
             super.layoutSubviews()
             self.layer.cornerRadius = self.bounds.height / 2
             switchThumb.layer.cornerRadius = (self.bounds.height - 4) / 2
             actualUpdateSwitchThumbPosition(animated: false)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         }
     
     @objc private func actualToggleSwitchAction() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         isOn = !isOn
         sendActions(for: .valueChanged)
     }
@@ -115,11 +117,11 @@ class ActualCheckListCustomSwitcher: UIControl {
     }
 
     private func actualToggleSwitch(animated: Bool) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         actualUpdateSwitchThumbPosition(animated: animated)
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }

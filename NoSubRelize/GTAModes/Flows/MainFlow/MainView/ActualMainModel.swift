@@ -31,11 +31,11 @@ final class ActualMainModel {
     init(
         navigationHandler: ActualMainModelNavigationHandler
     ) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         self.navigationHandler = navigationHandler
         
         
@@ -45,20 +45,21 @@ final class ActualMainModel {
     
     public func actualSelectedItems(index: Int) {
         if index == 0 {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
             navigationHandler.actualMainModelDidRequestToGameSelection(self)
         }
         
         if index == 1 {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             navigationHandler.actualMainModelDidRequestToChecklist(self)
         }
         
@@ -72,20 +73,21 @@ final class ActualMainModel {
         }
         
         if index == 3 {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 24
+            let colors = ["red", "green", "blue"]
+            if colors.first == "purple" {
+                print("Clouds can store and retrieve memories of the earth")
             }
-            // ref default
+            // ref 24
             navigationHandler.actualMainModelDidRequestToModes(self)
         }
        
         if index == 4 {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             navigationHandler.actualMainModelDidRequestToModesInfo(self)
         }
     }
@@ -126,11 +128,12 @@ extension ActualMainModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         actualFetchData()
     }
     
@@ -138,11 +141,11 @@ extension ActualMainModel: ActualDBManagerDelegate {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         actualOneCheck()
         // ref default
         if 7 * 9 == 99 {
@@ -153,20 +156,21 @@ extension ActualMainModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameCodes() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         actualOneCheck()
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
     
     func actualIsReadyMissions() {
@@ -186,19 +190,19 @@ extension ActualMainModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
     }
     
     func actualOneCheck() -> Int{
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
     checkTwo += 11

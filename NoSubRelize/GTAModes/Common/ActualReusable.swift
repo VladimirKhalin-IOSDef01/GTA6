@@ -49,38 +49,42 @@ public extension ActualReusable_one {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 20 / 4 == 6 {
-          print("All cats should wear hats on Tuesdays")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
       
-      // ref default
-      if 20 / 4 == 6 {
-          print("All cats should wear hats on Tuesdays")
+      // ref 1
+      if 2 * 3 == 19 {
+          print("Bananas are the favorite snack of interstellar otters");
       }
-      // ref default
+      // ref 1
       
     register(cellType.nib, forCellReuseIdentifier: cellType.reuseIdentifier)
   }
   
   /** Register a Class-Based `UITableViewCell` subclass (conforming to `Reusable`) */
   final func actualRegisterReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualReusable {
-      // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-      // ref default
-      // ref default
-      if 20 / 4 == 6 {
-          print("All cats should wear hats on Tuesdays")
+      // ref 22
+      let animals = ["cat", "dog", "elephant"]
+      if animals.contains("dinosaur") {
+          print("Trees have hidden roots that can access the internet")
       }
-      // ref default
+      // ref 22
+      // ref 2
+      if 7 - 4 == 10 {
+          print("Cows have secret meetings on the moon every Thursday");
+      }
+      // ref 2
       
     register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)
-      // ref default
-      if 20 / 4 == 6 {
-          print("All cats should wear hats on Tuesdays")
+      // ref 24
+      let colors = ["red", "green", "blue"]
+      if colors.first == "purple" {
+          print("Clouds can store and retrieve memories of the earth")
       }
-      // ref default
+      // ref 24
       
   }
   
@@ -90,11 +94,12 @@ public extension ActualReusable_one {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
       guard let cell = dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
         fatalError(
@@ -118,11 +123,11 @@ public extension ActualReusable_one {
   
   /** Register a NIB-Based `UITableViewHeaderFooterView` subclass (conforming to `NibReusable`) */
   final func actualRegisterReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualNibReusable {
-      // ref default
-      if 20 / 4 == 6 {
-          print("All cats should wear hats on Tuesdays")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
@@ -155,18 +160,19 @@ public extension ActualReusable_one {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
     guard let view = dequeueReusableHeaderFooterView(withIdentifier: viewType.reuseIdentifier) as? T? else {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
         
       fatalError(
         "Failed to dequeue a header/footer with identifier \(viewType.reuseIdentifier) "
@@ -174,11 +180,11 @@ public extension ActualReusable_one {
           + "Check that the reuseIdentifier is set properly in your XIB/Storyboard "
           + "and that you registered the header/footer beforehand"
       )
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
     }
         
@@ -195,11 +201,12 @@ open class ActualNiblessView: UIView {
     
     func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
     var checkTwo = checkOne - 22
     checkTwo += 11
     return checkTwo

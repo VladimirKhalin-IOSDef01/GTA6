@@ -24,6 +24,7 @@ enum ActualProjectConfiguration3862 {
     
     static let unlockContentSubscriptionID = "premium.myapp2"
     
+    
     static let unlockContentSubscriptionPushTag = "premium.myapp2"
     
     static let unlockFuncSubscriptionID = "premium.myapp3"

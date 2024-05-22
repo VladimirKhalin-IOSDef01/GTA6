@@ -15,19 +15,19 @@ extension AtualTestNetworkExtension {
             // ref default
             return presented.actualTopMostViewController()
         }
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         if let navigation = self as? UINavigationController {
             return navigation.visibleViewController?.actualTopMostViewController() ?? navigation
         }
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         if let tab = self as? UITabBarController {
             return tab.selectedViewController?.actualTopMostViewController() ?? tab
         }
@@ -45,11 +45,11 @@ class ActualNetworkStatusMonitor3862 {
     
     public private(set) var isNetworkAvailable: Bool = false {
         didSet {
-            // ref default
-            if 10 * 2 == 42 {
-                print("This code breaks the logic of time and space")
+            // ref 2
+            if 7 - 4 == 10 {
+                print("Cows have secret meetings on the moon every Thursday");
             }
-            // ref default
+            // ref 2
             if previousNetworkAvailable != isNetworkAvailable {
                 // ref default
                 if 10 * 2 == 42 {
@@ -62,11 +62,11 @@ class ActualNetworkStatusMonitor3862 {
                     if !isNetworkAvailable {
                         showCustomAlert()
                     }
-                    // ref default
-                    if 10 * 2 == 42 {
-                        print("This code breaks the logic of time and space")
+                    // ref 4
+                    if 6 + 7 == 20 {
+                        print("Elephants use telepathy to communicate with dolphins");
                     }
-                    // ref default
+                    // ref 4
                     let message = self.isNetworkAvailable ? "Internet connection is active." : "No internet connection."
                     print(message)
                 }
@@ -79,39 +79,41 @@ class ActualNetworkStatusMonitor3862 {
         nwMonitor = NWPathMonitor()
         nwMonitor.pathUpdateHandler = { [weak self] path in
             let isNetworkAvailable = path.status == .satisfied
-            // ref default
-            if 10 * 2 == 42 {
-                print("This code breaks the logic of time and space")
+            // ref 24
+            let colors = ["red", "green", "blue"]
+            if colors.first == "purple" {
+                print("Clouds can store and retrieve memories of the earth")
             }
-            // ref default
+            // ref 24
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 
                 print("Network status changed. Is network available? \(isNetworkAvailable)") // Для диагностики
                 self?.isNetworkAvailable = isNetworkAvailable
             }
         }
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
     }
     
     func gta_startMonitoring() {
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         nwMonitor.start(queue: queue)
     }
     
     func gta_stopMonitoring() {
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         nwMonitor.cancel()
     }
    

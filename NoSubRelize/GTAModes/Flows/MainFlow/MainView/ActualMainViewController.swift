@@ -58,21 +58,22 @@ class ActualMainViewController: ActualNiblessViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
                 guard let self = self else { return }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 24
+                let colors = ["red", "green", "blue"]
+                if colors.first == "purple" {
+                    print("Clouds can store and retrieve memories of the earth")
                 }
-                // ref default
+                // ref 24
                 self.tableView.reloadData()
             }.store(in: &subscriptions)
         
         model.hideSpiner = { [weak self] in
             guard let self = self else { return }
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             self.tableView.reloadData()
             // ref default
             if 7 * 9 == 99 {
@@ -84,17 +85,17 @@ class ActualMainViewController: ActualNiblessViewController {
     }
     
     override func viewDidLoad() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         super.viewDidLoad()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         if model.menuItems.isEmpty {
             actualShowSpinerMain()
         }
@@ -112,18 +113,19 @@ class ActualMainViewController: ActualNiblessViewController {
         }
         // ref default
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         loadingIndicator.style = .medium
         loadingIndicator.startAnimating()
         // ref default
@@ -142,34 +144,35 @@ class ActualMainViewController: ActualNiblessViewController {
         let doNothingClosure = { () -> Void in
         }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         alert?.dismiss(animated: false)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
     }
     
     private func actualCreateStack() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         let menuStack = createMenuConteiner(width: 345, height: 655)
         let cheatsStack = createMenuConteiner(width: 163, height: 361)
         let mapStack = createMenuConteiner(width: 163, height: 277)
         let checkListStack = createMenuConteiner(width: 163, height: 277)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         let modsStack = createMenuConteiner(width: 163, height: 361)
         
         view.addSubview(menuStack)
@@ -193,11 +196,11 @@ class ActualMainViewController: ActualNiblessViewController {
         ])
         cheatsStack.addSubviews()
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         menuStack.addSubview(mapStack)
         NSLayoutConstraint.activate([
@@ -212,11 +215,11 @@ class ActualMainViewController: ActualNiblessViewController {
             checkListStack.trailingAnchor.constraint(equalTo: menuStack.trailingAnchor, constant: 0)
            
         ])
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         menuStack.addSubview(modsStack)
         NSLayoutConstraint.activate([
             modsStack.bottomAnchor.constraint(equalTo: menuStack.bottomAnchor, constant: 0),
@@ -249,11 +252,12 @@ class ActualMainViewController: ActualNiblessViewController {
         
     }
     private func createMenuConteiner(width: CGFloat, height: CGFloat) -> UIStackView {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         let stack = UIStackView()
         stack.axis = .vertical
         stack.backgroundColor  = width > 300 ? .clear : .red
@@ -273,29 +277,30 @@ class ActualMainViewController: ActualNiblessViewController {
     
     private func createCellButton(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) -> UIImageView {
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         
         titleLabel.text = value.title.uppercased()
         backgroundImageView.contentMode = .scaleAspectFill
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
         titleLabel.textColor = .white
         
         backgroundImageView.kf.setImage(with: URL(string: value.imagePath))
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         if isLock {
             NSLayoutConstraint.deactivate(notLockConstraints)

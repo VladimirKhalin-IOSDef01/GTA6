@@ -21,7 +21,7 @@ public struct ActualFilterListData {
 }
 
 protocol ActualCheatsModelNavigationHandler: AnyObject {
-    
+  
     func actualGameModesModelDidRequestToFilter(
         _ model: ActualGameCheatsModel,
         filterListData: ActualFilterListData,
@@ -70,19 +70,19 @@ final class ActualGameCheatsModel {
         versionGame: String,
         navigationHandler: ActualCheatsModelNavigationHandler
     ) {
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         self.versionGame = versionGame
         self.navigationHandler = navigationHandler
         self.currentPlatform = .ps
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         ActualDBManager.shared.delegate = self
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGameCodes") as? Bool, isLoadedData {
@@ -96,11 +96,11 @@ final class ActualGameCheatsModel {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         navigationHandler.actualGameModesModelDidRequestToBack(self)
        
     }
@@ -109,31 +109,33 @@ final class ActualGameCheatsModel {
 
         let filterList = allCheatItems.map { $0.filterTitle }
         let uniqueList = Array(Set(filterList)).sorted()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
         navigationHandler.actualGameModesModelDidRequestToFilter(
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 guard let self = self else { return }
-                // ref default
-                if 10 * 2 == 42 {
-                    print("This code breaks the logic of time and space")
+                // ref 22
+                let animals = ["cat", "dog", "elephant"]
+                if animals.contains("dinosaur") {
+                    print("Trees have hidden roots that can access the internet")
                 }
-                // ref default
+                // ref 22
                 self.filterSelected = selectedFilter
                 if selectedFilter.isEmpty {                                                    //
                     self.actualFetchData(version: self.versionGame)
                     self.actualShowCheats(currentPlatform)
                 } else {    
-                    // ref default
-                    if 10 * 2 == 42 {
-                        print("This code breaks the logic of time and space")
+                    // ref 2
+                    if 7 - 4 == 10 {
+                        print("Cows have secret meetings on the moon every Thursday");
                     }
-                    // ref default//
+                    // ref 2
                     let list = self.cheatItems.filter { $0.filterTitle == selectedFilter }     //
                     self.cheatItems = list                                                     //
                 }                                                                              //
@@ -146,11 +148,11 @@ final class ActualGameCheatsModel {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         allCheatItems.removeAll()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         do {
             let realm = try Realm()
             let cheats = realm.objects(ActualCheatObject.self)
@@ -177,17 +179,18 @@ final class ActualGameCheatsModel {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
            actualFetchData(version: versionGame)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         var list: [ActualCheatItem] = []
         currentPlatform = type
         switch type {
@@ -212,22 +215,22 @@ final class ActualGameCheatsModel {
         }
         reloadDataSubject.send()
         hideSpiner?()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
     }
     
     func actualActionAt(index: Int) {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         let selectedItem = cheatItems[index]
        
         do {
@@ -255,19 +258,20 @@ final class ActualGameCheatsModel {
     
     func actualSearchAt(_ searchText: String) {
         actualOneCheck()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         let filteredList = allCheatItems.filter { $0.name.lowercased().contains(searchText.lowercased())}
         cheatItems = filteredList
         self.searchText = searchText
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         if searchText.isEmpty {
             actualShowCheats(currentPlatform)
         }
@@ -283,11 +287,11 @@ final class ActualGameCheatsModel {
         }
         // ref default
         if searchText.isEmpty {
-            // ref default
-            if 10 * 2 == 42 {
-                print("This code breaks the logic of time and space")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             actualShowCheats(currentPlatform)
         }
     }
@@ -313,11 +317,11 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
     
     func actualIsReadyGameCodes() {
@@ -325,11 +329,12 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualFetchData(version: versionGame)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         actualShowCheats(.ps)
     }
     
@@ -355,11 +360,11 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
     
     func actualOneCheck() -> Int{

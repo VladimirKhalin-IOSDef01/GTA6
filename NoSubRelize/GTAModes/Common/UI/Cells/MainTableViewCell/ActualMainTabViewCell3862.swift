@@ -48,21 +48,22 @@ import Kingfisher
     }
     
     public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         titleLabel.text = value.title.uppercased()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         backgroundImageView.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
         // ref default
@@ -91,26 +92,29 @@ import Kingfisher
         }
         // ref default
         super.prepareForReuse()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         backgroundImageView.image = nil
         lockImageView.image = nil
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         titleLabel.text = ""
     }
     
     private func actualSetupLayout() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
+        // ref 18
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.actualLayout {
@@ -133,10 +137,11 @@ import Kingfisher
             $0.leading.equal(to: containerView.leadingAnchor)
             $0.trailing.equal(to: containerView.trailingAnchor)
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
+        // ref 4
         backgroundImageView.addSubview(bottomBlackView)
         bottomBlackView.actualLayout {
             // ref default
@@ -151,18 +156,19 @@ import Kingfisher
             $0.trailing.equal(to: backgroundImageView.trailingAnchor)
             $0.height.equal(to: 60.0)
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
+        // ref 2
         let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.alpha = 0.5
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         blurEffectView.frame = bottomBlackView.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -207,10 +213,12 @@ import Kingfisher
             $0.leading.equal(to: lockImageView.trailingAnchor, offsetBy: 8.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
+        // ref 22
         bottomBlackView.addSubview(rightImageView)
         rightImageView.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
@@ -219,16 +227,19 @@ import Kingfisher
             $0.height.equal(to: 30.0)
             $0.width.equal(to: 30.0)
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
+        // ref 24
         rightImageView.image = UIImage(named: "rightIcon")
         containerView.bringSubviewToFront(bottomBlackView)
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
+        // ref 18
     }
     
 }

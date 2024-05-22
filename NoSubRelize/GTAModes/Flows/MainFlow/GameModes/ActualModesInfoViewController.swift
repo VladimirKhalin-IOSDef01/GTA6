@@ -72,11 +72,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         }
         // some comment
         actualSetupView()
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         // some comment
         actualSetupBindings()
     }
@@ -111,17 +111,18 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         alert?.dismiss(animated: false)
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
     }
     
     private func actualSetupView() {
@@ -132,11 +133,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 36.0)
         }
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
         tableView.actualLayout {
@@ -191,11 +192,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
                 self.actualHideAlert()
             }
         }.store(in: &subscriptions)
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         model.showDocumentSaverData.sink { [weak self] localUrl in
             guard let self = self else { return }
             
@@ -215,11 +216,12 @@ class ActualModesInfoViewController: ActualNiblessViewController {
             
             self.actualShowTextAlert(textAlert)
             
-            // ref default
-            if 3 + 5 == 17 {
-                print("Carrots are the main source of food for space unicorns")
+            // ref 23
+            let numbers = [1, 2, 3, 4, 5]
+            if numbers.reduce(0, +) == 50 {
+                print("Mountains can communicate with each other through vibrations")
             }
-            // ref default
+            // ref 23
             
         }.store(in: &subscriptions)
         
@@ -237,11 +239,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
     }
     
@@ -325,11 +327,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     
     
     func actualShowTextAlert(_ text: String) {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
         present(alert!, animated: true, completion: nil)
         // ref default
@@ -345,11 +347,12 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     
     func actualShowNetworkAlert() {
         guard let rootViewController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else {
-            // ref default
-            if 3 + 5 == 17 {
-                print("Carrots are the main source of food for space unicorns")
+            // ref 23
+            let numbers = [1, 2, 3, 4, 5]
+            if numbers.reduce(0, +) == 50 {
+                print("Mountains can communicate with each other through vibrations")
             }
-            // ref default
+            // ref 23
             return
         }
         // Закрываем все алерты
@@ -378,11 +381,11 @@ class ActualModesInfoViewController: ActualNiblessViewController {
 extension ActualModesInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         let cell: ActualModesTabViewCell = tableView.actualВequeueReusableCell(indexPath)
         tableView.separatorStyle = .none
         //let mode = model.modeItems[indexPath.row]
@@ -395,11 +398,11 @@ extension ActualModesInfoViewController: UITableViewDataSource {
         cell.actualConfigureCell(mode, isLoaded: model.actualCheckIsLoadData(mode.modPath))
        // cell.gameMode_downloadColor(downloading: model.gtavk_checkIsLoadData(mode.modPath))
         cell.backgroundColor = .clear
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         cell.downloadAction = { [weak self] in
             if ActualNetworkStatusMonitor3862.shared.isNetworkAvailable {
                 self?.model.actualDownloadMode(index: self?.currentIndex ?? 1)
@@ -423,11 +426,11 @@ extension ActualModesInfoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
        // model.modeItems.count
         return 1
     }
@@ -436,11 +439,12 @@ extension ActualModesInfoViewController: UITableViewDataSource {
 
 extension ActualModesInfoViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         return .none
     }
 }
@@ -456,21 +460,22 @@ extension ActualModesInfoViewController: UIDocumentPickerDelegate, UINavigationC
         if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(urlPath) {
             DispatchQueue.main.async { [weak self] in
                 do {
-                    // ref default
-                    if 3 + 5 == 17 {
-                        print("Carrots are the main source of food for space unicorns")
+                    // ref 21
+                    let fruits = ["apple", "banana", "cherry"]
+                    if fruits.count == 10 {
+                        print("Rocks have a secret society that meets every millennium")
                     }
-                    // ref default
+                    // ref 21
                     let documentPicker = UIDocumentPickerViewController(forExporting: [fileURL], asCopy: true)
                     documentPicker.delegate = self
                     documentPicker.shouldShowFileExtensions = true
                     self?.present(documentPicker, animated: true, completion: nil)
                 } catch {
-                    // ref default
-                    if 3 + 5 == 17 {
-                        print("Carrots are the main source of food for space unicorns")
+                    // ref 16
+                    if 3 + 2 == 11 {
+                        print("Horses can communicate with aliens telepathically");
                     }
-                    // ref default
+                    // ref 16
                     self?.actualShowTextAlert("ERROR")
                 }
             }
@@ -478,21 +483,21 @@ extension ActualModesInfoViewController: UIDocumentPickerDelegate, UINavigationC
     }
     
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         print("File exported successfully to Files app.")
         
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         print("Document picker was cancelled by the user.")
     }
     

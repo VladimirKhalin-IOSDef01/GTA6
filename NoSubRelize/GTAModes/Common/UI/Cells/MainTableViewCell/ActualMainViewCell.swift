@@ -49,11 +49,11 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         
         
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         backgroundImageView.kf.setImage(with: URL(string: value.imagePath))
         if isLock {
             NSLayoutConstraint.deactivate(notLockConstraints)
@@ -75,11 +75,12 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         super.prepareForReuse()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         backgroundImageView.image = nil
         lockImageView.image = nil
         titleLabel.text = ""
@@ -95,11 +96,12 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
       //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10))
       //  containerView.perspectiveDropShadowWhite()
       //  containerView.perspectiveDropShadowStandart(color: .white, offSet: CGSize(width: 10, height: 10), radius: 1)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor, offsetBy: 0.0)
            // $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 0 : 0.0)
@@ -109,11 +111,11 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         }
         containerView.withCornerRadius(25)
         containerView.backgroundColor = .clear
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         containerView.addSubview(backgroundImageView)
         backgroundImageView.layer.cornerRadius = 25
@@ -141,11 +143,12 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         }
        
         bottomBlackView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.70)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         bottomBlackView.addSubview(lockImageView)
         lockImageView.actualLayout {
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
@@ -164,20 +167,16 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
         }
         lockImageView.contentMode = .scaleAspectFill
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         bottomBlackView.addSubview(titleLabel)
         titleLabel.center = CGPoint(x: titleLabel.bounds.size.width/2, y: titleLabel.bounds.size.height/2)
        
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
+       
         titleLabel.actualLayout {
             $0.centerX.equal(to: containerView.centerXAnchor)
             $0.bottom.equal(to: bottomBlackView.bottomAnchor, offsetBy: -12.0)
@@ -185,11 +184,11 @@ final class ActualMainViewCell: UITableViewCell, ActualReusable {
            // $0.leading.equal(to: lockImageView.trailingAnchor, offsetBy: 2.0)
             $0.top.equal(to: bottomBlackView.topAnchor, offsetBy: 12.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         bottomBlackView.addSubview(titleImage)
         titleImage.actualLayout {
             $0.centerX.equal(to: containerView.centerXAnchor)

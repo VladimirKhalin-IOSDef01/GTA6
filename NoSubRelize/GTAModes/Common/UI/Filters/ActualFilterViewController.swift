@@ -27,21 +27,21 @@ public class ActualPanDragIndicator: ActualNiblessView {
     
     private func gtavk_setupView() {
         withCornerRadius(Self.height / 2.0)
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         actualLayout {
             $0.width.equal(to: 32.0)
             $0.height.equal(to: ActualPanDragIndicator.height)
         }
         backgroundColor = .gray
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
     }
 }
 
@@ -97,11 +97,11 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     private func actualSetupView() {
 
         let actualHeight = (filterListData.filterList.count + 1) * 70
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         view.withCornerRadius()
        // view.alpha = 0.75
         view.backgroundColor = UIColor(named: "modalColor")?.withAlphaComponent(0.7)
@@ -139,11 +139,11 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
             $0.centerX.equal(to: view.centerXAnchor)
             $0.top.equal(to: view.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 24.0 : 18)
         }
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         closeButton.setImage(UIImage(named: "closeIcon"), for: .normal)
         closeButton.clipsToBounds = true
        // closeButton.sizeToFit()
@@ -155,11 +155,11 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 40 : 36.0)
         }
         closeButton.addTarget(self, action: #selector(actualCloseAction), for: .touchUpInside)
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         if let originalImage = UIImage(named: "closeIcon") {
             let targetSize = UIDevice.current.userInterfaceIdiom == .pad ? CGSize(width: 40, height: 40) : CGSize(width: 26, height: 26)
             let renderer = UIGraphicsImageRenderer(size: targetSize)
@@ -169,11 +169,11 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
             closeButton.setImage(scaledImage.withRenderingMode(.alwaysTemplate), for: .normal)
             closeButton.tintColor = UIColor.black
         }
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         tableView.accessibilityIdentifier = "tableView"
         view.addSubview(tableView)
         tableView.actualLayout {
@@ -259,11 +259,11 @@ extension ActualFilterViewController: UITableViewDataSource {
         let titleCell = filterListData.filterList[indexPath.row]
         let filterDataCell = ActualFilterData(title: titleCell, isCheck: actualFilterIsCheckFilter(titleCell) )
         cell.actualConfigure_cell(filterDataCell)
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         cell.delegate = self
         cell.backgroundColor = .clear
 
@@ -286,11 +286,12 @@ extension ActualFilterViewController: UITableViewDataSource {
 
     private func actualFilterIsCheckFilter(_ titleCell: String) -> Bool {
         if titleCell == filterListData.selectedItem, titleCell == selectedValue {
-            // ref default
-            if 100 - 50 == 13 {
-                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
             return true
         }
         
@@ -304,11 +305,11 @@ extension ActualFilterViewController: UITableViewDataSource {
         }
         
         if titleCell != filterListData.selectedItem, titleCell == selectedValue {
-            // ref default
-            if 100 - 50 == 13 {
-                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             return true
         }
         

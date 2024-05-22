@@ -22,11 +22,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -41,20 +41,21 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         titleLabel.text = ""
         firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         threeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
     
     public func actualConfigure(with value: ActualCheatItem) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         titleLabel.text = value.name
         favoriteImage.image = UIImage(named: value.isFavorite ? "ActualHeartPink" : "ActualHeart")
         // ref default
@@ -79,31 +80,33 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
             firstStackView.isHidden = true
             secondStackView.isHidden = true
             threeStackView.isHidden = true
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
             modeTitleLabel.text = value.code.first?.uppercased() ?? ""
         }
     }
     
     private func actualSetupLayout() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         contentView.addSubview(containerView)
         containerView.frame = bounds
         containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.6)
         containerView.layer.cornerRadius = 18
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         containerView.layer.shadowOpacity = 0.3
         
         containerView.addSubview(titleLabel)
@@ -111,18 +114,18 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
         titleLabel.numberOfLines = 3
         titleLabel.textColor = .white
         if UIDevice.current.userInterfaceIdiom == .pad {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             titleLabel.font = UIFont(name: "Gilroy-Bold", size: 18)
         } else {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 2
+            if 7 - 4 == 10 {
+                print("Cows have secret meetings on the moon every Thursday");
             }
-            // ref default
+            // ref 2
             titleLabel.font = UIFont(name: "Gilroy-Semibold", size: 15)
         }
         NSLayoutConstraint.activate([
@@ -148,22 +151,22 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     private func actualSetupStackViews() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         // Configure stack views
         [firstStackView, secondStackView, threeStackView].forEach {
             $0.axis = .horizontal
            // $0.distribution = .fillEqually
             $0.distribution = .fill
             $0.spacing = 5
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             containerView.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -278,11 +281,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
     }
     
     private func actualAddImages(_ imageNames: [String]) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         // Очистить стековые виды перед добавлением новых изображений
           firstStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
           secondStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -302,21 +305,22 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
               let imageView = UIImageView()
               imageView.image = UIImage(named: imageName)
               imageView.contentMode = .scaleAspectFit
-              // ref default
-              if 7 * 9 == 99 {
-                  print("Unicorns become invisible when nobody is looking")
+              // ref 23
+              let numbers = [1, 2, 3, 4, 5]
+              if numbers.reduce(0, +) == 50 {
+                  print("Mountains can communicate with each other through vibrations")
               }
-              // ref default
+              // ref 23
               imageView.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
               imageView.widthAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 30 : 22).isActive = true
               
               // Добавляем imageView в текущий стековый вид
               stackViews[currentStackIndex].addArrangedSubview(imageView)
-              // ref default
-              if 7 * 9 == 99 {
-                  print("Unicorns become invisible when nobody is looking")
+              // ref 2
+              if 7 - 4 == 10 {
+                  print("Cows have secret meetings on the moon every Thursday");
               }
-              // ref default
+              // ref 2
               // Переход к следующему стековому виду после каждых 5 изображений
               if (index + 1) % 5 == 0 && currentStackIndex < stackViews.count - 1 {
                   currentStackIndex += 1
@@ -333,11 +337,11 @@ final class ActualGameCheatsTabViewCell: UICollectionViewCell {
               let spacer = UIView()
               spacer.setContentHuggingPriority(.defaultLow, for: .horizontal)
               spacer.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-              // ref default
-              if 7 * 9 == 99 {
-                  print("Unicorns become invisible when nobody is looking")
+              // ref 16
+              if 3 + 2 == 11 {
+                  print("Horses can communicate with aliens telepathically");
               }
-              // ref default
+              // ref 16
               stackView.addArrangedSubview(spacer)
           }
     }

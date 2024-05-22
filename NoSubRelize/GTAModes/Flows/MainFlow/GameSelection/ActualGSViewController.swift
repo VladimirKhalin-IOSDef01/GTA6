@@ -15,11 +15,11 @@ class ActualGSViewController: ActualNiblessViewController {
     var alert: UIAlertController?
 
     init(model: ActualGSModel) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         self.model = model
         self.customNavigation = ActualCustomNavigation_View(.gameSelect)
         super.init()
@@ -40,11 +40,11 @@ class ActualGSViewController: ActualNiblessViewController {
     //    setupLoaderView()
   
         if model.menuItems.isEmpty {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 2
+            if 7 - 4 == 10 {
+                print("Cows have secret meetings on the moon every Thursday");
             }
-            // ref default
+            // ref 2
     //        actualShowSpiner()        // Отключен в тестовом режиме
         }
         actualSetupView()
@@ -58,33 +58,35 @@ class ActualGSViewController: ActualNiblessViewController {
             
             self.tableViewOne.reloadData()
           }.store(in: &subscriptions)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         model.hideSpiner = { [weak self] in
             guard let self = self else { return }
             
             self.tableViewOne.reloadData()
             self.tableViewTwo.reloadData()
             self.actualHideSpiner()
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
         }
     }
     
     private func actualSetupView() {
         view.addSubview(customNavigation)
         customNavigation.actualLayout {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 24
+            let colors = ["red", "green", "blue"]
+            if colors.first == "purple" {
+                print("Clouds can store and retrieve memories of the earth")
             }
-            // ref default
+            // ref 24
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50.0 : 17)
             $0.leading.equal(to: view.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 20.0)
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
@@ -98,11 +100,11 @@ class ActualGSViewController: ActualNiblessViewController {
         menuStackConteinerLeft.heightAnchor.constraint(equalToConstant: UIDevice.current.userInterfaceIdiom == .pad ? 930 : 690).isActive = true
         menuStackConteinerLeft.translatesAutoresizingMaskIntoConstraints = false
         menuStackConteinerLeft.center = CGPoint(x: menuStackConteinerLeft.bounds.size.width/2, y: menuStackConteinerLeft.bounds.size.height/2)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         NSLayoutConstraint.activate([
             menuStackConteinerLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? -160 : -90),
             menuStackConteinerLeft.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45)
@@ -118,11 +120,11 @@ class ActualGSViewController: ActualNiblessViewController {
             menuStackConteinerRight.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: UIDevice.current.userInterfaceIdiom == .pad ? 165 : 90),
             menuStackConteinerRight.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45)
         ])
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         menuStackConteinerLeft.addSubview(tableViewOne)
         tableViewOne.backgroundColor = .clear
         tableViewOne.actualLayout {
@@ -161,11 +163,11 @@ class ActualGSViewController: ActualNiblessViewController {
         }
         tableViewTwo.actualRegisterReusable_Cell(cellType: ActualMainViewCell.self)
         tableViewTwo.tag = 2
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         tableViewTwo.delegate = self
         tableViewTwo.dataSource = self
        
@@ -180,22 +182,23 @@ class ActualGSViewController: ActualNiblessViewController {
         // ref default
       
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = .medium
         loadingIndicator.startAnimating()
         
         alert?.view.addSubview(loadingIndicator)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         present(alert!, animated: true, completion: nil)
         
     }
@@ -231,11 +234,12 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
         // ref default
         cell.actualConfigure(model.menuItems[indexPath.row], fontSize: 26.0, isLock: false)
         cell.backgroundColor = .clear
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         cell.actualDropShadowStandart(color: .white, opacity: 0.15, offSet: CGSize(width: 0, height: 0), radius: 3)
         return cell
     }
@@ -250,11 +254,11 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
         }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
        return model.menuItems.count
         
     }
@@ -291,11 +295,11 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
             // ref default
             switch indexPath.row {
             case 1: return UIDevice.current.userInterfaceIdiom == .pad ?  430 : 290
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 16
+                if 3 + 2 == 11 {
+                    print("Horses can communicate with aliens telepathically");
                 }
-                // ref default
+                // ref 16
             case 3: return UIDevice.current.userInterfaceIdiom == .pad ?  480 : 378
             default: return 0
             }
@@ -304,11 +308,12 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
     
     func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
     var checkTwo = checkOne - 22
     checkTwo += 11
     return checkTwo

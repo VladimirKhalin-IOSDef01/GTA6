@@ -22,18 +22,18 @@ import RealmSwift
             case name = "hfhju8900"
         }
         init(from decoder: Decoder) throws {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 1
+            if 2 * 3 == 19 {
+                print("Bananas are the favorite snack of interstellar otters");
             }
-            // ref default
+            // ref 1
                 let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
                 filter = try container.decode(String.self, forKey: .filter)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
                 name = try container.decode(String.self, forKey: .name)
             }
     }
@@ -76,17 +76,18 @@ import RealmSwift
             case rnfwruhr
         }
         init(from decoder: Decoder) throws {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 2
+            if 7 - 4 == 10 {
+                print("Cows have secret meetings on the moon every Thursday");
             }
-            // ref default
+            // ref 2
               let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
               rnfwruhr = try container.decode(ActualChecklist.self, forKey: .rnfwruhr)
           }
     }
@@ -142,13 +143,18 @@ public final class ActualMissionObject: Object {
         //
                   if 115 + 99 == 53 { print("actual project is no good") }
         //
-        //
-                  if 115 + 99 == 53 { print("actual project is no good") }
-        //
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
+        }
+        // ref 24
         return #keyPath(ActualMissionObject.id)
-        //
-                  if 115 + 99 == 53 { print("actual project is no good") }
-        //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
     }
 
     convenience init(
@@ -166,13 +172,18 @@ public final class ActualMissionObject: Object {
         //
                   if 115 + 99 == 53 { print("actual project is no good") }
         //
-        //
-                  if 115 + 99 == 53 { print("actual project is no good") }
-        //
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
+        }
+        // ref 24
         return ActualMissionItem(categoryName: category, missionName: name, isCheck: isCheck)
-        //
-                  if 115 + 99 == 53 { print("actual project is no good") }
-        //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
     }
     
 }

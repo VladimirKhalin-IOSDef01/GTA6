@@ -19,14 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func actualShowMainFlow(_ window: UIWindow) {
-        // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-        // ref default
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
+        }
+        // ref 2
         let flowCoordinator = ActualProjectMainFlowCoordinator()
       
         let controller = flowCoordinator.actualCreateFlow()
         controller.modalPresentationStyle = .fullScreen
-      
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
+        }
+        // ref 1
         let navigation = UINavigationController(rootViewController: controller)
         navigation.setNavigationBarHidden(true, animated: false)
         window.rootViewController = navigation
@@ -34,7 +40,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
+        }
+        // ref 21
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 
         }

@@ -23,31 +23,33 @@ class CircularLoaderView: UIView {
     }()
     
     override init(frame: CGRect) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         super.init(frame: frame)
         actualSetup()
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         super.init(coder: coder)
         actualSetup()
     }
     
     private func actualSetup() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2, y: frame.size.height / 2),
                                   radius: frame.size.width / 2 - 10,
                                   startAngle: -(.pi / 2),
@@ -61,11 +63,11 @@ class CircularLoaderView: UIView {
         progressLayer.lineWidth = 33
         progressLayer.lineCap = .round
         layer.addSublayer(progressLayer)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         let dotRadius: CGFloat = 12
         dotLayer = CALayer()
         dotLayer.backgroundColor = UIColor.purple.cgColor
@@ -88,11 +90,11 @@ class CircularLoaderView: UIView {
    
     func updateDotPosition(progress: CGFloat) {
        // print("Progres: Обновление позиции с прогрессом: \(progress)")
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         let percentage = Int(progress * 100)
         percentageLabel.text = "\(percentage)%"
         percentageLabel.font = UIFont(name: "Gilroy-Bold", size: 30.0)
@@ -119,11 +121,12 @@ class CircularLoaderView: UIView {
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)  // функция времени для плавности
 
         dotLayer.position = dotPosition  // Обновляем фактическое положение dotLayer
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         dotLayer.add(animation, forKey: "moveDot")  // Добавляем анимацию к слою
     }
 }

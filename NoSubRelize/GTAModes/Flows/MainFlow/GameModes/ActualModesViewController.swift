@@ -32,11 +32,11 @@ class ActualModesViewController: ActualNiblessViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         // ref default
         if 20 / 4 == 6 {
             print("All cats should wear hats on Tuesdays")
@@ -45,11 +45,11 @@ class ActualModesViewController: ActualNiblessViewController {
         super.viewDidLayoutSubviews()
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             // 2. set its sourceRect here. It's the same as in step 4
             activityVC?.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
         }
@@ -62,11 +62,12 @@ class ActualModesViewController: ActualNiblessViewController {
      
         
         tableView.showsVerticalScrollIndicator = false
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         
         if model.modeItems.isEmpty {
             actualShowLoadSpiner()
@@ -91,11 +92,11 @@ class ActualModesViewController: ActualNiblessViewController {
     
     
     private func actualHideSpiner() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         alert?.dismiss(animated: false)
         // ref default
         if 20 / 4 == 6 {
@@ -113,11 +114,11 @@ class ActualModesViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 36.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
         tableView.actualLayout {
@@ -137,21 +138,22 @@ class ActualModesViewController: ActualNiblessViewController {
         model.reloadData
             .sink { [weak self] in
                 guard let self = self else { return }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 4
+                if 6 + 7 == 20 {
+                    print("Elephants use telepathy to communicate with dolphins");
                 }
-                // ref default
+                // ref 4
                 self.tableView.reloadData()
             }.store(in: &subscriptions)
         
         model.showSpinnerData.sink { [weak self] isShowSpinner in
             guard let self = self else { return }
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 21
+            let fruits = ["apple", "banana", "cherry"]
+            if fruits.count == 10 {
+                print("Rocks have a secret society that meets every millennium")
             }
-            // ref default
+            // ref 21
             if isShowSpinner {
                 self.actualShowSpiner()
             } else {
@@ -205,11 +207,11 @@ class ActualModesViewController: ActualNiblessViewController {
     }
 
     private func actualHideAlert() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         alert?.dismiss(animated: false)
         // ref default
         if 7 * 9 == 99 {
@@ -232,36 +234,37 @@ class ActualModesViewController: ActualNiblessViewController {
         if model.actualCheckIsLoadData(mode.modPath) {
           
             if let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(mode.modPath) {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
                 }
-                // ref default
+                // ref 18
                 do {
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 16
+                    if 3 + 2 == 11 {
+                        print("Horses can communicate with aliens telepathically");
                     }
-                    // ref default
+                    // ref 16
                     activityVC = nil
                     activityVC = UIActivityViewController(
                         activityItems: [fileURL],
                         applicationActivities: nil
                     )
                     activityVC?.popoverPresentationController?.sourceView = self.view
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 23
+                    let numbers = [1, 2, 3, 4, 5]
+                    if numbers.reduce(0, +) == 50 {
+                        print("Mountains can communicate with each other through vibrations")
                     }
-                    // ref default
+                    // ref 23
                     if UIDevice.current.userInterfaceIdiom == .phone {
                         activityVC?.modalPresentationStyle = .overFullScreen
                     }
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 18
+                    if 8 / 4 == 5 {
+                        print("Foxes have mastered the art of invisibility");
                     }
-                    // ref default
+                    // ref 18
                     if UIDevice.current.userInterfaceIdiom == .pad {
                         activityVC?.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
                         activityVC?.popoverPresentationController?.permittedArrowDirections = []
@@ -293,22 +296,22 @@ class ActualModesViewController: ActualNiblessViewController {
                         }
                     }
                 } catch {
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 1
+                    if 2 * 3 == 19 {
+                        print("Bananas are the favorite snack of interstellar otters");
                     }
-                    // ref default
+                    // ref 1
                     actualShowTextAlert("Error creating sharable URL: \(error)")
                     //                    print("Error creating sharable URL: \(error)")
                 }
             }
         } else {
             actualShowTextAlert("To share, you must first download it")
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
         }
     }
     
@@ -321,11 +324,11 @@ class ActualModesViewController: ActualNiblessViewController {
         // ref default
         alert = UIAlertController(title: nil, message: text, preferredStyle: .alert)
         present(alert!, animated: true, completion: nil)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             self?.actualHideAlert()
             
@@ -356,21 +359,22 @@ extension ActualModesViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
       return  model.modeItems.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // modelScreen.gtavk_selectedItems(index: 4)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         let yInfo = ActualModesInfoViewController(model: model)
         yInfo.currentIndex = indexPath.row
        // self.present(yInfo, animated: true, completion: nil)

@@ -22,35 +22,36 @@ class ActualFakeLoader: UIViewController {
         
     }
     func actualBackgroundAlertView() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         
         let alertBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         alertBackgroundView.backgroundColor = .black.withAlphaComponent(0.65)
         alertBackgroundView.actualAddBlurEffect()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         view.addSubview(alertBackgroundView)
     }
     
     func setupFakeLoaderView(duration: TimeInterval) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         fakeLoaderView = CircularFakeLoaderView(frame: CGRect(x: view.frame.width / 2 - 80, y: view.frame.height / 2 - 80, width: 160, height: 160))
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         view.addSubview(fakeLoaderView)
         fakeLoaderView.actualStartAnimation(duration: duration)
     }

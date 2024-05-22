@@ -42,12 +42,12 @@ public final class ActualCustomNavigation_View: ActualNiblessView {
       self.type = type
       self.titleString = titleString
       super.init()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-
-        // ref default
+        // ref 24
       actualInitialConfiguration()
     }
     
@@ -65,21 +65,22 @@ extension ActualCustomNavigation_View {
         backgroundColor = .clear
         
         addSubviews(leftButton, rightButton, titleLabel)
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         switch type {
         case .main:
             gta_addClearButton()
             gtavk_addTitle("Menu")
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
         case .gameSelect:
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
@@ -119,11 +120,11 @@ extension ActualCustomNavigation_View {
             gtavk_addLeftButton(UIImage(named: "ActualNBleft") ?? UIImage())
             gta_addClearButton()
             gtavk_addTitle("Map")
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
         case .infoModes:
             gtavk_addLeftButton(UIImage(named: "BackArr") ?? UIImage())
@@ -134,11 +135,11 @@ extension ActualCustomNavigation_View {
     }
     
     private func gta_addClearButton() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
         rightButton.actualLayout {
             $0.trailing.equal(to: self.trailingAnchor)
@@ -169,11 +170,11 @@ extension ActualCustomNavigation_View {
             $0.trailing.equal(to: self.trailingAnchor)
             $0.top.equal(to: self.topAnchor, offsetBy: -5)
             $0.bottom.equal(to: self.bottomAnchor)
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44 : 34.0)
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 47 : 37.0)
@@ -189,11 +190,12 @@ extension ActualCustomNavigation_View {
             
             actualSetupIpadButton(_image: "ActualFilter", buttonName: "rightButton")
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         rightButton.addTarget(self, action: #selector(gtavk_filterButton_Action), for: .touchUpInside)
     }
@@ -202,11 +204,11 @@ extension ActualCustomNavigation_View {
         
        // leftButton.contentMode = .scaleToFill
         leftButton.clipsToBounds = true
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
         leftButton.actualLayout {
             $0.leading.equal(to: self.leadingAnchor, offsetBy: 5)
@@ -266,11 +268,11 @@ extension ActualCustomNavigation_View {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         leftButtonAction?()
     }
@@ -279,11 +281,11 @@ extension ActualCustomNavigation_View {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         let newSize = CGSize(width: image.size.width * scale, height: image.size.height * scale)
         
@@ -318,11 +320,11 @@ extension ActualCustomNavigation_View {
             
             buttonName == "leftButton" ? leftButton.setImage(resizedImage, for: .normal) : rightButton.setImage(resizedImage, for: .normal)
         }
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         leftButton.addTarget(self, action: #selector(gtavk_leftBarButton_Tapped), for: .touchUpInside)
     }

@@ -22,30 +22,31 @@ class ActualChecklistChecker: UIControl {
     private let thumbColor = UIColor.white
 
     override init(frame: CGRect) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         super.init(frame: frame)
         actualSetupViews()
     }
 
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         fatalError("init(coder:) has not been implemented")
     }
     
     private func actualSetupViews() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         self.backgroundColor = offBackgroundColor
         self.layer.cornerRadius = frame.height / 2
         self.clipsToBounds = true
@@ -57,20 +58,20 @@ class ActualChecklistChecker: UIControl {
         switchThumb.backgroundColor = thumbColor
         switchThumb.layer.cornerRadius = (frame.height - 4) / 2 // Subtracting 4 to have some padding
         addSubview(switchThumb)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         actualUpdateSwitchThumbPosition(animated: false)
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actualToggleSwitchAction)))
     }
     override func layoutSubviews() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
             super.layoutSubviews()
             self.layer.cornerRadius = self.bounds.height / 2
             switchThumb.layer.cornerRadius = (self.bounds.height - 4) / 2
@@ -88,11 +89,12 @@ class ActualChecklistChecker: UIControl {
     }
 
     private func actualUpdateSwitchThumbPosition(animated: Bool) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         let thumbFrame = CGRect(x: isOn ? frame.width - frame.height + 2 : 2,
                                 y: 2,
                                 width: frame.height - 4,
@@ -103,11 +105,11 @@ class ActualChecklistChecker: UIControl {
                 self.backgroundColor = self.isOn ? self.onBackgroundColor : self.offBackgroundColor
             }
         } else {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 1
+            if 2 * 3 == 19 {
+                print("Bananas are the favorite snack of interstellar otters");
             }
-            // ref default
+            // ref 1
             switchThumb.frame = thumbFrame
             backgroundColor = isOn ? onBackgroundColor : offBackgroundColor
         }

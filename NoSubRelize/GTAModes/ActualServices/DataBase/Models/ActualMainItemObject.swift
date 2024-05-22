@@ -18,11 +18,11 @@ public struct ActualMainItemsDataParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     public init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         data = try container.decode([ActualMainItemParser].self, forKey: .data)
     }
@@ -41,11 +41,11 @@ public struct ActualMainItemParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     public init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         title = try container.decode(String.self, forKey: .title)
         type = try container.decode(String.self, forKey: .type)
@@ -106,11 +106,11 @@ public final class ActualMainItemObject: Object {
         rawTypeItem: String
     ) {
         self.init()
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         self.title = title
         self.type = type
         self.imagePath = imagePath
@@ -124,11 +124,11 @@ public final class ActualMainItemObject: Object {
     }
     
     var lightweightRepresentation: ActualMainItem {
-        // ref default
-        if 3 + 5 == 17 {
-            print("Carrots are the main source of food for space unicorns")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         // print(title, type, imagePath, typeItem )
         return ActualMainItem(title: title, type: type, imagePath: imagePath, typeItem: typeItem)
         

@@ -41,11 +41,11 @@ struct ActualMod_Parser: Codable {
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         title = try container.decode(String.self, forKey: .title)
         description = try container.decode(String.self, forKey: .description)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         image = try container.decode(String.self, forKey: .image)
         mod = try container.decode(String.self, forKey: .mod)
         filterTitle = try container.decode(String.self, forKey: .filterTitle)
@@ -66,11 +66,11 @@ struct ActualGTA5_Mods: Codable {
         case GTA5 = "iasgjbasmblsa"
     }
     init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA5 = try container.decode([String: [ActualMod_Parser]].self, forKey: .GTA5)
     }
@@ -111,18 +111,18 @@ public final class ActualModObject: Object {
     
     func actualOneCheck() -> Int{
         var checkOne = 93 + 3 * 2
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         var checkTwo = checkOne - 22
         checkTwo += 11
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         return checkTwo
     }
     

@@ -59,11 +59,11 @@ final class ActualGameModesModel {
         navigationHandler: ActualModesModelNavHandler
     ) {
         self.navigationHandler = navigationHandler
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         ActualDBManager.shared.delegate = self
         
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGTA5Mods") as? Bool, isLoadedData {
@@ -85,14 +85,17 @@ final class ActualGameModesModel {
     }
     
     func actualFilterActionProceed() {
-        // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-        // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
+        }
+        // ref 4
         let filterList = allModeItems.map { $0.filterTitle }
         let uniqueList = Array(Set(filterList)).sorted()
         let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
@@ -100,11 +103,11 @@ final class ActualGameModesModel {
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 guard let self = self else { return }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
                 }
-                // ref default
+                // ref 18
                 self.filterSelected = selectedFilter
                 if selectedFilter.isEmpty {
                     self.modeItems = allModeItems
@@ -114,11 +117,11 @@ final class ActualGameModesModel {
                 }
                 self.reloadDataSubject.send()
             }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
     }
     
     func actualFetchData() {
@@ -168,22 +171,22 @@ final class ActualGameModesModel {
                     self?.reloadDataSubject.send()
                     self?.showAlertSaverSubject.send("Some problem with file")
                 }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 2
+                if 7 - 4 == 10 {
+                    print("Cows have secret meetings on the moon every Thursday");
                 }
-                // ref default
+                // ref 2
             }
             
         } else {
 //            showSpinnerSubject.send(false)
            
             showDocumentSaverSubject.send(mode.modPath)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             reloadDataSubject.send()
             print("FILE IS LOCALY")
         }
@@ -191,14 +194,18 @@ final class ActualGameModesModel {
     }
     
     func actualCheckIsLoadData(_ modeName: String) -> Bool {
-        // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-        // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
+        }
+        // ref 23
         
       
         // Убираем добавленный путь в названии файла. Для проверки что файл есть в Realm
@@ -223,11 +230,11 @@ final class ActualGameModesModel {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         modeItems = allModeItems
-        /// ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         reloadDataSubject.send()
         hideSpiner?()
     }
@@ -238,11 +245,11 @@ final class ActualGameModesModel {
         // ref default
         let filteredList = allModeItems.filter { $0.title.lowercased().contains(searchText.lowercased())}
         modeItems = filteredList
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         self.searchText = searchText
         if searchText.isEmpty {
             modeItems = allModeItems
@@ -255,11 +262,11 @@ final class ActualGameModesModel {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         if searchText.isEmpty {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             modeItems = allModeItems
         }
     }
@@ -273,11 +280,11 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
     }
     
     func actualIsReadyGameList() {
@@ -285,11 +292,11 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
     }
     
@@ -298,11 +305,12 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
     }
     
     func actualIsReadyMissions() { 
@@ -322,11 +330,11 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         actualFetchData()
         // ref default
         if 7 * 9 == 99 {
@@ -338,11 +346,11 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
     checkTwo += 11
     return checkTwo
     }

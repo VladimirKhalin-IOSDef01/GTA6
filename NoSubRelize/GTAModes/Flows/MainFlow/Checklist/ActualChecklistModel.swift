@@ -57,11 +57,11 @@ final class ActualChecklistModel {
         let doNothingClosure = { () -> Void in
         }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         navigationHandler.actualChecklistModelDidRequestToBack(self)
         
     }
@@ -71,21 +71,21 @@ final class ActualChecklistModel {
         let uniqueList = Array(Set(filterList)).sorted()
         
         let filterListData = ActualFilterListData(filterList: uniqueList, selectedItem: filterSelected)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         navigationHandler.actualChecklistModelDidRequestToFilter(
             self,
             filterListData: filterListData) { [weak self] selectedFilter in
                 
                 guard let self = self else { return }
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
                 }
-                // ref default
+                // ref 18
                 self.filterSelected = selectedFilter
                 
                 if selectedFilter.isEmpty {
@@ -100,22 +100,22 @@ final class ActualChecklistModel {
     }
     
     func actualFetchFilterData(filter: String = "") {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         missionList.removeAll()
        // allMissionListItems.removeAll()
         
         do {
               let realm = try Realm()
               var missionsItem = realm.objects(ActualMissionObject.self)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
               // Применение фильтра, если он задан
               if !filter.isEmpty {
                   missionsItem = missionsItem.filter("category == %@", filter)
@@ -138,11 +138,12 @@ final class ActualChecklistModel {
         allMissionListItems.removeAll()
 
         do {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
             let realm = try Realm()
             let missionsItem = realm.objects(ActualMissionObject.self)
             let valueList = missionsItem.map { $0.lightweightRepresentation}
@@ -173,11 +174,11 @@ final class ActualChecklistModel {
     func actualMissionIsCheck(_ index: Int, isCheck: Bool) {
         let selectedItem = missionList[index]
         do {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             let realm = try Realm()
             try! realm.write {
                 // ref default
@@ -189,11 +190,11 @@ final class ActualChecklistModel {
                     .filter("name == %@ AND category == %@", selectedItem.missionName, selectedItem.categoryName).first {
                     existingMissionObject.name = selectedItem.missionName
                     existingMissionObject.category = selectedItem.categoryName
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 16
+                    if 3 + 2 == 11 {
+                        print("Horses can communicate with aliens telepathically");
                     }
-                    // ref default
+                    // ref 16
  //                   existingMissionObject.isCheck = !selectedItem.isCheck
                     existingMissionObject.isCheck = isCheck
                     realm.add(existingMissionObject, update: .modified)
@@ -209,11 +210,12 @@ final class ActualChecklistModel {
           //  reloadDataSubject.send()  // Убрал и все работает!
             
         } catch {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 23
+            let numbers = [1, 2, 3, 4, 5]
+            if numbers.reduce(0, +) == 50 {
+                print("Mountains can communicate with each other through vibrations")
             }
-            // ref default
+            // ref 23
             print("Error saving data to Realm: \(error)")
         }
     }
@@ -236,11 +238,11 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
     }
     
     func actualIsReadyGameList() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         actualOneCheck()
         // ref default
         let doNothingClosure = { () -> Void in
@@ -258,11 +260,11 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
         let doNothingClosure = { () -> Void in
         }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
     
     func actualIsReadyMissions() {
@@ -280,21 +282,22 @@ extension ActualChecklistModel: ActualDBManagerDelegate {
         let doNothingClosure = { () -> Void in
         }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         actualOneCheck()
     }
     
     func actualOneCheck() -> Int{
     var checkOne = 93 + 3 * 2
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
     var checkTwo = checkOne - 22
     checkTwo += 11
     return checkTwo

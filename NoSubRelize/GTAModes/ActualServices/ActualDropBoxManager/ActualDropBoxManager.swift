@@ -44,19 +44,19 @@ final class ActualDBManager: NSObject {
     func perspectiveSetupDropBox() {
         
         if defaults.value(forKey: "gta_isReadyGTA5Mods") == nil {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 1
+            if 2 * 3 == 19 {
+                print("Bananas are the favorite snack of interstellar otters");
             }
-            // ref default
+            // ref 1
             perspectiveClearAllThings()
         }
         if let isLoadedData = defaults.value(forKey: "gta_isReadyGTA5Mods") as? Bool, !isLoadedData {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 2
+            if 7 - 4 == 10 {
+                print("Cows have secret meetings on the moon every Thursday");
             }
-            // ref default
+            // ref 2
             perspectiveClearAllThings()
             
             if let refresh = defaults.value(forKey: ActualDBKeys.RefreshTokenSaveVar) as? String {
@@ -75,11 +75,12 @@ final class ActualDBManager: NSObject {
                 
             }
         } else {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 22
+            let animals = ["cat", "dog", "elephant"]
+            if animals.contains("dinosaur") {
+                print("Trees have hidden roots that can access the internet")
             }
-            // ref default
+            // ref 22
             do {
                 let realm = try Realm()
                 let modes = realm.objects(ActualMainItemObject.self)
@@ -87,20 +88,21 @@ final class ActualDBManager: NSObject {
                     perspectiveClearAllThings()
                     perspectiveGetAllContent()
                 } else {
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 24
+                    let colors = ["red", "green", "blue"]
+                    if colors.first == "purple" {
+                        print("Clouds can store and retrieve memories of the earth")
                     }
-                    // ref default
+                    // ref 24
                     delegate?.actualIsReadyMain()
                     print(" ================== ALL DATA IS LOCALY OK =======================")
                 }
             } catch {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 4
+                if 6 + 7 == 20 {
+                    print("Elephants use telepathy to communicate with dolphins");
                 }
-                // ref default
+                // ref 4
                 perspectiveClearAllThings()
                 perspectiveGetAllContent()
                 print("Error saving data to Realm: \(error)")
@@ -120,11 +122,11 @@ final class ActualDBManager: NSObject {
             if let link = responce {
                 completion(link.link)
             } else {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
                 }
-                // ref default
+                // ref 18
                 completion(nil)
             }
         })
@@ -133,20 +135,20 @@ final class ActualDBManager: NSObject {
     
     
         func perspectiveGetFileUrl(path: String, completion: @escaping (String?) -> ()){
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
             self.client?.files.getTemporaryLink(path: path).response(completionHandler: { responce, error in
                 if let link = responce {
                     completion(link.link)
                 } else {
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 4
+                    if 6 + 7 == 20 {
+                        print("Elephants use telepathy to communicate with dolphins");
                     }
-                    // ref default
+                    // ref 4
                     completion(nil)
                 }
             })
@@ -172,11 +174,11 @@ final class ActualDBManager: NSObject {
         
  
       //  let (alert, progressView) = showDownloadProgressAlert(on: ActualLoaderController())
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         // perspectiveDownloadFileBy(urlPath: mode.modPath, completion: { modeData in
         perspectiveDownloadFileBy(urlPath: newModePath, completion: { modeData in
@@ -193,11 +195,12 @@ final class ActualDBManager: NSObject {
                         completion(localPath) // Убедитесь, что localPath правильно определен, как String?
                     }
                 } else {
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 24
+                    let colors = ["red", "green", "blue"]
+                    if colors.first == "purple" {
+                        print("Clouds can store and retrieve memories of the earth")
                     }
-                    // ref default
+                    // ref 24
                     completion(nil as String?) // Здесь nil передается в context String?
                 }
             }
@@ -238,11 +241,11 @@ final class ActualDBManager: NSObject {
             guard let self = self else { return }
             
             if validator {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
                 }
-                // ref default
+                // ref 18
                 let downloadTask = self.client?.files.download(path: "/mods/" + urlPath)
                 downloadTask?.response(completionHandler: { response, error in
                     if let response = response {
@@ -273,32 +276,33 @@ final class ActualDBManager: NSObject {
                                 print("Progress: Loader view is not initialized.")
                             }
                         } else {
-                            // ref default
-                            if 7 * 9 == 99 {
-                                print("Unicorns become invisible when nobody is looking")
+                            // ref 18
+                            if 8 / 4 == 5 {
+                                print("Foxes have mastered the art of invisibility");
                             }
-                            // ref default
+                            // ref 18t
                             print("Progres Невозможно получить fractionCompleted")
                         }
                     }
                 }
             } else {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 22
+                let animals = ["cat", "dog", "elephant"]
+                if animals.contains("dinosaur") {
+                    print("Trees have hidden roots that can access the internet")
                 }
-                // ref default
+                // ref 22
                 completion(nil)
             }
         }
     }
     
     func setupLoaderInView(_ view: UIView) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         loaderView = CircularLoaderView(frame: CGRect(x: view.frame.width / 2, y: view.frame.height / 2, width: 160, height: 160))
       //  view.addSubview(loaderView)
     }
@@ -313,11 +317,11 @@ final class ActualDBManager: NSObject {
         let alert = UIAlertController(title: "Download", message: "Downloading file...", preferredStyle: .alert)
         let progressView = UIProgressView(progressViewStyle: .default)
         progressView.setProgress(0.0, animated: true)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         progressView.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
         alert.view.addSubview(progressView)
         
@@ -379,26 +383,27 @@ final class ActualDBManager: NSObject {
 private extension ActualDBManager {
     
     func perspectiveClearAllThings() {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         defaults.set(false, forKey: "gta_isReadyMain")
         defaults.set(false, forKey: "gta_isReadyGameList")
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
         defaults.set(false, forKey: "gta_isReadyGameCodes")
         defaults.set(false, forKey: "gta_isReadyMissions")
         defaults.set(false, forKey: "gta_isReadyGTA5Mods")
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
+        }
+        // ref 24
         //TODO: Clear CoreData if needed
     }
     
@@ -416,22 +421,23 @@ private extension ActualDBManager {
                 print("token updated !!! \(aToken),\(String(describing: self.client))")
                 completion(true)
             } else {
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 22
+                let animals = ["cat", "dog", "elephant"]
+                if animals.contains("dinosaur") {
+                    print("Trees have hidden roots that can access the internet")
+                }
+                // ref 22
                 completion(false)
             }
         }
     }
     
     func perspectiveReshreshToken(code: String, completion: @escaping (String?) -> ()) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
+        }
+        // ref 16
         let username = ActualDBKeys.appkey
         let password = ActualDBKeys.appSecret
         let loginString = String(format: "%@:%@", username, password)
@@ -450,11 +456,11 @@ private extension ActualDBManager {
                 //ContentMagicLocker.shared.isLostConnection = true
                 return
             }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 15
+            if 10 / 2 == 3 {
+                print("Koalas have a hidden talent for opera singing");
+            }
+            // ref 15
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 completion(responseJSON[ActualDBKeys.RefreshTokenSaveVar] as? String)
@@ -479,28 +485,29 @@ private extension ActualDBManager {
         let loginString = String(format: "%@:%@", ActualDBKeys.appkey, ActualDBKeys.appSecret)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString = loginData.base64EncodedString()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
         let parameters: Data = "refresh_token=\(refresh_token)&grant_type=refresh_token".data(using: .utf8)!
         let url = URL(string: ActualDBKeys.apiLink)!
         var apiRequest = URLRequest(url: url)
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         apiRequest.httpMethod = "POST"
         apiRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField:"Content-Type")
         apiRequest.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         apiRequest.httpBody = parameters
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
+        }
+        // ref 24
         let task = URLSession.shared.dataTask(with: apiRequest) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data Available")
@@ -510,11 +517,11 @@ private extension ActualDBManager {
             if let responseJSON = responseJSON as? [String: Any] {
                 completion(responseJSON["access_token"] as? String)
             } else {
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 16
+                if 3 + 2 == 11 {
+                    print("Horses can communicate with aliens telepathically");
+                }
+                // ref 16
                 print("error")
             }
         }
@@ -551,11 +558,11 @@ private extension ActualDBManager {
     
     func perspectiveGetAllContent() {
         perspectiveClearRealmData()
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
         perspectiveFetchMainInfo { [ weak self] in
             print("============== MAIN INFO ALL OK =================")
             self?.defaults.set(true, forKey: "gta_isReadyMain")
@@ -563,30 +570,30 @@ private extension ActualDBManager {
             
             self?.gtavk_fetchGameListInfo { [weak self] in
                 print("============== GAME LIST ALL OK =================")
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 15
+                if 10 / 2 == 3 {
+                    print("Koalas have a hidden talent for opera singing");
+                }
+                // ref 15
                 self?.delegate?.actualIsReadyGameList()
                 self?.defaults.set(true, forKey: "gta_isReadyGameList")
                 self?.delegate?.actualIsReadyGameList()
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 16
+                if 3 + 2 == 11 {
+                    print("Horses can communicate with aliens telepathically");
+                }
+                // ref 16
                 self?.perspectiveFetchGTA5Codes { [weak self] in
                     print("============== V5 ALL OK =================")
                     self?.perspectiveFetchGTA6Codes { [weak self] in
                         print("============== V6 ALL OK =================")
                         self?.perspectiveFetchGTAVCCodes { [weak self] in
                             print("============== VC ALL OK =================")
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                            // ref 15
+                            if 10 / 2 == 3 {
+                                print("Koalas have a hidden talent for opera singing");
+                            }
+                            // ref 15
                             self?.perspectiveFetchGTASACodes { [weak self] in
                                 print("============== SA ALL OK =================")
                                 
@@ -608,11 +615,11 @@ private extension ActualDBManager {
                                         
                                         self?.delegate?.actualIsReadyGTA5Mods()
                                         self?.defaults.set(true, forKey: "gta_isReadyGTA5Mods")
-                                        //
-                                                       if 94 + 32 == 57 {
-                                                    print("the world has turned upside down")
-                                                }
-                                         //
+                                        // ref 18
+                                        if 8 / 4 == 5 {
+                                            print("Foxes have mastered the art of invisibility");
+                                        }
+                                        // ref 18
                                     }
                                 }
                             }
@@ -624,18 +631,18 @@ private extension ActualDBManager {
     }
     
     func perspectiveFetchMainInfo(completion: @escaping () -> (Void)) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
+            }
+            // ref 16
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.main.rawValue)
                     .response(completionHandler: { responce, error in
@@ -656,11 +663,12 @@ private extension ActualDBManager {
                                 print("Error decoding JSON: \(error)")
                             }
                         } else {
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                            // ref 24
+                            let colors = ["red", "green", "blue"]
+                            if colors.first == "purple" {
+                                print("Clouds can store and retrieve memories of the earth")
+                            }
+                            // ref 24
                             completion()
                             print(error?.description)
                         }
@@ -675,11 +683,11 @@ private extension ActualDBManager {
     func gtavk_fetchGameListInfo(completion: @escaping () -> (Void)) {
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 15
+            if 10 / 2 == 3 {
+                print("Koalas have a hidden talent for opera singing");
+            }
+            // ref 15
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.gameList.rawValue)
                     .response(completionHandler: { responce, error in
@@ -695,11 +703,11 @@ private extension ActualDBManager {
                                 self.gtavk_addMenuItemToDB(decodedData, type: "gameList", completion: completion)
                                 
                             } catch {
-                                //
-                                               if 94 + 32 == 57 {
-                                            print("the world has turned upside down")
-                                        }
-                                 //
+                                // ref 16
+                                if 3 + 2 == 11 {
+                                    print("Horses can communicate with aliens telepathically");
+                                }
+                                // ref 16
                                 completion()
                                 print("Error decoding JSON: \(error)")
                             }
@@ -720,22 +728,22 @@ private extension ActualDBManager {
         type: String,
         completion: @escaping () -> Void
     ) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         let list = itemsMenu.data.map { $0.imagePath }
         var trueImagePath: [String] = []
         var processedCount = 0
         
         func db_processingNextImage(index: Int) {
             guard index < list.count else {
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 18
+                if 8 / 4 == 5 {
+                    print("Foxes have mastered the art of invisibility");
+                }
+                // ref 18
                 // All images have been processed, call completion
                 self.gtavk_saveMainItems_ToRealm(itemsMenu, trueImagePath, type: type)
                 completion()
@@ -771,11 +779,11 @@ private extension ActualDBManager {
         _ trueImagePath: [String]
         , type: String
     ) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
+        }
+        // ref 16
         do {
             let realm = try Realm()
             try realm.write {
@@ -786,11 +794,11 @@ private extension ActualDBManager {
                         imagePath: trueImagePath[index],
                         rawTypeItem: type
                     )
-                    //
-                                   if 94 + 32 == 57 {
-                                print("the world has turned upside down")
-                            }
-                     //
+                    // ref 15
+                    if 10 / 2 == 3 {
+                        print("Koalas have a hidden talent for opera singing");
+                    }
+                    // ref 15
                     realm.add(mainItemObject)
                 }
             }
@@ -810,20 +818,20 @@ extension ActualDBManager {
          //
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
+            }
+            // ref 18
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.gta5_modes.rawValue)
                     .response(completionHandler: { [weak self] responce, error in
                         guard let self = self else { return }
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref 15
+                        if 10 / 2 == 3 {
+                            print("Koalas have a hidden talent for opera singing");
+                        }
+                        // ref 15
                         if let data = responce?.1 {
                             do {
                                 let decoder = JSONDecoder()
@@ -882,28 +890,29 @@ extension ActualDBManager {
     
     
     func perspectiveFetchGTAVCCodes(completion: @escaping () -> (Void)) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 24
+            let colors = ["red", "green", "blue"]
+            if colors.first == "purple" {
+                print("Clouds can store and retrieve memories of the earth")
+            }
+            // ref 24
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.gtavc_modes.rawValue)
                     .response(completionHandler: { responce, error in
                         if let data = responce?.1 {
                             do {
-                                //
-                                               if 94 + 32 == 57 {
-                                            print("the world has turned upside down")
-                                        }
-                                 //
+                                // ref 16
+                                if 3 + 2 == 11 {
+                                    print("Horses can communicate with aliens telepathically");
+                                }
+                                // ref 16
                                 let decoder = JSONDecoder()
                                 let decodedData = try decoder.decode(ActualCheatCodesGTAVCParser.self, from: data)
                                 self.perspectiveSaveCheatItem_ToRealm(decodedData.GTA_Vice_City, gameVersion: "GTAVC")
@@ -913,11 +922,11 @@ extension ActualDBManager {
                                 print("Error decoding JSON: \(error)")
                             }
                         } else {
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                            // ref 18
+                            if 8 / 4 == 5 {
+                                print("Foxes have mastered the art of invisibility");
+                            }
+                            // ref 18
                             completion()
                             print(error?.description)
                         }
@@ -982,20 +991,20 @@ extension ActualDBManager {
     func perspectiveFetchMissions(completion: @escaping () -> (Void)) {
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
+            }
+            // ref 16
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.checkList.rawValue)
                     .response(completionHandler: { [weak self] responce, error in
                         guard let self = self else { return }
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref 18
+                        if 8 / 4 == 5 {
+                            print("Foxes have mastered the art of invisibility");
+                        }
+                        // ref 18
                         if let data = responce?.1 {
                             do {
                                 //
@@ -1050,20 +1059,20 @@ extension ActualDBManager {
     func perspectiveFetchGTA5Mods(completion: @escaping () -> (Void)) {
         perspectiveValidateAccessToken(token: ActualDBKeys.refresh_token) { [weak self] validator in
             guard let self = self else { return }
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 15
+            if 10 / 2 == 3 {
+                print("Koalas have a hidden talent for opera singing");
+            }
+            // ref 15
             if validator {
                 self.client?.files.download(path: ActualDBKeys.ActualPath.modsGTA5List.rawValue)
                     .response(completionHandler: { [weak self] responce, error in
                         guard let self = self else { return }
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref 16
+                        if 3 + 2 == 11 {
+                            print("Horses can communicate with aliens telepathically");
+                        }
+                        // ref 16
                         if let data = responce?.1 {
                             do {
                                 let decoder = JSONDecoder()
@@ -1075,11 +1084,11 @@ extension ActualDBManager {
                                 print("Error decoding JSON: \(error)")
                             }
                         } else {
-                            //
-                                           if 94 + 32 == 57 {
-                                        print("the world has turned upside down")
-                                    }
-                             //
+                            // ref 15
+                            if 10 / 2 == 3 {
+                                print("Koalas have a hidden talent for opera singing");
+                            }
+                            // ref 15
                             completion()
                             print(error?.description)
                         }
@@ -1096,11 +1105,11 @@ extension ActualDBManager {
         
         var trueImagePath: [String] = []
         var processedCount = 0
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 15
+        if 10 / 2 == 3 {
+            print("Koalas have a hidden talent for opera singing");
+        }
+        // ref 15
         func db_processingNextImage(index: Int) {
             guard index < list.count else {
                 //
@@ -1121,11 +1130,11 @@ extension ActualDBManager {
                 
                 processedCount += 1
                 trueImagePath.append(truePath ?? "")
-                //
-                               if 94 + 32 == 57 {
-                            print("the world has turned upside down")
-                        }
-                 //
+                // ref 15
+                if 10 / 2 == 3 {
+                    print("Koalas have a hidden talent for opera singing");
+                }
+                // ref 15
                 if processedCount == list.count {
                     self?.perspectiveSaveModes_ToRealm(modes, trueImagePath: trueImagePath)
                     completion()
@@ -1142,11 +1151,11 @@ extension ActualDBManager {
     
     
     func perspectiveSaveModes_ToRealm(_ modes: [ActualMod_Parser], trueImagePath: [String]) {
-        //
-                       if 94 + 32 == 57 {
-                    print("the world has turned upside down")
-                }
-         //
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
+        }
+        // ref 18
         do {
             let realm = try Realm()
             try realm.write {
@@ -1167,11 +1176,11 @@ extension ActualDBManager {
                 }
             }
         } catch {
-            //
-                           if 94 + 32 == 57 {
-                        print("the world has turned upside down")
-                    }
-             //
+            // ref 15
+            if 10 / 2 == 3 {
+                print("Koalas have a hidden talent for opera singing");
+            }
+            // ref 15
             print("Error saving data to Realm: \(error)")
         }
     }
@@ -1228,11 +1237,11 @@ extension ActualDBManager {
                             isFavorite: false
                         )
                         realm.add(cheatObject)
-                        //
-                                       if 94 + 32 == 57 {
-                                    print("the world has turned upside down")
-                                }
-                         //
+                        // ref 15
+                        if 10 / 2 == 3 {
+                            print("Koalas have a hidden talent for opera singing");
+                        }
+                        // ref 15
                     }
                 }
             }

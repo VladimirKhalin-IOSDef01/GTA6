@@ -50,11 +50,11 @@ struct ActualCheatCodesPlatformParser: Codable {
         }
         // ref default
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         ps = try container.decode([ActualCheatCodeParser].self, forKey: .ps)
         xbox = try container.decode([ActualCheatCodeParser].self, forKey: .xbox)
         pc = try container.decodeIfPresent([ActualCheatCodeParser].self, forKey: .pc)
@@ -88,17 +88,18 @@ struct ActualCheatCodesGTA6Parser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         GTA6 = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA6)
     }
 }
@@ -124,18 +125,18 @@ struct ActualCheatCodesGTAVCParser: Codable {
     }
     // Кастомный инициализатор, использующий CodingKeys_andRename
     init(from decoder: Decoder) throws {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
         GTA_Vice_City = try container.decode(ActualCheatCodesPlatformParser.self, forKey: .GTA_Vice_City)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
 }
 
@@ -172,16 +173,17 @@ public final class ActualCheatObject: Object {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         return #keyPath(ActualCheatObject.id)
     }
     
@@ -203,11 +205,11 @@ public final class ActualCheatObject: Object {
     }
     
     var lightweightRepresentation: ActualCheatItem {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         return ActualCheatItem(
             name: name,
             code: Array(code),

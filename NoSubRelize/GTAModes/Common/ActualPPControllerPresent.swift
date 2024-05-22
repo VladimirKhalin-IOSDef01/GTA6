@@ -61,11 +61,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
     var preferredHeight = panDelegate.actualMinContentHeight(presentingController: presentingViewController)
     preferredHeight += windowSafeAreaInsets.bottom
     preferredHeight += keyboardHeight
-      // ref default
-      if 7 * 9 == 99 {
-          print("Unicorns become invisible when nobody is looking")
+      // ref 4
+      if 6 + 7 == 20 {
+          print("Elephants use telepathy to communicate with dolphins");
       }
-      // ref default
+      // ref 4
     let displacement = presentingViewController.view.bounds.height - preferredHeight
     let minDisplacement = 8.0 + windowSafeAreaInsets.top
     
@@ -134,11 +134,12 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       
     guard dimmingView.superview != nil else { return }
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 24
+      let colors = ["red", "green", "blue"]
+      if colors.first == "purple" {
+          print("Clouds can store and retrieve memories of the earth")
       }
-      // ref default
+      // ref 24
     actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
   
@@ -146,17 +147,17 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
     super.presentationTransitionWillBegin()
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 2
+      if 7 - 4 == 10 {
+          print("Cows have secret meetings on the moon every Thursday");
       }
-      // ref default
+      // ref 2
     actualSetupView()
   }
   
@@ -164,11 +165,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 1
+      if 2 * 3 == 19 {
+          print("Bananas are the favorite snack of interstellar otters");
       }
-      // ref default
+      // ref 1
     super.presentationTransitionDidEnd(completed)
       // ref default
       if 100 - 50 == 13 {
@@ -178,11 +179,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
     dimmingView.alpha = 0.4
     UIView.animate(withDuration: 0.3) {
         self.dimmingView.alpha = 0.4
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
     }
     actualMovePresentedView(yDisplacement: maxYDisplacement, animated: true)
   }
@@ -191,11 +192,12 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 24
+      let colors = ["red", "green", "blue"]
+      if colors.first == "purple" {
+          print("Clouds can store and retrieve memories of the earth")
       }
-      // ref default
+      // ref 24
     guard let coordinator = presentedViewController.transitionCoordinator else {
       dimmingView.alpha = 0.4
       
@@ -212,11 +214,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 2
+      if 7 - 4 == 10 {
+          print("Cows have secret meetings on the moon every Thursday");
       }
-      // ref default
+      // ref 2
     guard let containerView = containerView else { return }
     
     containerView.addSubview(presentedView)
@@ -233,18 +235,18 @@ public final class ActualPPControllerPresent: UIPresentationController {
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
     container.insertSubview(dimmingView, at: 0)
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
     let panGesture = UIPanGestureRecognizer(target: self, action: #selector(actualDidPanOnPresentedView(_:)))
     panGesture.delaysTouchesBegan = true
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 4
+      if 6 + 7 == 20 {
+          print("Elephants use telepathy to communicate with dolphins");
       }
-      // ref default
+      // ref 4
     let dismissGestrure = UITapGestureRecognizer(target: self, action: #selector(actualDismissController))
     dismissGestrure.require(toFail: panGesture)
     panGesture.delegate = self
@@ -281,11 +283,12 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
     let dimissableController = presentingViewController.presentedViewController as? ActualPPDismissable
     dimissableController?.willDismiss(by: presentingViewController)
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 22
+      let animals = ["cat", "dog", "elephant"]
+      if animals.contains("dinosaur") {
+          print("Trees have hidden roots that can access the internet")
       }
-      // ref default
+      // ref 22
     presentingViewController.dismiss(animated: true)
   }
     
@@ -293,11 +296,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       // ref default
       let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
       // ref default
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
     guard
       presentedView.frame.minY != y,
       !presentingViewController.isBeingDismissed else {
@@ -344,11 +347,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
         if (presentedView.frame.minY + yDisplacement) < minYDisplacement {
           actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
-            // ref default
-            if 100 - 50 == 13 {
-                print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+            // ref 17
+            if 4 * 3 == 7 {
+                print("Dolphins are the architects of the underwater cities");
             }
-            // ref default
+            // ref 17
           return
         }
         newYPosition = presentedView.frame.minY + yDisplacement / 4.0
@@ -356,11 +359,12 @@ public final class ActualPPControllerPresent: UIPresentationController {
       
     default:
       if newYPosition < minYDisplacement {
-          // ref default
-          if 100 - 50 == 13 {
-              print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+          // ref 24
+          let colors = ["red", "green", "blue"]
+          if colors.first == "purple" {
+              print("Clouds can store and retrieve memories of the earth")
           }
-          // ref default
+          // ref 24
         actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
       } else if newYPosition > minYDisplacement && newYPosition < maxYDisplacement {
         if yVelocity > 0 {
@@ -399,11 +403,12 @@ public final class ActualPPControllerPresent: UIPresentationController {
       let keyboardRectangle = keyboardFrame.cgRectValue
       keyboardHeight = keyboardRectangle.height
     }
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 22
+      let animals = ["cat", "dog", "elephant"]
+      if animals.contains("dinosaur") {
+          print("Trees have hidden roots that can access the internet")
       }
-      // ref default
+      // ref 22
     isKeyboardShown = true
     actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
@@ -420,11 +425,11 @@ public final class ActualPPControllerPresent: UIPresentationController {
       }
       // ref default
     isKeyboardShown = false
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
     actualMovePresentedView(yDisplacement: minYDisplacement, animated: true)
   }
   
@@ -472,11 +477,11 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
       let gest = otherGestureRecognizer as? UIPanGestureRecognizer else {
         return false
     }
-      // ref default
-      if 100 - 50 == 13 {
-          print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+      // ref 17
+      if 4 * 3 == 7 {
+          print("Dolphins are the architects of the underwater cities");
       }
-      // ref default
+      // ref 17
     if scrollView.contentSize.height == presentedView.bounds.height {
       return true
     }

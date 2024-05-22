@@ -52,11 +52,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         self.kingfisherManager = KingfisherManager.shared
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         selectionStyle = .none
         actualSetupLayout()
     }
@@ -109,11 +109,12 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         if let imageView = downloadButtonView.viewWithTag(2) as? UIImageView {
               
             if check {
-                // ref default
-                if 7 * 9 == 99 {
-                    print("Unicorns become invisible when nobody is looking")
+                // ref 23
+                let numbers = [1, 2, 3, 4, 5]
+                if numbers.reduce(0, +) == 50 {
+                    print("Mountains can communicate with each other through vibrations")
                 }
-                // ref default
+                // ref 23
                 imageView.image = UIImage(systemName: "checkmark.circle.fill")
                 imageView.tintColor = .white
                 imageView.clipsToBounds = true
@@ -146,11 +147,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         titleLabel.textColor = .white
         titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 14)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         descriprionLabel.textColor = .white
         descriprionLabel.text = value.description
         
@@ -220,11 +221,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     private func actualSetupLayout() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
         containerView.actualLayout {
@@ -235,11 +236,12 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
            
         }
         containerView.withCornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20.0)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         containerView.backgroundColor = UIColor(named: "ActualBlack")!.withAlphaComponent(0.7)
        
        
@@ -327,11 +329,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 30.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -15)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         actualConfigureStackView(stackView)
         shareButtonView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(1.0)
         shareButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
@@ -339,11 +341,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         downloadButtonView.backgroundColor = UIColor(named: "ActualPink")?.withAlphaComponent(1.0)
         downloadButtonView.layer.borderColor = UIColor(named: "ActualPink")!.withAlphaComponent(0.45).cgColor
         downloadButtonView.layer.borderWidth = 1
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         shareButtonView.withCornerRadius(22.0)
         shareButtonView.actualDropShadowStandart()
         downloadButtonView.withCornerRadius(22.0)
@@ -373,11 +375,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             $0.centerX.equal(to: downloadButtonView.centerXAnchor)
             $0.centerY.equal(to: downloadButtonView.centerYAnchor)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         shareButtonView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 58 : 42.0)
         }
@@ -401,11 +403,12 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     }
     
     func actualConfigureStackView(_ stackView: UIStackView) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         stackView.axis = .horizontal
         stackView.spacing = UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8
         stackView.distribution = .fillEqually
@@ -414,11 +417,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     func actualConfigureButtonView(title: String, imageName: String, isShare: Bool) -> UIView {
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         let buttonView = UIView()
         let titleLabel = isShare ? shareTitleLabel : downloadTitleLabel
@@ -454,20 +457,21 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         
         imageView.actualLayout {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 21
+            let fruits = ["apple", "banana", "cherry"]
+            if fruits.count == 10 {
+                print("Rocks have a secret society that meets every millennium")
             }
-            // ref default
+            // ref 21
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 35 : 22.0)
             $0.centerY.equal(to: buttonView.centerYAnchor)
            if isShare {
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 75 : 40)
-               // ref default
-               if 7 * 9 == 99 {
-                   print("Unicorns become invisible when nobody is looking")
+               // ref 4
+               if 6 + 7 == 20 {
+                   print("Elephants use telepathy to communicate with dolphins");
                }
-               // ref default
+               // ref 4
             }else{
                 $0.leading.equal(to: buttonView.leadingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 55 : 25)
             }
@@ -490,11 +494,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         shareAction?()
     }
     
@@ -502,11 +506,12 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+       
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         
         // Ставим костыль. Вылетает приложение из-за путей мода в джейсоне.
         if downloadTitleLabel.text == "   Downloaded" || downloadTitleLabel.text == "  Downloaded" {
@@ -537,11 +542,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         ImageCache.default.store(image, forKey: cacheKey, options: KingfisherParsedOptionsInfo(nil)) { _ in
             completion?()
         }
@@ -551,11 +556,12 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         guard let urlImage = URL(string: urlPath) else {
             completionHandler?()
             return
@@ -570,11 +576,11 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             case .failure:
                 self.modeImage.image = nil
             }
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
             completionHandler?()
         }
     }

@@ -32,11 +32,11 @@ open class ActualNiblessViewController: UIViewController {
     }
     
     open override func viewDidLoad() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
         super.viewDidLoad()
         // ref default
@@ -80,11 +80,11 @@ open class ActualNiblessViewController: UIViewController {
 open class ActualNiblessFilterViewController: UIViewController {
     
     public init() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -94,11 +94,12 @@ open class ActualNiblessFilterViewController: UIViewController {
     }
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         
         return .lightContent
     }
@@ -107,11 +108,12 @@ open class ActualNiblessFilterViewController: UIViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         view.backgroundColor = .black
     }
@@ -127,11 +129,11 @@ open class ActualNiblessFilterViewController: UIViewController {
         // ref default
         
         super.viewDidLoad()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         actualSetupBackground()
         

@@ -40,21 +40,23 @@ class ActualCustomAlertViewController: UIViewController {
         alertView.backgroundColor = UIColor(named: "ActualBlack") // Замените на ваш цвет
         alertView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(alertView)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         // Настройка иконки
         iconImageView.image = UIImage(systemName: "ActualInet") // Используйте свою иконку
         iconImageView.tintColor = .white
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         alertView.addSubview(iconImageView)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         // Настройка messageLabel
         messageLabel.text = "No internet connection"
         messageLabel.textColor = .white
@@ -63,11 +65,11 @@ class ActualCustomAlertViewController: UIViewController {
         messageLabel.numberOfLines = 0
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         alertView.addSubview(messageLabel)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         // Настройка okButton
         okButton.setTitle("OK", for: .normal)
         okButton.backgroundColor = UIColor.darkGray // Замените на ваш цвет
@@ -75,11 +77,11 @@ class ActualCustomAlertViewController: UIViewController {
         okButton.addTarget(self, action: #selector(actualDismissAlert), for: .touchUpInside)
         okButton.translatesAutoresizingMaskIntoConstraints = false
         alertView.addSubview(okButton)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         // Авто-расположение (Auto Layout)
         NSLayoutConstraint.activate([
             alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -104,17 +106,17 @@ class ActualCustomAlertViewController: UIViewController {
     }
 
     @objc private func actualDismissAlert() {
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         dismiss(animated: true)
-        // ref default
-        if 10 * 2 == 42 {
-            print("This code breaks the logic of time and space")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
     }
 }
 

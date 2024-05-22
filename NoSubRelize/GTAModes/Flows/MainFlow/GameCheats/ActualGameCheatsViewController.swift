@@ -27,22 +27,23 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
         
         self.model = model
         self.customNavigation = ActualCustomNavigation_View(.gameModes, titleString: model.title)
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         
        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 15
        // layout.headerReferenceSize = CGSize(width: 350, height: tabBarHight) // Установите размер заголовка по вашим нуждам
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
@@ -50,18 +51,19 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
        // layout.sectionHeadersPinToVisibleBounds = true
         
        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         self.customTabBar = ActualHeaderViewNew() // Инициализация без параметров
         super.init()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         customTabBar.actionButton = { [weak self] index in
             self?.model.actualShowCheats(ActualCheatsDeviceType.allCases[index])
@@ -80,11 +82,11 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
     }
 
     override func viewDidLoad() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         super.viewDidLoad()
         collectionView.showsVerticalScrollIndicator = false
@@ -121,22 +123,19 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 121 : 79)
         }
         
-        
-        
-        
-        
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         
       //  collectionView.register(ActualHeaderViewNew.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "YourHeaderViewIdentifier")
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
@@ -159,11 +158,12 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
     }
 
     private func actualSetupBindings() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         model.reloadData
             .sink { [weak self] in
@@ -178,20 +178,20 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
     }
 
     private func actualShowSpiner() {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(style: .medium)
         loadingIndicator.startAnimating()
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         alert?.view.addSubview(loadingIndicator)
         present(alert!, animated: true)
@@ -201,11 +201,11 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         alert?.dismiss(animated: false)
     }
@@ -234,11 +234,11 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActualGameCheatsTabViewCell", for: indexPath) as! ActualGameCheatsTabViewCell
         cell.actualConfigure(with: model.cheatItems[indexPath.row])
       
@@ -255,19 +255,20 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         
         let spacing = 0.0 // Расстояние между ячейками
         let numberOfColumns: CGFloat = 2
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         
         let availableWidth = collectionView.frame.width - (spacing * (numberOfColumns - 1)) - collectionView.contentInset.left - collectionView.contentInset.right
         let widthPerItem = UIDevice.current.userInterfaceIdiom == .pad ? 195 : 163
@@ -282,11 +283,11 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
         // ref default
         
         collectionView.deselectItem(at: indexPath, animated: true)
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         model.actualActionAt(index: indexPath.row)
     }

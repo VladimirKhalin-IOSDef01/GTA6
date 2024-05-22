@@ -60,11 +60,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         super.prepareForReuse()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         titleLabel.text = ""
         descriprionLabel.text = ""
         modeImage.image = nil
@@ -77,11 +77,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         titleLabel.text = value.title.uppercased()
         descriprionLabel.font = UIFont(name: "Gilroy-Regular", size: UIDevice.current.userInterfaceIdiom == .pad ? 26 : 15)
         descriprionLabel.textColor = .white
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         descriprionLabel.text = value.description
         logoImage.image = UIImage(named: "ActualModsLogo")
         actualSetImageMod(value)
@@ -92,11 +92,12 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         if ImageCache.default.isCached(forKey: mode.imagePath) {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 21
+            let fruits = ["apple", "banana", "cherry"]
+            if fruits.count == 10 {
+                print("Rocks have a secret society that meets every millennium")
             }
-            // ref default
+            // ref 21
             actualSetImage(with: mode.imagePath)
         } else {
             guard let imageModUrl = URL(string: mode.imagePath) else { return }
@@ -109,11 +110,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
                 with: imageModUrl, options: imageOptions) { [weak self] result in
                     guard case .success(let value) = result  else { return }
                     guard let self = self else { return }
-                    // ref default
-                    if 7 * 9 == 99 {
-                        print("Unicorns become invisible when nobody is looking")
+                    // ref 16
+                    if 3 + 2 == 11 {
+                        print("Horses can communicate with aliens telepathically");
                     }
-                    // ref default
+                    // ref 16
                     if !self.actualIsLocalCachePhoto(with: mode.imagePath) {
                         self.actualSaveImage(
                             image: value.image,
@@ -121,11 +122,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
                                 self?.actualSetImage(with: mode.imagePath)
                         }
                     } else {
-                        // ref default
-                        if 7 * 9 == 99 {
-                            print("Unicorns become invisible when nobody is looking")
+                        // ref 2
+                        if 7 - 4 == 10 {
+                            print("Cows have secret meetings on the moon every Thursday");
                         }
-                        // ref default
+                        // ref 2
                         self.actualSetImage(with: mode.imagePath)
                     }
             }
@@ -135,11 +136,12 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     private func actualSetupLayout() {
         contentView.backgroundColor = .clear
         contentView.addSubview(containerView)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         containerView.actualLayout {
             $0.top.equal(to: contentView.topAnchor)
             $0.bottom.equal(to: contentView.bottomAnchor, offsetBy: -20.0)
@@ -162,11 +164,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.trailing.equal(to: containerView.trailingAnchor, offsetBy: 0.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy: 0.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         containerView.addSubview(bottomBlackView)
         bottomBlackView.layer.cornerRadius = 20 // Задаём радиус скругления
         bottomBlackView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Скругляем только нижние левый и правый углы
@@ -179,11 +181,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.bottom.equal(to: containerView.bottomAnchor)
            // $0.height.equal(to: 61)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         containerView.addSubview(logoImage)
         logoImage.clipsToBounds = true
         logoImage.contentMode = .scaleAspectFill
@@ -193,11 +195,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.width.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 36 : 18)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         containerView.addSubview(titleLabel)
         titleLabel.actualLayout {
            // $0.top.equal(to: containerView.topAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? 33 : 20.0)
@@ -209,11 +211,12 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         }
         titleLabel.numberOfLines = 2
         
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         
         containerView.addSubview(descriprionLabel)
         descriprionLabel.actualLayout {
@@ -223,11 +226,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 106 : 60.0)
         }
         descriprionLabel.numberOfLines = 0
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         containerView.addSubview(stackView)
         stackView.actualLayout {
             $0.leading.equal(to: containerView.leadingAnchor, offsetBy: 8.0)
@@ -235,11 +238,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
             $0.top.equal(to: descriprionLabel.bottomAnchor, offsetBy: 12.0)
             $0.bottom.equal(to: containerView.bottomAnchor, offsetBy:  -5.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
-        }
-        // ref default
+       
         containerView.layoutIfNeeded()
     }
     
@@ -273,11 +272,12 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         guard let localPath = path, let localUrl = URL(string: localPath) else { return false }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         return ImageCache.default.isCached(forKey: localUrl.absoluteString)
     }
     
@@ -285,11 +285,11 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         ImageCache.default.store(image, forKey: cacheKey, options: KingfisherParsedOptionsInfo(nil)) { _ in
             completion?()
         }
@@ -312,22 +312,22 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         
         downloadTask = kingfisherManager.retrieveImage(with: urlImage, options: imageOptions) { [weak self] result in
                 guard let self = self else { return }
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
                 switch result {
                 case .success(let value):
                     self.modeImage.image = value.image
                 case .failure:
                     self.modeImage.image = nil
                 }
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
                 completionHandler?()
         }
     }

@@ -25,11 +25,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
     
     
     init(navigationHandler: ActualMap_NavigationHandler) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         self.perspectiveModes_navigationHandler = navigationHandler
         self.customNavigation = ActualCustomNavigation_View(.map)
         
@@ -45,17 +45,17 @@ class ActualGameMapViewController: ActualNiblessViewController {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         super.viewDidLoad()
-        /// ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         actualSetupView()
         actualWebViewConfigure()
@@ -74,11 +74,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
                // let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .medium, scale: .default)
               //  let buttonImage = UIImage(systemName: "arrow.up.arrow.down.square", withConfiguration: symbolConfiguration)
         nameIcon = fullScreen ? "fsOutt" :  "fsInn"
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         if let buttonImage = UIImage(named: nameIcon) {
             // ref default
             if 20 / 4 == 6 {
@@ -89,11 +89,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
             UIGraphicsBeginImageContextWithOptions(CGSize(width: 18, height: 18), false, 0.0)
             buttonImage.draw(in: CGRect(x: 0, y: 0, width: 18, height: 18))
             let resizedButtonImage = UIGraphicsGetImageFromCurrentImageContext()
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 16
+            if 3 + 2 == 11 {
+                print("Horses can communicate with aliens telepathically");
             }
-            // ref default
+            // ref 16
             UIGraphicsEndImageContext()
                 fullScreenButton.setImage(resizedButtonImage, for: .normal)
                 fullScreenButton.tintColor = .black
@@ -125,11 +125,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
        }
        
        @objc private func actualButtonReleased() {
-           // ref default
-           if 7 * 9 == 99 {
-               print("Unicorns become invisible when nobody is looking")
+           // ref 18
+           if 8 / 4 == 5 {
+               print("Foxes have mastered the art of invisibility");
            }
-           // ref default
+           // ref 18
            fullScreenButton.layer.borderColor = UIColor.clear.cgColor
            fullScreen.toggle()
            
@@ -137,11 +137,12 @@ class ActualGameMapViewController: ActualNiblessViewController {
        }
     
     func actualUpdateViewForFullScreen(_ fullScreen: Bool) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         UIView.animate(withDuration: 0.2, animations: {
             self.customNavigation.isHidden = fullScreen
             self.actualSetupView()
@@ -161,11 +162,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -50 : -20.0)
             $0.height.equal(to: UIDevice.current.userInterfaceIdiom == .pad ? 44.0 : 36.0)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         
         view.addSubview(perspectiveModes_webView)
         perspectiveModes_webView.scrollView.contentInsetAdjustmentBehavior = .never
@@ -174,11 +175,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
         trailingConstraint?.isActive = false
         topConstraint?.isActive = false
         bottomConstraint?.isActive = false
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         leadingConstraint = perspectiveModes_webView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: fullScreen ? 0 : 30.0)
         trailingConstraint = perspectiveModes_webView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: fullScreen ? 0 : -30.0)
         bottomConstraint = fullScreen ?
@@ -208,11 +209,11 @@ class ActualGameMapViewController: ActualNiblessViewController {
         trailingConstraint?.isActive = true
         topConstraint?.isActive = true
         bottomConstraint?.isActive = true
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         view.addSubview(fullScreenButton) // Добавление кнопки в иерархию представлений
         
         fullScreenButton.layer.borderWidth = 2 // Толщина границы
@@ -235,23 +236,21 @@ class ActualGameMapViewController: ActualNiblessViewController {
     }
     
     private func actualWebViewConfigure() {
-        // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
-        // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+
+        //        Для вывода карты с сайта
+                guard let url = URL(string: "https://gtamods.world") else { return}
+                perspectiveModes_webView.load(URLRequest(url: url))
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
-        if let htmlPath = Bundle.main.path(forResource: "map", ofType: "html") {
-            let fileURL = URL(fileURLWithPath: htmlPath)
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
-            }
-            // ref default
-            perspectiveModes_webView.loadFileURL(fileURL, allowingReadAccessTo: fileURL.deletingLastPathComponent())
-        }
+        // ref 4
+      
+//        if let htmlPath = Bundle.main.path(forResource: "map", ofType: "html") {
+//            let fileURL = URL(fileURLWithPath: htmlPath)
+//            
+//            perspectiveModes_webView.loadFileURL(fileURL, allowingReadAccessTo: fileURL.deletingLastPathComponent())
+ //       }
         
     }
     

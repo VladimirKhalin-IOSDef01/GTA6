@@ -13,11 +13,11 @@ class ActualChecklistViewController: ActualNiblessViewController {
     var fakeLoader = ActualFakeLoader()
     
     init(model: ActualChecklistModel) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         self.model = model
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
@@ -31,11 +31,11 @@ class ActualChecklistViewController: ActualNiblessViewController {
         self.customNavigation = ActualCustomNavigation_View(.checkList)
     
         super.init()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         customNavigation.leftButtonAction = { [weak self] in
             self?.model.actualBackActionProceeed()
         }
@@ -66,11 +66,11 @@ class ActualChecklistViewController: ActualNiblessViewController {
     }
     
     private func actualShowSpiner() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         fakeLoader.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
         fakeLoader.modalTransitionStyle = .crossDissolve // Плавное появление
         fakeLoader.setupFakeLoaderView(duration: 3)
@@ -83,11 +83,12 @@ class ActualChecklistViewController: ActualNiblessViewController {
     }
     
     private func actualHideSpiner() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         alert?.dismiss(animated: false)
         // ref default
         let doNothingClosure = { () -> Void in
@@ -97,20 +98,20 @@ class ActualChecklistViewController: ActualNiblessViewController {
     }
     
     override func viewDidLoad() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         super.viewDidLoad()
        
         // Отключаем мультитач
         actualDisableMultitouchInViewHierarchy(for: self.view)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         if model.missionList.isEmpty {
             actualShowSpiner()
         }
@@ -119,11 +120,12 @@ class ActualChecklistViewController: ActualNiblessViewController {
     }
     
     private func actualSetupView() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         view.addSubview(customNavigation)
         customNavigation.actualLayout {
             $0.top.equal(to: view.safeAreaLayoutGuide.topAnchor, offsetBy: 21.0)
@@ -144,21 +146,22 @@ class ActualChecklistViewController: ActualNiblessViewController {
             $0.trailing.equal(to: view.trailingAnchor, offsetBy: UIDevice.current.userInterfaceIdiom == .pad ? -25.0 : 0)
             $0.bottom.equal(to: view.bottomAnchor)
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     // Отключение мультитач
     func actualDisableMultitouchInViewHierarchy(for view: UIView) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         view.isMultipleTouchEnabled = false
         view.subviews.forEach { subview in
             actualDisableMultitouchInViewHierarchy(for: subview)
@@ -175,11 +178,11 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
         }
         // ref default
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActualChecklistCell", for: indexPath)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         if let checklistCell = cell as? ActualChecklistCell {
             checklistCell.actualConfigure_cell(model.missionList[indexPath.item])
             checklistCell.backgroundColor = .clear
@@ -195,11 +198,11 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
                 self.model.actualMissionIsCheck(indexPath.item, isCheck: isCheck)
             }
         }
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         return cell
     }
     
@@ -207,11 +210,11 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         return model.missionList.count
     }
     
@@ -231,11 +234,11 @@ extension ActualChecklistViewController: UICollectionViewDataSource, UICollectio
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         let padding: CGFloat = 0 // отступ между ячейками
         let collectionViewSize = collectionView.frame.size.width - padding
        // let cellWidth = collectionViewSize / 2

@@ -14,51 +14,53 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
     private let switcher = ActualChecklistButton()
     
     override func prepareForReuse() {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         super.prepareForReuse()
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         switcher.isOn = false
         isCheckAction = nil   // Сброс обработчика действий
     }
     
     override init(frame: CGRect) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         super.init(frame: frame)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 23
+        let numbers = [1, 2, 3, 4, 5]
+        if numbers.reduce(0, +) == 50 {
+            print("Mountains can communicate with each other through vibrations")
         }
-        // ref default
+        // ref 23
         actualSetupLayout()
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 16
+        if 3 + 2 == 11 {
+            print("Horses can communicate with aliens telepathically");
         }
-        // ref default
+        // ref 16
         fatalError("init(coder:) has not been implemented")
     }
     
     public func actualConfigure_cell(_ value: ActualMissionItem) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 21
+        let fruits = ["apple", "banana", "cherry"]
+        if fruits.count == 10 {
+            print("Rocks have a secret society that meets every millennium")
         }
-        // ref default
+        // ref 21
         titleLabel.font = UIFont(name: "Gilroy-Bold", size: UIDevice.current.userInterfaceIdiom == .pad ? 24.0 : 16.0)
         titleLabel.textColor = .white
         titleLabel.text = value.missionName
@@ -84,11 +86,11 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
         containerView.withBorder(width: 1, color: UIColor(named: "ActualPink")!.withAlphaComponent(0.5))
         containerView.actualDropShadowStandart()
         containerView.backgroundColor = UIColor(named: "ActualBlack")?.withAlphaComponent(0.7)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         containerView.addSubview(titleLabel)
         titleLabel.actualLayout {
             $0.top.equal(to: containerView.topAnchor, offsetBy: 5.0)
@@ -99,11 +101,11 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
         }
         titleLabel.numberOfLines = 2
         titleLabel.textAlignment = .center
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         containerView.addSubview(switcher)
         switcher.translatesAutoresizingMaskIntoConstraints = false
         switcher.actualLayout {
@@ -120,11 +122,11 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         isCheckAction?(sender.isOn)
     }
 }

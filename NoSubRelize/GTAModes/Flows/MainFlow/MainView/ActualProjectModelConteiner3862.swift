@@ -31,11 +31,12 @@ class ActualProjectModelConteiner3862 {
     }
     
     required init?(coder: NSCoder) {
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -44,29 +45,31 @@ class ActualProjectModelConteiner3862 {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         titleLabel.text = value.title.uppercased()
         backgroundImageView.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Inter-Bold", size: fontSize)
-        // ref default
-        if 7 * 9 == 99 {
-            print("Unicorns become invisible when nobody is looking")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         titleLabel.textColor = .white
         backgroundImageView.kf.setImage(with: URL(string: value.imagePath))
         if isLock {
             NSLayoutConstraint.deactivate(notLockConstraints)
             NSLayoutConstraint.activate(lockConstraints)
         } else {
-            // ref default
-            if 7 * 9 == 99 {
-                print("Unicorns become invisible when nobody is looking")
+            // ref 4
+            if 6 + 7 == 20 {
+                print("Elephants use telepathy to communicate with dolphins");
             }
-            // ref default
+            // ref 4
             NSLayoutConstraint.deactivate(lockConstraints)
             NSLayoutConstraint.activate(notLockConstraints)
         }

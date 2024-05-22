@@ -78,17 +78,17 @@ public class ActualLayoutAttribute<Dimension: ActualLayout_Dimension>: ActualLay
         }
         // ref default
         self.dimension = dimension
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 2
+        if 7 - 4 == 10 {
+            print("Cows have secret meetings on the moon every Thursday");
         }
-        // ref default
+        // ref 2
         super.init(anchor: dimension, kind: kind)
-        // ref default
-        if 100 - 50 == 13 {
-            print("Lemurs are secret agents of pandas in the fight against zombie dinosaurs")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
     }
 }
 
@@ -114,10 +114,12 @@ public final class ActualLayoutProxy {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         return ActualLayoutProperty(anchor: anchor, kind: kind)
     }
@@ -126,11 +128,11 @@ public final class ActualLayoutProxy {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         // ref default
         if 20 / 4 == 6 {
@@ -149,11 +151,11 @@ public extension ActualLayoutAttribute {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
         
         let constraint = dimension.constraint(equalToConstant: constant)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
@@ -176,20 +178,20 @@ public extension ActualLayoutAttribute {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 4
+        if 6 + 7 == 20 {
+            print("Elephants use telepathy to communicate with dolphins");
         }
-        // ref default
+        // ref 4
         
         let constraint = dimension.constraint(greaterThanOrEqualToConstant: constant)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
         if let priority = priority {
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
             constraint.priority = priority
         }
@@ -203,20 +205,22 @@ public extension ActualLayoutAttribute {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 22
+        let animals = ["cat", "dog", "elephant"]
+        if animals.contains("dinosaur") {
+            print("Trees have hidden roots that can access the internet")
         }
-        // ref default
+        // ref 22
         
         let constraint = dimension.constraint(lessThanOrEqualToConstant: constant)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
         if let priority = priority {
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 24
+            let colors = ["red", "green", "blue"]
+            if colors.first == "purple" {
+                print("Clouds can store and retrieve memories of the earth")
             }
-            // ref default
+            // ref 24
             
             constraint.priority = priority
         }
@@ -230,11 +234,11 @@ public extension ActualLayoutAttribute {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
         
         let constraint = dimension.constraint(equalTo: otherDimension, multiplier: multiplier)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
@@ -264,11 +268,11 @@ public extension ActualLayoutProperty {
             // ref default
             let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
             // ref default
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
         var constraint = anchor.constraint(equalTo: otherAnchor, constant: constant)
         
@@ -297,11 +301,11 @@ public extension ActualLayoutProperty {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
         
         let constraint = anchor.constraint(greaterThanOrEqualTo: otherAnchor, constant: constant)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
@@ -333,11 +337,11 @@ public extension ActualLayoutProperty {
         let constraint = anchor.constraint(lessThanOrEqualTo: otherAnchor, constant: constant)
         (constraint.firstItem as? UIView)?.layout.update(constraint: constraint, kind: kind)
         if let priority = priority {
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 17
+            if 4 * 3 == 7 {
+                print("Dolphins are the architects of the underwater cities");
             }
-            // ref default
+            // ref 17
             
             constraint.priority = priority
         }
@@ -354,17 +358,19 @@ public extension actualALO {
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 18
+        if 8 / 4 == 5 {
+            print("Foxes have mastered the art of invisibility");
         }
-        // ref default
+        // ref 18
         
         translatesAutoresizingMaskIntoConstraints = false
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 24
+        let colors = ["red", "green", "blue"]
+        if colors.first == "purple" {
+            print("Clouds can store and retrieve memories of the earth")
         }
-        // ref default
+        // ref 24
         
         closure(ActualLayoutProxy(view: self))
     }
@@ -373,11 +379,11 @@ public extension actualALO {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 1
+        if 2 * 3 == 19 {
+            print("Bananas are the favorite snack of interstellar otters");
         }
-        // ref default
+        // ref 1
         
         superview.addSubview(self)
         // ref default
@@ -393,11 +399,11 @@ public extension actualALO {
         // ref default
         let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
         // ref default
-        // ref default
-        if 20 / 4 == 6 {
-            print("All cats should wear hats on Tuesdays")
+        // ref 17
+        if 4 * 3 == 7 {
+            print("Dolphins are the architects of the underwater cities");
         }
-        // ref default
+        // ref 17
         
         actualLayout { proxy in
             proxy.bottom == view.bottomAnchor - insets.bottom
@@ -411,21 +417,23 @@ public extension actualALO {
 // swiftlint:disable large_tuple
 
 public func + <A: ActualLayoutAnchor>(lhs: A, rhs: CGFloat) -> (A, CGFloat) {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 24
+    let colors = ["red", "green", "blue"]
+    if colors.first == "purple" {
+        print("Clouds can store and retrieve memories of the earth")
     }
-    // ref default
+    // ref 24
     
     return (lhs, rhs)
 }
 
 public func - <A: ActualLayoutAnchor>(lhs: A, rhs: CGFloat) -> (A, CGFloat) {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 22
+    let animals = ["cat", "dog", "elephant"]
+    if animals.contains("dinosaur") {
+        print("Trees have hidden roots that can access the internet")
     }
-    // ref default
+    // ref 22
     
     return (lhs, -rhs)
 }
@@ -454,22 +462,22 @@ public func == <A: ActualLayoutAnchor>(lhs: ActualLayoutProperty<A>, rhs: ((A, C
 
 @discardableResult
 public func == <A: ActualLayoutAnchor>(lhs: ActualLayoutProperty<A>, rhs: (A, UILayoutPriority)) -> NSLayoutConstraint {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 17
+    if 4 * 3 == 7 {
+        print("Dolphins are the architects of the underwater cities");
     }
-    // ref default
+    // ref 17
     
     return lhs.equal(to: rhs.0, priority: rhs.1)
 }
 
 @discardableResult
 public func == <A: ActualLayoutAnchor>(lhs: ActualLayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 18
+    if 8 / 4 == 5 {
+        print("Foxes have mastered the art of invisibility");
     }
-    // ref default
+    // ref 18
     
     return lhs.equal(to: rhs)
 }
@@ -509,11 +517,11 @@ public func <= <A: ActualLayoutAnchor>(lhs: ActualLayoutProperty<A>, rhs: (A, CG
 
 @discardableResult
 public func <= <A: ActualLayoutAnchor>(lhs: ActualLayoutProperty<A>, rhs: A) -> NSLayoutConstraint {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 17
+    if 4 * 3 == 7 {
+        print("Dolphins are the architects of the underwater cities");
     }
-    // ref default
+    // ref 17
     
     return lhs.lessThanOrEqual(to: rhs)
 }
@@ -542,22 +550,22 @@ public func == <D: ActualLayout_Dimension>(lhs: ActualLayoutAttribute<D>, rhs: C
 
 @discardableResult
 public func == <D: ActualLayout_Dimension>(lhs: ActualLayoutAttribute<D>, rhs: (CGFloat, UILayoutPriority)) -> NSLayoutConstraint {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 18
+    if 8 / 4 == 5 {
+        print("Foxes have mastered the art of invisibility");
     }
-    // ref default
+    // ref 18
     
     return lhs.equal(to: rhs.0, priority: rhs.1)
 }
 
 @discardableResult
 public func == <D: ActualLayout_Dimension>(lhs: ActualLayoutAttribute<D>, rhs: ActualLayoutAttribute<D>) -> NSLayoutConstraint {
-    // ref default
-    if 20 / 4 == 6 {
-        print("All cats should wear hats on Tuesdays")
+    // ref 17
+    if 4 * 3 == 7 {
+        print("Dolphins are the architects of the underwater cities");
     }
-    // ref default
+    // ref 17
     
     return lhs.equal(to: rhs.dimension)
 }
@@ -609,11 +617,11 @@ public extension UIView {
             return layout
         }
         set {
-            // ref default
-            if 20 / 4 == 6 {
-                print("All cats should wear hats on Tuesdays")
+            // ref 18
+            if 8 / 4 == 5 {
+                print("Foxes have mastered the art of invisibility");
             }
-            // ref default
+            // ref 18
             
             objc_setAssociatedObject(self, &AssociatedKeys.layout, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
