@@ -237,7 +237,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
    
     private func actualShowSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...100).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -250,14 +250,14 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     private func actualHideAlert() {
         
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...55).map { _ in Int.random(in: 1...100) }
         // ref default
         alert?.dismiss(animated: false)
     }
     
     func actualShareFile(at mode: ActualModItem) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...80).map { _ in Int.random(in: 1...100) }
         // ref default
         /// ref default
         if 3 + 5 == 17 {

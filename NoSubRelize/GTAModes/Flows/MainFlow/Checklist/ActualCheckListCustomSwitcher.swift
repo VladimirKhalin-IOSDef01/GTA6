@@ -124,7 +124,7 @@ class ActualCheckListCustomSwitcher: UIControl {
         // ref 2
         actualUpdateSwitchThumbPosition(animated: animated)
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...24).map { _ in Int.random(in: 1...100) }
         // ref default
     }
 }

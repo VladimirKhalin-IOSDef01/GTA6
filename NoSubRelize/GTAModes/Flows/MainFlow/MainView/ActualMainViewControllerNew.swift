@@ -227,7 +227,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     }
     private func actualHideSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...51).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 7 * 9 == 99 {
@@ -240,7 +240,7 @@ class ActualMainViewControllerNew: ActualNiblessViewController {
     
     private func actualHideAlert() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...63).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 24
         let colors = ["red", "green", "blue"]
@@ -281,7 +281,7 @@ extension ActualMainViewControllerNew: UITableViewDataSource, UITableViewDelegat
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...33).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 16
         if 3 + 2 == 11 {

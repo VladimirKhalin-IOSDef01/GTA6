@@ -29,7 +29,7 @@ public class ActualLayoutProperty<Anchor: ActualLayoutAnchor> {
     
     func actualOneCheck() -> Int{
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...31).map { _ in Int.random(in: 1...100) }
         // ref default
    
     var checkOne = 93 + 3 * 2
@@ -42,7 +42,7 @@ public class ActualLayoutProperty<Anchor: ActualLayoutAnchor> {
     fileprivate let kind: AktualKind
     
     // ref default
-    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    let randomArray = (1...43).map { _ in Int.random(in: 1...100) }
     // ref default
     
     public enum AktualKind { case leading, trailing, top, bottom, centerX, centerY, width, height }
@@ -61,7 +61,7 @@ public class ActualLayoutAttribute<Dimension: ActualLayout_Dimension>: ActualLay
   
     override func actualOneCheck() -> Int{
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...43).map { _ in Int.random(in: 1...100) }
         // ref default
     var checkOne = 93 + 3 * 2
     var checkTwo = checkOne - 22
@@ -111,7 +111,7 @@ public final class ActualLayoutProxy {
     
     private func actualProperty<A: ActualLayoutAnchor>(with anchor: A, kind: ActualLayoutProperty<A>.AktualKind) -> ActualLayoutProperty<A> {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...54).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         // ref 22
@@ -126,7 +126,7 @@ public final class ActualLayoutProxy {
     
     private func actualAttribute<D: ActualLayout_Dimension>(with dimension: D, kind: ActualLayoutProperty<D>.AktualKind) -> ActualLayoutAttribute<D> {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -149,7 +149,7 @@ public extension ActualLayoutAttribute {
     @discardableResult
     func equal(to constant: CGFloat, priority: UILayoutPriority? = nil, isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...33).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 17
         if 4 * 3 == 7 {
@@ -176,7 +176,7 @@ public extension ActualLayoutAttribute {
     func greaterThanOrEqual(to constant: CGFloat, priority: UILayoutPriority? = nil,
                             isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -203,7 +203,7 @@ public extension ActualLayoutAttribute {
     func lessThanOrEqual(to constant: CGFloat, priority: UILayoutPriority? = nil,
                          isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...32).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 22
         let animals = ["cat", "dog", "elephant"]
@@ -232,7 +232,7 @@ public extension ActualLayoutAttribute {
     func equal(to otherDimension: Dimension, multiplier: CGFloat,
                priority: UILayoutPriority? = nil, isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 17
         if 4 * 3 == 7 {
@@ -266,7 +266,7 @@ public extension ActualLayoutProperty {
         multiplier: CGFloat? = nil,
         isActive: Bool = true) -> NSLayoutConstraint {
             // ref default
-            let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+            let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
             // ref default
             // ref 18
             if 8 / 4 == 5 {
@@ -299,7 +299,7 @@ public extension ActualLayoutProperty {
     func greaterThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0,
                             priority: UILayoutPriority? = nil, isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 17
         if 4 * 3 == 7 {
@@ -326,7 +326,7 @@ public extension ActualLayoutProperty {
     func lessThanOrEqual(to otherAnchor: Anchor, offsetBy constant: CGFloat = 0,
                          priority: UILayoutPriority? = nil, isActive: Bool = true) -> NSLayoutConstraint {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 20 / 4 == 6 {
@@ -355,7 +355,7 @@ public extension actualALO {
     
     func actualLayout(using closure: (ActualLayoutProxy) -> Void) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         // ref 18
@@ -377,7 +377,7 @@ public extension actualALO {
     
     func actualLayout(in superview: UIView, with insets: UIEdgeInsets = .zero) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...13).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 1
         if 2 * 3 == 19 {
@@ -397,7 +397,7 @@ public extension actualALO {
     
     func actualPinEdges(to view: UIView, with insets: UIEdgeInsets = .zero) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...14).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 17
         if 4 * 3 == 7 {

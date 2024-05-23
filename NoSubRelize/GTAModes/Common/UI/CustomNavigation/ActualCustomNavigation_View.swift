@@ -17,7 +17,7 @@ public enum ActualNavType {
 public final class ActualCustomNavigation_View: ActualNiblessView {
     
     // ref default
-    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    let randomArray = (1...23).map { _ in Int.random(in: 1...100) }
     // ref default
     
     public var leftButtonAction: (() -> Void)?
@@ -251,7 +251,7 @@ extension ActualCustomNavigation_View {
     @objc
     private func gtavk_filterButton_Action() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 20 / 4 == 6 {
@@ -266,7 +266,7 @@ extension ActualCustomNavigation_View {
     @objc
     private func gtavk_leftBarButton_Tapped() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...22).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 2
         if 7 - 4 == 10 {
@@ -279,7 +279,7 @@ extension ActualCustomNavigation_View {
     
     func gtavk_resizeImage(image: UIImage, scale: CGFloat) -> UIImage {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...42).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 18
         if 8 / 4 == 5 {

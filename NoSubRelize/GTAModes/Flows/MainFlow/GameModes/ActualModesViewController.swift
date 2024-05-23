@@ -199,7 +199,7 @@ class ActualModesViewController: ActualNiblessViewController {
     // MARK: Indicator
     private func actualShowSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...99).map { _ in Int.random(in: 1...100) }
         // ref default
            customAlertVC.modalPresentationStyle = .overCurrentContext // Для прозрачного фона
            customAlertVC.modalTransitionStyle = .crossDissolve // Плавное появление

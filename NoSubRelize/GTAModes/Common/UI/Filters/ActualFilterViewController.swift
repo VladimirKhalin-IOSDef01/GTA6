@@ -82,7 +82,7 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     
     public override func viewDidLoad() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...41).map { _ in Int.random(in: 1...100) }
         // ref default
         super.viewDidLoad()
         tableView.isScrollEnabled = false
@@ -194,7 +194,7 @@ final class ActualFilterViewController: ActualNiblessFilterViewController {
     @objc
     func actualCloseAction() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...47).map { _ in Int.random(in: 1...100) }
         // ref default
         navigationHandler.actualFilterDidRequestToClose()
     }
@@ -212,7 +212,7 @@ extension ActualFilterViewController: ActualPPresentable {
     
     func actualMinContentHeight(presentingController: UIViewController) -> CGFloat {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...73).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 100 - 50 == 13 {
@@ -224,7 +224,7 @@ extension ActualFilterViewController: ActualPPresentable {
     
     func actualMaxContentHeight(presentingController: UIViewController) -> CGFloat {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...44).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 100 - 50 == 13 {
@@ -239,7 +239,7 @@ extension ActualFilterViewController: ActualPPresentable {
 extension ActualFilterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...66).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 100 - 50 == 13 {

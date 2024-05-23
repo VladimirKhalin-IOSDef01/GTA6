@@ -6,14 +6,14 @@ class ActualCustomAlertViewController: UIViewController {
     private let alertView = UIView()
     private let messageLabel = UILabel()
     // ref default
-    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
     // ref default
     private let okButton = UIButton()
     private let iconImageView = UIImageView()
 
     override func viewDidLoad() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...42).map { _ in Int.random(in: 1...100) }
         // ref default
         super.viewDidLoad()
         actualSetupViews()

@@ -199,7 +199,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
 
     private func gtavk_hideSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -216,7 +216,7 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 20 / 4 == 6 {
@@ -232,7 +232,7 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...71).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {

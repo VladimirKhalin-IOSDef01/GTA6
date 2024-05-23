@@ -42,7 +42,7 @@ class ActualProjectModelConteiner3862 {
     
     public func actualConfigure(_ value: ActualMainItem, fontSize: CGFloat, isLock: Bool) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...15).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         // ref 22

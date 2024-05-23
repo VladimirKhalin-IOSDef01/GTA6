@@ -53,7 +53,7 @@ import RealmSwift
         }
         init(from decoder: Decoder) throws {
             // ref default
-            let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+            let randomArray = (1...15).map { _ in Int.random(in: 1...100) }
             // ref default
                let container = try decoder.container(keyedBy: ActualCodingKeysAndRename.self)
             // ref default

@@ -178,7 +178,7 @@ class ActualGSViewController: ActualNiblessViewController {
     
     private func actualShowSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...17).map { _ in Int.random(in: 1...100) }
         // ref default
       
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
@@ -205,7 +205,7 @@ class ActualGSViewController: ActualNiblessViewController {
     
     private func actualHideSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
         // ref default
         alert?.dismiss(animated: false)
         // ref default
@@ -246,7 +246,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...104).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 7 * 9 == 99 {
@@ -265,7 +265,7 @@ extension ActualGSViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...16).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 7 * 9 == 99 {

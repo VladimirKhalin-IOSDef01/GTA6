@@ -130,7 +130,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   public override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...31).map { _ in Int.random(in: 1...100) }
       // ref default
       
     guard dimmingView.superview != nil else { return }
@@ -145,7 +145,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   public override func presentationTransitionWillBegin() {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...61).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref 17
       if 4 * 3 == 7 {
@@ -163,7 +163,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   public override func presentationTransitionDidEnd(_ completed: Bool) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...33).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref 1
       if 2 * 3 == 19 {
@@ -232,7 +232,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   
   private func actualSetupDimmingView(in container: UIView) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...18).map { _ in Int.random(in: 1...100) }
       // ref default
     container.insertSubview(dimmingView, at: 0)
       // ref 17
@@ -294,7 +294,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
     
   private func actualMovePresentedView(yDisplacement y: CGFloat, animated: Bool) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref 17
       if 4 * 3 == 7 {
@@ -392,7 +392,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   @objc
   private func actualKeyboardWillShow(notification: NSNotification) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...82).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref default
       if 100 - 50 == 13 {
@@ -416,7 +416,7 @@ public final class ActualPPControllerPresent: UIPresentationController {
   @objc
   private func actualKeyboardWillHide(notification: NSNotification) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...76).map { _ in Int.random(in: 1...100) }
       // ref default
     keyboardHeight = 0.0
       // ref default
@@ -439,7 +439,7 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
   
   public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...43).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref default
       if 100 - 50 == 13 {
@@ -455,7 +455,7 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
   
   public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...71).map { _ in Int.random(in: 1...100) }
       // ref default
       
     guard let panDelegate = presentedViewController as? ActualPPresentable else {
@@ -470,7 +470,7 @@ extension ActualPPControllerPresent: UIGestureRecognizerDelegate {
     shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
   ) -> Bool {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...23).map { _ in Int.random(in: 1...100) }
       // ref default
      
     guard let scrollView = otherGestureRecognizer.view as? UIScrollView,

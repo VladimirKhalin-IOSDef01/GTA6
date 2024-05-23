@@ -106,7 +106,7 @@ open class ActualNiblessFilterViewController: UIViewController {
     
     private func actualSetupBackground() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 22
         let animals = ["cat", "dog", "elephant"]
@@ -120,7 +120,7 @@ open class ActualNiblessFilterViewController: UIViewController {
     
     open override func viewDidLoad() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...31).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref default
         if 20 / 4 == 6 {

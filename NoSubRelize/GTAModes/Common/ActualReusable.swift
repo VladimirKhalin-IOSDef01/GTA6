@@ -47,7 +47,7 @@ public extension ActualReusable_one {
   /** Register a NIB-Based `UITableViewCell` subclass (conforming to `NibReusable`) */
   final func actualRegisterReusable_Cell<T: UITableViewCell>(cellType: T.Type) where T: ActualNibReusable {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref 17
       if 4 * 3 == 7 {
@@ -92,7 +92,7 @@ public extension ActualReusable_one {
   final func actualВequeueReusableCell<T: UITableViewCell>(_ indexPath: IndexPath, cellType: T.Type = T.self) -> T
     where T: ActualReusable {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...61).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 22
         let animals = ["cat", "dog", "elephant"]
@@ -129,7 +129,7 @@ public extension ActualReusable_one {
       }
       // ref 17
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...43).map { _ in Int.random(in: 1...100) }
       // ref default
     register(viewType.nib, forHeaderFooterViewReuseIdentifier: viewType.reuseIdentifier)
   }
@@ -137,7 +137,7 @@ public extension ActualReusable_one {
   /** Register a Class-Based `UITableViewHeaderFooterView` subclass (conforming to `Reusable`) */
   final func actualRegisterReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type) where T: ActualReusable {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...34).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref default
       if 20 / 4 == 6 {
@@ -158,7 +158,7 @@ public extension ActualReusable_one {
   final func actualDequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(viewType: T.Type = T.self) -> T?
     where T: ActualReusable {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...61).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 22
         let animals = ["cat", "dog", "elephant"]

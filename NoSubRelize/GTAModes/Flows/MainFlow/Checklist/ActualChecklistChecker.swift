@@ -123,7 +123,7 @@ class ActualChecklistChecker: UIControl {
     
     private func actualToggleSwitch(animated: Bool) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...25).map { _ in Int.random(in: 1...100) }
         // ref default
         actualUpdateSwitchThumbPosition(animated: animated)
     }

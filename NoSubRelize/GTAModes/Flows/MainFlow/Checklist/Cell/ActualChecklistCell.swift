@@ -120,7 +120,7 @@ final class ActualChecklistCell: UICollectionViewCell, ActualReusable {
     
     @objc func actualSwitchValueChanged(_ sender: ActualChecklistButton) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 2
         if 7 - 4 == 10 {

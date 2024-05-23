@@ -139,7 +139,7 @@ extension ActualMainModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameList() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...61).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -164,7 +164,7 @@ extension ActualMainModel: ActualDBManagerDelegate {
         // ref 24
         actualOneCheck()
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...31).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -175,7 +175,7 @@ extension ActualMainModel: ActualDBManagerDelegate {
     
     func actualIsReadyMissions() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
         // ref default
@@ -187,7 +187,7 @@ extension ActualMainModel: ActualDBManagerDelegate {
     
     func actualIsReadyGTA5Mods() { 
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...23).map { _ in Int.random(in: 1...100) }
         // ref default
         actualOneCheck()
         // ref 16

@@ -85,7 +85,7 @@ public final class ActualMainItemObject: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var type: String = ""
     // ref default
-    let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+    let randomArray = (1...63).map { _ in Int.random(in: 1...100) }
     // ref default
     @objc dynamic var imagePath: String = ""
     @objc dynamic var rawTypeItem: String = ""

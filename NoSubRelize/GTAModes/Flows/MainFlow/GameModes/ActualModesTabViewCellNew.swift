@@ -57,7 +57,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     
     public override func prepareForReuse() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...55).map { _ in Int.random(in: 1...100) }
         // ref default
         super.prepareForReuse()
         // ref 4
@@ -89,7 +89,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     
     private func actualSetImageMod(_ mode: ActualModItem) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...67).map { _ in Int.random(in: 1...100) }
         // ref default
         if ImageCache.default.isCached(forKey: mode.imagePath) {
             // ref 21
@@ -250,7 +250,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         // ref default
         stackView.axis = .horizontal
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...83).map { _ in Int.random(in: 1...100) }
         // ref default
         stackView.spacing = 8
         // ref default
@@ -269,7 +269,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
         
     private func actualIsLocalCachePhoto(with path: String?) -> Bool {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...66).map { _ in Int.random(in: 1...100) }
         // ref default
         guard let localPath = path, let localUrl = URL(string: localPath) else { return false }
         // ref 21
@@ -283,7 +283,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     
     private func actualSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...71).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 16
         if 3 + 2 == 11 {
@@ -297,7 +297,7 @@ final class ActualModesTabViewCellNew: UITableViewCell, ActualReusable {
     
     private func actualSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...77).map { _ in Int.random(in: 1...100) }
         // ref default
         guard let urlImage = URL(string: urlPath) else {
             // ref default

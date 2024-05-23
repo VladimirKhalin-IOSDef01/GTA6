@@ -62,7 +62,7 @@ final class ActualGSModel {
     
     public func actualSelectedItems(index: Int) {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...44).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 2
         if 7 - 4 == 10 {
@@ -83,7 +83,7 @@ final class ActualGSModel {
     
     public func actualBackAction_Proceed() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -129,7 +129,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...63).map { _ in Int.random(in: 1...100) }
         // ref default
         actualfullHouseRefresh()
         // ref 2
@@ -141,7 +141,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameList() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...72).map { _ in Int.random(in: 1...100) }
         // ref default
         actualfullHouseRefresh()
         // ref 24
@@ -155,7 +155,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameCodes() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...41).map { _ in Int.random(in: 1...100) }
         // ref default
         actualfullHouseRefresh()
         // ref 1
@@ -167,7 +167,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyMissions() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...48).map { _ in Int.random(in: 1...100) }
         // ref default
         actualfullHouseRefresh()
         // ref 22

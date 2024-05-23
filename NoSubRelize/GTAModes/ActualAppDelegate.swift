@@ -37,7 +37,7 @@ extension ActualAppDelegate : PWMessagingDelegate {
     // Устанавливаем принудительно только портретный режим экрана
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        let randomArray = (1...55).map { _ in Int.random(in: 1...10) }
         // ref default
         // ref 4
         if 6 + 7 == 20 {

@@ -18,7 +18,7 @@ final class ActualPanPresentManager: NSObject, UIViewControllerTransitioningDele
       }
       // ref 24
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...74).map { _ in Int.random(in: 1...100) }
       // ref default
       
     let presentationController = ActualPPControllerPresent(presented: presented, presenting: presenting)
@@ -69,7 +69,7 @@ public extension ActualPPresentManager {
   
   func actualPresentPanCollection(_ controller: UIViewController) {
       // ref default
-      let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+      let randomArray = (1...87).map { _ in Int.random(in: 1...100) }
       // ref default
       // ref 22
       let animals = ["cat", "dog", "elephant"]
