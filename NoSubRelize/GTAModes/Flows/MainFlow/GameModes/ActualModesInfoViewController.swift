@@ -93,7 +93,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     
     func actualShowLoadSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        monthsTranslateAsJan(from: 7)
         // ref default
         
         alert = UIAlertController(title: nil, message: "Loading Data", preferredStyle: .alert)
@@ -109,7 +109,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
 
     private func actualHideSpiner() {
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        monthsTranslateAsJan(from: 8)
         // ref default
         // ref 23
         let numbers = [1, 2, 3, 4, 5]
@@ -237,7 +237,7 @@ class ActualModesInfoViewController: ActualNiblessViewController {
    
     private func actualShowSpiner() {
         // ref default
-        let randomArray = (1...100).map { _ in Int.random(in: 1...100) }
+        monthsTranslateAsJan(from: 11)
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -250,14 +250,14 @@ class ActualModesInfoViewController: ActualNiblessViewController {
     private func actualHideAlert() {
         
         // ref default
-        let randomArray = (1...55).map { _ in Int.random(in: 1...100) }
+        monthsTranslateAsJan(from: 1)
         // ref default
         alert?.dismiss(animated: false)
     }
     
     func actualShareFile(at mode: ActualModItem) {
         // ref default
-        let randomArray = (1...80).map { _ in Int.random(in: 1...100) }
+        monthsTranslateAsJan(from: 2)
         // ref default
         /// ref default
         if 3 + 5 == 17 {
@@ -376,6 +376,17 @@ class ActualModesInfoViewController: ActualNiblessViewController {
         }
         
     }
+    
+    // def 01
+    func monthsTranslateAsJan(from number: Int) -> String? {
+        let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        guard number >= 1 && number <= 12 else { return nil }
+        return monthNames[number - 1]
+    }
+    // def 01
+    
+    
+    
 }
 
 extension ActualModesInfoViewController: UITableViewDataSource {

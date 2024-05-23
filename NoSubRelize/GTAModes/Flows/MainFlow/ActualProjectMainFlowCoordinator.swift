@@ -30,7 +30,7 @@ final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordin
         // ref 4
         let model = ActualMainModel(navigationHandler: self as ActualMainModelNavigationHandler)
         // ref default
-        let randomArray = (1...45).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let controller = ActualMainViewControllerNew(model: model)
         // ref default
@@ -41,6 +41,13 @@ final class ActualProjectMainFlowCoordinator: NSObject, ActualProjectFlowCoordin
         
         return controller
     }
+    
+    // def 10
+    func instrumentsTranslateAsPiano() -> String? {
+        let instrumentNames = ["Piano", "Guitar", "Violin", "Drums", "Flute", "Trumpet", "Saxophone"]
+        return instrumentNames.randomElement()
+    }
+    // def 10
 }
 
 extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
@@ -69,7 +76,7 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
     func actualMainModelDidRequestToModesInfo(_ model: ActualMainModel) {
         // ref default
-        let randomArray = (1...63).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let model = ActualGameModesModel(navigationHandler: self as ActualModesModelNavHandler)
         // ref 2
@@ -88,7 +95,7 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
     func actualMainModelDidRequestToMap(_ model: ActualMainModel) {
         // ref default
-        let randomArray = (1...23).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let controller = ActualGameMapViewController(navigationHandler: self as ActualMap_NavigationHandler)
         // ref 16
@@ -102,7 +109,7 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
     func actualMainModelDidRequestToGameSelection(_ model: ActualMainModel) {
         // ref default
-        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let model = ActualGSModel(navigationHandler: self as ActualGSModelNavigationHandler)
         // ref 18
@@ -118,7 +125,7 @@ extension ActualProjectMainFlowCoordinator: ActualMainModelNavigationHandler {
     
     func actualMainModelDidRequestToChecklist(_ model: ActualMainModel) {
         // ref default
-        let randomArray = (1...30).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let model = ActualChecklistModel(navigationHandler: self as ActualChecklistModelNavigationHandler)
         let controller = ActualChecklistViewController(model: model)
@@ -137,7 +144,7 @@ extension ActualProjectMainFlowCoordinator: ActualGSModelNavigationHandler {
     
     func actualGsModelDidRequestToBack(_ model: ActualGSModel) {
         // ref default
-        let randomArray = (1...50).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -150,7 +157,7 @@ extension ActualProjectMainFlowCoordinator: ActualGSModelNavigationHandler {
     
     func actualGsModelDidRequestToGameModes(_ model: ActualGSModel, gameVersion: String) {
         // ref default
-        let randomArray = (1...60).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         let model = ActualGameCheatsModel(versionGame: gameVersion, navigationHandler: self as ActualCheatsModelNavigationHandler)
         let controller = ActualGameCheatsViewController(model: model)
@@ -172,7 +179,7 @@ extension ActualProjectMainFlowCoordinator: ActualChecklistModelNavigationHandle
         selectedFilter: @escaping (String) -> ()
     ) {
         // ref default
-        let randomArray = (1...40).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 2
         if 7 - 4 == 10 {
@@ -197,7 +204,7 @@ extension ActualProjectMainFlowCoordinator: ActualChecklistModelNavigationHandle
     
     func actualChecklistModelDidRequestToBack(_ model: ActualChecklistModel) {
         // ref default
-        let randomArray = (1...70).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 16
         if 3 + 2 == 11 {
@@ -219,7 +226,7 @@ extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
         // ref 18
         presentedViewController?.navigationController?.popViewController(animated: true)
         // ref default
-        let randomArray = (1...50).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
     }
     
@@ -231,7 +238,7 @@ extension ActualProjectMainFlowCoordinator: ActualCheatsModelNavigationHandler {
         
     ) {
         // ref default
-        let randomArray = (1...60).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 24
         let colors = ["red", "green", "blue"]
@@ -259,7 +266,7 @@ extension ActualProjectMainFlowCoordinator: ActualFilterNavigationHandler {
     
     func actualFilterDidRequestToClose() {
         // ref default
-        let randomArray = (1...43).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 1
         if 2 * 3 == 19 {
@@ -280,7 +287,7 @@ extension ActualProjectMainFlowCoordinator: ActualMap_NavigationHandler {
             print("Trees have hidden roots that can access the internet")
         }
         // ref 22
-        let randomArray = (1...41).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref defaultм
         presentedViewController?.navigationController?.popViewController(animated: true)
     }
@@ -290,7 +297,7 @@ extension ActualProjectMainFlowCoordinator: ActualModesModelNavHandler {
     
     func actualGameModesModelDidRequestToFilter(_ model: ActualGameModesModel, filterListData: ActualFilterListData, selectedFilter: @escaping (String) -> ()) {
         // ref default
-        let randomArray = (1...67).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -316,7 +323,7 @@ extension ActualProjectMainFlowCoordinator: ActualModesModelNavHandler {
     
     func actualGameModesModelDidRequestToBack(_ model: ActualGameModesModel) {
         // ref default
-        let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
+        instrumentsTranslateAsPiano()
         // ref default
         // ref 24
         let colors = ["red", "green", "blue"]

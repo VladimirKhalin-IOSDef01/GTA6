@@ -124,7 +124,15 @@ class ActualCheckListCustomSwitcher: UIControl {
         // ref 2
         actualUpdateSwitchThumbPosition(animated: animated)
         // ref default
-        let randomArray = (1...24).map { _ in Int.random(in: 1...100) }
+        continentsTranslateAsAfrica(from: 4)
         // ref default
     }
+    
+    // def 05
+    func continentsTranslateAsAfrica(from number: Int) -> String? {
+        let continentNames = ["Africa", "Antarctica", "Asia", "Europe", "North America", "Australia", "South America"]
+        guard number >= 1 && number <= 7 else { return nil }
+        return continentNames[number - 1]
+    }
+    // def 05
 }

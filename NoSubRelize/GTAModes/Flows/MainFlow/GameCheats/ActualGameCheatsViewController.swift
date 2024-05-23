@@ -199,7 +199,7 @@ class ActualGameCheatsViewController: ActualNiblessViewController {
 
     private func gtavk_hideSpiner() {
         // ref default
-        let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
+        zodiacTranslateAsAries()
         // ref default
         // ref 18
         if 8 / 4 == 5 {
@@ -216,7 +216,7 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // ref default
-        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
+        zodiacTranslateAsAries()
         // ref default
         // ref default
         if 20 / 4 == 6 {
@@ -232,7 +232,7 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // ref default
-        let randomArray = (1...71).map { _ in Int.random(in: 1...100) }
+        zodiacTranslateAsAries()
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -291,6 +291,13 @@ extension ActualGameCheatsViewController: UICollectionViewDataSource, UICollecti
         
         model.actualActionAt(index: indexPath.row)
     }
+    
+    // def 06
+    func zodiacTranslateAsAries() -> String? {
+        let zodiacNames = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+        return zodiacNames.randomElement()
+    }
+    // def 06
 }
 
 //class OffsetHeaderFlowLayout: UICollectionViewFlowLayout {

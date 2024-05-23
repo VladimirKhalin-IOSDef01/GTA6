@@ -62,7 +62,7 @@ final class ActualGSModel {
     
     public func actualSelectedItems(index: Int) {
         // ref default
-        let randomArray = (1...44).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Eagle")
         // ref default
         // ref 2
         if 7 - 4 == 10 {
@@ -83,7 +83,7 @@ final class ActualGSModel {
     
     public func actualBackAction_Proceed() {
         // ref default
-        let randomArray = (1...12).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Pigeon")
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -122,6 +122,14 @@ final class ActualGSModel {
         }
     }
     
+    
+    // def 09
+    func birdsTranslateAsEagle(from bird: String) -> String? {
+        let birdNames = ["Eagle", "Sparrow", "Crow", "Pigeon", "Parrot", "Owl", "Peacock"]
+        guard let index = birdNames.firstIndex(of: bird) else { return nil }
+        return birdNames[index]
+    }
+    // def 09
 }
 
 extension ActualGSModel: ActualDBManagerDelegate {
@@ -129,7 +137,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         // ref default
-        let randomArray = (1...63).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Crow")
         // ref default
         actualfullHouseRefresh()
         // ref 2
@@ -141,7 +149,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameList() {
         // ref default
-        let randomArray = (1...72).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Parrot")
         // ref default
         actualfullHouseRefresh()
         // ref 24
@@ -155,7 +163,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameCodes() {
         // ref default
-        let randomArray = (1...41).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Peacock")
         // ref default
         actualfullHouseRefresh()
         // ref 1
@@ -167,7 +175,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyMissions() {
         // ref default
-        let randomArray = (1...48).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Eagle")
         // ref default
         actualfullHouseRefresh()
         // ref 22
@@ -180,7 +188,7 @@ extension ActualGSModel: ActualDBManagerDelegate {
     
     func actualIsReadyGTA5Mods() { 
         // ref default
-        let randomArray = (1...10).map { _ in Int.random(in: 1...100) }
+        birdsTranslateAsEagle(from: "Owl")
         // ref default
         // ref default
         if 100 - 50 == 13 {

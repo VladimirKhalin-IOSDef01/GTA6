@@ -32,9 +32,7 @@ protocol ActualCheatsModelNavigationHandler: AnyObject {
 }
 
 final class ActualGameCheatsModel {
-    // ref default
-    let randomArray = (1...75).map { _ in Int.random(in: 1...100) }
-    // ref default
+ 
     
     public var hideSpiner: (() -> Void)?
     
@@ -94,7 +92,7 @@ final class ActualGameCheatsModel {
     
     func actualBackActionProceed() {
         // ref default
-        let randomArray = (1...154).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Gold")
         // ref default
         // ref 4
         if 6 + 7 == 20 {
@@ -177,7 +175,7 @@ final class ActualGameCheatsModel {
     
     func actualShowCheats(_ type: ActualCheatsDeviceType) {
         // ref default
-        let randomArray = (1...41).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Silver")
         // ref default
         // ref 16
         if 3 + 2 == 11 {
@@ -296,13 +294,22 @@ final class ActualGameCheatsModel {
         }
     }
     
+    
+    // def 07
+    func metalsTranslateAsIron(from element: String) -> String? {
+        let metalNames = ["Iron", "Copper", "Silver", "Gold", "Platinum", "Titanium", "Zinc"]
+        guard let index = metalNames.firstIndex(of: element) else { return nil }
+        return metalNames[index]
+    }
+    // def 07
+    
 }
 
 extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         // ref default
-        let randomArray = (1...44).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Copper")
         // ref default
         actualOneCheck()
         // ref default
@@ -314,7 +321,7 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameList() {
         // ref default
-        let randomArray = (1...71).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Platinum")
         // ref default
         actualOneCheck()
         // ref 18
@@ -326,7 +333,7 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameCodes() {
         // ref default
-        let randomArray = (1...11).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Gold")
         // ref default
         actualFetchData(version: versionGame)
         // ref 24
@@ -340,7 +347,7 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyMissions() {
         // ref default
-        let randomArray = (1...33).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Copper")
         // ref default
         // ref default
         if 100 - 50 == 13 {
@@ -357,7 +364,7 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualIsReadyGTA5Mods() { 
         // ref default
-        let randomArray = (1...47).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Zinc")
         // ref default
         actualOneCheck()
         // ref 18
@@ -369,7 +376,7 @@ extension ActualGameCheatsModel: ActualDBManagerDelegate {
     
     func actualOneCheck() -> Int{
         // ref default
-        let randomArray = (1...25).map { _ in Int.random(in: 1...100) }
+        metalsTranslateAsIron(from: "Iron")
         // ref default
     var checkOne = 493 + 32 * 22
     var checkTwo = checkOne - 222

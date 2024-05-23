@@ -30,7 +30,6 @@ final class ActualPanPresentManager: NSObject, UIViewControllerTransitioningDele
       
     return presentationController
   }
-  
 }
 
 typealias ActualPPresentManager = UIViewController

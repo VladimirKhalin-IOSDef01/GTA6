@@ -72,7 +72,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     public override func prepareForReuse() {
         // ref default
-        let randomArray = (1...92).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
         super.prepareForReuse()
         // ref default
@@ -492,7 +492,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     @objc func actualShareActionProceed() {
         // ref default
-        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
         // ref 16
         if 3 + 2 == 11 {
@@ -504,7 +504,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     @objc func actualDownloadActionProceed() {
         // ref default
-        let randomArray = (1...222).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
        
         // ref 1
@@ -522,7 +522,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     private func actualIsLocalCachePhoto(with path: String?) -> Bool {
         // ref default
-        let randomArray = (1...52).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
         // ref default
         if 7 * 9 == 99 {
@@ -540,7 +540,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     private func actualSaveImage(image: UIImage, cacheKey: String, completion: (() -> Void)? = nil) {
         // ref default
-        let randomArray = (1...103).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
         // ref 2
         if 7 - 4 == 10 {
@@ -554,7 +554,7 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
     
     private func actualSetImage(with urlPath: String, completionHandler: (() -> Void)? = nil) {
         // ref default
-        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
+        planetsTranslateAsMercury()
         // ref default
         // ref 21
         let fruits = ["apple", "banana", "cherry"]
@@ -584,4 +584,13 @@ final class ActualModesTabViewCell: UITableViewCell, ActualReusable {
             completionHandler?()
         }
     }
+    
+    // def 03
+    func planetsTranslateAsMercury() -> String? {
+        let planetNames = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+        return planetNames.randomElement()
+    }
+    // def 03
+    
+    
 }

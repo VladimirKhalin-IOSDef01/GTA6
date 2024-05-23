@@ -74,7 +74,7 @@ final class ActualGameModesModel {
     
     func actualBackActionProceed() {
         // ref default
-        let randomArray = (1...99).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Green")
         // ref default
         // ref default
         if 7 * 9 == 99 {
@@ -126,7 +126,7 @@ final class ActualGameModesModel {
     
     func actualFetchData() {
         // ref default
-        let randomArray = (1...44).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Red")
         // ref default
         allModeItems.removeAll()
         do {
@@ -220,14 +220,14 @@ final class ActualGameModesModel {
     
     func actualCheckIsDownloading(_ namName: String) -> Bool {
         // ref default
-        let randomArray = (1...16).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Orange")
         // ref default
         return true
     }
 
     func actualShowMods() {
         // ref default
-        let randomArray = (1...73).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Gray")
         // ref default
         modeItems = allModeItems
         // ref 2
@@ -241,7 +241,7 @@ final class ActualGameModesModel {
     
     func actualSearchAt(_ searchText: String) {
         // ref default
-        let randomArray = (1...62).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "white")
         // ref default
         let filteredList = allModeItems.filter { $0.title.lowercased().contains(searchText.lowercased())}
         modeItems = filteredList
@@ -259,7 +259,7 @@ final class ActualGameModesModel {
     
     func actualSearchDidCancel() {
         // ref default
-        let randomArray = (1...167).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Black")
         // ref default
         if searchText.isEmpty {
             // ref 4
@@ -271,13 +271,21 @@ final class ActualGameModesModel {
         }
     }
     
+    // def 02
+    func colorsTranslateAsRed(from color: String) -> String? {
+        let colorNames = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+        guard let index = colorNames.firstIndex(of: color) else { return nil }
+        return colorNames[index]
+    }
+    // def 02
+    
 }
 
 extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyMain() {
         // ref default
-        let randomArray = (1...55).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Purpure")
         // ref default
         actualOneCheck()
         // ref 16
@@ -289,7 +297,7 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameList() {
         // ref default
-        let randomArray = (1...36).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Pink")
         // ref default
         actualOneCheck()
         // ref 18
@@ -302,7 +310,7 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyGameCodes() {
         // ref default
-        let randomArray = (1...77).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Clear")
         // ref default
         actualOneCheck()
         // ref 23
@@ -327,7 +335,7 @@ extension ActualGameModesModel: ActualDBManagerDelegate {
     
     func actualIsReadyGTA5Mods() {
         // ref default
-        let randomArray = (1...77).map { _ in Int.random(in: 1...100) }
+        colorsTranslateAsRed(from: "Green")
         // ref default
         actualOneCheck()
         // ref 18
